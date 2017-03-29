@@ -1,0 +1,23 @@
+c:\users\alexa\documents\visual studio 2015\Projects\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.pdb
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmMain.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmCustomer.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmInvoice.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmNewCustomer.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmNewPart.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmNewProperty.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmNewTechnician.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmParts.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmProperty.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmTechnician.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmViewInvoices.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.Properties.Resources.resources
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csproj.GenerateResource.Cache
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
+C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb
+C:\Users\adeakins-cc\Desktop\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
+C:\Users\adeakins-cc\Desktop\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
+C:\Users\adeakins-cc\Desktop\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb

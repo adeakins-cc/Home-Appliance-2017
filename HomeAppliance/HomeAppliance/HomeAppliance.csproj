@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{068DD6F3-558A-442C-ADD6-E052ABEF4279}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomeAppliance</RootNamespace>
+    <AssemblyName>HomeAppliance</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainPage.Designer.cs">
+      <DependentUpon>frmMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvoice.Designer.cs">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewCustomer.Designer.cs">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPart.Designer.cs">
+      <DependentUpon>frmNewPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewProperty.Designer.cs">
+      <DependentUpon>frmNewProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewTechnician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewTechnician.Designer.cs">
+      <DependentUpon>frmNewTechnician.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParts.Designer.cs">
+      <DependentUpon>frmParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProperty.Designer.cs">
+      <DependentUpon>frmProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTechnician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTechnician.Designer.cs">
+      <DependentUpon>frmTechnician.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewInvoices.Designer.cs">
+      <DependentUpon>frmViewInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMainPage.resx">
+      <DependentUpon>frmMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoice.resx">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewCustomer.resx">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPart.resx">
+      <DependentUpon>frmNewPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewProperty.resx">
+      <DependentUpon>frmNewProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewTechnician.resx">
+      <DependentUpon>frmNewTechnician.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParts.resx">
+      <DependentUpon>frmParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProperty.resx">
+      <DependentUpon>frmProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTechnician.resx">
+      <DependentUpon>frmTechnician.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewInvoices.resx">
+      <DependentUpon>frmViewInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
