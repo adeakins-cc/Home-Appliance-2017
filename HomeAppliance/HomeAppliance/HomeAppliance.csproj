@@ -47,34 +47,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category\frmEditCategory.cs">
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\Property.cs" />
+    <Compile Include="Model\Technician.cs" />
+    <Compile Include="View\Category\frmEditCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Category\frmEditCategory.Designer.cs">
+    <Compile Include="View\Category\frmEditCategory.Designer.cs">
       <DependentUpon>frmEditCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Category\frmManageCategories.cs">
+    <Compile Include="View\Category\frmManageCategories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Category\frmManageCategories.Designer.cs">
+    <Compile Include="View\Category\frmManageCategories.Designer.cs">
       <DependentUpon>frmManageCategories.cs</DependentUpon>
     </Compile>
-    <Compile Include="Category\frmNewCategory.cs">
+    <Compile Include="View\Category\frmNewCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Category\frmNewCategory.Designer.cs">
+    <Compile Include="View\Category\frmNewCategory.Designer.cs">
       <DependentUpon>frmNewCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\frmEditCustomer.cs">
+    <Compile Include="View\Customer\frmEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\frmEditCustomer.Designer.cs">
+    <Compile Include="View\Customer\frmEditCustomer.Designer.cs">
       <DependentUpon>frmEditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Finance\frmManageFinance.cs">
+    <Compile Include="View\Finance\frmManageFinance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Finance\frmManageFinance.Designer.cs">
+    <Compile Include="View\Finance\frmManageFinance.Designer.cs">
       <DependentUpon>frmManageFinance.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMainPage.cs">
@@ -83,150 +87,150 @@
     <Compile Include="frmMainPage.Designer.cs">
       <DependentUpon>frmMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\frmManageCustomers.cs">
+    <Compile Include="View\Customer\frmManageCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\frmManageCustomers.Designer.cs">
+    <Compile Include="View\Customer\frmManageCustomers.Designer.cs">
       <DependentUpon>frmManageCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoice\frmEditInvoice.cs">
+    <Compile Include="View\Invoice\frmEditInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Invoice\frmEditInvoice.Designer.cs">
+    <Compile Include="View\Invoice\frmEditInvoice.Designer.cs">
       <DependentUpon>frmEditInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoice\frmInvoice.cs">
+    <Compile Include="View\Invoice\frmInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Invoice\frmInvoice.Designer.cs">
+    <Compile Include="View\Invoice\frmInvoice.Designer.cs">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\frmNewCustomer.cs">
+    <Compile Include="View\Customer\frmNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\frmNewCustomer.Designer.cs">
+    <Compile Include="View\Customer\frmNewCustomer.Designer.cs">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parts\frmEditPart.cs">
+    <Compile Include="View\Parts\frmEditPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parts\frmEditPart.Designer.cs">
+    <Compile Include="View\Parts\frmEditPart.Designer.cs">
       <DependentUpon>frmEditPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parts\frmNewPart.cs">
+    <Compile Include="View\Parts\frmNewPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parts\frmNewPart.Designer.cs">
+    <Compile Include="View\Parts\frmNewPart.Designer.cs">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Property\frmEditProperty.cs">
+    <Compile Include="View\Property\frmEditProperty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Property\frmEditProperty.Designer.cs">
+    <Compile Include="View\Property\frmEditProperty.Designer.cs">
       <DependentUpon>frmEditProperty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Property\frmNewProperty.cs">
+    <Compile Include="View\Property\frmNewProperty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Property\frmNewProperty.Designer.cs">
+    <Compile Include="View\Property\frmNewProperty.Designer.cs">
       <DependentUpon>frmNewProperty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Technician\frmEditTechnician.cs">
+    <Compile Include="View\Technician\frmEditTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Technician\frmEditTechnician.Designer.cs">
+    <Compile Include="View\Technician\frmEditTechnician.Designer.cs">
       <DependentUpon>frmEditTechnician.cs</DependentUpon>
     </Compile>
-    <Compile Include="Technician\frmNewTechnician.cs">
+    <Compile Include="View\Technician\frmNewTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Technician\frmNewTechnician.Designer.cs">
+    <Compile Include="View\Technician\frmNewTechnician.Designer.cs">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parts\frmManageParts.cs">
+    <Compile Include="View\Parts\frmManageParts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parts\frmManageParts.Designer.cs">
+    <Compile Include="View\Parts\frmManageParts.Designer.cs">
       <DependentUpon>frmManageParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Property\frmManageProperty.cs">
+    <Compile Include="View\Property\frmManageProperty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Property\frmManageProperty.Designer.cs">
+    <Compile Include="View\Property\frmManageProperty.Designer.cs">
       <DependentUpon>frmManageProperty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Technician\frmTechnician.cs">
+    <Compile Include="View\Technician\frmTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Technician\frmTechnician.Designer.cs">
+    <Compile Include="View\Technician\frmTechnician.Designer.cs">
       <DependentUpon>frmTechnician.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoice\frmViewInvoices.cs">
+    <Compile Include="View\Invoice\frmViewInvoices.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Invoice\frmViewInvoices.Designer.cs">
+    <Compile Include="View\Invoice\frmViewInvoices.Designer.cs">
       <DependentUpon>frmViewInvoices.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Category\frmEditCategory.resx">
+    <EmbeddedResource Include="View\Category\frmEditCategory.resx">
       <DependentUpon>frmEditCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Category\frmManageCategories.resx">
+    <EmbeddedResource Include="View\Category\frmManageCategories.resx">
       <DependentUpon>frmManageCategories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Category\frmNewCategory.resx">
+    <EmbeddedResource Include="View\Category\frmNewCategory.resx">
       <DependentUpon>frmNewCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\frmEditCustomer.resx">
+    <EmbeddedResource Include="View\Customer\frmEditCustomer.resx">
       <DependentUpon>frmEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Finance\frmManageFinance.resx">
+    <EmbeddedResource Include="View\Finance\frmManageFinance.resx">
       <DependentUpon>frmManageFinance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainPage.resx">
       <DependentUpon>frmMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\frmManageCustomers.resx">
+    <EmbeddedResource Include="View\Customer\frmManageCustomers.resx">
       <DependentUpon>frmManageCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoice\frmEditInvoice.resx">
+    <EmbeddedResource Include="View\Invoice\frmEditInvoice.resx">
       <DependentUpon>frmEditInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoice\frmInvoice.resx">
+    <EmbeddedResource Include="View\Invoice\frmInvoice.resx">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\frmNewCustomer.resx">
+    <EmbeddedResource Include="View\Customer\frmNewCustomer.resx">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parts\frmEditPart.resx">
+    <EmbeddedResource Include="View\Parts\frmEditPart.resx">
       <DependentUpon>frmEditPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parts\frmNewPart.resx">
+    <EmbeddedResource Include="View\Parts\frmNewPart.resx">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Property\frmEditProperty.resx">
+    <EmbeddedResource Include="View\Property\frmEditProperty.resx">
       <DependentUpon>frmEditProperty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Property\frmNewProperty.resx">
+    <EmbeddedResource Include="View\Property\frmNewProperty.resx">
       <DependentUpon>frmNewProperty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Technician\frmEditTechnician.resx">
+    <EmbeddedResource Include="View\Technician\frmEditTechnician.resx">
       <DependentUpon>frmEditTechnician.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Technician\frmNewTechnician.resx">
+    <EmbeddedResource Include="View\Technician\frmNewTechnician.resx">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parts\frmManageParts.resx">
+    <EmbeddedResource Include="View\Parts\frmManageParts.resx">
       <DependentUpon>frmManageParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Property\frmManageProperty.resx">
+    <EmbeddedResource Include="View\Property\frmManageProperty.resx">
       <DependentUpon>frmManageProperty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Technician\frmTechnician.resx">
+    <EmbeddedResource Include="View\Technician\frmTechnician.resx">
       <DependentUpon>frmTechnician.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoice\frmViewInvoices.resx">
+    <EmbeddedResource Include="View\Invoice\frmViewInvoices.resx">
       <DependentUpon>frmViewInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -251,7 +255,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controller\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
