@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace HomeAppliance
 {
-    public partial class frmCustomer : Form
+    public partial class frmManageCustomer : Form
     {
-        public frmCustomer()
+        public frmManageCustomer()
         {
             InitializeComponent();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }
