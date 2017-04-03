@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeAppliance
+namespace HomeAppliance.Invoice
 {
-    public partial class frmViewInvoices : Form
+    public partial class frmEditInvoice : Form
     {
-        public frmViewInvoices()
+        public frmEditInvoice()
         {
             InitializeComponent();
-        }
-
-        private void txtInvoiceStart_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

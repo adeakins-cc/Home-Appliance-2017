@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HomeAppliance
 {
-    public partial class frmInvoice : Form
+    public partial class frmNewInvoice : Form
     {
-        public frmInvoice()
+        public frmNewInvoice()
         {
             InitializeComponent();
         }
@@ -48,6 +48,11 @@ namespace HomeAppliance
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

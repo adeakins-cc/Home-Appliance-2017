@@ -1,6 +1,6 @@
 ﻿namespace HomeAppliance
 {
-    partial class frmInvoice
+    partial class frmNewInvoice
     {
         /// <summary>
         /// Required designer variable.
@@ -28,58 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtInvoiceDate = new System.Windows.Forms.DateTimePicker();
+            this.dateInvoiceDate = new System.Windows.Forms.DateTimePicker();
             this.lblInvDate = new System.Windows.Forms.Label();
             this.lstOwner = new System.Windows.Forms.ListView();
             this.lblOwner = new System.Windows.Forms.Label();
             this.lblProperty = new System.Windows.Forms.Label();
             this.lstProperty = new System.Windows.Forms.ListView();
             this.lblSerDate = new System.Windows.Forms.Label();
-            this.dtServiceDate = new System.Windows.Forms.DateTimePicker();
+            this.dateServiceDate = new System.Windows.Forms.DateTimePicker();
             this.lblTechnician = new System.Windows.Forms.Label();
             this.drpTechnician = new System.Windows.Forms.ComboBox();
             this.lblCustomerComplain = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtComplaint = new System.Windows.Forms.RichTextBox();
             this.lblServiceNotes = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtNotes = new System.Windows.Forms.RichTextBox();
             this.lblParts = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataListParts = new System.Windows.Forms.DataGridView();
             this.partName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quality = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddPart = new System.Windows.Forms.Button();
             this.btnRemovePart = new System.Windows.Forms.Button();
             this.grpCharge = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSession = new System.Windows.Forms.Button();
             this.btnPost = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.chkPSTExempt = new System.Windows.Forms.CheckBox();
+            this.chkHSTExempt = new System.Windows.Forms.CheckBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtPST = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtHST = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtServiceCalls = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLabour = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaterials = new System.Windows.Forms.TextBox();
             this.lblmaterials = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnNewInvoiceExit = new System.Windows.Forms.Button();
+            this.btnSearchCustomerProperty = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
             this.grpCharge.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtInvoiceDate
+            // dateInvoiceDate
             // 
-            this.dtInvoiceDate.Location = new System.Drawing.Point(11, 28);
-            this.dtInvoiceDate.Name = "dtInvoiceDate";
-            this.dtInvoiceDate.Size = new System.Drawing.Size(200, 20);
-            this.dtInvoiceDate.TabIndex = 0;
+            this.dateInvoiceDate.Location = new System.Drawing.Point(11, 28);
+            this.dateInvoiceDate.Name = "dateInvoiceDate";
+            this.dateInvoiceDate.Size = new System.Drawing.Size(200, 20);
+            this.dateInvoiceDate.TabIndex = 0;
             // 
             // lblInvDate
             // 
@@ -134,13 +134,13 @@
             this.lblSerDate.TabIndex = 7;
             this.lblSerDate.Text = "Service Date:";
             // 
-            // dtServiceDate
+            // dateServiceDate
             // 
-            this.dtServiceDate.Location = new System.Drawing.Point(11, 197);
-            this.dtServiceDate.Name = "dtServiceDate";
-            this.dtServiceDate.Size = new System.Drawing.Size(200, 20);
-            this.dtServiceDate.TabIndex = 6;
-            this.dtServiceDate.ValueChanged += new System.EventHandler(this.dtServiceDate_ValueChanged);
+            this.dateServiceDate.Location = new System.Drawing.Point(11, 197);
+            this.dateServiceDate.Name = "dateServiceDate";
+            this.dateServiceDate.Size = new System.Drawing.Size(200, 20);
+            this.dateServiceDate.TabIndex = 6;
+            this.dateServiceDate.ValueChanged += new System.EventHandler(this.dtServiceDate_ValueChanged);
             // 
             // lblTechnician
             // 
@@ -168,13 +168,13 @@
             this.lblCustomerComplain.TabIndex = 13;
             this.lblCustomerComplain.Text = "Customer Complaint:";
             // 
-            // richTextBox1
+            // txtComplaint
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(11, 240);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(198, 96);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
+            this.txtComplaint.Location = new System.Drawing.Point(11, 240);
+            this.txtComplaint.Name = "txtComplaint";
+            this.txtComplaint.Size = new System.Drawing.Size(198, 96);
+            this.txtComplaint.TabIndex = 12;
+            this.txtComplaint.Text = "";
             // 
             // lblServiceNotes
             // 
@@ -185,13 +185,13 @@
             this.lblServiceNotes.TabIndex = 15;
             this.lblServiceNotes.Text = "Service Notes:";
             // 
-            // richTextBox2
+            // txtNotes
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(218, 240);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(200, 96);
-            this.richTextBox2.TabIndex = 14;
-            this.richTextBox2.Text = "";
+            this.txtNotes.Location = new System.Drawing.Point(218, 240);
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(200, 96);
+            this.txtNotes.TabIndex = 14;
+            this.txtNotes.Text = "";
             // 
             // lblParts
             // 
@@ -202,18 +202,18 @@
             this.lblParts.TabIndex = 17;
             this.lblParts.Text = "Part List:";
             // 
-            // dataGridView1
+            // dataListParts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataListParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.partName,
             this.Price,
             this.quality});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 359);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(406, 56);
-            this.dataGridView1.TabIndex = 18;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataListParts.Location = new System.Drawing.Point(12, 359);
+            this.dataListParts.Name = "dataListParts";
+            this.dataListParts.Size = new System.Drawing.Size(406, 56);
+            this.dataListParts.TabIndex = 18;
+            this.dataListParts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // partName
             // 
@@ -250,23 +250,23 @@
             // 
             // grpCharge
             // 
-            this.grpCharge.Controls.Add(this.button1);
+            this.grpCharge.Controls.Add(this.btnSession);
             this.grpCharge.Controls.Add(this.btnPost);
-            this.grpCharge.Controls.Add(this.checkBox2);
-            this.grpCharge.Controls.Add(this.checkBox1);
-            this.grpCharge.Controls.Add(this.textBox7);
+            this.grpCharge.Controls.Add(this.chkPSTExempt);
+            this.grpCharge.Controls.Add(this.chkHSTExempt);
+            this.grpCharge.Controls.Add(this.txtTotal);
             this.grpCharge.Controls.Add(this.label6);
-            this.grpCharge.Controls.Add(this.textBox6);
+            this.grpCharge.Controls.Add(this.txtPST);
             this.grpCharge.Controls.Add(this.label5);
-            this.grpCharge.Controls.Add(this.textBox5);
+            this.grpCharge.Controls.Add(this.txtHST);
             this.grpCharge.Controls.Add(this.label4);
-            this.grpCharge.Controls.Add(this.textBox4);
+            this.grpCharge.Controls.Add(this.txtSubtotal);
             this.grpCharge.Controls.Add(this.label3);
-            this.grpCharge.Controls.Add(this.textBox3);
+            this.grpCharge.Controls.Add(this.txtServiceCalls);
             this.grpCharge.Controls.Add(this.label2);
-            this.grpCharge.Controls.Add(this.textBox2);
+            this.grpCharge.Controls.Add(this.txtLabour);
             this.grpCharge.Controls.Add(this.label1);
-            this.grpCharge.Controls.Add(this.textBox1);
+            this.grpCharge.Controls.Add(this.txtMaterials);
             this.grpCharge.Controls.Add(this.lblmaterials);
             this.grpCharge.Location = new System.Drawing.Point(424, 28);
             this.grpCharge.Name = "grpCharge";
@@ -275,14 +275,14 @@
             this.grpCharge.TabStop = false;
             this.grpCharge.Text = "Charge";
             // 
-            // button1
+            // btnSession
             // 
-            this.button1.Location = new System.Drawing.Point(16, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Session";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSession.Location = new System.Drawing.Point(16, 246);
+            this.btnSession.Name = "btnSession";
+            this.btnSession.Size = new System.Drawing.Size(75, 23);
+            this.btnSession.TabIndex = 17;
+            this.btnSession.Text = "Session";
+            this.btnSession.UseVisualStyleBackColor = true;
             // 
             // btnPost
             // 
@@ -293,32 +293,32 @@
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkPSTExempt
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(92, 222);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(85, 17);
-            this.checkBox2.TabIndex = 15;
-            this.checkBox2.Text = "PST Exempt";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkPSTExempt.AutoSize = true;
+            this.chkPSTExempt.Location = new System.Drawing.Point(92, 222);
+            this.chkPSTExempt.Name = "chkPSTExempt";
+            this.chkPSTExempt.Size = new System.Drawing.Size(85, 17);
+            this.chkPSTExempt.TabIndex = 15;
+            this.chkPSTExempt.Text = "PST Exempt";
+            this.chkPSTExempt.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkHSTExempt
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(92, 198);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 17);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "HST Exempt";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkHSTExempt.AutoSize = true;
+            this.chkHSTExempt.Location = new System.Drawing.Point(92, 198);
+            this.chkHSTExempt.Name = "chkHSTExempt";
+            this.chkHSTExempt.Size = new System.Drawing.Size(86, 17);
+            this.chkHSTExempt.TabIndex = 14;
+            this.chkHSTExempt.Text = "HST Exempt";
+            this.chkHSTExempt.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txtTotal
             // 
-            this.textBox7.Location = new System.Drawing.Point(75, 172);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 13;
+            this.txtTotal.Location = new System.Drawing.Point(75, 172);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 13;
             // 
             // label6
             // 
@@ -329,12 +329,12 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Total:";
             // 
-            // textBox6
+            // txtPST
             // 
-            this.textBox6.Location = new System.Drawing.Point(75, 146);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 11;
+            this.txtPST.Location = new System.Drawing.Point(75, 146);
+            this.txtPST.Name = "txtPST";
+            this.txtPST.Size = new System.Drawing.Size(100, 20);
+            this.txtPST.TabIndex = 11;
             // 
             // label5
             // 
@@ -345,12 +345,12 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "PST:";
             // 
-            // textBox5
+            // txtHST
             // 
-            this.textBox5.Location = new System.Drawing.Point(75, 120);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtHST.Location = new System.Drawing.Point(75, 120);
+            this.txtHST.Name = "txtHST";
+            this.txtHST.Size = new System.Drawing.Size(100, 20);
+            this.txtHST.TabIndex = 9;
             // 
             // label4
             // 
@@ -361,12 +361,12 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "HST:";
             // 
-            // textBox4
+            // txtSubtotal
             // 
-            this.textBox4.Location = new System.Drawing.Point(75, 94);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtSubtotal.Location = new System.Drawing.Point(75, 94);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
+            this.txtSubtotal.TabIndex = 7;
             // 
             // label3
             // 
@@ -378,12 +378,12 @@
             this.label3.Text = "Subtotal:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox3
+            // txtServiceCalls
             // 
-            this.textBox3.Location = new System.Drawing.Point(75, 68);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtServiceCalls.Location = new System.Drawing.Point(75, 68);
+            this.txtServiceCalls.Name = "txtServiceCalls";
+            this.txtServiceCalls.Size = new System.Drawing.Size(100, 20);
+            this.txtServiceCalls.TabIndex = 5;
             // 
             // label2
             // 
@@ -394,12 +394,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Service Call:";
             // 
-            // textBox2
+            // txtLabour
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtLabour.Location = new System.Drawing.Point(75, 42);
+            this.txtLabour.Name = "txtLabour";
+            this.txtLabour.Size = new System.Drawing.Size(100, 20);
+            this.txtLabour.TabIndex = 3;
             // 
             // label1
             // 
@@ -411,12 +411,13 @@
             this.label1.Text = "Labour:";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // textBox1
+            // txtMaterials
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtMaterials.Location = new System.Drawing.Point(75, 13);
+            this.txtMaterials.Name = "txtMaterials";
+            this.txtMaterials.Size = new System.Drawing.Size(100, 20);
+            this.txtMaterials.TabIndex = 1;
+            this.txtMaterials.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblmaterials
             // 
@@ -427,54 +428,54 @@
             this.lblmaterials.TabIndex = 0;
             this.lblmaterials.Text = "Materials:";
             // 
-            // btnExit
+            // btnNewInvoiceExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(527, 421);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 22;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnNewInvoiceExit.Location = new System.Drawing.Point(527, 421);
+            this.btnNewInvoiceExit.Name = "btnNewInvoiceExit";
+            this.btnNewInvoiceExit.Size = new System.Drawing.Size(75, 23);
+            this.btnNewInvoiceExit.TabIndex = 22;
+            this.btnNewInvoiceExit.Text = "Exit";
+            this.btnNewInvoiceExit.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSearchCustomerProperty
             // 
-            this.button2.Location = new System.Drawing.Point(343, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSearchCustomerProperty.Location = new System.Drawing.Point(343, 48);
+            this.btnSearchCustomerProperty.Name = "btnSearchCustomerProperty";
+            this.btnSearchCustomerProperty.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchCustomerProperty.TabIndex = 23;
+            this.btnSearchCustomerProperty.Text = "Search";
+            this.btnSearchCustomerProperty.UseVisualStyleBackColor = true;
             // 
-            // frmInvoice
+            // frmNewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 451);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSearchCustomerProperty);
+            this.Controls.Add(this.btnNewInvoiceExit);
             this.Controls.Add(this.grpCharge);
             this.Controls.Add(this.btnRemovePart);
             this.Controls.Add(this.btnAddPart);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataListParts);
             this.Controls.Add(this.lblParts);
             this.Controls.Add(this.lblServiceNotes);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.lblCustomerComplain);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtComplaint);
             this.Controls.Add(this.drpTechnician);
             this.Controls.Add(this.lblTechnician);
             this.Controls.Add(this.lblSerDate);
-            this.Controls.Add(this.dtServiceDate);
+            this.Controls.Add(this.dateServiceDate);
             this.Controls.Add(this.lblProperty);
             this.Controls.Add(this.lstProperty);
             this.Controls.Add(this.lblOwner);
             this.Controls.Add(this.lstOwner);
             this.Controls.Add(this.lblInvDate);
-            this.Controls.Add(this.dtInvoiceDate);
-            this.Name = "frmInvoice";
+            this.Controls.Add(this.dateInvoiceDate);
+            this.Name = "frmNewInvoice";
             this.Text = "New Invoices";
             this.Load += new System.EventHandler(this.frmInvoice_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
             this.grpCharge.ResumeLayout(false);
             this.grpCharge.PerformLayout();
             this.ResumeLayout(false);
@@ -484,47 +485,47 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dtInvoiceDate;
+        private System.Windows.Forms.DateTimePicker dateInvoiceDate;
         private System.Windows.Forms.Label lblInvDate;
         private System.Windows.Forms.ListView lstOwner;
         private System.Windows.Forms.Label lblOwner;
         private System.Windows.Forms.Label lblProperty;
         private System.Windows.Forms.ListView lstProperty;
         private System.Windows.Forms.Label lblSerDate;
-        private System.Windows.Forms.DateTimePicker dtServiceDate;
+        private System.Windows.Forms.DateTimePicker dateServiceDate;
         private System.Windows.Forms.Label lblTechnician;
         private System.Windows.Forms.ComboBox drpTechnician;
         private System.Windows.Forms.Label lblCustomerComplain;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtComplaint;
         private System.Windows.Forms.Label lblServiceNotes;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox txtNotes;
         private System.Windows.Forms.Label lblParts;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataListParts;
         private System.Windows.Forms.DataGridViewTextBoxColumn partName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn quality;
         private System.Windows.Forms.Button btnAddPart;
         private System.Windows.Forms.Button btnRemovePart;
         private System.Windows.Forms.GroupBox grpCharge;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtPST;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtHST;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtServiceCalls;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtLabour;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaterials;
         private System.Windows.Forms.Label lblmaterials;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox chkPSTExempt;
+        private System.Windows.Forms.CheckBox chkHSTExempt;
+        private System.Windows.Forms.Button btnSession;
         private System.Windows.Forms.Button btnPost;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNewInvoiceExit;
+        private System.Windows.Forms.Button btnSearchCustomerProperty;
     }
 }
