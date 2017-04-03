@@ -33,7 +33,6 @@
             this.btnDeletePart = new System.Windows.Forms.Button();
             this.btnManagePartsExit = new System.Windows.Forms.Button();
             this.lstParts = new System.Windows.Forms.ListBox();
-            this.btnManageCategories = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNewPart
@@ -83,21 +82,11 @@
             this.lstParts.Size = new System.Drawing.Size(237, 95);
             this.lstParts.TabIndex = 5;
             // 
-            // btnManageCategories
-            // 
-            this.btnManageCategories.Location = new System.Drawing.Point(59, 142);
-            this.btnManageCategories.Name = "btnManageCategories";
-            this.btnManageCategories.Size = new System.Drawing.Size(109, 23);
-            this.btnManageCategories.TabIndex = 6;
-            this.btnManageCategories.Text = "Manage categories";
-            this.btnManageCategories.UseVisualStyleBackColor = true;
-            // 
             // frmManageParts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(257, 172);
-            this.Controls.Add(this.btnManageCategories);
             this.Controls.Add(this.lstParts);
             this.Controls.Add(this.btnManagePartsExit);
             this.Controls.Add(this.btnDeletePart);
@@ -115,6 +104,5 @@
         private System.Windows.Forms.Button btnDeletePart;
         private System.Windows.Forms.Button btnManagePartsExit;
         private System.Windows.Forms.ListBox lstParts;
-        private System.Windows.Forms.Button btnManageCategories;
     }
 }
