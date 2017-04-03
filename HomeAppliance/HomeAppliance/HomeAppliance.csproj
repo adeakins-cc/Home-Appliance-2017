@@ -89,6 +89,12 @@
     <Compile Include="Parts\frmNewPart.Designer.cs">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Property\frmEditProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\frmEditProperty.Designer.cs">
+      <DependentUpon>frmEditProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Property\frmNewProperty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,11 +113,11 @@
     <Compile Include="Parts\frmParts.Designer.cs">
       <DependentUpon>frmParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Property\frmProperty.cs">
+    <Compile Include="Property\frmManageProperty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Property\frmProperty.Designer.cs">
-      <DependentUpon>frmProperty.cs</DependentUpon>
+    <Compile Include="Property\frmManageProperty.Designer.cs">
+      <DependentUpon>frmManageProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Technician\frmTechnician.cs">
       <SubType>Form</SubType>
@@ -148,6 +154,9 @@
     <EmbeddedResource Include="Parts\frmNewPart.resx">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Property\frmEditProperty.resx">
+      <DependentUpon>frmEditProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Property\frmNewProperty.resx">
       <DependentUpon>frmNewProperty.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,8 +166,8 @@
     <EmbeddedResource Include="Parts\frmParts.resx">
       <DependentUpon>frmParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Property\frmProperty.resx">
-      <DependentUpon>frmProperty.cs</DependentUpon>
+    <EmbeddedResource Include="Property\frmManageProperty.resx">
+      <DependentUpon>frmManageProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Technician\frmTechnician.resx">
       <DependentUpon>frmTechnician.cs</DependentUpon>

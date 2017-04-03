@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeAppliance
+namespace HomeAppliance.Property
 {
-    public partial class frmProperty : Form
+    public partial class frmEditProperty : Form
     {
-        public frmProperty()
+        public frmEditProperty()
         {
             InitializeComponent();
+        }
+
+        private void btnEditPropertyExit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

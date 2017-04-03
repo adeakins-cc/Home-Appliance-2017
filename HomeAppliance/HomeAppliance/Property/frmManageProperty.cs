@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace HomeAppliance
 {
-    public partial class frmNewProperty : Form
+    public partial class frmManageProperty : Form
     {
-        public frmNewProperty()
+        public frmManageProperty()
         {
             InitializeComponent();
         }
 
-        private void btnNewPropertyExit_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnManagePropertyExit_Click(object sender, EventArgs e)
         {
 
         }
