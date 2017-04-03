@@ -21,3 +21,6 @@ C:\Users\adeakins-cc\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance
 C:\Users\adeakins-cc\Desktop\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
 C:\Users\adeakins-cc\Desktop\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
 C:\Users\adeakins-cc\Desktop\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb
+C:\Users\adeakins-cc\Desktop\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
+C:\Users\adeakins-cc\Desktop\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
+C:\Users\adeakins-cc\Desktop\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb
