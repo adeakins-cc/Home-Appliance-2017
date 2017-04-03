@@ -47,105 +47,123 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer\frmEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\frmEditCustomer.Designer.cs">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\frmManageFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\frmManageFinance.Designer.cs">
+      <DependentUpon>frmManageFinance.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMainPage.Designer.cs">
       <DependentUpon>frmMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomer.cs">
+    <Compile Include="Customer\frmManageCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer.Designer.cs">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
+    <Compile Include="Customer\frmManageCustomers.Designer.cs">
+      <DependentUpon>frmManageCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInvoice.cs">
+    <Compile Include="Invoice\frmInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInvoice.Designer.cs">
+    <Compile Include="Invoice\frmInvoice.Designer.cs">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewCustomer.cs">
+    <Compile Include="Customer\frmNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewCustomer.Designer.cs">
+    <Compile Include="Customer\frmNewCustomer.Designer.cs">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewPart.cs">
+    <Compile Include="Parts\frmNewPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewPart.Designer.cs">
+    <Compile Include="Parts\frmNewPart.Designer.cs">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewProperty.cs">
+    <Compile Include="Property\frmNewProperty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewProperty.Designer.cs">
+    <Compile Include="Property\frmNewProperty.Designer.cs">
       <DependentUpon>frmNewProperty.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewTechnician.cs">
+    <Compile Include="Technician\frmNewTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewTechnician.Designer.cs">
+    <Compile Include="Technician\frmNewTechnician.Designer.cs">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmParts.cs">
+    <Compile Include="Parts\frmParts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmParts.Designer.cs">
+    <Compile Include="Parts\frmParts.Designer.cs">
       <DependentUpon>frmParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProperty.cs">
+    <Compile Include="Property\frmProperty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProperty.Designer.cs">
+    <Compile Include="Property\frmProperty.Designer.cs">
       <DependentUpon>frmProperty.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTechnician.cs">
+    <Compile Include="Technician\frmTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTechnician.Designer.cs">
+    <Compile Include="Technician\frmTechnician.Designer.cs">
       <DependentUpon>frmTechnician.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmViewInvoices.cs">
+    <Compile Include="Invoice\frmViewInvoices.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewInvoices.Designer.cs">
+    <Compile Include="Invoice\frmViewInvoices.Designer.cs">
       <DependentUpon>frmViewInvoices.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customer\frmEditCustomer.resx">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\frmManageFinance.resx">
+      <DependentUpon>frmManageFinance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainPage.resx">
       <DependentUpon>frmMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomer.resx">
-      <DependentUpon>frmCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Customer\frmManageCustomers.resx">
+      <DependentUpon>frmManageCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInvoice.resx">
+    <EmbeddedResource Include="Invoice\frmInvoice.resx">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewCustomer.resx">
+    <EmbeddedResource Include="Customer\frmNewCustomer.resx">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewPart.resx">
+    <EmbeddedResource Include="Parts\frmNewPart.resx">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewProperty.resx">
+    <EmbeddedResource Include="Property\frmNewProperty.resx">
       <DependentUpon>frmNewProperty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewTechnician.resx">
+    <EmbeddedResource Include="Technician\frmNewTechnician.resx">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmParts.resx">
+    <EmbeddedResource Include="Parts\frmParts.resx">
       <DependentUpon>frmParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProperty.resx">
+    <EmbeddedResource Include="Property\frmProperty.resx">
       <DependentUpon>frmProperty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTechnician.resx">
+    <EmbeddedResource Include="Technician\frmTechnician.resx">
       <DependentUpon>frmTechnician.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewInvoices.resx">
+    <EmbeddedResource Include="Invoice\frmViewInvoices.resx">
       <DependentUpon>frmViewInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -169,6 +187,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Category\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

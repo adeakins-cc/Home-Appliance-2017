@@ -35,30 +35,30 @@
             this.lstFinance = new System.Windows.Forms.ListBox();
             this.btnSearchDue = new System.Windows.Forms.Button();
             this.btnSearchOverdue = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSearchList = new System.Windows.Forms.Button();
+            this.grpSearchOptions = new System.Windows.Forms.GroupBox();
+            this.grpList = new System.Windows.Forms.GroupBox();
+            this.btnListAllDue = new System.Windows.Forms.Button();
+            this.btnListAllOverdue = new System.Windows.Forms.Button();
             this.btnListAll = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.datePaid = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtAmountPaid = new System.Windows.Forms.TextBox();
-            this.txtChequeName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtChequeNumber = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNotes = new System.Windows.Forms.RichTextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnSearchList = new System.Windows.Forms.Button();
+            this.grpUpdate = new System.Windows.Forms.GroupBox();
+            this.btnSaveFinance = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dateOnCheque = new System.Windows.Forms.DateTimePicker();
-            this.btnSaveFinance = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnListAllOverdue = new System.Windows.Forms.Button();
-            this.btnListAllDue = new System.Windows.Forms.Button();
+            this.txtNotes = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtChequeNumber = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtChequeName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAmountPaid = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.datePaid = new System.Windows.Forms.DateTimePicker();
             this.btnFinanceExit = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grpSearchOptions.SuspendLayout();
+            this.grpList.SuspendLayout();
+            this.grpUpdate.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateSearchStart
@@ -122,31 +122,52 @@
             this.btnSearchOverdue.Text = "Overdue";
             this.btnSearchOverdue.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grpSearchOptions
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.btnSearchOverdue);
-            this.groupBox1.Controls.Add(this.btnSearchList);
-            this.groupBox1.Controls.Add(this.btnSearchDue);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dateSearchStart);
-            this.groupBox1.Controls.Add(this.dateSearchEnd);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 126);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 140);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Search";
+            this.grpSearchOptions.Controls.Add(this.grpList);
+            this.grpSearchOptions.Controls.Add(this.btnSearchOverdue);
+            this.grpSearchOptions.Controls.Add(this.btnSearchList);
+            this.grpSearchOptions.Controls.Add(this.btnSearchDue);
+            this.grpSearchOptions.Controls.Add(this.label1);
+            this.grpSearchOptions.Controls.Add(this.dateSearchStart);
+            this.grpSearchOptions.Controls.Add(this.dateSearchEnd);
+            this.grpSearchOptions.Controls.Add(this.label2);
+            this.grpSearchOptions.Location = new System.Drawing.Point(12, 126);
+            this.grpSearchOptions.Name = "grpSearchOptions";
+            this.grpSearchOptions.Size = new System.Drawing.Size(279, 140);
+            this.grpSearchOptions.TabIndex = 8;
+            this.grpSearchOptions.TabStop = false;
+            this.grpSearchOptions.Text = "Search";
             // 
-            // btnSearchList
+            // grpList
             // 
-            this.btnSearchList.Location = new System.Drawing.Point(117, 62);
-            this.btnSearchList.Name = "btnSearchList";
-            this.btnSearchList.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchList.TabIndex = 5;
-            this.btnSearchList.Text = "List";
-            this.btnSearchList.UseVisualStyleBackColor = true;
+            this.grpList.Controls.Add(this.btnListAllDue);
+            this.grpList.Controls.Add(this.btnListAllOverdue);
+            this.grpList.Controls.Add(this.btnListAll);
+            this.grpList.Location = new System.Drawing.Point(0, 93);
+            this.grpList.Name = "grpList";
+            this.grpList.Size = new System.Drawing.Size(279, 47);
+            this.grpList.TabIndex = 8;
+            this.grpList.TabStop = false;
+            this.grpList.Text = "View";
+            // 
+            // btnListAllDue
+            // 
+            this.btnListAllDue.Location = new System.Drawing.Point(36, 17);
+            this.btnListAllDue.Name = "btnListAllDue";
+            this.btnListAllDue.Size = new System.Drawing.Size(75, 23);
+            this.btnListAllDue.TabIndex = 8;
+            this.btnListAllDue.Text = "All Due";
+            this.btnListAllDue.UseVisualStyleBackColor = true;
+            // 
+            // btnListAllOverdue
+            // 
+            this.btnListAllOverdue.Location = new System.Drawing.Point(117, 17);
+            this.btnListAllOverdue.Name = "btnListAllOverdue";
+            this.btnListAllOverdue.Size = new System.Drawing.Size(75, 23);
+            this.btnListAllOverdue.TabIndex = 7;
+            this.btnListAllOverdue.Text = "All Overdue";
+            this.btnListAllOverdue.UseVisualStyleBackColor = true;
             // 
             // btnListAll
             // 
@@ -157,109 +178,45 @@
             this.btnListAll.Text = "List All";
             this.btnListAll.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // btnSearchList
             // 
-            this.groupBox2.Controls.Add(this.btnSaveFinance);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.dateOnCheque);
-            this.groupBox2.Controls.Add(this.txtNotes);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtChequeNumber);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtChequeName);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtAmountPaid);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.datePaid);
-            this.groupBox2.Location = new System.Drawing.Point(297, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 254);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Update";
+            this.btnSearchList.Location = new System.Drawing.Point(117, 62);
+            this.btnSearchList.Name = "btnSearchList";
+            this.btnSearchList.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchList.TabIndex = 5;
+            this.btnSearchList.Text = "List";
+            this.btnSearchList.UseVisualStyleBackColor = true;
             // 
-            // datePaid
+            // grpUpdate
             // 
-            this.datePaid.Location = new System.Drawing.Point(6, 36);
-            this.datePaid.Name = "datePaid";
-            this.datePaid.Size = new System.Drawing.Size(188, 20);
-            this.datePaid.TabIndex = 0;
-            this.datePaid.Value = new System.DateTime(2017, 4, 3, 11, 23, 18, 0);
+            this.grpUpdate.Controls.Add(this.btnSaveFinance);
+            this.grpUpdate.Controls.Add(this.label8);
+            this.grpUpdate.Controls.Add(this.dateOnCheque);
+            this.grpUpdate.Controls.Add(this.txtNotes);
+            this.grpUpdate.Controls.Add(this.label7);
+            this.grpUpdate.Controls.Add(this.txtChequeNumber);
+            this.grpUpdate.Controls.Add(this.label6);
+            this.grpUpdate.Controls.Add(this.txtChequeName);
+            this.grpUpdate.Controls.Add(this.label5);
+            this.grpUpdate.Controls.Add(this.txtAmountPaid);
+            this.grpUpdate.Controls.Add(this.label4);
+            this.grpUpdate.Controls.Add(this.label3);
+            this.grpUpdate.Controls.Add(this.datePaid);
+            this.grpUpdate.Location = new System.Drawing.Point(297, 12);
+            this.grpUpdate.Name = "grpUpdate";
+            this.grpUpdate.Size = new System.Drawing.Size(200, 254);
+            this.grpUpdate.TabIndex = 9;
+            this.grpUpdate.TabStop = false;
+            this.grpUpdate.Text = "Update";
             // 
-            // label3
+            // btnSaveFinance
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Date Paid:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Amount Paid:";
-            // 
-            // txtAmountPaid
-            // 
-            this.txtAmountPaid.Location = new System.Drawing.Point(94, 63);
-            this.txtAmountPaid.Name = "txtAmountPaid";
-            this.txtAmountPaid.Size = new System.Drawing.Size(100, 20);
-            this.txtAmountPaid.TabIndex = 3;
-            // 
-            // txtChequeName
-            // 
-            this.txtChequeName.Location = new System.Drawing.Point(94, 89);
-            this.txtChequeName.Name = "txtChequeName";
-            this.txtChequeName.Size = new System.Drawing.Size(100, 20);
-            this.txtChequeName.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Cheque name:";
-            // 
-            // txtChequeNumber
-            // 
-            this.txtChequeNumber.Location = new System.Drawing.Point(94, 115);
-            this.txtChequeNumber.Name = "txtChequeNumber";
-            this.txtChequeNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtChequeNumber.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Cheque No:";
-            // 
-            // txtNotes
-            // 
-            this.txtNotes.Location = new System.Drawing.Point(57, 180);
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(137, 67);
-            this.txtNotes.TabIndex = 8;
-            this.txtNotes.Text = "";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 177);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Notes:";
+            this.btnSaveFinance.Location = new System.Drawing.Point(6, 224);
+            this.btnSaveFinance.Name = "btnSaveFinance";
+            this.btnSaveFinance.Size = new System.Drawing.Size(45, 23);
+            this.btnSaveFinance.TabIndex = 12;
+            this.btnSaveFinance.Text = "Save";
+            this.btnSaveFinance.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -278,44 +235,87 @@
             this.dateOnCheque.TabIndex = 10;
             this.dateOnCheque.Value = new System.DateTime(2017, 4, 3, 11, 23, 18, 0);
             // 
-            // btnSaveFinance
+            // txtNotes
             // 
-            this.btnSaveFinance.Location = new System.Drawing.Point(6, 224);
-            this.btnSaveFinance.Name = "btnSaveFinance";
-            this.btnSaveFinance.Size = new System.Drawing.Size(45, 23);
-            this.btnSaveFinance.TabIndex = 12;
-            this.btnSaveFinance.Text = "Save";
-            this.btnSaveFinance.UseVisualStyleBackColor = true;
+            this.txtNotes.Location = new System.Drawing.Point(57, 180);
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(137, 67);
+            this.txtNotes.TabIndex = 8;
+            this.txtNotes.Text = "";
             // 
-            // groupBox3
+            // label7
             // 
-            this.groupBox3.Controls.Add(this.btnListAllDue);
-            this.groupBox3.Controls.Add(this.btnListAllOverdue);
-            this.groupBox3.Controls.Add(this.btnListAll);
-            this.groupBox3.Location = new System.Drawing.Point(0, 93);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(279, 47);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "View";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 177);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Notes:";
             // 
-            // btnListAllOverdue
+            // txtChequeNumber
             // 
-            this.btnListAllOverdue.Location = new System.Drawing.Point(117, 17);
-            this.btnListAllOverdue.Name = "btnListAllOverdue";
-            this.btnListAllOverdue.Size = new System.Drawing.Size(75, 23);
-            this.btnListAllOverdue.TabIndex = 7;
-            this.btnListAllOverdue.Text = "All Overdue";
-            this.btnListAllOverdue.UseVisualStyleBackColor = true;
+            this.txtChequeNumber.Location = new System.Drawing.Point(94, 115);
+            this.txtChequeNumber.Name = "txtChequeNumber";
+            this.txtChequeNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtChequeNumber.TabIndex = 7;
             // 
-            // btnListAllDue
+            // label6
             // 
-            this.btnListAllDue.Location = new System.Drawing.Point(36, 17);
-            this.btnListAllDue.Name = "btnListAllDue";
-            this.btnListAllDue.Size = new System.Drawing.Size(75, 23);
-            this.btnListAllDue.TabIndex = 8;
-            this.btnListAllDue.Text = "All Due";
-            this.btnListAllDue.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Cheque No:";
+            // 
+            // txtChequeName
+            // 
+            this.txtChequeName.Location = new System.Drawing.Point(94, 89);
+            this.txtChequeName.Name = "txtChequeName";
+            this.txtChequeName.Size = new System.Drawing.Size(100, 20);
+            this.txtChequeName.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 89);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Cheque name:";
+            // 
+            // txtAmountPaid
+            // 
+            this.txtAmountPaid.Location = new System.Drawing.Point(94, 63);
+            this.txtAmountPaid.Name = "txtAmountPaid";
+            this.txtAmountPaid.Size = new System.Drawing.Size(100, 20);
+            this.txtAmountPaid.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Amount Paid:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Date Paid:";
+            // 
+            // datePaid
+            // 
+            this.datePaid.Location = new System.Drawing.Point(6, 36);
+            this.datePaid.Name = "datePaid";
+            this.datePaid.Size = new System.Drawing.Size(188, 20);
+            this.datePaid.TabIndex = 0;
+            this.datePaid.Value = new System.DateTime(2017, 4, 3, 11, 23, 18, 0);
             // 
             // btnFinanceExit
             // 
@@ -332,16 +332,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 300);
             this.Controls.Add(this.btnFinanceExit);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpUpdate);
+            this.Controls.Add(this.grpSearchOptions);
             this.Controls.Add(this.lstFinance);
             this.Name = "frmManageFinance";
             this.Text = "Manage Finance";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.grpSearchOptions.ResumeLayout(false);
+            this.grpSearchOptions.PerformLayout();
+            this.grpList.ResumeLayout(false);
+            this.grpUpdate.ResumeLayout(false);
+            this.grpUpdate.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -355,10 +355,10 @@
         private System.Windows.Forms.ListBox lstFinance;
         private System.Windows.Forms.Button btnSearchDue;
         private System.Windows.Forms.Button btnSearchOverdue;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpSearchOptions;
         private System.Windows.Forms.Button btnSearchList;
         private System.Windows.Forms.Button btnListAll;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpUpdate;
         private System.Windows.Forms.Button btnSaveFinance;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateOnCheque;
@@ -372,7 +372,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker datePaid;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grpList;
         private System.Windows.Forms.Button btnListAllDue;
         private System.Windows.Forms.Button btnListAllOverdue;
         private System.Windows.Forms.Button btnFinanceExit;
