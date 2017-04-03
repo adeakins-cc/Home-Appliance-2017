@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HomeAppliance
 {
-    public partial class frmParts : Form
+    public partial class frmManageParts : Form
     {
-        public frmParts()
+        public frmManageParts()
         {
             InitializeComponent();
         }

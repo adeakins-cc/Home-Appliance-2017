@@ -47,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category\frmEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\frmEditCategory.Designer.cs">
+      <DependentUpon>frmEditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\frmManageCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\frmManageCategories.Designer.cs">
+      <DependentUpon>frmManageCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\frmNewCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\frmNewCategory.Designer.cs">
+      <DependentUpon>frmNewCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\frmEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +107,12 @@
     <Compile Include="Customer\frmNewCustomer.Designer.cs">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parts\frmEditPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parts\frmEditPart.Designer.cs">
+      <DependentUpon>frmEditPart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parts\frmNewPart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,17 +131,23 @@
     <Compile Include="Property\frmNewProperty.Designer.cs">
       <DependentUpon>frmNewProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Technician\frmEditTechnician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technician\frmEditTechnician.Designer.cs">
+      <DependentUpon>frmEditTechnician.cs</DependentUpon>
+    </Compile>
     <Compile Include="Technician\frmNewTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Technician\frmNewTechnician.Designer.cs">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parts\frmParts.cs">
+    <Compile Include="Parts\frmManageParts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Parts\frmParts.Designer.cs">
-      <DependentUpon>frmParts.cs</DependentUpon>
+    <Compile Include="Parts\frmManageParts.Designer.cs">
+      <DependentUpon>frmManageParts.cs</DependentUpon>
     </Compile>
     <Compile Include="Property\frmManageProperty.cs">
       <SubType>Form</SubType>
@@ -139,6 +169,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Category\frmEditCategory.resx">
+      <DependentUpon>frmEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\frmManageCategories.resx">
+      <DependentUpon>frmManageCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\frmNewCategory.resx">
+      <DependentUpon>frmNewCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\frmEditCustomer.resx">
       <DependentUpon>frmEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +199,9 @@
     <EmbeddedResource Include="Customer\frmNewCustomer.resx">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parts\frmEditPart.resx">
+      <DependentUpon>frmEditPart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parts\frmNewPart.resx">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,11 +211,14 @@
     <EmbeddedResource Include="Property\frmNewProperty.resx">
       <DependentUpon>frmNewProperty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Technician\frmEditTechnician.resx">
+      <DependentUpon>frmEditTechnician.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Technician\frmNewTechnician.resx">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parts\frmParts.resx">
-      <DependentUpon>frmParts.cs</DependentUpon>
+    <EmbeddedResource Include="Parts\frmManageParts.resx">
+      <DependentUpon>frmManageParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Property\frmManageProperty.resx">
       <DependentUpon>frmManageProperty.cs</DependentUpon>
@@ -206,9 +251,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Category\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
