@@ -31,5 +31,10 @@ namespace HomeAppliance
         {
 
         }
+
+        private void btnNewPartExit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

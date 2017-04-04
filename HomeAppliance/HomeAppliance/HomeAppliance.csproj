@@ -47,8 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\Part.cs" />
+    <Compile Include="Model\PartsUsed.cs" />
     <Compile Include="Model\Property.cs" />
     <Compile Include="Model\Technician.cs" />
     <Compile Include="View\Category\frmEditCategory.cs">
@@ -111,16 +114,16 @@
     <Compile Include="View\Customer\frmNewCustomer.Designer.cs">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Parts\frmEditPart.cs">
+    <Compile Include="View\Part\frmEditPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Parts\frmEditPart.Designer.cs">
+    <Compile Include="View\Part\frmEditPart.Designer.cs">
       <DependentUpon>frmEditPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Parts\frmNewPart.cs">
+    <Compile Include="View\Part\frmNewPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Parts\frmNewPart.Designer.cs">
+    <Compile Include="View\Part\frmNewPart.Designer.cs">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Property\frmEditProperty.cs">
@@ -147,11 +150,11 @@
     <Compile Include="View\Technician\frmNewTechnician.Designer.cs">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Parts\frmManageParts.cs">
+    <Compile Include="View\Part\frmManagePart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Parts\frmManageParts.Designer.cs">
-      <DependentUpon>frmManageParts.cs</DependentUpon>
+    <Compile Include="View\Part\frmManagePart.Designer.cs">
+      <DependentUpon>frmManagePart.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Property\frmManageProperty.cs">
       <SubType>Form</SubType>
@@ -203,10 +206,10 @@
     <EmbeddedResource Include="View\Customer\frmNewCustomer.resx">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Parts\frmEditPart.resx">
+    <EmbeddedResource Include="View\Part\frmEditPart.resx">
       <DependentUpon>frmEditPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Parts\frmNewPart.resx">
+    <EmbeddedResource Include="View\Part\frmNewPart.resx">
       <DependentUpon>frmNewPart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Property\frmEditProperty.resx">
@@ -221,8 +224,8 @@
     <EmbeddedResource Include="View\Technician\frmNewTechnician.resx">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Parts\frmManageParts.resx">
-      <DependentUpon>frmManageParts.cs</DependentUpon>
+    <EmbeddedResource Include="View\Part\frmManagePart.resx">
+      <DependentUpon>frmManagePart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Property\frmManageProperty.resx">
       <DependentUpon>frmManageProperty.cs</DependentUpon>

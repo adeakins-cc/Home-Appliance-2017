@@ -16,5 +16,10 @@ namespace HomeAppliance.Parts
         {
             InitializeComponent();
         }
+
+        private void btnEditPartExit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
