@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Finance.cs" />
     <Compile Include="Model\Invoice.cs" />
     <Compile Include="Model\Part.cs" />
     <Compile Include="Model\PartsUsed.cs" />

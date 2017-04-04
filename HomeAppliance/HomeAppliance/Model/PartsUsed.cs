@@ -9,6 +9,7 @@ namespace HomeAppliance.Model
     class PartsUsed
     {
         private int usedPartID;
+        private Invoice invoice;
         private Part part;
         private decimal editPrice;
         private int quantity;
@@ -16,6 +17,7 @@ namespace HomeAppliance.Model
         public PartsUsed()
         {
             usedPartID  = 0;
+            invoice     = new Invoice();
             part        = new Part();
             editPrice   = 0;
             quantity    = 0;
@@ -28,6 +30,15 @@ namespace HomeAppliance.Model
         public int getUsedPartID()
         {
             return usedPartID;
+        }
+
+        public void setInvoice(Invoice invoice)
+        {
+            this.invoice = invoice;
+        }
+        public Invoice getInvoice()
+        {
+            return invoice;
         }
 
         public void setPart(Part part)
