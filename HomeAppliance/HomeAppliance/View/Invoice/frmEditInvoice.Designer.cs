@@ -29,25 +29,6 @@
         private void InitializeComponent()
         {
             this.btnSearchCustomerProperty = new System.Windows.Forms.Button();
-            this.btnEditInvoiceExit = new System.Windows.Forms.Button();
-            this.grpCharge = new System.Windows.Forms.GroupBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.chkPSTExempt = new System.Windows.Forms.CheckBox();
-            this.chkHSTExempt = new System.Windows.Forms.CheckBox();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPST = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtHST = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtServiceCalls = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtLabour = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMaterials = new System.Windows.Forms.TextBox();
-            this.lblmaterials = new System.Windows.Forms.Label();
             this.btnRemovePart = new System.Windows.Forms.Button();
             this.btnAddPart = new System.Windows.Forms.Button();
             this.dataListParts = new System.Windows.Forms.DataGridView();
@@ -69,8 +50,35 @@
             this.lstOwner = new System.Windows.Forms.ListView();
             this.lblInvDate = new System.Windows.Forms.Label();
             this.dateInvoiceDate = new System.Windows.Forms.DateTimePicker();
-            this.grpCharge.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSerialNumber = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtMake = new System.Windows.Forms.TextBox();
+            this.txtPONumber = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnNewInvoiceExit = new System.Windows.Forms.Button();
+            this.grpCharge = new System.Windows.Forms.GroupBox();
+            this.btnSession = new System.Windows.Forms.Button();
+            this.btnPost = new System.Windows.Forms.Button();
+            this.chkHSTExempt = new System.Windows.Forms.CheckBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtHST = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtServiceCalls = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLabour = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMaterials = new System.Windows.Forms.TextBox();
+            this.lblmaterials = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.grpCharge.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearchCustomerProperty
@@ -81,182 +89,6 @@
             this.btnSearchCustomerProperty.TabIndex = 44;
             this.btnSearchCustomerProperty.Text = "Search";
             this.btnSearchCustomerProperty.UseVisualStyleBackColor = true;
-            // 
-            // btnEditInvoiceExit
-            // 
-            this.btnEditInvoiceExit.Location = new System.Drawing.Point(527, 421);
-            this.btnEditInvoiceExit.Name = "btnEditInvoiceExit";
-            this.btnEditInvoiceExit.Size = new System.Drawing.Size(75, 23);
-            this.btnEditInvoiceExit.TabIndex = 43;
-            this.btnEditInvoiceExit.Text = "Exit";
-            this.btnEditInvoiceExit.UseVisualStyleBackColor = true;
-            // 
-            // grpCharge
-            // 
-            this.grpCharge.Controls.Add(this.btnUpdate);
-            this.grpCharge.Controls.Add(this.chkPSTExempt);
-            this.grpCharge.Controls.Add(this.chkHSTExempt);
-            this.grpCharge.Controls.Add(this.txtTotal);
-            this.grpCharge.Controls.Add(this.label6);
-            this.grpCharge.Controls.Add(this.txtPST);
-            this.grpCharge.Controls.Add(this.label5);
-            this.grpCharge.Controls.Add(this.txtHST);
-            this.grpCharge.Controls.Add(this.label4);
-            this.grpCharge.Controls.Add(this.txtSubtotal);
-            this.grpCharge.Controls.Add(this.label3);
-            this.grpCharge.Controls.Add(this.txtServiceCalls);
-            this.grpCharge.Controls.Add(this.label2);
-            this.grpCharge.Controls.Add(this.txtLabour);
-            this.grpCharge.Controls.Add(this.label1);
-            this.grpCharge.Controls.Add(this.txtMaterials);
-            this.grpCharge.Controls.Add(this.lblmaterials);
-            this.grpCharge.Location = new System.Drawing.Point(424, 28);
-            this.grpCharge.Name = "grpCharge";
-            this.grpCharge.Size = new System.Drawing.Size(178, 387);
-            this.grpCharge.TabIndex = 42;
-            this.grpCharge.TabStop = false;
-            this.grpCharge.Text = "Charge";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(97, 246);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 16;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // chkPSTExempt
-            // 
-            this.chkPSTExempt.AutoSize = true;
-            this.chkPSTExempt.Location = new System.Drawing.Point(92, 222);
-            this.chkPSTExempt.Name = "chkPSTExempt";
-            this.chkPSTExempt.Size = new System.Drawing.Size(85, 17);
-            this.chkPSTExempt.TabIndex = 15;
-            this.chkPSTExempt.Text = "PST Exempt";
-            this.chkPSTExempt.UseVisualStyleBackColor = true;
-            // 
-            // chkHSTExempt
-            // 
-            this.chkHSTExempt.AutoSize = true;
-            this.chkHSTExempt.Location = new System.Drawing.Point(92, 198);
-            this.chkHSTExempt.Name = "chkHSTExempt";
-            this.chkHSTExempt.Size = new System.Drawing.Size(86, 17);
-            this.chkHSTExempt.TabIndex = 14;
-            this.chkHSTExempt.Text = "HST Exempt";
-            this.chkHSTExempt.UseVisualStyleBackColor = true;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(75, 172);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
-            this.txtTotal.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Total:";
-            // 
-            // txtPST
-            // 
-            this.txtPST.Location = new System.Drawing.Point(75, 146);
-            this.txtPST.Name = "txtPST";
-            this.txtPST.Size = new System.Drawing.Size(100, 20);
-            this.txtPST.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "PST:";
-            // 
-            // txtHST
-            // 
-            this.txtHST.Location = new System.Drawing.Point(75, 120);
-            this.txtHST.Name = "txtHST";
-            this.txtHST.Size = new System.Drawing.Size(100, 20);
-            this.txtHST.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 123);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "HST:";
-            // 
-            // txtSubtotal
-            // 
-            this.txtSubtotal.Location = new System.Drawing.Point(75, 94);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
-            this.txtSubtotal.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Subtotal:";
-            // 
-            // txtServiceCalls
-            // 
-            this.txtServiceCalls.Location = new System.Drawing.Point(75, 68);
-            this.txtServiceCalls.Name = "txtServiceCalls";
-            this.txtServiceCalls.Size = new System.Drawing.Size(100, 20);
-            this.txtServiceCalls.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Service Call:";
-            // 
-            // txtLabour
-            // 
-            this.txtLabour.Location = new System.Drawing.Point(75, 42);
-            this.txtLabour.Name = "txtLabour";
-            this.txtLabour.Size = new System.Drawing.Size(100, 20);
-            this.txtLabour.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Labour:";
-            // 
-            // txtMaterials
-            // 
-            this.txtMaterials.Location = new System.Drawing.Point(75, 13);
-            this.txtMaterials.Name = "txtMaterials";
-            this.txtMaterials.Size = new System.Drawing.Size(100, 20);
-            this.txtMaterials.TabIndex = 1;
-            // 
-            // lblmaterials
-            // 
-            this.lblmaterials.AutoSize = true;
-            this.lblmaterials.Location = new System.Drawing.Point(17, 16);
-            this.lblmaterials.Name = "lblmaterials";
-            this.lblmaterials.Size = new System.Drawing.Size(52, 13);
-            this.lblmaterials.TabIndex = 0;
-            this.lblmaterials.Text = "Materials:";
             // 
             // btnRemovePart
             // 
@@ -429,14 +261,253 @@
             this.dateInvoiceDate.Size = new System.Drawing.Size(200, 20);
             this.dateInvoiceDate.TabIndex = 24;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtSerialNumber);
+            this.groupBox1.Controls.Add(this.txtModel);
+            this.groupBox1.Controls.Add(this.txtMake);
+            this.groupBox1.Controls.Add(this.txtPONumber);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Location = new System.Drawing.Point(424, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(196, 127);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sale";
+            // 
+            // txtSerialNumber
+            // 
+            this.txtSerialNumber.Location = new System.Drawing.Point(90, 91);
+            this.txtSerialNumber.Name = "txtSerialNumber";
+            this.txtSerialNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtSerialNumber.TabIndex = 7;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(90, 65);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 6;
+            // 
+            // txtMake
+            // 
+            this.txtMake.Location = new System.Drawing.Point(90, 39);
+            this.txtMake.Name = "txtMake";
+            this.txtMake.Size = new System.Drawing.Size(100, 20);
+            this.txtMake.TabIndex = 5;
+            // 
+            // txtPONumber
+            // 
+            this.txtPONumber.Location = new System.Drawing.Point(90, 13);
+            this.txtPONumber.Name = "txtPONumber";
+            this.txtPONumber.Size = new System.Drawing.Size(100, 20);
+            this.txtPONumber.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(45, 68);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Model:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Serial Number:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Make:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "P.O. Number:";
+            // 
+            // btnNewInvoiceExit
+            // 
+            this.btnNewInvoiceExit.Location = new System.Drawing.Point(536, 422);
+            this.btnNewInvoiceExit.Name = "btnNewInvoiceExit";
+            this.btnNewInvoiceExit.Size = new System.Drawing.Size(75, 23);
+            this.btnNewInvoiceExit.TabIndex = 46;
+            this.btnNewInvoiceExit.Text = "Exit";
+            this.btnNewInvoiceExit.UseVisualStyleBackColor = true;
+            // 
+            // grpCharge
+            // 
+            this.grpCharge.Controls.Add(this.btnSession);
+            this.grpCharge.Controls.Add(this.btnPost);
+            this.grpCharge.Controls.Add(this.chkHSTExempt);
+            this.grpCharge.Controls.Add(this.txtTotal);
+            this.grpCharge.Controls.Add(this.label6);
+            this.grpCharge.Controls.Add(this.txtHST);
+            this.grpCharge.Controls.Add(this.label4);
+            this.grpCharge.Controls.Add(this.txtSubtotal);
+            this.grpCharge.Controls.Add(this.label3);
+            this.grpCharge.Controls.Add(this.txtServiceCalls);
+            this.grpCharge.Controls.Add(this.label2);
+            this.grpCharge.Controls.Add(this.txtLabour);
+            this.grpCharge.Controls.Add(this.label1);
+            this.grpCharge.Controls.Add(this.txtMaterials);
+            this.grpCharge.Controls.Add(this.lblmaterials);
+            this.grpCharge.Location = new System.Drawing.Point(424, 181);
+            this.grpCharge.Name = "grpCharge";
+            this.grpCharge.Size = new System.Drawing.Size(193, 234);
+            this.grpCharge.TabIndex = 45;
+            this.grpCharge.TabStop = false;
+            this.grpCharge.Text = "Charge";
+            // 
+            // btnSession
+            // 
+            this.btnSession.Location = new System.Drawing.Point(31, 201);
+            this.btnSession.Name = "btnSession";
+            this.btnSession.Size = new System.Drawing.Size(75, 23);
+            this.btnSession.TabIndex = 17;
+            this.btnSession.Text = "Session";
+            this.btnSession.UseVisualStyleBackColor = true;
+            // 
+            // btnPost
+            // 
+            this.btnPost.Location = new System.Drawing.Point(112, 201);
+            this.btnPost.Name = "btnPost";
+            this.btnPost.Size = new System.Drawing.Size(75, 23);
+            this.btnPost.TabIndex = 16;
+            this.btnPost.Text = "Post";
+            this.btnPost.UseVisualStyleBackColor = true;
+            // 
+            // chkHSTExempt
+            // 
+            this.chkHSTExempt.AutoSize = true;
+            this.chkHSTExempt.Location = new System.Drawing.Point(87, 178);
+            this.chkHSTExempt.Name = "chkHSTExempt";
+            this.chkHSTExempt.Size = new System.Drawing.Size(86, 17);
+            this.chkHSTExempt.TabIndex = 14;
+            this.chkHSTExempt.Text = "HST Exempt";
+            this.chkHSTExempt.UseVisualStyleBackColor = true;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(87, 152);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(47, 155);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Total:";
+            // 
+            // txtHST
+            // 
+            this.txtHST.Location = new System.Drawing.Point(87, 126);
+            this.txtHST.Name = "txtHST";
+            this.txtHST.Size = new System.Drawing.Size(100, 20);
+            this.txtHST.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(49, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "HST:";
+            // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Location = new System.Drawing.Point(87, 100);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
+            this.txtSubtotal.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Subtotal:";
+            // 
+            // txtServiceCalls
+            // 
+            this.txtServiceCalls.Location = new System.Drawing.Point(87, 74);
+            this.txtServiceCalls.Name = "txtServiceCalls";
+            this.txtServiceCalls.Size = new System.Drawing.Size(100, 20);
+            this.txtServiceCalls.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Service Call:";
+            // 
+            // txtLabour
+            // 
+            this.txtLabour.Location = new System.Drawing.Point(87, 48);
+            this.txtLabour.Name = "txtLabour";
+            this.txtLabour.Size = new System.Drawing.Size(100, 20);
+            this.txtLabour.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Labour:";
+            // 
+            // txtMaterials
+            // 
+            this.txtMaterials.Location = new System.Drawing.Point(87, 19);
+            this.txtMaterials.Name = "txtMaterials";
+            this.txtMaterials.Size = new System.Drawing.Size(100, 20);
+            this.txtMaterials.TabIndex = 1;
+            // 
+            // lblmaterials
+            // 
+            this.lblmaterials.AutoSize = true;
+            this.lblmaterials.Location = new System.Drawing.Point(29, 22);
+            this.lblmaterials.Name = "lblmaterials";
+            this.lblmaterials.Size = new System.Drawing.Size(52, 13);
+            this.lblmaterials.TabIndex = 0;
+            this.lblmaterials.Text = "Materials:";
+            // 
             // frmEditInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 458);
-            this.Controls.Add(this.btnSearchCustomerProperty);
-            this.Controls.Add(this.btnEditInvoiceExit);
+            this.ClientSize = new System.Drawing.Size(625, 451);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnNewInvoiceExit);
             this.Controls.Add(this.grpCharge);
+            this.Controls.Add(this.btnSearchCustomerProperty);
             this.Controls.Add(this.btnRemovePart);
             this.Controls.Add(this.btnAddPart);
             this.Controls.Add(this.dataListParts);
@@ -457,9 +528,11 @@
             this.Controls.Add(this.dateInvoiceDate);
             this.Name = "frmEditInvoice";
             this.Text = "Edit Invoice";
+            ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.grpCharge.ResumeLayout(false);
             this.grpCharge.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,25 +541,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnSearchCustomerProperty;
-        private System.Windows.Forms.Button btnEditInvoiceExit;
-        private System.Windows.Forms.GroupBox grpCharge;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.CheckBox chkPSTExempt;
-        private System.Windows.Forms.CheckBox chkHSTExempt;
-        private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPST;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtHST;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSubtotal;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtServiceCalls;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtLabour;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMaterials;
-        private System.Windows.Forms.Label lblmaterials;
         private System.Windows.Forms.Button btnRemovePart;
         private System.Windows.Forms.Button btnAddPart;
         private System.Windows.Forms.DataGridView dataListParts;
@@ -508,5 +562,31 @@
         private System.Windows.Forms.ListView lstOwner;
         private System.Windows.Forms.Label lblInvDate;
         private System.Windows.Forms.DateTimePicker dateInvoiceDate;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtSerialNumber;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtMake;
+        private System.Windows.Forms.TextBox txtPONumber;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnNewInvoiceExit;
+        private System.Windows.Forms.GroupBox grpCharge;
+        private System.Windows.Forms.Button btnSession;
+        private System.Windows.Forms.Button btnPost;
+        private System.Windows.Forms.CheckBox chkHSTExempt;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtHST;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSubtotal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtServiceCalls;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtLabour;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMaterials;
+        private System.Windows.Forms.Label lblmaterials;
     }
 }

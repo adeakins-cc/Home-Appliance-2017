@@ -27,3 +27,6 @@ C:\Users\adeakins-cc\Desktop\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb

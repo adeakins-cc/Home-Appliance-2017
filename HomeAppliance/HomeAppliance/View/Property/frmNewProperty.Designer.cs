@@ -176,7 +176,7 @@
             this.groupBox1.Controls.Add(this.txtStreetName);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtCity);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(191, 180);
             this.groupBox1.TabIndex = 29;
@@ -187,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(209, 228);
+            this.ClientSize = new System.Drawing.Size(209, 227);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnNewPropertyExit);
             this.Controls.Add(this.btnNewPropertySave);

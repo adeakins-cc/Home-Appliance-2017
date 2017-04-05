@@ -34,8 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.grpContact = new System.Windows.Forms.GroupBox();
             this.txtFax = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -53,13 +51,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnNewCustomerSave = new System.Windows.Forms.Button();
             this.btnNewCustomerExit = new System.Windows.Forms.Button();
-            this.txtPostalCode = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtProvince = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.grpCustomer = new System.Windows.Forms.GroupBox();
+            this.txtPostalCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtProvince = new System.Windows.Forms.TextBox();
+            this.txtUnitNumber = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtStreetName = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtCity = new System.Windows.Forms.TextBox();
             this.grpContact.SuspendLayout();
             this.grpCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 23);
+            this.label2.Location = new System.Drawing.Point(12, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 1;
@@ -75,7 +77,7 @@
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(95, 20);
+            this.txtCompanyName.Location = new System.Drawing.Point(101, 20);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(100, 20);
             this.txtCompanyName.TabIndex = 2;
@@ -83,7 +85,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(95, 46);
+            this.txtFirstName.Location = new System.Drawing.Point(101, 46);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtFirstName.TabIndex = 4;
@@ -91,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 49);
+            this.label3.Location = new System.Drawing.Point(35, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 3;
@@ -99,7 +101,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(95, 72);
+            this.txtLastName.Location = new System.Drawing.Point(101, 72);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
             this.txtLastName.TabIndex = 6;
@@ -107,27 +109,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 75);
+            this.label4.Location = new System.Drawing.Point(35, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Last Name:";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(95, 98);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(100, 20);
-            this.txtAddress.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Billing Address:";
             // 
             // grpContact
             // 
@@ -284,83 +270,117 @@
             this.btnNewCustomerExit.Text = "Exit";
             this.btnNewCustomerExit.UseVisualStyleBackColor = true;
             // 
-            // txtPostalCode
-            // 
-            this.txtPostalCode.Location = new System.Drawing.Point(95, 124);
-            this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(100, 20);
-            this.txtPostalCode.TabIndex = 13;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(25, 127);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "PostalCode:";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(95, 150);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(100, 20);
-            this.txtCity.TabIndex = 15;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(62, 153);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "City:";
-            // 
-            // txtProvince
-            // 
-            this.txtProvince.Location = new System.Drawing.Point(95, 176);
-            this.txtProvince.Name = "txtProvince";
-            this.txtProvince.Size = new System.Drawing.Size(100, 20);
-            this.txtProvince.TabIndex = 17;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(37, 179);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 13);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Province:";
-            // 
             // grpCustomer
             // 
-            this.grpCustomer.Controls.Add(this.label2);
-            this.grpCustomer.Controls.Add(this.txtProvince);
-            this.grpCustomer.Controls.Add(this.txtCompanyName);
-            this.grpCustomer.Controls.Add(this.label12);
-            this.grpCustomer.Controls.Add(this.label3);
-            this.grpCustomer.Controls.Add(this.txtCity);
-            this.grpCustomer.Controls.Add(this.txtFirstName);
-            this.grpCustomer.Controls.Add(this.label11);
-            this.grpCustomer.Controls.Add(this.label4);
             this.grpCustomer.Controls.Add(this.txtPostalCode);
-            this.grpCustomer.Controls.Add(this.txtLastName);
-            this.grpCustomer.Controls.Add(this.label10);
+            this.grpCustomer.Controls.Add(this.label1);
             this.grpCustomer.Controls.Add(this.label5);
-            this.grpCustomer.Controls.Add(this.txtAddress);
+            this.grpCustomer.Controls.Add(this.txtProvince);
+            this.grpCustomer.Controls.Add(this.txtUnitNumber);
+            this.grpCustomer.Controls.Add(this.label10);
+            this.grpCustomer.Controls.Add(this.label11);
+            this.grpCustomer.Controls.Add(this.txtStreetName);
+            this.grpCustomer.Controls.Add(this.label12);
+            this.grpCustomer.Controls.Add(this.txtCity);
+            this.grpCustomer.Controls.Add(this.label2);
+            this.grpCustomer.Controls.Add(this.txtCompanyName);
+            this.grpCustomer.Controls.Add(this.label3);
+            this.grpCustomer.Controls.Add(this.txtFirstName);
+            this.grpCustomer.Controls.Add(this.label4);
+            this.grpCustomer.Controls.Add(this.txtLastName);
             this.grpCustomer.Location = new System.Drawing.Point(12, 12);
             this.grpCustomer.Name = "grpCustomer";
-            this.grpCustomer.Size = new System.Drawing.Size(207, 207);
+            this.grpCustomer.Size = new System.Drawing.Size(207, 236);
             this.grpCustomer.TabIndex = 18;
             this.grpCustomer.TabStop = false;
             this.grpCustomer.Text = "Customer Info:";
             this.grpCustomer.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // txtPostalCode
+            // 
+            this.txtPostalCode.Location = new System.Drawing.Point(101, 202);
+            this.txtPostalCode.Name = "txtPostalCode";
+            this.txtPostalCode.Size = new System.Drawing.Size(100, 20);
+            this.txtPostalCode.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 205);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Postal Code:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 101);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Unit Number:";
+            // 
+            // txtProvince
+            // 
+            this.txtProvince.Location = new System.Drawing.Point(101, 176);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(100, 20);
+            this.txtProvince.TabIndex = 36;
+            // 
+            // txtUnitNumber
+            // 
+            this.txtUnitNumber.Location = new System.Drawing.Point(101, 98);
+            this.txtUnitNumber.Name = "txtUnitNumber";
+            this.txtUnitNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtUnitNumber.TabIndex = 30;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(43, 179);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Province:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(26, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Street Name:";
+            // 
+            // txtStreetName
+            // 
+            this.txtStreetName.Location = new System.Drawing.Point(101, 124);
+            this.txtStreetName.Name = "txtStreetName";
+            this.txtStreetName.Size = new System.Drawing.Size(100, 20);
+            this.txtStreetName.TabIndex = 32;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(68, 153);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 13);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "City:";
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(101, 150);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(100, 20);
+            this.txtCity.TabIndex = 34;
+            // 
             // frmNewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 254);
+            this.ClientSize = new System.Drawing.Size(413, 257);
             this.Controls.Add(this.grpCustomer);
             this.Controls.Add(this.btnNewCustomerExit);
             this.Controls.Add(this.btnNewCustomerSave);
@@ -382,8 +402,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox grpContact;
         private System.Windows.Forms.TextBox txtContactName;
         private System.Windows.Forms.Label label6;
@@ -401,12 +419,16 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtBussinessNumber;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtPostalCode;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtProvince;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox grpCustomer;
+        private System.Windows.Forms.TextBox txtPostalCode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtProvince;
+        private System.Windows.Forms.TextBox txtUnitNumber;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtStreetName;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtCity;
     }
 }

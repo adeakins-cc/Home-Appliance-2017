@@ -16,5 +16,10 @@ namespace HomeAppliance.Invoice
         {
             InitializeComponent();
         }
+
+        private void btnEditInvoiceExit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,14 +14,19 @@ namespace HomeAppliance.Model
         private Customer customer;
         private Property property;
         private Technician technician;
+        private string customerComplaints;
+        private string notes;
         private decimal serviceCharge;
+        private decimal labour;
+        private decimal subTotal;
         private decimal partTotal;
-        private byte chargeGST;
-        private decimal GST;
         private byte chargeHST;
         private decimal HST;
         private decimal grossTotal;
-
+        private string make;
+        private string model;
+        private string serialNumber;
+        private string PONumber;
 
         public Invoice()
         {
@@ -31,10 +36,12 @@ namespace HomeAppliance.Model
             customer = new Customer();
             property = new Property();
             technician = new Technician();
+            customerComplaints = "";
+            notes = "";
             serviceCharge = 0;
+            labour = 0;
             partTotal = 0;
-            chargeGST = 0;
-            GST = 0;
+            subTotal = 0;
             chargeHST = 0;
             HST = 0;
             grossTotal = 0;
@@ -94,6 +101,24 @@ namespace HomeAppliance.Model
             return technician;
         }
 
+        public void setCustomerComplaints(string customerComplaints)
+        {
+            this.customerComplaints = customerComplaints;
+        }
+        public string getCustomerComplaints()
+        {
+            return customerComplaints;
+        }
+
+        public void setNotes(string notes)
+        {
+            this.notes = notes;
+        }
+        public string getNotes()
+        {
+            return notes;
+        }
+
         public void setServiceCharge(decimal serviceCharge)
         {
             this.serviceCharge = serviceCharge;
@@ -101,6 +126,15 @@ namespace HomeAppliance.Model
         public decimal getServiceCharge()
         {
             return serviceCharge;
+        }
+
+        public void setLabour(decimal labour)
+        {
+            this.labour = labour;
+        }
+        public decimal getLabour()
+        {
+            return labour;
         }
 
         public void setPartTotal(decimal partTotal)
@@ -112,22 +146,13 @@ namespace HomeAppliance.Model
             return partTotal;
         }
 
-        public void setChargeGST(byte chargeGST)
+        public void setSubTotal(decimal subTotal)
         {
-            this.chargeGST = chargeGST;
+            this.subTotal = subTotal;
         }
-        public byte getChargeGST()
+        public decimal getSubTotal()
         {
-            return chargeGST;
-        }
-
-        public void setGST(decimal GST)
-        {
-            this.GST = GST;
-        }
-        public decimal getGST()
-        {
-            return GST;
+            return subTotal;
         }
 
         public void setChargeHST(byte chargeHST)
@@ -157,6 +182,42 @@ namespace HomeAppliance.Model
             return grossTotal;
         }
 
+        public void setMake(string make)
+        {
+            this.make = make;
+        }
+        public string getMake()
+        {
+            return customerComplaints;
+        }
+
+        public void setModel(string model)
+        {
+            this.model = model;
+        }
+        public string getModel()
+        {
+            return model;
+        }
+
+        public void setSerialNumber(string serialNumber)
+        {
+            this.serialNumber = serialNumber;
+        }
+        public string getSerialNumber()
+        {
+            return serialNumber;
+        }
+
+        public void setPONumber(string PONumber)
+        {
+            this.PONumber = PONumber;
+        }
+        public string getPONumber()
+        {
+            return PONumber;
+        }
+
 
         List<Customer> getCustomerList()
         {
@@ -173,9 +234,9 @@ namespace HomeAppliance.Model
             List<Technician> technicianList = new List<Technician>();
             return technicianList;
         }
-        List<PartsUsed> getPartList()
+        List<PartList> getPartList()
         {
-            List<PartsUsed> partList = new List<PartsUsed>();
+            List<PartList> partList = new List<PartList>();
             return partList;
         }
 

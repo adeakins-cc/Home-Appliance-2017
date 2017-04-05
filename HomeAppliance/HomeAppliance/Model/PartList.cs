@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliance.Model
 {
-    class PartsUsed
+    class PartList
     {
         private int usedPartID;
         private Invoice invoice;
@@ -14,7 +14,7 @@ namespace HomeAppliance.Model
         private decimal editPrice;
         private int quantity;
 
-        public PartsUsed()
+        public PartList()
         {
             usedPartID  = 0;
             invoice     = new Invoice();

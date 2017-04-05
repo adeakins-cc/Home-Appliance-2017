@@ -52,12 +52,9 @@
             this.grpCharge = new System.Windows.Forms.GroupBox();
             this.btnSession = new System.Windows.Forms.Button();
             this.btnPost = new System.Windows.Forms.Button();
-            this.chkPSTExempt = new System.Windows.Forms.CheckBox();
             this.chkHSTExempt = new System.Windows.Forms.CheckBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPST = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtHST = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
@@ -70,8 +67,18 @@
             this.lblmaterials = new System.Windows.Forms.Label();
             this.btnNewInvoiceExit = new System.Windows.Forms.Button();
             this.btnSearchCustomerProperty = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtPONumber = new System.Windows.Forms.TextBox();
+            this.txtMake = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtSerialNumber = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
             this.grpCharge.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateInvoiceDate
@@ -252,12 +259,9 @@
             // 
             this.grpCharge.Controls.Add(this.btnSession);
             this.grpCharge.Controls.Add(this.btnPost);
-            this.grpCharge.Controls.Add(this.chkPSTExempt);
             this.grpCharge.Controls.Add(this.chkHSTExempt);
             this.grpCharge.Controls.Add(this.txtTotal);
             this.grpCharge.Controls.Add(this.label6);
-            this.grpCharge.Controls.Add(this.txtPST);
-            this.grpCharge.Controls.Add(this.label5);
             this.grpCharge.Controls.Add(this.txtHST);
             this.grpCharge.Controls.Add(this.label4);
             this.grpCharge.Controls.Add(this.txtSubtotal);
@@ -268,16 +272,16 @@
             this.grpCharge.Controls.Add(this.label1);
             this.grpCharge.Controls.Add(this.txtMaterials);
             this.grpCharge.Controls.Add(this.lblmaterials);
-            this.grpCharge.Location = new System.Drawing.Point(424, 28);
+            this.grpCharge.Location = new System.Drawing.Point(424, 181);
             this.grpCharge.Name = "grpCharge";
-            this.grpCharge.Size = new System.Drawing.Size(178, 387);
+            this.grpCharge.Size = new System.Drawing.Size(193, 234);
             this.grpCharge.TabIndex = 21;
             this.grpCharge.TabStop = false;
             this.grpCharge.Text = "Charge";
             // 
             // btnSession
             // 
-            this.btnSession.Location = new System.Drawing.Point(16, 246);
+            this.btnSession.Location = new System.Drawing.Point(31, 201);
             this.btnSession.Name = "btnSession";
             this.btnSession.Size = new System.Drawing.Size(75, 23);
             this.btnSession.TabIndex = 17;
@@ -286,27 +290,17 @@
             // 
             // btnPost
             // 
-            this.btnPost.Location = new System.Drawing.Point(97, 246);
+            this.btnPost.Location = new System.Drawing.Point(112, 201);
             this.btnPost.Name = "btnPost";
             this.btnPost.Size = new System.Drawing.Size(75, 23);
             this.btnPost.TabIndex = 16;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
             // 
-            // chkPSTExempt
-            // 
-            this.chkPSTExempt.AutoSize = true;
-            this.chkPSTExempt.Location = new System.Drawing.Point(92, 222);
-            this.chkPSTExempt.Name = "chkPSTExempt";
-            this.chkPSTExempt.Size = new System.Drawing.Size(85, 17);
-            this.chkPSTExempt.TabIndex = 15;
-            this.chkPSTExempt.Text = "PST Exempt";
-            this.chkPSTExempt.UseVisualStyleBackColor = true;
-            // 
             // chkHSTExempt
             // 
             this.chkHSTExempt.AutoSize = true;
-            this.chkHSTExempt.Location = new System.Drawing.Point(92, 198);
+            this.chkHSTExempt.Location = new System.Drawing.Point(87, 178);
             this.chkHSTExempt.Name = "chkHSTExempt";
             this.chkHSTExempt.Size = new System.Drawing.Size(86, 17);
             this.chkHSTExempt.TabIndex = 14;
@@ -315,7 +309,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(75, 172);
+            this.txtTotal.Location = new System.Drawing.Point(87, 152);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 13;
@@ -323,31 +317,15 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 175);
+            this.label6.Location = new System.Drawing.Point(47, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Total:";
             // 
-            // txtPST
-            // 
-            this.txtPST.Location = new System.Drawing.Point(75, 146);
-            this.txtPST.Name = "txtPST";
-            this.txtPST.Size = new System.Drawing.Size(100, 20);
-            this.txtPST.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "PST:";
-            // 
             // txtHST
             // 
-            this.txtHST.Location = new System.Drawing.Point(75, 120);
+            this.txtHST.Location = new System.Drawing.Point(87, 126);
             this.txtHST.Name = "txtHST";
             this.txtHST.Size = new System.Drawing.Size(100, 20);
             this.txtHST.TabIndex = 9;
@@ -355,7 +333,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 123);
+            this.label4.Location = new System.Drawing.Point(49, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 8;
@@ -363,7 +341,7 @@
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(75, 94);
+            this.txtSubtotal.Location = new System.Drawing.Point(87, 100);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
             this.txtSubtotal.TabIndex = 7;
@@ -371,7 +349,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 97);
+            this.label3.Location = new System.Drawing.Point(32, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 6;
@@ -380,7 +358,7 @@
             // 
             // txtServiceCalls
             // 
-            this.txtServiceCalls.Location = new System.Drawing.Point(75, 68);
+            this.txtServiceCalls.Location = new System.Drawing.Point(87, 74);
             this.txtServiceCalls.Name = "txtServiceCalls";
             this.txtServiceCalls.Size = new System.Drawing.Size(100, 20);
             this.txtServiceCalls.TabIndex = 5;
@@ -388,7 +366,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 71);
+            this.label2.Location = new System.Drawing.Point(15, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 4;
@@ -396,7 +374,7 @@
             // 
             // txtLabour
             // 
-            this.txtLabour.Location = new System.Drawing.Point(75, 42);
+            this.txtLabour.Location = new System.Drawing.Point(87, 48);
             this.txtLabour.Name = "txtLabour";
             this.txtLabour.Size = new System.Drawing.Size(100, 20);
             this.txtLabour.TabIndex = 3;
@@ -404,7 +382,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 45);
+            this.label1.Location = new System.Drawing.Point(38, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 2;
@@ -413,7 +391,7 @@
             // 
             // txtMaterials
             // 
-            this.txtMaterials.Location = new System.Drawing.Point(75, 13);
+            this.txtMaterials.Location = new System.Drawing.Point(87, 19);
             this.txtMaterials.Name = "txtMaterials";
             this.txtMaterials.Size = new System.Drawing.Size(100, 20);
             this.txtMaterials.TabIndex = 1;
@@ -422,7 +400,7 @@
             // lblmaterials
             // 
             this.lblmaterials.AutoSize = true;
-            this.lblmaterials.Location = new System.Drawing.Point(17, 16);
+            this.lblmaterials.Location = new System.Drawing.Point(29, 22);
             this.lblmaterials.Name = "lblmaterials";
             this.lblmaterials.Size = new System.Drawing.Size(52, 13);
             this.lblmaterials.TabIndex = 0;
@@ -430,7 +408,7 @@
             // 
             // btnNewInvoiceExit
             // 
-            this.btnNewInvoiceExit.Location = new System.Drawing.Point(527, 421);
+            this.btnNewInvoiceExit.Location = new System.Drawing.Point(536, 422);
             this.btnNewInvoiceExit.Name = "btnNewInvoiceExit";
             this.btnNewInvoiceExit.Size = new System.Drawing.Size(75, 23);
             this.btnNewInvoiceExit.TabIndex = 22;
@@ -446,11 +424,93 @@
             this.btnSearchCustomerProperty.Text = "Search";
             this.btnSearchCustomerProperty.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtSerialNumber);
+            this.groupBox1.Controls.Add(this.txtModel);
+            this.groupBox1.Controls.Add(this.txtMake);
+            this.groupBox1.Controls.Add(this.txtPONumber);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Location = new System.Drawing.Point(424, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(196, 127);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sale";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "P.O. Number:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Make:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Serial Number:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(45, 68);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Model:";
+            // 
+            // txtPONumber
+            // 
+            this.txtPONumber.Location = new System.Drawing.Point(90, 13);
+            this.txtPONumber.Name = "txtPONumber";
+            this.txtPONumber.Size = new System.Drawing.Size(100, 20);
+            this.txtPONumber.TabIndex = 4;
+            // 
+            // txtMake
+            // 
+            this.txtMake.Location = new System.Drawing.Point(90, 39);
+            this.txtMake.Name = "txtMake";
+            this.txtMake.Size = new System.Drawing.Size(100, 20);
+            this.txtMake.TabIndex = 5;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(90, 65);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 6;
+            // 
+            // txtSerialNumber
+            // 
+            this.txtSerialNumber.Location = new System.Drawing.Point(90, 91);
+            this.txtSerialNumber.Name = "txtSerialNumber";
+            this.txtSerialNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtSerialNumber.TabIndex = 7;
+            // 
             // frmNewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 451);
+            this.ClientSize = new System.Drawing.Size(625, 451);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSearchCustomerProperty);
             this.Controls.Add(this.btnNewInvoiceExit);
             this.Controls.Add(this.grpCharge);
@@ -478,6 +538,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
             this.grpCharge.ResumeLayout(false);
             this.grpCharge.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,8 +571,6 @@
         private System.Windows.Forms.GroupBox grpCharge;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPST;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtHST;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSubtotal;
@@ -521,11 +581,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaterials;
         private System.Windows.Forms.Label lblmaterials;
-        private System.Windows.Forms.CheckBox chkPSTExempt;
         private System.Windows.Forms.CheckBox chkHSTExempt;
         private System.Windows.Forms.Button btnSession;
         private System.Windows.Forms.Button btnPost;
         private System.Windows.Forms.Button btnNewInvoiceExit;
         private System.Windows.Forms.Button btnSearchCustomerProperty;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtSerialNumber;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtMake;
+        private System.Windows.Forms.TextBox txtPONumber;
     }
 }
