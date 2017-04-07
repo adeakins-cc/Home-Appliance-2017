@@ -44,6 +44,28 @@ namespace HomeAppliance {
         
         private TechnicianDataTable tableTechnician;
         
+        private global::System.Data.DataRelation relationFK_Customer_City_01;
+        
+        private global::System.Data.DataRelation relationFK_Customer_City_02;
+        
+        private global::System.Data.DataRelation relationFK_Finance_Invoice;
+        
+        private global::System.Data.DataRelation relationFK_Invoice_Customer;
+        
+        private global::System.Data.DataRelation relationFK_Invoice_Property;
+        
+        private global::System.Data.DataRelation relationFK_Invoice_Technicain;
+        
+        private global::System.Data.DataRelation relationFK_Part_Category;
+        
+        private global::System.Data.DataRelation relationFK_PartList_Invoice;
+        
+        private global::System.Data.DataRelation relationFK_PartList_Part;
+        
+        private global::System.Data.DataRelation relationFK_Property_City;
+        
+        private global::System.Data.DataRelation relationFK_Property_Customer;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -410,6 +432,17 @@ namespace HomeAppliance {
                     this.tableTechnician.InitVars();
                 }
             }
+            this.relationFK_Customer_City_01 = this.Relations["FK_Customer_City_01"];
+            this.relationFK_Customer_City_02 = this.Relations["FK_Customer_City_02"];
+            this.relationFK_Finance_Invoice = this.Relations["FK_Finance_Invoice"];
+            this.relationFK_Invoice_Customer = this.Relations["FK_Invoice_Customer"];
+            this.relationFK_Invoice_Property = this.Relations["FK_Invoice_Property"];
+            this.relationFK_Invoice_Technicain = this.Relations["FK_Invoice_Technicain"];
+            this.relationFK_Part_Category = this.Relations["FK_Part_Category"];
+            this.relationFK_PartList_Invoice = this.Relations["FK_PartList_Invoice"];
+            this.relationFK_PartList_Part = this.Relations["FK_PartList_Part"];
+            this.relationFK_Property_City = this.Relations["FK_Property_City"];
+            this.relationFK_Property_Customer = this.Relations["FK_Property_Customer"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -440,6 +473,50 @@ namespace HomeAppliance {
             base.Tables.Add(this.tableTaxes);
             this.tableTechnician = new TechnicianDataTable();
             base.Tables.Add(this.tableTechnician);
+            this.relationFK_Customer_City_01 = new global::System.Data.DataRelation("FK_Customer_City_01", new global::System.Data.DataColumn[] {
+                        this.tableCity.cityIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCustomer.cityId_01Column}, false);
+            this.Relations.Add(this.relationFK_Customer_City_01);
+            this.relationFK_Customer_City_02 = new global::System.Data.DataRelation("FK_Customer_City_02", new global::System.Data.DataColumn[] {
+                        this.tableCity.cityIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCustomer.cityId_02Column}, false);
+            this.Relations.Add(this.relationFK_Customer_City_02);
+            this.relationFK_Finance_Invoice = new global::System.Data.DataRelation("FK_Finance_Invoice", new global::System.Data.DataColumn[] {
+                        this.tableInvoice.invoiceIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFinacial.invoiceIdColumn}, false);
+            this.Relations.Add(this.relationFK_Finance_Invoice);
+            this.relationFK_Invoice_Customer = new global::System.Data.DataRelation("FK_Invoice_Customer", new global::System.Data.DataColumn[] {
+                        this.tableCustomer.customerIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableInvoice.customerIdColumn}, false);
+            this.Relations.Add(this.relationFK_Invoice_Customer);
+            this.relationFK_Invoice_Property = new global::System.Data.DataRelation("FK_Invoice_Property", new global::System.Data.DataColumn[] {
+                        this.tableProperty.propertyIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableInvoice.propertyIdColumn}, false);
+            this.Relations.Add(this.relationFK_Invoice_Property);
+            this.relationFK_Invoice_Technicain = new global::System.Data.DataRelation("FK_Invoice_Technicain", new global::System.Data.DataColumn[] {
+                        this.tableTechnician.technicianIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableInvoice.technicianIdColumn}, false);
+            this.Relations.Add(this.relationFK_Invoice_Technicain);
+            this.relationFK_Part_Category = new global::System.Data.DataRelation("FK_Part_Category", new global::System.Data.DataColumn[] {
+                        this.tableCategory.categoryIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePart.categoryIdColumn}, false);
+            this.Relations.Add(this.relationFK_Part_Category);
+            this.relationFK_PartList_Invoice = new global::System.Data.DataRelation("FK_PartList_Invoice", new global::System.Data.DataColumn[] {
+                        this.tableInvoice.invoiceIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePartsUsed.invoiceIdColumn}, false);
+            this.Relations.Add(this.relationFK_PartList_Invoice);
+            this.relationFK_PartList_Part = new global::System.Data.DataRelation("FK_PartList_Part", new global::System.Data.DataColumn[] {
+                        this.tablePart.partIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePartsUsed.partIdColumn}, false);
+            this.Relations.Add(this.relationFK_PartList_Part);
+            this.relationFK_Property_City = new global::System.Data.DataRelation("FK_Property_City", new global::System.Data.DataColumn[] {
+                        this.tableCity.cityIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableProperty.cityIdColumn}, false);
+            this.Relations.Add(this.relationFK_Property_City);
+            this.relationFK_Property_Customer = new global::System.Data.DataRelation("FK_Property_Customer", new global::System.Data.DataColumn[] {
+                        this.tableCustomer.customerIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableProperty.customerIdColumn}, false);
+            this.Relations.Add(this.relationFK_Property_Customer);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1487,8 +1564,8 @@ namespace HomeAppliance {
                         int streetNumber_02, 
                         string streetName_02, 
                         string postalCode_02, 
-                        int cityId_01, 
-                        int cityId_02, 
+                        CityRow parentCityRowByFK_Customer_City_01, 
+                        CityRow parentCityRowByFK_Customer_City_02, 
                         long bussinessPhone, 
                         long contactPhone, 
                         long fax, 
@@ -1512,8 +1589,8 @@ namespace HomeAppliance {
                         streetNumber_02,
                         streetName_02,
                         postalCode_02,
-                        cityId_01,
-                        cityId_02,
+                        null,
+                        null,
                         bussinessPhone,
                         contactPhone,
                         fax,
@@ -1523,6 +1600,12 @@ namespace HomeAppliance {
                         DateActive,
                         DateModified,
                         contactEmail};
+                if ((parentCityRowByFK_Customer_City_01 != null)) {
+                    columnValuesArray[12] = parentCityRowByFK_Customer_City_01[0];
+                }
+                if ((parentCityRowByFK_Customer_City_02 != null)) {
+                    columnValuesArray[13] = parentCityRowByFK_Customer_City_02[0];
+                }
                 rowCustomerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCustomerRow);
                 return rowCustomerRow;
@@ -1950,11 +2033,11 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FinacialRow AddFinacialRow(int finacialId, int invoiceId, System.DateTime postDate, decimal totalDue, decimal amountPaid, string chequeNumber, string chequeName, System.DateTime paidDate, System.DateTime dateOnCheque, string notes) {
+            public FinacialRow AddFinacialRow(int finacialId, InvoiceRow parentInvoiceRowByFK_Finance_Invoice, System.DateTime postDate, decimal totalDue, decimal amountPaid, string chequeNumber, string chequeName, System.DateTime paidDate, System.DateTime dateOnCheque, string notes) {
                 FinacialRow rowFinacialRow = ((FinacialRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         finacialId,
-                        invoiceId,
+                        null,
                         postDate,
                         totalDue,
                         amountPaid,
@@ -1963,6 +2046,9 @@ namespace HomeAppliance {
                         paidDate,
                         dateOnCheque,
                         notes};
+                if ((parentInvoiceRowByFK_Finance_Invoice != null)) {
+                    columnValuesArray[1] = parentInvoiceRowByFK_Finance_Invoice[0];
+                }
                 rowFinacialRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFinacialRow);
                 return rowFinacialRow;
@@ -2444,9 +2530,9 @@ namespace HomeAppliance {
                         int invoiceId, 
                         System.DateTime serviceDate, 
                         System.DateTime invoiceDate, 
-                        int customerId, 
-                        int propertyId, 
-                        int technicianId, 
+                        CustomerRow parentCustomerRowByFK_Invoice_Customer, 
+                        PropertyRow parentPropertyRowByFK_Invoice_Property, 
+                        TechnicianRow parentTechnicianRowByFK_Invoice_Technicain, 
                         decimal serviceCharge, 
                         decimal labour, 
                         decimal partTotal, 
@@ -2466,9 +2552,9 @@ namespace HomeAppliance {
                         invoiceId,
                         serviceDate,
                         invoiceDate,
-                        customerId,
-                        propertyId,
-                        technicianId,
+                        null,
+                        null,
+                        null,
                         serviceCharge,
                         labour,
                         partTotal,
@@ -2483,6 +2569,15 @@ namespace HomeAppliance {
                         make,
                         model,
                         serialNumber};
+                if ((parentCustomerRowByFK_Invoice_Customer != null)) {
+                    columnValuesArray[3] = parentCustomerRowByFK_Invoice_Customer[0];
+                }
+                if ((parentPropertyRowByFK_Invoice_Property != null)) {
+                    columnValuesArray[4] = parentPropertyRowByFK_Invoice_Property[0];
+                }
+                if ((parentTechnicianRowByFK_Invoice_Technicain != null)) {
+                    columnValuesArray[5] = parentTechnicianRowByFK_Invoice_Technicain[0];
+                }
                 rowInvoiceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInvoiceRow);
                 return rowInvoiceRow;
@@ -2839,13 +2934,16 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PartRow AddPartRow(int partId, int categoryId, string name, decimal price) {
+            public PartRow AddPartRow(int partId, CategoryRow parentCategoryRowByFK_Part_Category, string name, decimal price) {
                 PartRow rowPartRow = ((PartRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         partId,
-                        categoryId,
+                        null,
                         name,
                         price};
+                if ((parentCategoryRowByFK_Part_Category != null)) {
+                    columnValuesArray[1] = parentCategoryRowByFK_Part_Category[0];
+                }
                 rowPartRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPartRow);
                 return rowPartRow;
@@ -3163,15 +3261,21 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PartsUsedRow AddPartsUsedRow(int partListId, int invoiceId, int partId, decimal editPrice, int quantity, string categoryName) {
+            public PartsUsedRow AddPartsUsedRow(int partListId, InvoiceRow parentInvoiceRowByFK_PartList_Invoice, PartRow parentPartRowByFK_PartList_Part, decimal editPrice, int quantity, string categoryName) {
                 PartsUsedRow rowPartsUsedRow = ((PartsUsedRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         partListId,
-                        invoiceId,
-                        partId,
+                        null,
+                        null,
                         editPrice,
                         quantity,
                         categoryName};
+                if ((parentInvoiceRowByFK_PartList_Invoice != null)) {
+                    columnValuesArray[1] = parentInvoiceRowByFK_PartList_Invoice[0];
+                }
+                if ((parentPartRowByFK_PartList_Part != null)) {
+                    columnValuesArray[2] = parentPartRowByFK_PartList_Part[0];
+                }
                 rowPartsUsedRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPartsUsedRow);
                 return rowPartsUsedRow;
@@ -3537,19 +3641,25 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PropertyRow AddPropertyRow(int propertyId, int customerId, int unitNumber, int streetNumber, string streetName, int cityId, string superintendent, long superintendentPhone, System.DateTime DateActive, System.DateTime DateModified) {
+            public PropertyRow AddPropertyRow(int propertyId, CustomerRow parentCustomerRowByFK_Property_Customer, int unitNumber, int streetNumber, string streetName, CityRow parentCityRowByFK_Property_City, string superintendent, long superintendentPhone, System.DateTime DateActive, System.DateTime DateModified) {
                 PropertyRow rowPropertyRow = ((PropertyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         propertyId,
-                        customerId,
+                        null,
                         unitNumber,
                         streetNumber,
                         streetName,
-                        cityId,
+                        null,
                         superintendent,
                         superintendentPhone,
                         DateActive,
                         DateModified};
+                if ((parentCustomerRowByFK_Property_Customer != null)) {
+                    columnValuesArray[1] = parentCustomerRowByFK_Property_Customer[0];
+                }
+                if ((parentCityRowByFK_Property_City != null)) {
+                    columnValuesArray[5] = parentCityRowByFK_Property_City[0];
+                }
                 rowPropertyRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPropertyRow);
                 return rowPropertyRow;
@@ -4348,6 +4458,17 @@ namespace HomeAppliance {
                     this[this.tableCategory.nameColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PartRow[] GetPartRows() {
+                if ((this.Table.ChildRelations["FK_Part_Category"] == null)) {
+                    return new PartRow[0];
+                }
+                else {
+                    return ((PartRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Part_Category"])));
+                }
+            }
         }
         
         /// <summary>
@@ -4405,6 +4526,39 @@ namespace HomeAppliance {
                 }
                 set {
                     this[this.tableCity.counrtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CustomerRow[] GetCustomerRowsByFK_Customer_City_01() {
+                if ((this.Table.ChildRelations["FK_Customer_City_01"] == null)) {
+                    return new CustomerRow[0];
+                }
+                else {
+                    return ((CustomerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Customer_City_01"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CustomerRow[] GetCustomerRowsByFK_Customer_City_02() {
+                if ((this.Table.ChildRelations["FK_Customer_City_02"] == null)) {
+                    return new CustomerRow[0];
+                }
+                else {
+                    return ((CustomerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Customer_City_02"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PropertyRow[] GetPropertyRows() {
+                if ((this.Table.ChildRelations["FK_Property_City"] == null)) {
+                    return new PropertyRow[0];
+                }
+                else {
+                    return ((PropertyRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Property_City"])));
                 }
             }
         }
@@ -4753,6 +4907,28 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CityRow CityRowByFK_Customer_City_01 {
+                get {
+                    return ((CityRow)(this.GetParentRow(this.Table.ParentRelations["FK_Customer_City_01"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Customer_City_01"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CityRow CityRowByFK_Customer_City_02 {
+                get {
+                    return ((CityRow)(this.GetParentRow(this.Table.ParentRelations["FK_Customer_City_02"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Customer_City_02"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscompanyNameNull() {
                 return this.IsNull(this.tableCustomer.companyNameColumn);
             }
@@ -4930,6 +5106,28 @@ namespace HomeAppliance {
             public void SetcontactEmailNull() {
                 this[this.tableCustomer.contactEmailColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public InvoiceRow[] GetInvoiceRows() {
+                if ((this.Table.ChildRelations["FK_Invoice_Customer"] == null)) {
+                    return new InvoiceRow[0];
+                }
+                else {
+                    return ((InvoiceRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Invoice_Customer"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PropertyRow[] GetPropertyRows() {
+                if ((this.Table.ChildRelations["FK_Property_Customer"] == null)) {
+                    return new PropertyRow[0];
+                }
+                else {
+                    return ((PropertyRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Property_Customer"])));
+                }
+            }
         }
         
         /// <summary>
@@ -5083,6 +5281,17 @@ namespace HomeAppliance {
                 }
                 set {
                     this[this.tableFinacial.notesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public InvoiceRow InvoiceRow {
+                get {
+                    return ((InvoiceRow)(this.GetParentRow(this.Table.ParentRelations["FK_Finance_Invoice"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Finance_Invoice"]);
                 }
             }
             
@@ -5450,6 +5659,39 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CustomerRow CustomerRow {
+                get {
+                    return ((CustomerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Invoice_Customer"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Invoice_Customer"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PropertyRow PropertyRow {
+                get {
+                    return ((PropertyRow)(this.GetParentRow(this.Table.ParentRelations["FK_Invoice_Property"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Invoice_Property"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TechnicianRow TechnicianRow {
+                get {
+                    return ((TechnicianRow)(this.GetParentRow(this.Table.ParentRelations["FK_Invoice_Technicain"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Invoice_Technicain"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsserviceChargeNull() {
                 return this.IsNull(this.tableInvoice.serviceChargeColumn);
             }
@@ -5579,6 +5821,28 @@ namespace HomeAppliance {
             public void SetserialNumberNull() {
                 this[this.tableInvoice.serialNumberColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public FinacialRow[] GetFinacialRows() {
+                if ((this.Table.ChildRelations["FK_Finance_Invoice"] == null)) {
+                    return new FinacialRow[0];
+                }
+                else {
+                    return ((FinacialRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Finance_Invoice"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PartsUsedRow[] GetPartsUsedRows() {
+                if ((this.Table.ChildRelations["FK_PartList_Invoice"] == null)) {
+                    return new PartsUsedRow[0];
+                }
+                else {
+                    return ((PartsUsedRow[])(base.GetChildRows(this.Table.ChildRelations["FK_PartList_Invoice"])));
+                }
+            }
         }
         
         /// <summary>
@@ -5636,6 +5900,28 @@ namespace HomeAppliance {
                 }
                 set {
                     this[this.tablePart.priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CategoryRow CategoryRow {
+                get {
+                    return ((CategoryRow)(this.GetParentRow(this.Table.ParentRelations["FK_Part_Category"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Part_Category"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PartsUsedRow[] GetPartsUsedRows() {
+                if ((this.Table.ChildRelations["FK_PartList_Part"] == null)) {
+                    return new PartsUsedRow[0];
+                }
+                else {
+                    return ((PartsUsedRow[])(base.GetChildRows(this.Table.ChildRelations["FK_PartList_Part"])));
                 }
             }
         }
@@ -5717,6 +6003,28 @@ namespace HomeAppliance {
                 }
                 set {
                     this[this.tablePartsUsed.categoryNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public InvoiceRow InvoiceRow {
+                get {
+                    return ((InvoiceRow)(this.GetParentRow(this.Table.ParentRelations["FK_PartList_Invoice"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_PartList_Invoice"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public PartRow PartRow {
+                get {
+                    return ((PartRow)(this.GetParentRow(this.Table.ParentRelations["FK_PartList_Part"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_PartList_Part"]);
                 }
             }
         }
@@ -5872,6 +6180,28 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CityRow CityRow {
+                get {
+                    return ((CityRow)(this.GetParentRow(this.Table.ParentRelations["FK_Property_City"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Property_City"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CustomerRow CustomerRow {
+                get {
+                    return ((CustomerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Property_Customer"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Property_Customer"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsunitNumberNull() {
                 return this.IsNull(this.tableProperty.unitNumberColumn);
             }
@@ -5928,6 +6258,17 @@ namespace HomeAppliance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDateModifiedNull() {
                 this[this.tableProperty.DateModifiedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public InvoiceRow[] GetInvoiceRows() {
+                if ((this.Table.ChildRelations["FK_Invoice_Property"] == null)) {
+                    return new InvoiceRow[0];
+                }
+                else {
+                    return ((InvoiceRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Invoice_Property"])));
+                }
             }
         }
         
@@ -6012,6 +6353,17 @@ namespace HomeAppliance {
                 }
                 set {
                     this[this.tableTechnician.nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public InvoiceRow[] GetInvoiceRows() {
+                if ((this.Table.ChildRelations["FK_Invoice_Technicain"] == null)) {
+                    return new InvoiceRow[0];
+                }
+                else {
+                    return ((InvoiceRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Invoice_Technicain"])));
                 }
             }
         }
@@ -11874,15 +12226,6 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(HomeAppDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._categoryTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._categoryTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._cityTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.City.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -11901,12 +12244,30 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._finacialTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Finacial.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._categoryTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._finacialTableAdapter.Update(updatedRows));
+                    result = (result + this._categoryTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._propertyTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Property.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._propertyTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._technicianTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Technician.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._technicianTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -11928,6 +12289,15 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._finacialTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Finacial.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._finacialTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._partsUsedTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.PartsUsed.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -11937,30 +12307,12 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._propertyTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Property.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._propertyTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._taxesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Taxes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._taxesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._technicianTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Technician.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._technicianTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -11974,14 +12326,6 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(HomeAppDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._categoryTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._categoryTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._cityTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.City.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -11998,11 +12342,27 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._finacialTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Finacial.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._categoryTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._finacialTableAdapter.Update(addedRows));
+                    result = (result + this._categoryTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._propertyTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Property.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._propertyTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._technicianTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Technician.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._technicianTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12022,6 +12382,14 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._finacialTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Finacial.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._finacialTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._partsUsedTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.PartsUsed.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12030,27 +12398,11 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._propertyTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Property.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._propertyTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._taxesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Taxes.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._taxesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._technicianTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Technician.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._technicianTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12064,14 +12416,6 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(HomeAppDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._technicianTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Technician.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._technicianTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._taxesTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Taxes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12080,19 +12424,19 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._propertyTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Property.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._propertyTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._partsUsedTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.PartsUsed.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._partsUsedTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._finacialTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Finacial.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._finacialTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -12112,11 +12456,27 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._finacialTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Finacial.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._technicianTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Technician.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._finacialTableAdapter.Update(deletedRows));
+                    result = (result + this._technicianTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._propertyTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Property.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._propertyTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._categoryTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._categoryTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -12133,14 +12493,6 @@ SELECT propertyId, customerId, unitNumber, streetNumber, streetName, cityId, sup
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cityTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._categoryTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._categoryTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
