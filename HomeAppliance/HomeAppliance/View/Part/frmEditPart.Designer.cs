@@ -1,4 +1,4 @@
-﻿namespace HomeAppliance.Parts
+﻿namespace HomeAppliance
 {
     partial class frmEditPart
     {

@@ -1,4 +1,4 @@
-﻿namespace HomeAppliance.Property
+﻿namespace HomeAppliance
 {
     partial class frmEditProperty
     {

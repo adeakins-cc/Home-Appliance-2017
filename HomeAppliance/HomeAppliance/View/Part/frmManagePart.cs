@@ -17,9 +17,19 @@ namespace HomeAppliance
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void frmManageParts_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNewPart_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEditPart_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

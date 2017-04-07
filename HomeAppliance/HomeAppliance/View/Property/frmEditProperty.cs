@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeAppliance.Property
+namespace HomeAppliance
 {
     public partial class frmEditProperty : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace HomeAppliance.Technician
+﻿namespace HomeAppliance
 {
     partial class frmEditTechnician
     {

@@ -17,19 +17,19 @@ namespace HomeAppliance
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void frmManageCustomer_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnNewCustomer_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnUpdateCustomer_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

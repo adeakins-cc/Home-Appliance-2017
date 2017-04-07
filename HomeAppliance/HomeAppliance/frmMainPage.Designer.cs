@@ -45,22 +45,22 @@
             // 
             // btnReset
             // 
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(25, 284);
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(21, 265);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(232, 48);
+            this.btnReset.Size = new System.Drawing.Size(186, 33);
             this.btnReset.TabIndex = 0;
-            this.btnReset.Text = "Reset DB Connection";
+            this.btnReset.Text = "Reconnect to database";
             this.btnReset.UseVisualStyleBackColor = true;
             // 
             // btnNewInvoice
             // 
-            this.btnNewInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewInvoice.Location = new System.Drawing.Point(25, 17);
+            this.btnNewInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewInvoice.Location = new System.Drawing.Point(21, 13);
             this.btnNewInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewInvoice.Name = "btnNewInvoice";
-            this.btnNewInvoice.Size = new System.Drawing.Size(141, 48);
+            this.btnNewInvoice.Size = new System.Drawing.Size(153, 33);
             this.btnNewInvoice.TabIndex = 1;
             this.btnNewInvoice.Text = "New Invoice";
             this.btnNewInvoice.UseVisualStyleBackColor = true;
@@ -68,41 +68,46 @@
             // 
             // btnDisplayInvoice
             // 
-            this.btnDisplayInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayInvoice.Location = new System.Drawing.Point(174, 17);
+            this.btnDisplayInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplayInvoice.Location = new System.Drawing.Point(238, 13);
             this.btnDisplayInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplayInvoice.Name = "btnDisplayInvoice";
-            this.btnDisplayInvoice.Size = new System.Drawing.Size(182, 48);
+            this.btnDisplayInvoice.Size = new System.Drawing.Size(182, 33);
             this.btnDisplayInvoice.TabIndex = 2;
             this.btnDisplayInvoice.Text = "Display Invoices";
             this.btnDisplayInvoice.UseVisualStyleBackColor = true;
             // 
             // btnManageCustomer
             // 
-            this.btnManageCustomer.Location = new System.Drawing.Point(7, 143);
+            this.btnManageCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCustomer.Location = new System.Drawing.Point(8, 34);
             this.btnManageCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageCustomer.Name = "btnManageCustomer";
-            this.btnManageCustomer.Size = new System.Drawing.Size(212, 48);
+            this.btnManageCustomer.Size = new System.Drawing.Size(171, 32);
             this.btnManageCustomer.TabIndex = 3;
             this.btnManageCustomer.Text = "Manage Customers";
             this.btnManageCustomer.UseVisualStyleBackColor = true;
+            this.btnManageCustomer.Click += new System.EventHandler(this.btnManageCustomer_Click);
             // 
             // btnManageProperty
             // 
-            this.btnManageProperty.Location = new System.Drawing.Point(305, 89);
+            this.btnManageProperty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageProperty.Location = new System.Drawing.Point(225, 34);
             this.btnManageProperty.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageProperty.Name = "btnManageProperty";
-            this.btnManageProperty.Size = new System.Drawing.Size(188, 48);
+            this.btnManageProperty.Size = new System.Drawing.Size(188, 33);
             this.btnManageProperty.TabIndex = 4;
             this.btnManageProperty.Text = "Manage Property";
             this.btnManageProperty.UseVisualStyleBackColor = true;
+            this.btnManageProperty.Click += new System.EventHandler(this.btnManageProperty_Click);
             // 
             // btnManageTechnician
             // 
-            this.btnManageTechnician.Location = new System.Drawing.Point(7, 33);
+            this.btnManageTechnician.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageTechnician.Location = new System.Drawing.Point(225, 86);
             this.btnManageTechnician.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageTechnician.Name = "btnManageTechnician";
-            this.btnManageTechnician.Size = new System.Drawing.Size(223, 48);
+            this.btnManageTechnician.Size = new System.Drawing.Size(188, 33);
             this.btnManageTechnician.TabIndex = 5;
             this.btnManageTechnician.Text = "Manage Technicians";
             this.btnManageTechnician.UseVisualStyleBackColor = true;
@@ -110,13 +115,15 @@
             // 
             // btnManageParts
             // 
-            this.btnManageParts.Location = new System.Drawing.Point(335, 33);
+            this.btnManageParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageParts.Location = new System.Drawing.Point(8, 86);
             this.btnManageParts.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageParts.Name = "btnManageParts";
-            this.btnManageParts.Size = new System.Drawing.Size(158, 48);
+            this.btnManageParts.Size = new System.Drawing.Size(171, 33);
             this.btnManageParts.TabIndex = 6;
             this.btnManageParts.Text = "Manage Parts";
             this.btnManageParts.UseVisualStyleBackColor = true;
+            this.btnManageParts.Click += new System.EventHandler(this.btnManageParts_Click);
             // 
             // grpManagement
             // 
@@ -126,62 +133,66 @@
             this.grpManagement.Controls.Add(this.btnManageProperty);
             this.grpManagement.Controls.Add(this.btnManageParts);
             this.grpManagement.Controls.Add(this.btnManageTechnician);
-            this.grpManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpManagement.Location = new System.Drawing.Point(18, 73);
+            this.grpManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpManagement.Location = new System.Drawing.Point(13, 79);
             this.grpManagement.Margin = new System.Windows.Forms.Padding(4);
             this.grpManagement.Name = "grpManagement";
             this.grpManagement.Padding = new System.Windows.Forms.Padding(4);
-            this.grpManagement.Size = new System.Drawing.Size(501, 203);
+            this.grpManagement.Size = new System.Drawing.Size(648, 163);
             this.grpManagement.TabIndex = 7;
             this.grpManagement.TabStop = false;
             this.grpManagement.Text = "Management";
             // 
             // btnManageFinacial
             // 
-            this.btnManageFinacial.Location = new System.Drawing.Point(305, 145);
+            this.btnManageFinacial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageFinacial.Location = new System.Drawing.Point(458, 34);
             this.btnManageFinacial.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageFinacial.Name = "btnManageFinacial";
-            this.btnManageFinacial.Size = new System.Drawing.Size(188, 48);
+            this.btnManageFinacial.Size = new System.Drawing.Size(161, 33);
             this.btnManageFinacial.TabIndex = 8;
             this.btnManageFinacial.Text = "Manage Finacial";
             this.btnManageFinacial.UseVisualStyleBackColor = true;
             // 
             // btnManageCategories
             // 
-            this.btnManageCategories.Location = new System.Drawing.Point(7, 88);
+            this.btnManageCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCategories.Location = new System.Drawing.Point(458, 86);
             this.btnManageCategories.Name = "btnManageCategories";
-            this.btnManageCategories.Size = new System.Drawing.Size(214, 48);
+            this.btnManageCategories.Size = new System.Drawing.Size(161, 32);
             this.btnManageCategories.TabIndex = 7;
             this.btnManageCategories.Text = "Manage Categories";
             this.btnManageCategories.UseVisualStyleBackColor = true;
+            this.btnManageCategories.Click += new System.EventHandler(this.btnManageCategories_Click);
             // 
             // btnPrintReports
             // 
-            this.btnPrintReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintReports.Location = new System.Drawing.Point(364, 17);
+            this.btnPrintReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintReports.Location = new System.Drawing.Point(471, 13);
             this.btnPrintReports.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintReports.Name = "btnPrintReports";
-            this.btnPrintReports.Size = new System.Drawing.Size(147, 48);
+            this.btnPrintReports.Size = new System.Drawing.Size(147, 33);
             this.btnPrintReports.TabIndex = 8;
             this.btnPrintReports.Text = "Print Reports";
             this.btnPrintReports.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(399, 284);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(548, 269);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(112, 48);
+            this.btnExit.Size = new System.Drawing.Size(84, 26);
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 354);
+            this.ClientSize = new System.Drawing.Size(670, 318);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPrintReports);
             this.Controls.Add(this.grpManagement);
@@ -192,6 +203,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Text = "Main Page";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.grpManagement.ResumeLayout(false);
             this.ResumeLayout(false);
 

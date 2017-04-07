@@ -17,14 +17,19 @@ namespace HomeAppliance
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void frmManageProperty_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnManagePropertyExit_Click(object sender, EventArgs e)
+        private void btnNewProperty_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnUpdateProperty_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

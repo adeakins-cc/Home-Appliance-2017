@@ -17,14 +17,21 @@ namespace HomeAppliance
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void frmTechnician_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnNewTechnician_Click(object sender, EventArgs e)
         {
+            frmNewTechnician newTechPage = new frmNewTechnician();
+            newTechPage.ShowDialog();
+        }
 
+        private void btnUpdateTechnician_Click(object sender, EventArgs e)
+        {
+            frmEditTechnician editTechPage = new frmEditTechnician();
+            editTechPage.ShowDialog();
         }
     }
 }

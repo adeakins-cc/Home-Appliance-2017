@@ -113,7 +113,6 @@
             this.lblOwner.Size = new System.Drawing.Size(72, 13);
             this.lblOwner.TabIndex = 3;
             this.lblOwner.Text = "Customer Info";
-            this.lblOwner.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblProperty
             // 
@@ -147,7 +146,6 @@
             this.dateServiceDate.Name = "dateServiceDate";
             this.dateServiceDate.Size = new System.Drawing.Size(200, 20);
             this.dateServiceDate.TabIndex = 6;
-            this.dateServiceDate.ValueChanged += new System.EventHandler(this.dtServiceDate_ValueChanged);
             // 
             // lblTechnician
             // 
@@ -163,7 +161,7 @@
             this.drpTechnician.FormattingEnabled = true;
             this.drpTechnician.Location = new System.Drawing.Point(218, 197);
             this.drpTechnician.Name = "drpTechnician";
-            this.drpTechnician.Size = new System.Drawing.Size(121, 21);
+            this.drpTechnician.Size = new System.Drawing.Size(140, 21);
             this.drpTechnician.TabIndex = 9;
             // 
             // lblCustomerComplain
@@ -218,9 +216,8 @@
             this.quality});
             this.dataListParts.Location = new System.Drawing.Point(12, 359);
             this.dataListParts.Name = "dataListParts";
-            this.dataListParts.Size = new System.Drawing.Size(406, 56);
+            this.dataListParts.Size = new System.Drawing.Size(406, 109);
             this.dataListParts.TabIndex = 18;
-            this.dataListParts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // partName
             // 
@@ -239,7 +236,7 @@
             // 
             // btnAddPart
             // 
-            this.btnAddPart.Location = new System.Drawing.Point(16, 422);
+            this.btnAddPart.Location = new System.Drawing.Point(12, 493);
             this.btnAddPart.Name = "btnAddPart";
             this.btnAddPart.Size = new System.Drawing.Size(75, 23);
             this.btnAddPart.TabIndex = 19;
@@ -248,7 +245,7 @@
             // 
             // btnRemovePart
             // 
-            this.btnRemovePart.Location = new System.Drawing.Point(98, 422);
+            this.btnRemovePart.Location = new System.Drawing.Point(94, 493);
             this.btnRemovePart.Name = "btnRemovePart";
             this.btnRemovePart.Size = new System.Drawing.Size(78, 23);
             this.btnRemovePart.TabIndex = 20;
@@ -296,7 +293,6 @@
             this.btnPost.TabIndex = 16;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
-            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // chkHSTExempt
             // 
@@ -355,7 +351,6 @@
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Subtotal:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtServiceCalls
             // 
@@ -388,7 +383,6 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Labour:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // txtMaterials
             // 
@@ -396,7 +390,6 @@
             this.txtMaterials.Name = "txtMaterials";
             this.txtMaterials.Size = new System.Drawing.Size(100, 20);
             this.txtMaterials.TabIndex = 1;
-            this.txtMaterials.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblmaterials
             // 
@@ -409,12 +402,13 @@
             // 
             // btnNewInvoiceExit
             // 
-            this.btnNewInvoiceExit.Location = new System.Drawing.Point(536, 422);
+            this.btnNewInvoiceExit.Location = new System.Drawing.Point(536, 445);
             this.btnNewInvoiceExit.Name = "btnNewInvoiceExit";
             this.btnNewInvoiceExit.Size = new System.Drawing.Size(75, 23);
             this.btnNewInvoiceExit.TabIndex = 22;
             this.btnNewInvoiceExit.Text = "Exit";
             this.btnNewInvoiceExit.UseVisualStyleBackColor = true;
+            this.btnNewInvoiceExit.Click += new System.EventHandler(this.btnNewInvoiceExit_Click);
             // 
             // btnSearchCustomerProperty
             // 
@@ -424,6 +418,7 @@
             this.btnSearchCustomerProperty.TabIndex = 23;
             this.btnSearchCustomerProperty.Text = "Search";
             this.btnSearchCustomerProperty.UseVisualStyleBackColor = true;
+            this.btnSearchCustomerProperty.Click += new System.EventHandler(this.btnSearchCustomerProperty_Click);
             // 
             // groupBox1
             // 
@@ -510,7 +505,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 451);
+            this.ClientSize = new System.Drawing.Size(796, 532);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSearchCustomerProperty);
             this.Controls.Add(this.btnNewInvoiceExit);

@@ -52,21 +52,23 @@
             this.btnUpdateTechnician.TabIndex = 13;
             this.btnUpdateTechnician.Text = "Update technician";
             this.btnUpdateTechnician.UseVisualStyleBackColor = true;
+            this.btnUpdateTechnician.Click += new System.EventHandler(this.btnUpdateTechnician_Click);
             // 
             // btnNewTechnician
             // 
             this.btnNewTechnician.Location = new System.Drawing.Point(13, 153);
             this.btnNewTechnician.Name = "btnNewTechnician";
-            this.btnNewTechnician.Size = new System.Drawing.Size(89, 23);
+            this.btnNewTechnician.Size = new System.Drawing.Size(102, 23);
             this.btnNewTechnician.TabIndex = 12;
             this.btnNewTechnician.Text = "New technician";
             this.btnNewTechnician.UseVisualStyleBackColor = true;
+            this.btnNewTechnician.Click += new System.EventHandler(this.btnNewTechnician_Click);
             // 
             // btnManageTechnicianExit
             // 
-            this.btnManageTechnicianExit.Location = new System.Drawing.Point(178, 182);
+            this.btnManageTechnicianExit.Location = new System.Drawing.Point(184, 182);
             this.btnManageTechnicianExit.Name = "btnManageTechnicianExit";
-            this.btnManageTechnicianExit.Size = new System.Drawing.Size(75, 23);
+            this.btnManageTechnicianExit.Size = new System.Drawing.Size(69, 23);
             this.btnManageTechnicianExit.TabIndex = 15;
             this.btnManageTechnicianExit.Text = "Exit";
             this.btnManageTechnicianExit.UseVisualStyleBackColor = true;
@@ -80,7 +82,6 @@
             this.lstTechnician.Name = "lstTechnician";
             this.lstTechnician.Size = new System.Drawing.Size(240, 134);
             this.lstTechnician.TabIndex = 16;
-            this.lstTechnician.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // frmTechnician
             // 
@@ -94,6 +95,7 @@
             this.Controls.Add(this.btnNewTechnician);
             this.Name = "frmTechnician";
             this.Text = "Manage Technician";
+            this.Load += new System.EventHandler(this.frmTechnician_Load);
             this.ResumeLayout(false);
 
         }

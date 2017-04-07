@@ -1,4 +1,4 @@
-﻿namespace HomeAppliance.Category
+﻿namespace HomeAppliance
 {
     partial class frmManageCategories
     {
@@ -93,6 +93,7 @@
             this.Controls.Add(this.btnNewCategory);
             this.Name = "frmManageCategories";
             this.Text = "Manage Categories";
+            this.Load += new System.EventHandler(this.frmManageCategories_Load);
             this.ResumeLayout(false);
 
         }

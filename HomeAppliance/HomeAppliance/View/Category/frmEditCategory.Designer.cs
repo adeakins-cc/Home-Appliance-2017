@@ -1,4 +1,4 @@
-﻿namespace HomeAppliance.Category
+﻿namespace HomeAppliance
 {
     partial class frmEditCategory
     {

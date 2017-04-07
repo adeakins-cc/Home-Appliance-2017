@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeAppliance.Customer
+namespace HomeAppliance
 {
     public partial class frmEditCustomer : Form
     {
         public frmEditCustomer()
         {
             InitializeComponent();
+        }
+
+        private void frmEditCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeAppliance.Category
+namespace HomeAppliance
 {
     public partial class frmManageCategories : Form
     {
         public frmManageCategories()
         {
             InitializeComponent();
+        }
+
+        private void frmManageCategories_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

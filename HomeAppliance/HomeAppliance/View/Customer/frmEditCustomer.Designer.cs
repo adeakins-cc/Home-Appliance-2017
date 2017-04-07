@@ -1,4 +1,4 @@
-﻿namespace HomeAppliance.Customer
+﻿namespace HomeAppliance
 {
     partial class frmEditCustomer
     {
@@ -29,6 +29,22 @@
         private void InitializeComponent()
         {
             this.grpCustomer = new System.Windows.Forms.GroupBox();
+            this.txtPostalCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtProvince = new System.Windows.Forms.TextBox();
+            this.txtUnitNumber = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtStreetName = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLastName = new System.Windows.Forms.TextBox();
             this.btnEditCustomerExit = new System.Windows.Forms.Button();
             this.btnEditCustomerSave = new System.Windows.Forms.Button();
             this.grpContact = new System.Windows.Forms.GroupBox();
@@ -46,22 +62,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtContactName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPostalCode = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtProvince = new System.Windows.Forms.TextBox();
-            this.txtUnitNumber = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtStreetName = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCompanyName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtLastName = new System.Windows.Forms.TextBox();
             this.grpCustomer.SuspendLayout();
             this.grpContact.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +90,134 @@
             this.grpCustomer.TabIndex = 22;
             this.grpCustomer.TabStop = false;
             this.grpCustomer.Text = "Customer Info:";
+            // 
+            // txtPostalCode
+            // 
+            this.txtPostalCode.Location = new System.Drawing.Point(101, 202);
+            this.txtPostalCode.Name = "txtPostalCode";
+            this.txtPostalCode.Size = new System.Drawing.Size(100, 20);
+            this.txtPostalCode.TabIndex = 54;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 205);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Postal Code:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 101);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 13);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Unit Number:";
+            // 
+            // txtProvince
+            // 
+            this.txtProvince.Location = new System.Drawing.Point(101, 176);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(100, 20);
+            this.txtProvince.TabIndex = 52;
+            // 
+            // txtUnitNumber
+            // 
+            this.txtUnitNumber.Location = new System.Drawing.Point(101, 98);
+            this.txtUnitNumber.Name = "txtUnitNumber";
+            this.txtUnitNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtUnitNumber.TabIndex = 46;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(43, 179);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Province:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(26, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "Street Name:";
+            // 
+            // txtStreetName
+            // 
+            this.txtStreetName.Location = new System.Drawing.Point(101, 124);
+            this.txtStreetName.Name = "txtStreetName";
+            this.txtStreetName.Size = new System.Drawing.Size(100, 20);
+            this.txtStreetName.TabIndex = 48;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(68, 153);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 13);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "City:";
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(101, 150);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(100, 20);
+            this.txtCity.TabIndex = 50;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Company name:";
+            // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.Location = new System.Drawing.Point(101, 20);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(100, 20);
+            this.txtCompanyName.TabIndex = 40;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "First Name:";
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Location = new System.Drawing.Point(101, 46);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstName.TabIndex = 42;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 75);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Last Name:";
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.Location = new System.Drawing.Point(101, 72);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtLastName.TabIndex = 44;
             // 
             // btnEditCustomerExit
             // 
@@ -244,134 +372,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Name:";
             // 
-            // txtPostalCode
-            // 
-            this.txtPostalCode.Location = new System.Drawing.Point(101, 202);
-            this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(100, 20);
-            this.txtPostalCode.TabIndex = 54;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 205);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Postal Code:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 13);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Unit Number:";
-            // 
-            // txtProvince
-            // 
-            this.txtProvince.Location = new System.Drawing.Point(101, 176);
-            this.txtProvince.Name = "txtProvince";
-            this.txtProvince.Size = new System.Drawing.Size(100, 20);
-            this.txtProvince.TabIndex = 52;
-            // 
-            // txtUnitNumber
-            // 
-            this.txtUnitNumber.Location = new System.Drawing.Point(101, 98);
-            this.txtUnitNumber.Name = "txtUnitNumber";
-            this.txtUnitNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtUnitNumber.TabIndex = 46;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(43, 179);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 13);
-            this.label10.TabIndex = 51;
-            this.label10.Text = "Province:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 127);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 13);
-            this.label11.TabIndex = 47;
-            this.label11.Text = "Street Name:";
-            // 
-            // txtStreetName
-            // 
-            this.txtStreetName.Location = new System.Drawing.Point(101, 124);
-            this.txtStreetName.Name = "txtStreetName";
-            this.txtStreetName.Size = new System.Drawing.Size(100, 20);
-            this.txtStreetName.TabIndex = 48;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(68, 153);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 13);
-            this.label12.TabIndex = 49;
-            this.label12.Text = "City:";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(101, 150);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(100, 20);
-            this.txtCity.TabIndex = 50;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Company name:";
-            // 
-            // txtCompanyName
-            // 
-            this.txtCompanyName.Location = new System.Drawing.Point(101, 20);
-            this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(100, 20);
-            this.txtCompanyName.TabIndex = 40;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "First Name:";
-            // 
-            // txtFirstName
-            // 
-            this.txtFirstName.Location = new System.Drawing.Point(101, 46);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtFirstName.TabIndex = 42;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Last Name:";
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.Location = new System.Drawing.Point(101, 72);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName.TabIndex = 44;
-            // 
             // frmEditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,6 +383,7 @@
             this.Controls.Add(this.grpContact);
             this.Name = "frmEditCustomer";
             this.Text = "Edit Customer";
+            this.Load += new System.EventHandler(this.frmEditCustomer_Load);
             this.grpCustomer.ResumeLayout(false);
             this.grpCustomer.PerformLayout();
             this.grpContact.ResumeLayout(false);
