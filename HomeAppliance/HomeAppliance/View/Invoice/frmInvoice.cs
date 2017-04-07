@@ -56,5 +56,10 @@ namespace HomeAppliance
         {
 
         }
+
+        private void btnPost_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

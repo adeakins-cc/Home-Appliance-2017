@@ -36,10 +36,10 @@
             this.btnManageTechnician = new System.Windows.Forms.Button();
             this.btnManageParts = new System.Windows.Forms.Button();
             this.grpManagement = new System.Windows.Forms.GroupBox();
+            this.btnManageFinacial = new System.Windows.Forms.Button();
+            this.btnManageCategories = new System.Windows.Forms.Button();
             this.btnPrintReports = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnManageCategories = new System.Windows.Forms.Button();
-            this.btnManageFinacial = new System.Windows.Forms.Button();
             this.grpManagement.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,7 @@
             this.btnNewInvoice.TabIndex = 1;
             this.btnNewInvoice.Text = "New Invoice";
             this.btnNewInvoice.UseVisualStyleBackColor = true;
+            this.btnNewInvoice.Click += new System.EventHandler(this.btnNewInvoice_Click);
             // 
             // btnDisplayInvoice
             // 
@@ -105,6 +106,7 @@
             this.btnManageTechnician.TabIndex = 5;
             this.btnManageTechnician.Text = "Manage Technicians";
             this.btnManageTechnician.UseVisualStyleBackColor = true;
+            this.btnManageTechnician.Click += new System.EventHandler(this.btnManageTechnician_Click);
             // 
             // btnManageParts
             // 
@@ -134,6 +136,25 @@
             this.grpManagement.TabStop = false;
             this.grpManagement.Text = "Management";
             // 
+            // btnManageFinacial
+            // 
+            this.btnManageFinacial.Location = new System.Drawing.Point(305, 145);
+            this.btnManageFinacial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManageFinacial.Name = "btnManageFinacial";
+            this.btnManageFinacial.Size = new System.Drawing.Size(188, 48);
+            this.btnManageFinacial.TabIndex = 8;
+            this.btnManageFinacial.Text = "Manage Finacial";
+            this.btnManageFinacial.UseVisualStyleBackColor = true;
+            // 
+            // btnManageCategories
+            // 
+            this.btnManageCategories.Location = new System.Drawing.Point(7, 88);
+            this.btnManageCategories.Name = "btnManageCategories";
+            this.btnManageCategories.Size = new System.Drawing.Size(214, 48);
+            this.btnManageCategories.TabIndex = 7;
+            this.btnManageCategories.Text = "Manage Categories";
+            this.btnManageCategories.UseVisualStyleBackColor = true;
+            // 
             // btnPrintReports
             // 
             this.btnPrintReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,25 +176,6 @@
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
-            // 
-            // btnManageCategories
-            // 
-            this.btnManageCategories.Location = new System.Drawing.Point(7, 88);
-            this.btnManageCategories.Name = "btnManageCategories";
-            this.btnManageCategories.Size = new System.Drawing.Size(214, 48);
-            this.btnManageCategories.TabIndex = 7;
-            this.btnManageCategories.Text = "Manage Categories";
-            this.btnManageCategories.UseVisualStyleBackColor = true;
-            // 
-            // btnManageFinacial
-            // 
-            this.btnManageFinacial.Location = new System.Drawing.Point(305, 145);
-            this.btnManageFinacial.Margin = new System.Windows.Forms.Padding(4);
-            this.btnManageFinacial.Name = "btnManageFinacial";
-            this.btnManageFinacial.Size = new System.Drawing.Size(188, 48);
-            this.btnManageFinacial.TabIndex = 8;
-            this.btnManageFinacial.Text = "Manage Finacial";
-            this.btnManageFinacial.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 

@@ -68,14 +68,14 @@
             this.btnNewInvoiceExit = new System.Windows.Forms.Button();
             this.btnSearchCustomerProperty = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtPONumber = new System.Windows.Forms.TextBox();
-            this.txtMake = new System.Windows.Forms.TextBox();
-            this.txtModel = new System.Windows.Forms.TextBox();
             this.txtSerialNumber = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtMake = new System.Windows.Forms.TextBox();
+            this.txtPONumber = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
             this.grpCharge.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -296,6 +296,7 @@
             this.btnPost.TabIndex = 16;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // chkHSTExempt
             // 
@@ -441,32 +442,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sale";
             // 
-            // label7
+            // txtSerialNumber
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "P.O. Number:";
+            this.txtSerialNumber.Location = new System.Drawing.Point(90, 91);
+            this.txtSerialNumber.Name = "txtSerialNumber";
+            this.txtSerialNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtSerialNumber.TabIndex = 7;
             // 
-            // label8
+            // txtModel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Make:";
+            this.txtModel.Location = new System.Drawing.Point(90, 65);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 6;
             // 
-            // label9
+            // txtMake
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Serial Number:";
+            this.txtMake.Location = new System.Drawing.Point(90, 39);
+            this.txtMake.Name = "txtMake";
+            this.txtMake.Size = new System.Drawing.Size(100, 20);
+            this.txtMake.TabIndex = 5;
+            // 
+            // txtPONumber
+            // 
+            this.txtPONumber.Location = new System.Drawing.Point(90, 13);
+            this.txtPONumber.Name = "txtPONumber";
+            this.txtPONumber.Size = new System.Drawing.Size(100, 20);
+            this.txtPONumber.TabIndex = 4;
             // 
             // label10
             // 
@@ -477,33 +479,32 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Model:";
             // 
-            // txtPONumber
+            // label9
             // 
-            this.txtPONumber.Location = new System.Drawing.Point(90, 13);
-            this.txtPONumber.Name = "txtPONumber";
-            this.txtPONumber.Size = new System.Drawing.Size(100, 20);
-            this.txtPONumber.TabIndex = 4;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Serial Number:";
             // 
-            // txtMake
+            // label8
             // 
-            this.txtMake.Location = new System.Drawing.Point(90, 39);
-            this.txtMake.Name = "txtMake";
-            this.txtMake.Size = new System.Drawing.Size(100, 20);
-            this.txtMake.TabIndex = 5;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Make:";
             // 
-            // txtModel
+            // label7
             // 
-            this.txtModel.Location = new System.Drawing.Point(90, 65);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(100, 20);
-            this.txtModel.TabIndex = 6;
-            // 
-            // txtSerialNumber
-            // 
-            this.txtSerialNumber.Location = new System.Drawing.Point(90, 91);
-            this.txtSerialNumber.Name = "txtSerialNumber";
-            this.txtSerialNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtSerialNumber.TabIndex = 7;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "P.O. Number:";
             // 
             // frmNewInvoice
             // 

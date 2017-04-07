@@ -16,5 +16,15 @@ namespace HomeAppliance
         {
             InitializeComponent();
         }
+
+        private void btnManageTechnician_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNewInvoice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

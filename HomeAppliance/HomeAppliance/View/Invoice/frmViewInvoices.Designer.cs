@@ -69,6 +69,7 @@
             this.btnViewInvoiceRange.TabIndex = 4;
             this.btnViewInvoiceRange.Text = "View Invoices";
             this.btnViewInvoiceRange.UseVisualStyleBackColor = true;
+            this.btnViewInvoiceRange.Click += new System.EventHandler(this.btnViewInvoiceRange_Click);
             // 
             // txtInvoiceStart
             // 

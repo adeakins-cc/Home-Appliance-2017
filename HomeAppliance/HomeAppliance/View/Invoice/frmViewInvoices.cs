@@ -21,5 +21,10 @@ namespace HomeAppliance
         {
 
         }
+
+        private void btnViewInvoiceRange_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
