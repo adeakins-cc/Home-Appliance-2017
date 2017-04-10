@@ -33,41 +33,43 @@
             this.btnEditPart = new System.Windows.Forms.Button();
             this.btnDeletePart = new System.Windows.Forms.Button();
             this.btnManagePartsExit = new System.Windows.Forms.Button();
-            this.lstParts = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchPart = new System.Windows.Forms.TextBox();
             this.btnSearchPart = new System.Windows.Forms.Button();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
             this.lblCategory = new System.Windows.Forms.Label();
+            this.btnSavePart = new System.Windows.Forms.Button();
+            this.btnCancelPart = new System.Windows.Forms.Button();
+            this.dgvPartDetails = new System.Windows.Forms.DataGridView();
+            this.categoryTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CategoryTableAdapter();
             this.lblPartName = new System.Windows.Forms.Label();
             this.txtPartName = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.btnSavePart = new System.Windows.Forms.Button();
-            this.txtCancel = new System.Windows.Forms.Button();
-            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
-            this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoryTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CategoryTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPartDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewPart
             // 
-            this.btnNewPart.Location = new System.Drawing.Point(328, 62);
+            this.btnNewPart.Location = new System.Drawing.Point(501, 101);
+            this.btnNewPart.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewPart.Name = "btnNewPart";
-            this.btnNewPart.Size = new System.Drawing.Size(75, 23);
+            this.btnNewPart.Size = new System.Drawing.Size(100, 28);
             this.btnNewPart.TabIndex = 1;
             this.btnNewPart.Text = "Add part";
             this.btnNewPart.UseVisualStyleBackColor = true;
-            this.btnNewPart.Click += new System.EventHandler(this.btnNewPart_Click);
             // 
             // btnEditPart
             // 
-            this.btnEditPart.Location = new System.Drawing.Point(328, 96);
+            this.btnEditPart.Location = new System.Drawing.Point(501, 135);
+            this.btnEditPart.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditPart.Name = "btnEditPart";
-            this.btnEditPart.Size = new System.Drawing.Size(75, 23);
+            this.btnEditPart.Size = new System.Drawing.Size(100, 28);
             this.btnEditPart.TabIndex = 2;
             this.btnEditPart.Text = "Edit part";
             this.btnEditPart.UseVisualStyleBackColor = true;
@@ -75,44 +77,38 @@
             // 
             // btnDeletePart
             // 
-            this.btnDeletePart.Location = new System.Drawing.Point(328, 130);
+            this.btnDeletePart.Location = new System.Drawing.Point(501, 169);
+            this.btnDeletePart.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletePart.Name = "btnDeletePart";
-            this.btnDeletePart.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletePart.Size = new System.Drawing.Size(100, 28);
             this.btnDeletePart.TabIndex = 3;
             this.btnDeletePart.Text = "Delete part";
             this.btnDeletePart.UseVisualStyleBackColor = true;
             // 
             // btnManagePartsExit
             // 
-            this.btnManagePartsExit.Location = new System.Drawing.Point(328, 305);
+            this.btnManagePartsExit.Location = new System.Drawing.Point(501, 420);
+            this.btnManagePartsExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnManagePartsExit.Name = "btnManagePartsExit";
-            this.btnManagePartsExit.Size = new System.Drawing.Size(75, 23);
+            this.btnManagePartsExit.Size = new System.Drawing.Size(100, 28);
             this.btnManagePartsExit.TabIndex = 4;
             this.btnManagePartsExit.Text = "Exit";
             this.btnManagePartsExit.UseVisualStyleBackColor = true;
             // 
-            // lstParts
+            // txtSearchPart
             // 
-            this.lstParts.FormattingEnabled = true;
-            this.lstParts.Items.AddRange(new object[] {
-            "ID        Category\tName\tPrice"});
-            this.lstParts.Location = new System.Drawing.Point(11, 62);
-            this.lstParts.Name = "lstParts";
-            this.lstParts.Size = new System.Drawing.Size(311, 147);
-            this.lstParts.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(11, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtSearchPart.Location = new System.Drawing.Point(15, 15);
+            this.txtSearchPart.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchPart.Name = "txtSearchPart";
+            this.txtSearchPart.Size = new System.Drawing.Size(283, 22);
+            this.txtSearchPart.TabIndex = 6;
             // 
             // btnSearchPart
             // 
-            this.btnSearchPart.Location = new System.Drawing.Point(247, 10);
+            this.btnSearchPart.Location = new System.Drawing.Point(329, 12);
+            this.btnSearchPart.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchPart.Name = "btnSearchPart";
-            this.btnSearchPart.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchPart.Size = new System.Drawing.Size(100, 28);
             this.btnSearchPart.TabIndex = 7;
             this.btnSearchPart.Text = "Search";
             this.btnSearchPart.UseVisualStyleBackColor = true;
@@ -123,96 +119,118 @@
             this.cbbCategory.DataSource = this.categoryBindingSource;
             this.cbbCategory.DisplayMember = "name";
             this.cbbCategory.FormattingEnabled = true;
-            this.cbbCategory.Location = new System.Drawing.Point(11, 228);
+            this.cbbCategory.Location = new System.Drawing.Point(15, 67);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(213, 21);
+            this.cbbCategory.Size = new System.Drawing.Size(283, 24);
             this.cbbCategory.TabIndex = 8;
             this.cbbCategory.ValueMember = "categoryId";
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(11, 212);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(49, 13);
-            this.lblCategory.TabIndex = 9;
-            this.lblCategory.Text = "Category";
-            // 
-            // lblPartName
-            // 
-            this.lblPartName.AutoSize = true;
-            this.lblPartName.Location = new System.Drawing.Point(12, 257);
-            this.lblPartName.Name = "lblPartName";
-            this.lblPartName.Size = new System.Drawing.Size(57, 13);
-            this.lblPartName.TabIndex = 10;
-            this.lblPartName.Text = "Part Name";
-            // 
-            // txtPartName
-            // 
-            this.txtPartName.Location = new System.Drawing.Point(11, 273);
-            this.txtPartName.Name = "txtPartName";
-            this.txtPartName.Size = new System.Drawing.Size(213, 20);
-            this.txtPartName.TabIndex = 11;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(243, 273);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(105, 20);
-            this.txtPrice.TabIndex = 13;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(244, 257);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(31, 13);
-            this.lblPrice.TabIndex = 12;
-            this.lblPrice.Text = "Price";
-            // 
-            // btnSavePart
-            // 
-            this.btnSavePart.Location = new System.Drawing.Point(11, 305);
-            this.btnSavePart.Name = "btnSavePart";
-            this.btnSavePart.Size = new System.Drawing.Size(75, 23);
-            this.btnSavePart.TabIndex = 14;
-            this.btnSavePart.Text = "Save";
-            this.btnSavePart.UseVisualStyleBackColor = true;
-            // 
-            // txtCancel
-            // 
-            this.txtCancel.Location = new System.Drawing.Point(123, 305);
-            this.txtCancel.Name = "txtCancel";
-            this.txtCancel.Size = new System.Drawing.Size(75, 23);
-            this.txtCancel.TabIndex = 15;
-            this.txtCancel.Text = "Cancel";
-            this.txtCancel.UseVisualStyleBackColor = true;
-            // 
-            // homeAppDBDataSet
-            // 
-            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
-            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // homeAppDBDataSetBindingSource
-            // 
-            this.homeAppDBDataSetBindingSource.DataSource = this.homeAppDBDataSet;
-            this.homeAppDBDataSetBindingSource.Position = 0;
+            this.cbbCategory.SelectionChangeCommitted += new System.EventHandler(this.cbbCategory_SelectionChangeCommitted);
             // 
             // categoryBindingSource
             // 
             this.categoryBindingSource.DataMember = "Category";
             this.categoryBindingSource.DataSource = this.homeAppDBDataSetBindingSource;
             // 
+            // homeAppDBDataSetBindingSource
+            // 
+            this.homeAppDBDataSetBindingSource.DataSource = this.homeAppDBDataSet;
+            this.homeAppDBDataSetBindingSource.Position = 0;
+            // 
+            // homeAppDBDataSet
+            // 
+            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
+            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Location = new System.Drawing.Point(15, 47);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(65, 17);
+            this.lblCategory.TabIndex = 9;
+            this.lblCategory.Text = "Category";
+            // 
+            // btnSavePart
+            // 
+            this.btnSavePart.Location = new System.Drawing.Point(15, 368);
+            this.btnSavePart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSavePart.Name = "btnSavePart";
+            this.btnSavePart.Size = new System.Drawing.Size(100, 28);
+            this.btnSavePart.TabIndex = 14;
+            this.btnSavePart.Text = "Save";
+            this.btnSavePart.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelPart
+            // 
+            this.btnCancelPart.Location = new System.Drawing.Point(164, 368);
+            this.btnCancelPart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelPart.Name = "btnCancelPart";
+            this.btnCancelPart.Size = new System.Drawing.Size(100, 28);
+            this.btnCancelPart.TabIndex = 15;
+            this.btnCancelPart.Text = "Cancel";
+            this.btnCancelPart.UseVisualStyleBackColor = true;
+            // 
+            // dgvPartDetails
+            // 
+            this.dgvPartDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPartDetails.Location = new System.Drawing.Point(15, 101);
+            this.dgvPartDetails.Name = "dgvPartDetails";
+            this.dgvPartDetails.ReadOnly = true;
+            this.dgvPartDetails.RowTemplate.Height = 24;
+            this.dgvPartDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPartDetails.Size = new System.Drawing.Size(414, 193);
+            this.dgvPartDetails.TabIndex = 16;
+            this.dgvPartDetails.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvPartDetails_MouseClick);
+            // 
             // categoryTableAdapter
             // 
             this.categoryTableAdapter.ClearBeforeFill = true;
             // 
+            // lblPartName
+            // 
+            this.lblPartName.AutoSize = true;
+            this.lblPartName.Location = new System.Drawing.Point(16, 309);
+            this.lblPartName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPartName.Name = "lblPartName";
+            this.lblPartName.Size = new System.Drawing.Size(75, 17);
+            this.lblPartName.TabIndex = 10;
+            this.lblPartName.Text = "Part Name";
+            // 
+            // txtPartName
+            // 
+            this.txtPartName.Location = new System.Drawing.Point(15, 329);
+            this.txtPartName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPartName.Name = "txtPartName";
+            this.txtPartName.Size = new System.Drawing.Size(232, 22);
+            this.txtPartName.TabIndex = 11;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(306, 309);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(40, 17);
+            this.lblPrice.TabIndex = 12;
+            this.lblPrice.Text = "Price";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(309, 329);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(120, 22);
+            this.txtPrice.TabIndex = 13;
+            // 
             // frmManageParts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 335);
-            this.Controls.Add(this.txtCancel);
+            this.ClientSize = new System.Drawing.Size(615, 461);
+            this.Controls.Add(this.dgvPartDetails);
+            this.Controls.Add(this.btnCancelPart);
             this.Controls.Add(this.btnSavePart);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
@@ -221,18 +239,19 @@
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.cbbCategory);
             this.Controls.Add(this.btnSearchPart);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lstParts);
+            this.Controls.Add(this.txtSearchPart);
             this.Controls.Add(this.btnManagePartsExit);
             this.Controls.Add(this.btnDeletePart);
             this.Controls.Add(this.btnEditPart);
             this.Controls.Add(this.btnNewPart);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmManageParts";
             this.Text = "Manage Parts";
             this.Load += new System.EventHandler(this.frmManageParts_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPartDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,20 +262,21 @@
         private System.Windows.Forms.Button btnEditPart;
         private System.Windows.Forms.Button btnDeletePart;
         private System.Windows.Forms.Button btnManagePartsExit;
-        private System.Windows.Forms.ListBox lstParts;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchPart;
         private System.Windows.Forms.Button btnSearchPart;
         private System.Windows.Forms.ComboBox cbbCategory;
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.Label lblPartName;
-        private System.Windows.Forms.TextBox txtPartName;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Button btnSavePart;
-        private System.Windows.Forms.Button txtCancel;
+
+        private System.Windows.Forms.Button btnCancelPart;
+        private System.Windows.Forms.DataGridView dgvPartDetails;
         private System.Windows.Forms.BindingSource homeAppDBDataSetBindingSource;
         private HomeAppDBDataSet homeAppDBDataSet;
         private System.Windows.Forms.BindingSource categoryBindingSource;
         private HomeAppDBDataSetTableAdapters.CategoryTableAdapter categoryTableAdapter;
+        private System.Windows.Forms.Label lblPartName;
+        private System.Windows.Forms.TextBox txtPartName;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.TextBox txtPrice;
     }
 }
