@@ -54,9 +54,11 @@
             this.listBox1.DataSource = this.technicianBindingSource;
             this.listBox1.DisplayMember = "name";
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 13);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(13, 31);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(198, 147);
+            this.listBox1.Size = new System.Drawing.Size(263, 180);
             this.listBox1.TabIndex = 0;
             this.listBox1.ValueMember = "technicianId";
             // 
@@ -81,11 +83,12 @@
             // 
             // fillByTechnicianToolStrip
             // 
+            this.fillByTechnicianToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByTechnicianToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fillByTechnicianToolStripButton});
             this.fillByTechnicianToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByTechnicianToolStrip.Name = "fillByTechnicianToolStrip";
-            this.fillByTechnicianToolStrip.Size = new System.Drawing.Size(221, 25);
+            this.fillByTechnicianToolStrip.Size = new System.Drawing.Size(346, 27);
             this.fillByTechnicianToolStrip.TabIndex = 1;
             this.fillByTechnicianToolStrip.Text = "fillByTechnicianToolStrip";
             // 
@@ -93,58 +96,64 @@
             // 
             this.fillByTechnicianToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByTechnicianToolStripButton.Name = "fillByTechnicianToolStripButton";
-            this.fillByTechnicianToolStripButton.Size = new System.Drawing.Size(97, 22);
+            this.fillByTechnicianToolStripButton.Size = new System.Drawing.Size(118, 24);
             this.fillByTechnicianToolStripButton.Text = "FillByTechnician";
             this.fillByTechnicianToolStripButton.Click += new System.EventHandler(this.fillByTechnicianToolStripButton_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 192);
+            this.button1.Location = new System.Drawing.Point(16, 254);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 23);
+            this.button1.Size = new System.Drawing.Size(135, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "Add Technician";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(57, 166);
+            this.textBox1.Location = new System.Drawing.Point(70, 218);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
+            this.textBox1.Size = new System.Drawing.Size(206, 22);
             this.textBox1.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 169);
+            this.label1.Location = new System.Drawing.Point(13, 221);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Name:";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(120, 192);
+            this.button2.Location = new System.Drawing.Point(159, 254);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 23);
+            this.button2.Size = new System.Drawing.Size(121, 28);
             this.button2.TabIndex = 5;
             this.button2.Text = "Edit Technician";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 221);
+            this.button3.Location = new System.Drawing.Point(15, 290);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 23);
+            this.button3.Size = new System.Drawing.Size(136, 28);
             this.button3.TabIndex = 6;
             this.button3.Text = "Delete Technician";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(120, 221);
+            this.btnExit.Location = new System.Drawing.Point(159, 290);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(91, 23);
+            this.btnExit.Size = new System.Drawing.Size(121, 28);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -152,9 +161,9 @@
             // 
             // frmManageTechnician
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(221, 255);
+            this.ClientSize = new System.Drawing.Size(346, 351);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -163,6 +172,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.fillByTechnicianToolStrip);
             this.Controls.Add(this.listBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmManageTechnician";
             this.Text = "frmManageTechnician";
             this.Load += new System.EventHandler(this.frmManageTechnician_Load);

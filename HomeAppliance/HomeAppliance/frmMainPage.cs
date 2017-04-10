@@ -28,37 +28,37 @@ namespace HomeAppliance
         private void btnNewInvoice_Click(object sender, EventArgs e)
         {
             frmNewInvoice newInvoicePage = new frmNewInvoice();
-            newInvoicePage.ShowDialog();
+            newInvoicePage.Show();
         }
 
         private void btnManageCustomer_Click(object sender, EventArgs e)
         {
             frmManageCustomer customerPage = new frmManageCustomer();
-            customerPage.ShowDialog();
+            customerPage.Show();
         }
 
         private void btnManageProperty_Click(object sender, EventArgs e)
         {
             frmManageProperty propertyPage = new frmManageProperty();
-            propertyPage.ShowDialog();
+            propertyPage.Show();
         }
 
         private void btnManageParts_Click(object sender, EventArgs e)
         {
             frmManageParts partPage = new frmManageParts();
-            partPage.ShowDialog();
+            partPage.Show();
         }
 
         private void btnManageTechnician_Click(object sender, EventArgs e)
         {
             frmManageTechnician technicianPage = new frmManageTechnician();
-            technicianPage.ShowDialog();
+            technicianPage.Show();
         }
 
         private void btnManageCategories_Click(object sender, EventArgs e)
         {
             frmManageCategories categoryPage = new frmManageCategories();
-            categoryPage.ShowDialog();
+            categoryPage.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -69,13 +69,13 @@ namespace HomeAppliance
         private void btnDisplayInvoice_Click(object sender, EventArgs e)
         {
             frmManageFinance viewInvoicePage = new frmManageFinance();
-            viewInvoicePage.ShowDialog();
+            viewInvoicePage.Show();
         }
 
         private void btnManageFinacial_Click(object sender, EventArgs e)
         {
             frmManageFinance viewFinancesPage = new frmManageFinance();
-            viewFinancesPage.ShowDialog();
+            viewFinancesPage.Show();
         }
     }
 }
