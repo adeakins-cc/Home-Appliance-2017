@@ -96,36 +96,6 @@
     <Compile Include="View\Invoice\frmInvoice.Designer.cs">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Part\frmEditPart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Part\frmEditPart.Designer.cs">
-      <DependentUpon>frmEditPart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Part\frmNewPart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Part\frmNewPart.Designer.cs">
-      <DependentUpon>frmNewPart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Property\frmEditProperty.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Property\frmEditProperty.Designer.cs">
-      <DependentUpon>frmEditProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Property\frmNewProperty.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Property\frmNewProperty.Designer.cs">
-      <DependentUpon>frmNewProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Technician\frmEditTechnician.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Technician\frmEditTechnician.Designer.cs">
-      <DependentUpon>frmEditTechnician.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Technician\frmNewTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,12 +113,6 @@
     </Compile>
     <Compile Include="View\Property\frmManageProperty.Designer.cs">
       <DependentUpon>frmManageProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Technician\frmTechnician.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Technician\frmTechnician.Designer.cs">
-      <DependentUpon>frmTechnician.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Invoice\frmViewInvoices.cs">
       <SubType>Form</SubType>
@@ -176,21 +140,6 @@
     <EmbeddedResource Include="View\Invoice\frmInvoice.resx">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Part\frmEditPart.resx">
-      <DependentUpon>frmEditPart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Part\frmNewPart.resx">
-      <DependentUpon>frmNewPart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Property\frmEditProperty.resx">
-      <DependentUpon>frmEditProperty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Property\frmNewProperty.resx">
-      <DependentUpon>frmNewProperty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Technician\frmEditTechnician.resx">
-      <DependentUpon>frmEditTechnician.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Technician\frmNewTechnician.resx">
       <DependentUpon>frmNewTechnician.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,9 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Property\frmManageProperty.resx">
       <DependentUpon>frmManageProperty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Technician\frmTechnician.resx">
-      <DependentUpon>frmTechnician.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Invoice\frmViewInvoices.resx">
       <DependentUpon>frmViewInvoices.cs</DependentUpon>

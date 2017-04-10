@@ -19,6 +19,8 @@ namespace HomeAppliance
 
         private void frmManageParts_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'homeAppDBDataSet.Category' table. You can move, or remove it, as needed.
+            this.categoryTableAdapter.Fill(this.homeAppDBDataSet.Category);
 
         }
 

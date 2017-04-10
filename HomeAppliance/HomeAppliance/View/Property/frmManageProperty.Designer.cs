@@ -35,6 +35,11 @@
             this.btnManagePropertySearch = new System.Windows.Forms.Button();
             this.txtSearchProperty = new System.Windows.Forms.TextBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSuperPhone = new System.Windows.Forms.TextBox();
+            this.txtSuperintendent = new System.Windows.Forms.TextBox();
+            this.txtUnits = new System.Windows.Forms.TextBox();
+            this.txtBuildingStreet = new System.Windows.Forms.TextBox();
+            this.txtBuildingNumber = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.lblLastModified = new System.Windows.Forms.Label();
             this.lblDateActive = new System.Windows.Forms.Label();
@@ -44,28 +49,26 @@
             this.Label8 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
-            this.lblPropertyID = new System.Windows.Forms.Label();
             this.tvStreetList = new System.Windows.Forms.TreeView();
             this.lblStreetName = new System.Windows.Forms.Label();
             this.lstBuildingList = new System.Windows.Forms.ListView();
             this.lblBuildingList = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtOwnerID = new System.Windows.Forms.TextBox();
-            this.lblOwnerInfo = new System.Windows.Forms.Label();
             this.btnSaveNewProperty = new System.Windows.Forms.Button();
             this.btnCancelP = new System.Windows.Forms.Button();
-            this.txtBuildingNumber = new System.Windows.Forms.TextBox();
-            this.txtBuildingStreet = new System.Windows.Forms.TextBox();
-            this.txtUnits = new System.Windows.Forms.TextBox();
-            this.txtSuperintendent = new System.Windows.Forms.TextBox();
-            this.txtSuperPhone = new System.Windows.Forms.TextBox();
+            this.cboCustomer = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnManagePropertyExit
             // 
-            this.btnManagePropertyExit.Location = new System.Drawing.Point(595, 589);
+            this.btnManagePropertyExit.Location = new System.Drawing.Point(518, 578);
             this.btnManagePropertyExit.Name = "btnManagePropertyExit";
             this.btnManagePropertyExit.Size = new System.Drawing.Size(94, 23);
             this.btnManagePropertyExit.TabIndex = 12;
@@ -74,7 +77,7 @@
             // 
             // btnDeleteProperty
             // 
-            this.btnDeleteProperty.Location = new System.Drawing.Point(595, 125);
+            this.btnDeleteProperty.Location = new System.Drawing.Point(518, 132);
             this.btnDeleteProperty.Name = "btnDeleteProperty";
             this.btnDeleteProperty.Size = new System.Drawing.Size(94, 23);
             this.btnDeleteProperty.TabIndex = 11;
@@ -83,7 +86,7 @@
             // 
             // btnUpdateProperty
             // 
-            this.btnUpdateProperty.Location = new System.Drawing.Point(595, 91);
+            this.btnUpdateProperty.Location = new System.Drawing.Point(518, 98);
             this.btnUpdateProperty.Name = "btnUpdateProperty";
             this.btnUpdateProperty.Size = new System.Drawing.Size(94, 23);
             this.btnUpdateProperty.TabIndex = 10;
@@ -93,7 +96,7 @@
             // 
             // btnNewProperty
             // 
-            this.btnNewProperty.Location = new System.Drawing.Point(595, 57);
+            this.btnNewProperty.Location = new System.Drawing.Point(518, 64);
             this.btnNewProperty.Name = "btnNewProperty";
             this.btnNewProperty.Size = new System.Drawing.Size(94, 23);
             this.btnNewProperty.TabIndex = 9;
@@ -114,7 +117,7 @@
             // 
             this.txtSearchProperty.Location = new System.Drawing.Point(12, 12);
             this.txtSearchProperty.Name = "txtSearchProperty";
-            this.txtSearchProperty.Size = new System.Drawing.Size(185, 20);
+            this.txtSearchProperty.Size = new System.Drawing.Size(203, 20);
             this.txtSearchProperty.TabIndex = 15;
             // 
             // GroupBox1
@@ -133,13 +136,47 @@
             this.GroupBox1.Controls.Add(this.Label8);
             this.GroupBox1.Controls.Add(this.Label7);
             this.GroupBox1.Controls.Add(this.Label6);
-            this.GroupBox1.Controls.Add(this.lblPropertyID);
             this.GroupBox1.Location = new System.Drawing.Point(13, 404);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(319, 168);
             this.GroupBox1.TabIndex = 16;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Property Details";
+            // 
+            // txtSuperPhone
+            // 
+            this.txtSuperPhone.Location = new System.Drawing.Point(184, 123);
+            this.txtSuperPhone.Name = "txtSuperPhone";
+            this.txtSuperPhone.Size = new System.Drawing.Size(109, 20);
+            this.txtSuperPhone.TabIndex = 35;
+            // 
+            // txtSuperintendent
+            // 
+            this.txtSuperintendent.Location = new System.Drawing.Point(9, 123);
+            this.txtSuperintendent.Name = "txtSuperintendent";
+            this.txtSuperintendent.Size = new System.Drawing.Size(160, 20);
+            this.txtSuperintendent.TabIndex = 34;
+            // 
+            // txtUnits
+            // 
+            this.txtUnits.Location = new System.Drawing.Point(184, 84);
+            this.txtUnits.Name = "txtUnits";
+            this.txtUnits.Size = new System.Drawing.Size(109, 20);
+            this.txtUnits.TabIndex = 33;
+            // 
+            // txtBuildingStreet
+            // 
+            this.txtBuildingStreet.Location = new System.Drawing.Point(97, 40);
+            this.txtBuildingStreet.Name = "txtBuildingStreet";
+            this.txtBuildingStreet.Size = new System.Drawing.Size(216, 20);
+            this.txtBuildingStreet.TabIndex = 32;
+            // 
+            // txtBuildingNumber
+            // 
+            this.txtBuildingNumber.Location = new System.Drawing.Point(9, 40);
+            this.txtBuildingNumber.Name = "txtBuildingNumber";
+            this.txtBuildingNumber.Size = new System.Drawing.Size(69, 20);
+            this.txtBuildingNumber.TabIndex = 31;
             // 
             // txtCity
             // 
@@ -211,22 +248,11 @@
             this.Label6.TabIndex = 15;
             this.Label6.Text = "Number";
             // 
-            // lblPropertyID
-            // 
-            this.lblPropertyID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPropertyID.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblPropertyID.Location = new System.Drawing.Point(241, 21);
-            this.lblPropertyID.Name = "lblPropertyID";
-            this.lblPropertyID.Size = new System.Drawing.Size(72, 16);
-            this.lblPropertyID.TabIndex = 0;
-            this.lblPropertyID.Text = "PropertyID";
-            this.lblPropertyID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // tvStreetList
             // 
             this.tvStreetList.Location = new System.Drawing.Point(12, 57);
             this.tvStreetList.Name = "tvStreetList";
-            this.tvStreetList.Size = new System.Drawing.Size(284, 341);
+            this.tvStreetList.Size = new System.Drawing.Size(254, 341);
             this.tvStreetList.TabIndex = 17;
             // 
             // lblStreetName
@@ -241,9 +267,9 @@
             // 
             // lstBuildingList
             // 
-            this.lstBuildingList.Location = new System.Drawing.Point(304, 57);
+            this.lstBuildingList.Location = new System.Drawing.Point(272, 57);
             this.lstBuildingList.Name = "lstBuildingList";
-            this.lstBuildingList.Size = new System.Drawing.Size(265, 341);
+            this.lstBuildingList.Size = new System.Drawing.Size(240, 341);
             this.lstBuildingList.TabIndex = 19;
             this.lstBuildingList.UseCompatibleStateImageBehavior = false;
             // 
@@ -259,34 +285,22 @@
             // 
             // GroupBox2
             // 
-            this.GroupBox2.Controls.Add(this.txtOwnerID);
-            this.GroupBox2.Controls.Add(this.lblOwnerInfo);
+            this.GroupBox2.Controls.Add(this.textBox2);
+            this.GroupBox2.Controls.Add(this.label3);
+            this.GroupBox2.Controls.Add(this.textBox1);
+            this.GroupBox2.Controls.Add(this.label1);
+            this.GroupBox2.Controls.Add(this.cboCustomer);
+            this.GroupBox2.Controls.Add(this.label2);
             this.GroupBox2.Location = new System.Drawing.Point(347, 404);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(285, 168);
+            this.GroupBox2.Size = new System.Drawing.Size(265, 168);
             this.GroupBox2.TabIndex = 21;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "Owner Details";
             // 
-            // txtOwnerID
-            // 
-            this.txtOwnerID.Location = new System.Drawing.Point(191, 17);
-            this.txtOwnerID.Name = "txtOwnerID";
-            this.txtOwnerID.Size = new System.Drawing.Size(64, 20);
-            this.txtOwnerID.TabIndex = 2;
-            this.txtOwnerID.Visible = false;
-            // 
-            // lblOwnerInfo
-            // 
-            this.lblOwnerInfo.BackColor = System.Drawing.SystemColors.Menu;
-            this.lblOwnerInfo.Location = new System.Drawing.Point(16, 48);
-            this.lblOwnerInfo.Name = "lblOwnerInfo";
-            this.lblOwnerInfo.Size = new System.Drawing.Size(239, 112);
-            this.lblOwnerInfo.TabIndex = 0;
-            // 
             // btnSaveNewProperty
             // 
-            this.btnSaveNewProperty.Location = new System.Drawing.Point(595, 331);
+            this.btnSaveNewProperty.Location = new System.Drawing.Point(518, 338);
             this.btnSaveNewProperty.Name = "btnSaveNewProperty";
             this.btnSaveNewProperty.Size = new System.Drawing.Size(94, 23);
             this.btnSaveNewProperty.TabIndex = 22;
@@ -295,53 +309,68 @@
             // 
             // btnCancelP
             // 
-            this.btnCancelP.Location = new System.Drawing.Point(595, 368);
+            this.btnCancelP.Location = new System.Drawing.Point(518, 375);
             this.btnCancelP.Name = "btnCancelP";
             this.btnCancelP.Size = new System.Drawing.Size(94, 23);
             this.btnCancelP.TabIndex = 23;
             this.btnCancelP.Text = "Cancel";
             this.btnCancelP.UseVisualStyleBackColor = true;
             // 
-            // txtBuildingNumber
+            // cboCustomer
             // 
-            this.txtBuildingNumber.Location = new System.Drawing.Point(9, 40);
-            this.txtBuildingNumber.Name = "txtBuildingNumber";
-            this.txtBuildingNumber.Size = new System.Drawing.Size(69, 20);
-            this.txtBuildingNumber.TabIndex = 31;
+            this.cboCustomer.FormattingEnabled = true;
+            this.cboCustomer.Location = new System.Drawing.Point(6, 38);
+            this.cboCustomer.Name = "cboCustomer";
+            this.cboCustomer.Size = new System.Drawing.Size(249, 21);
+            this.cboCustomer.TabIndex = 26;
             // 
-            // txtBuildingStreet
+            // label2
             // 
-            this.txtBuildingStreet.Location = new System.Drawing.Point(97, 40);
-            this.txtBuildingStreet.Name = "txtBuildingStreet";
-            this.txtBuildingStreet.Size = new System.Drawing.Size(216, 20);
-            this.txtBuildingStreet.TabIndex = 32;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Customer:";
             // 
-            // txtUnits
+            // textBox1
             // 
-            this.txtUnits.Location = new System.Drawing.Point(184, 84);
-            this.txtUnits.Name = "txtUnits";
-            this.txtUnits.Size = new System.Drawing.Size(109, 20);
-            this.txtUnits.TabIndex = 33;
+            this.textBox1.Location = new System.Drawing.Point(6, 81);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(249, 20);
+            this.textBox1.TabIndex = 34;
             // 
-            // txtSuperintendent
+            // label1
             // 
-            this.txtSuperintendent.Location = new System.Drawing.Point(9, 123);
-            this.txtSuperintendent.Name = "txtSuperintendent";
-            this.txtSuperintendent.Size = new System.Drawing.Size(160, 20);
-            this.txtSuperintendent.TabIndex = 34;
+            this.label1.Location = new System.Drawing.Point(6, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 16);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Address1:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtSuperPhone
+            // textBox2
             // 
-            this.txtSuperPhone.Location = new System.Drawing.Point(184, 123);
-            this.txtSuperPhone.Name = "txtSuperPhone";
-            this.txtSuperPhone.Size = new System.Drawing.Size(109, 20);
-            this.txtSuperPhone.TabIndex = 35;
+            this.textBox2.Location = new System.Drawing.Point(6, 123);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(249, 20);
+            this.textBox2.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(6, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 16);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Address2:";
             // 
             // frmManageProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 628);
+            this.ClientSize = new System.Drawing.Size(618, 608);
             this.Controls.Add(this.btnCancelP);
             this.Controls.Add(this.btnSaveNewProperty);
             this.Controls.Add(this.GroupBox2);
@@ -382,14 +411,11 @@
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.Label lblPropertyID;
         private System.Windows.Forms.TreeView tvStreetList;
         private System.Windows.Forms.Label lblStreetName;
         private System.Windows.Forms.ListView lstBuildingList;
         private System.Windows.Forms.Label lblBuildingList;
         internal System.Windows.Forms.GroupBox GroupBox2;
-        internal System.Windows.Forms.TextBox txtOwnerID;
-        internal System.Windows.Forms.Label lblOwnerInfo;
         private System.Windows.Forms.Button btnSaveNewProperty;
         private System.Windows.Forms.Button btnCancelP;
         private System.Windows.Forms.TextBox txtCity;
@@ -400,5 +426,11 @@
         private System.Windows.Forms.TextBox txtUnits;
         private System.Windows.Forms.TextBox txtBuildingStreet;
         private System.Windows.Forms.TextBox txtBuildingNumber;
+        private System.Windows.Forms.ComboBox cboCustomer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        internal System.Windows.Forms.Label label3;
     }
 }

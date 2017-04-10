@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnNewPart = new System.Windows.Forms.Button();
             this.btnEditPart = new System.Windows.Forms.Button();
             this.btnDeletePart = new System.Windows.Forms.Button();
@@ -43,11 +44,18 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.btnSavePart = new System.Windows.Forms.Button();
             this.txtCancel = new System.Windows.Forms.Button();
+            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
+            this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CategoryTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewPart
             // 
-            this.btnNewPart.Location = new System.Drawing.Point(494, 62);
+            this.btnNewPart.Location = new System.Drawing.Point(328, 62);
             this.btnNewPart.Name = "btnNewPart";
             this.btnNewPart.Size = new System.Drawing.Size(75, 23);
             this.btnNewPart.TabIndex = 1;
@@ -57,7 +65,7 @@
             // 
             // btnEditPart
             // 
-            this.btnEditPart.Location = new System.Drawing.Point(494, 96);
+            this.btnEditPart.Location = new System.Drawing.Point(328, 96);
             this.btnEditPart.Name = "btnEditPart";
             this.btnEditPart.Size = new System.Drawing.Size(75, 23);
             this.btnEditPart.TabIndex = 2;
@@ -67,7 +75,7 @@
             // 
             // btnDeletePart
             // 
-            this.btnDeletePart.Location = new System.Drawing.Point(494, 130);
+            this.btnDeletePart.Location = new System.Drawing.Point(328, 130);
             this.btnDeletePart.Name = "btnDeletePart";
             this.btnDeletePart.Size = new System.Drawing.Size(75, 23);
             this.btnDeletePart.TabIndex = 3;
@@ -76,7 +84,7 @@
             // 
             // btnManagePartsExit
             // 
-            this.btnManagePartsExit.Location = new System.Drawing.Point(494, 305);
+            this.btnManagePartsExit.Location = new System.Drawing.Point(328, 305);
             this.btnManagePartsExit.Name = "btnManagePartsExit";
             this.btnManagePartsExit.Size = new System.Drawing.Size(75, 23);
             this.btnManagePartsExit.TabIndex = 4;
@@ -90,7 +98,7 @@
             "ID        Category\tName\tPrice"});
             this.lstParts.Location = new System.Drawing.Point(11, 62);
             this.lstParts.Name = "lstParts";
-            this.lstParts.Size = new System.Drawing.Size(436, 134);
+            this.lstParts.Size = new System.Drawing.Size(311, 147);
             this.lstParts.TabIndex = 5;
             // 
             // textBox1
@@ -111,11 +119,15 @@
             // 
             // cbbCategory
             // 
+            this.cbbCategory.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.categoryBindingSource, "categoryId", true));
+            this.cbbCategory.DataSource = this.categoryBindingSource;
+            this.cbbCategory.DisplayMember = "name";
             this.cbbCategory.FormattingEnabled = true;
             this.cbbCategory.Location = new System.Drawing.Point(11, 228);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(213, 21);
             this.cbbCategory.TabIndex = 8;
+            this.cbbCategory.ValueMember = "categoryId";
             // 
             // lblCategory
             // 
@@ -176,11 +188,30 @@
             this.txtCancel.Text = "Cancel";
             this.txtCancel.UseVisualStyleBackColor = true;
             // 
+            // homeAppDBDataSet
+            // 
+            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
+            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // homeAppDBDataSetBindingSource
+            // 
+            this.homeAppDBDataSetBindingSource.DataSource = this.homeAppDBDataSet;
+            this.homeAppDBDataSetBindingSource.Position = 0;
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataMember = "Category";
+            this.categoryBindingSource.DataSource = this.homeAppDBDataSetBindingSource;
+            // 
+            // categoryTableAdapter
+            // 
+            this.categoryTableAdapter.ClearBeforeFill = true;
+            // 
             // frmManageParts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 350);
+            this.ClientSize = new System.Drawing.Size(412, 335);
             this.Controls.Add(this.txtCancel);
             this.Controls.Add(this.btnSavePart);
             this.Controls.Add(this.txtPrice);
@@ -199,6 +230,9 @@
             this.Name = "frmManageParts";
             this.Text = "Manage Parts";
             this.Load += new System.EventHandler(this.frmManageParts_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +254,9 @@
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Button btnSavePart;
         private System.Windows.Forms.Button txtCancel;
+        private System.Windows.Forms.BindingSource homeAppDBDataSetBindingSource;
+        private HomeAppDBDataSet homeAppDBDataSet;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private HomeAppDBDataSetTableAdapters.CategoryTableAdapter categoryTableAdapter;
     }
 }

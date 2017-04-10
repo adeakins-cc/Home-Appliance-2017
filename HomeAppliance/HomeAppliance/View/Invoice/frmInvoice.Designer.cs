@@ -236,7 +236,7 @@
             // 
             // btnAddPart
             // 
-            this.btnAddPart.Location = new System.Drawing.Point(12, 493);
+            this.btnAddPart.Location = new System.Drawing.Point(11, 474);
             this.btnAddPart.Name = "btnAddPart";
             this.btnAddPart.Size = new System.Drawing.Size(75, 23);
             this.btnAddPart.TabIndex = 19;
@@ -245,7 +245,7 @@
             // 
             // btnRemovePart
             // 
-            this.btnRemovePart.Location = new System.Drawing.Point(94, 493);
+            this.btnRemovePart.Location = new System.Drawing.Point(93, 474);
             this.btnRemovePart.Name = "btnRemovePart";
             this.btnRemovePart.Size = new System.Drawing.Size(78, 23);
             this.btnRemovePart.TabIndex = 20;
@@ -505,7 +505,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 532);
+            this.ClientSize = new System.Drawing.Size(625, 503);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSearchCustomerProperty);
             this.Controls.Add(this.btnNewInvoiceExit);
