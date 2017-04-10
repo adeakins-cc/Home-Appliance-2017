@@ -26,7 +26,7 @@ namespace HomeAppliance.View.Invoice
 
         private void btnAddPart_Click(object sender, EventArgs e)
         {
-            frmNewInvoice.ActiveForm.DataBindings.Add(partBindingSource,0,0,"",0);
+            
         }
     }
 }

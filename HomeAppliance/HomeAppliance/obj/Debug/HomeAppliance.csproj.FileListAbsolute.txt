@@ -115,3 +115,5 @@ C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeApplian
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.dll
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.xml
 >>>>>>> origin/master
+C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.dll
+C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.xml

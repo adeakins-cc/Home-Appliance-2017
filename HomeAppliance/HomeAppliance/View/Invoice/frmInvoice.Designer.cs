@@ -48,7 +48,6 @@
             this.txtNotes = new System.Windows.Forms.RichTextBox();
             this.lblParts = new System.Windows.Forms.Label();
             this.dataListParts = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
             this.partListIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,11 +56,9 @@
             this.partsListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.partsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-=======
             this.partName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quality = new System.Windows.Forms.DataGridViewTextBoxColumn();
->>>>>>> parent of 73099fe... Invoice Updates
             this.btnAddPart = new System.Windows.Forms.Button();
             this.btnRemovePart = new System.Windows.Forms.Button();
             this.grpCharge = new System.Windows.Forms.GroupBox();
@@ -108,12 +105,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
-=======
->>>>>>> parent of 73099fe... Invoice Updates
             this.grpCharge.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
@@ -290,8 +284,6 @@
             this.dataListParts.Name = "dataListParts";
             this.dataListParts.Size = new System.Drawing.Size(406, 109);
             this.dataListParts.TabIndex = 18;
-            // 
-<<<<<<< HEAD
             // partListIdDataGridViewTextBoxColumn
             // 
             this.partListIdDataGridViewTextBoxColumn.DataPropertyName = "partListId";
@@ -328,9 +320,7 @@
             this.partsListBindingSource1.DataSource = this.invoiceBindingSource;
             // 
             // partsListBindingSource
-=======
             // partName
->>>>>>> parent of 73099fe... Invoice Updates
             // 
             this.partName.HeaderText = "Part Name";
             this.partName.Name = "partName";
@@ -340,14 +330,11 @@
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             // 
-<<<<<<< HEAD
-=======
             // quality
             // 
             this.quality.HeaderText = "Quality";
             this.quality.Name = "quality";
             // 
->>>>>>> parent of 73099fe... Invoice Updates
             // btnAddPart
             // 
             this.btnAddPart.Location = new System.Drawing.Point(11, 474);
@@ -393,7 +380,6 @@
             this.grpCharge.TabStop = false;
             this.grpCharge.Text = "Charge";
             // 
-<<<<<<< HEAD
             // txtGST
             // 
             this.txtGST.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "GST", true));
@@ -411,8 +397,6 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "GST:";
             // 
-=======
->>>>>>> parent of 73099fe... Invoice Updates
             // btnPost
             // 
             this.btnPost.Location = new System.Drawing.Point(6, 258);
@@ -684,7 +668,6 @@
             // 
             this.partsListTableAdapter.ClearBeforeFill = true;
             // 
-<<<<<<< HEAD
             // invoiceTableAdapter
             // 
             this.invoiceTableAdapter.ClearBeforeFill = true;
@@ -740,7 +723,6 @@
             this.lblPropertyId.TabIndex = 27;
             this.lblPropertyId.Text = "Propertyd";
             this.lblPropertyId.Visible = false;
-=======
             // partListIdDataGridViewTextBoxColumn
             // 
             this.partListIdDataGridViewTextBoxColumn.DataPropertyName = "partListId";
@@ -770,7 +752,6 @@
             this.editPriceDataGridViewTextBoxColumn.DataPropertyName = "editPrice";
             this.editPriceDataGridViewTextBoxColumn.HeaderText = "editPrice";
             this.editPriceDataGridViewTextBoxColumn.Name = "editPriceDataGridViewTextBoxColumn";
->>>>>>> parent of 73099fe... Invoice Updates
             // 
             // frmNewInvoice
             // 
@@ -808,12 +789,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
-=======
->>>>>>> parent of 73099fe... Invoice Updates
             this.grpCharge.ResumeLayout(false);
             this.grpCharge.PerformLayout();
             this.groupBox1.ResumeLayout(false);
