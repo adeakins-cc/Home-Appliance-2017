@@ -48,6 +48,7 @@
             this.txtNotes = new System.Windows.Forms.RichTextBox();
             this.lblParts = new System.Windows.Forms.Label();
             this.dataListParts = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.partListIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,14 +57,16 @@
             this.partsListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.partsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+=======
+            this.partName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quality = new System.Windows.Forms.DataGridViewTextBoxColumn();
+>>>>>>> parent of 73099fe... Invoice Updates
             this.btnAddPart = new System.Windows.Forms.Button();
             this.btnRemovePart = new System.Windows.Forms.Button();
             this.grpCharge = new System.Windows.Forms.GroupBox();
-            this.txtGST = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnPost = new System.Windows.Forms.Button();
             this.chkRSTExempt = new System.Windows.Forms.CheckBox();
-            this.btnNewInvoiceExit = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtRST = new System.Windows.Forms.TextBox();
@@ -76,6 +79,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaterials = new System.Windows.Forms.TextBox();
             this.lblmaterials = new System.Windows.Forms.Label();
+            this.btnNewInvoiceExit = new System.Windows.Forms.Button();
             this.btnSearchCustomerProperty = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSerialNumber = new System.Windows.Forms.TextBox();
@@ -86,8 +90,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtGST = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
+            this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartTableAdapter();
+            this.partsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partsListTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartsListTableAdapter();
             this.invoiceTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.InvoiceTableAdapter();
             this.tableAdapterManager = new HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager();
@@ -99,12 +108,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
+=======
+>>>>>>> parent of 73099fe... Invoice Updates
             this.grpCharge.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateInvoiceDate
@@ -262,6 +277,9 @@
             this.dataListParts.AutoGenerateColumns = false;
             this.dataListParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.partName,
+            this.Price,
+            this.quality,
             this.partListIdDataGridViewTextBoxColumn,
             this.invoiceIdDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
@@ -273,6 +291,7 @@
             this.dataListParts.Size = new System.Drawing.Size(406, 109);
             this.dataListParts.TabIndex = 18;
             // 
+<<<<<<< HEAD
             // partListIdDataGridViewTextBoxColumn
             // 
             this.partListIdDataGridViewTextBoxColumn.DataPropertyName = "partListId";
@@ -309,15 +328,26 @@
             this.partsListBindingSource1.DataSource = this.invoiceBindingSource;
             // 
             // partsListBindingSource
+=======
+            // partName
+>>>>>>> parent of 73099fe... Invoice Updates
             // 
-            this.partsListBindingSource.DataMember = "PartsList";
-            this.partsListBindingSource.DataSource = this.homeAppDBDataSetBindingSource;
+            this.partName.HeaderText = "Part Name";
+            this.partName.Name = "partName";
             // 
-            // homeAppDBDataSetBindingSource
+            // Price
             // 
-            this.homeAppDBDataSetBindingSource.DataSource = this.homeAppDBDataSet;
-            this.homeAppDBDataSetBindingSource.Position = 0;
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
             // 
+<<<<<<< HEAD
+=======
+            // quality
+            // 
+            this.quality.HeaderText = "Quality";
+            this.quality.Name = "quality";
+            // 
+>>>>>>> parent of 73099fe... Invoice Updates
             // btnAddPart
             // 
             this.btnAddPart.Location = new System.Drawing.Point(11, 474);
@@ -363,6 +393,7 @@
             this.grpCharge.TabStop = false;
             this.grpCharge.Text = "Charge";
             // 
+<<<<<<< HEAD
             // txtGST
             // 
             this.txtGST.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "GST", true));
@@ -380,6 +411,8 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "GST:";
             // 
+=======
+>>>>>>> parent of 73099fe... Invoice Updates
             // btnPost
             // 
             this.btnPost.Location = new System.Drawing.Point(6, 258);
@@ -399,16 +432,6 @@
             this.chkRSTExempt.TabIndex = 14;
             this.chkRSTExempt.Text = "RST Exempt";
             this.chkRSTExempt.UseVisualStyleBackColor = true;
-            // 
-            // btnNewInvoiceExit
-            // 
-            this.btnNewInvoiceExit.Location = new System.Drawing.Point(112, 258);
-            this.btnNewInvoiceExit.Name = "btnNewInvoiceExit";
-            this.btnNewInvoiceExit.Size = new System.Drawing.Size(75, 23);
-            this.btnNewInvoiceExit.TabIndex = 22;
-            this.btnNewInvoiceExit.Text = "Exit";
-            this.btnNewInvoiceExit.UseVisualStyleBackColor = true;
-            this.btnNewInvoiceExit.Click += new System.EventHandler(this.btnNewInvoiceExit_Click);
             // 
             // txtTotal
             // 
@@ -512,6 +535,16 @@
             this.lblmaterials.TabIndex = 0;
             this.lblmaterials.Text = "Materials:";
             // 
+            // btnNewInvoiceExit
+            // 
+            this.btnNewInvoiceExit.Location = new System.Drawing.Point(112, 258);
+            this.btnNewInvoiceExit.Name = "btnNewInvoiceExit";
+            this.btnNewInvoiceExit.Size = new System.Drawing.Size(75, 23);
+            this.btnNewInvoiceExit.TabIndex = 22;
+            this.btnNewInvoiceExit.Text = "Exit";
+            this.btnNewInvoiceExit.UseVisualStyleBackColor = true;
+            this.btnNewInvoiceExit.Click += new System.EventHandler(this.btnNewInvoiceExit_Click);
+            // 
             // btnSearchCustomerProperty
             // 
             this.btnSearchCustomerProperty.Location = new System.Drawing.Point(343, 48);
@@ -607,6 +640,32 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "P.O. Number:";
             // 
+            // txtGST
+            // 
+            this.txtGST.Location = new System.Drawing.Point(87, 152);
+            this.txtGST.Name = "txtGST";
+            this.txtGST.Size = new System.Drawing.Size(100, 20);
+            this.txtGST.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 155);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "GST:";
+            // 
+            // homeAppDBDataSet
+            // 
+            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
+            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // homeAppDBDataSetBindingSource
+            // 
+            this.homeAppDBDataSetBindingSource.DataSource = this.homeAppDBDataSet;
+            this.homeAppDBDataSetBindingSource.Position = 0;
+            // 
             // partBindingSource
             // 
             this.partBindingSource.DataMember = "Part";
@@ -616,10 +675,16 @@
             // 
             this.partTableAdapter.ClearBeforeFill = true;
             // 
+            // partsListBindingSource
+            // 
+            this.partsListBindingSource.DataMember = "PartsList";
+            this.partsListBindingSource.DataSource = this.homeAppDBDataSetBindingSource;
+            // 
             // partsListTableAdapter
             // 
             this.partsListTableAdapter.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
             // invoiceTableAdapter
             // 
             this.invoiceTableAdapter.ClearBeforeFill = true;
@@ -675,6 +740,37 @@
             this.lblPropertyId.TabIndex = 27;
             this.lblPropertyId.Text = "Propertyd";
             this.lblPropertyId.Visible = false;
+=======
+            // partListIdDataGridViewTextBoxColumn
+            // 
+            this.partListIdDataGridViewTextBoxColumn.DataPropertyName = "partListId";
+            this.partListIdDataGridViewTextBoxColumn.HeaderText = "partListId";
+            this.partListIdDataGridViewTextBoxColumn.Name = "partListIdDataGridViewTextBoxColumn";
+            // 
+            // invoiceIdDataGridViewTextBoxColumn
+            // 
+            this.invoiceIdDataGridViewTextBoxColumn.DataPropertyName = "invoiceId";
+            this.invoiceIdDataGridViewTextBoxColumn.HeaderText = "invoiceId";
+            this.invoiceIdDataGridViewTextBoxColumn.Name = "invoiceIdDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // partIdDataGridViewTextBoxColumn
+            // 
+            this.partIdDataGridViewTextBoxColumn.DataPropertyName = "partId";
+            this.partIdDataGridViewTextBoxColumn.HeaderText = "partId";
+            this.partIdDataGridViewTextBoxColumn.Name = "partIdDataGridViewTextBoxColumn";
+            // 
+            // editPriceDataGridViewTextBoxColumn
+            // 
+            this.editPriceDataGridViewTextBoxColumn.DataPropertyName = "editPrice";
+            this.editPriceDataGridViewTextBoxColumn.HeaderText = "editPrice";
+            this.editPriceDataGridViewTextBoxColumn.Name = "editPriceDataGridViewTextBoxColumn";
+>>>>>>> parent of 73099fe... Invoice Updates
             // 
             // frmNewInvoice
             // 
@@ -712,14 +808,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
+=======
+>>>>>>> parent of 73099fe... Invoice Updates
             this.grpCharge.ResumeLayout(false);
             this.grpCharge.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -743,6 +845,9 @@
         private System.Windows.Forms.RichTextBox txtNotes;
         private System.Windows.Forms.Label lblParts;
         private System.Windows.Forms.DataGridView dataListParts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn partName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quality;
         private System.Windows.Forms.Button btnAddPart;
         private System.Windows.Forms.Button btnRemovePart;
         private System.Windows.Forms.GroupBox grpCharge;
