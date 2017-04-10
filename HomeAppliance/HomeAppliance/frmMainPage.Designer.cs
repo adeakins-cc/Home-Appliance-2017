@@ -76,6 +76,7 @@
             this.btnDisplayInvoice.TabIndex = 2;
             this.btnDisplayInvoice.Text = "Display Invoices";
             this.btnDisplayInvoice.UseVisualStyleBackColor = true;
+            this.btnDisplayInvoice.Click += new System.EventHandler(this.btnDisplayInvoice_Click);
             // 
             // btnManageCustomer
             // 
@@ -153,6 +154,7 @@
             this.btnManageFinacial.TabIndex = 8;
             this.btnManageFinacial.Text = "Manage Finacial";
             this.btnManageFinacial.UseVisualStyleBackColor = true;
+            this.btnManageFinacial.Click += new System.EventHandler(this.btnManageFinacial_Click);
             // 
             // btnManageCategories
             // 

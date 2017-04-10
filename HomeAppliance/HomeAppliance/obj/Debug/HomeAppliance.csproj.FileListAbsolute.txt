@@ -94,6 +94,8 @@ C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmNe
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Technician.frmManageTechnician.resources
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageParts.resources
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageProperty.resources
-C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmViewInvoices.resources
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.Properties.Resources.resources
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csproj.GenerateResource.Cache
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.pdb
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageFinance.resources

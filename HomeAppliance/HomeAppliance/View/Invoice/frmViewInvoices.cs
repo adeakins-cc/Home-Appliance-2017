@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HomeAppliance
 {
-    public partial class frmViewInvoices : Form
+    public partial class frmManageFinance : Form
     {
-        public frmViewInvoices()
+        public frmManageFinance()
         {
             InitializeComponent();
         }

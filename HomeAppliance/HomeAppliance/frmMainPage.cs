@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using HomeAppliance.View.Technician;
+using HomeAppliance;
 
 namespace HomeAppliance
 {
@@ -49,7 +51,7 @@ namespace HomeAppliance
 
         private void btnManageTechnician_Click(object sender, EventArgs e)
         {
-            frmManageTechnican technicianPage = new frmManageTechnican();
+            frmManageTechnician technicianPage = new frmManageTechnician();
             technicianPage.ShowDialog();
         }
 
@@ -62,6 +64,18 @@ namespace HomeAppliance
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnDisplayInvoice_Click(object sender, EventArgs e)
+        {
+            frmManageFinance viewInvoicePage = new frmManageFinance();
+            viewInvoicePage.ShowDialog();
+        }
+
+        private void btnManageFinacial_Click(object sender, EventArgs e)
+        {
+            frmManageFinance viewFinancesPage = new frmManageFinance();
+            viewFinancesPage.ShowDialog();
         }
     }
 }

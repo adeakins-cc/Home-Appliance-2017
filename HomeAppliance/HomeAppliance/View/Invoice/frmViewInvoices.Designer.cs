@@ -1,6 +1,6 @@
 ﻿namespace HomeAppliance
 {
-    partial class frmViewInvoices
+    partial class frmManageFinance
     {
         /// <summary>
         /// Required designer variable.
