@@ -21,5 +21,10 @@ namespace HomeAppliance.Finance
         {
 
         }
+
+        private void frmManageFinance_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

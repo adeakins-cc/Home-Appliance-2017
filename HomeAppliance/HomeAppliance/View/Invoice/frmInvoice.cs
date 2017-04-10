@@ -19,6 +19,10 @@ namespace HomeAppliance
 
         private void frmInvoice_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'homeAppDBDataSet.PartsList' table. You can move, or remove it, as needed.
+            this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
+            // TODO: This line of code loads data into the 'homeAppDBDataSet.Part' table. You can move, or remove it, as needed.
+            this.partTableAdapter.Fill(this.homeAppDBDataSet.Part);
 
         }
 

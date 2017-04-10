@@ -49,7 +49,7 @@ namespace HomeAppliance
 
         private void btnManageTechnician_Click(object sender, EventArgs e)
         {
-            frmTechnician technicianPage = new frmTechnician();
+            frmManageTechnican technicianPage = new frmManageTechnican();
             technicianPage.ShowDialog();
         }
 

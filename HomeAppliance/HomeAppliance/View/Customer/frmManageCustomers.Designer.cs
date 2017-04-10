@@ -29,17 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDeleteCustomer = new System.Windows.Forms.Button();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
             this.btnNewCustomer = new System.Windows.Forms.Button();
-            this.lstCustomer = new System.Windows.Forms.RichTextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchCustomer = new System.Windows.Forms.TextBox();
             this.grpCustomer = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtStreetNum02 = new System.Windows.Forms.TextBox();
+            this.cobCityId02 = new System.Windows.Forms.ComboBox();
+            this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPostalCode02 = new System.Windows.Forms.TextBox();
+            this.txtUnitNum02 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtStreetName02 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCompanyName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtStreetNumber01 = new System.Windows.Forms.TextBox();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeAppDBDataSet1 = new HomeAppliance.HomeAppDBDataSet();
+            this.cobCityId01 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtPostalCode01 = new System.Windows.Forms.TextBox();
+            this.unitNumber01 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.streetName01 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
@@ -58,42 +84,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtContactName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtPostalCode01 = new System.Windows.Forms.TextBox();
-            this.unitNumber01 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.streetName01 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.cobCityId01 = new System.Windows.Forms.ComboBox();
-            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
-            this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cityTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CityTableAdapter();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtStreetNumber01 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtStreetNum02 = new System.Windows.Forms.TextBox();
-            this.cobCityId02 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPostalCode02 = new System.Windows.Forms.TextBox();
-            this.txtUnitNum02 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtStreetName02 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.homeAppDBDataSet1 = new HomeAppliance.HomeAppDBDataSet();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CustomerTableAdapter();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.grpCustomer.SuspendLayout();
-            this.grpContact.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet1)).BeginInit();
+            this.grpContact.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
@@ -136,14 +137,6 @@
             this.btnNewCustomer.UseVisualStyleBackColor = true;
             this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
             // 
-            // lstCustomer
-            // 
-            this.lstCustomer.Location = new System.Drawing.Point(12, 38);
-            this.lstCustomer.Name = "lstCustomer";
-            this.lstCustomer.Size = new System.Drawing.Size(229, 445);
-            this.lstCustomer.TabIndex = 9;
-            this.lstCustomer.Text = "firstName\t\tlastName\t\tCompanyName\t";
-            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(166, 12);
@@ -177,6 +170,119 @@
             this.grpCustomer.TabStop = false;
             this.grpCustomer.Text = "Customer Info:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtStreetNum02);
+            this.groupBox1.Controls.Add(this.cobCityId02);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtPostalCode02);
+            this.groupBox1.Controls.Add(this.txtUnitNum02);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txtStreetName02);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Location = new System.Drawing.Point(209, 71);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(197, 153);
+            this.groupBox1.TabIndex = 42;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Address2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Street Number:";
+            // 
+            // txtStreetNum02
+            // 
+            this.txtStreetNum02.Location = new System.Drawing.Point(88, 45);
+            this.txtStreetNum02.Name = "txtStreetNum02";
+            this.txtStreetNum02.Size = new System.Drawing.Size(100, 20);
+            this.txtStreetNum02.TabIndex = 41;
+            // 
+            // cobCityId02
+            // 
+            this.cobCityId02.DataSource = this.cityBindingSource;
+            this.cobCityId02.DisplayMember = "name";
+            this.cobCityId02.FormattingEnabled = true;
+            this.cobCityId02.Location = new System.Drawing.Point(88, 96);
+            this.cobCityId02.Name = "cobCityId02";
+            this.cobCityId02.Size = new System.Drawing.Size(100, 21);
+            this.cobCityId02.TabIndex = 39;
+            this.cobCityId02.ValueMember = "cityId";
+            // 
+            // cityBindingSource
+            // 
+            this.cityBindingSource.DataMember = "City";
+            this.cityBindingSource.DataSource = this.homeAppDBDataSet;
+            // 
+            // homeAppDBDataSet
+            // 
+            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
+            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Unit Number:";
+            // 
+            // txtPostalCode02
+            // 
+            this.txtPostalCode02.Location = new System.Drawing.Point(88, 123);
+            this.txtPostalCode02.Name = "txtPostalCode02";
+            this.txtPostalCode02.Size = new System.Drawing.Size(100, 20);
+            this.txtPostalCode02.TabIndex = 38;
+            // 
+            // txtUnitNum02
+            // 
+            this.txtUnitNum02.Location = new System.Drawing.Point(88, 19);
+            this.txtUnitNum02.Name = "txtUnitNum02";
+            this.txtUnitNum02.Size = new System.Drawing.Size(100, 20);
+            this.txtUnitNum02.TabIndex = 30;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(15, 126);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 13);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Postal Code:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 13);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Street Name:";
+            // 
+            // txtStreetName02
+            // 
+            this.txtStreetName02.Location = new System.Drawing.Point(88, 71);
+            this.txtStreetName02.Name = "txtStreetName02";
+            this.txtStreetName02.Size = new System.Drawing.Size(100, 20);
+            this.txtStreetName02.TabIndex = 32;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(55, 100);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(27, 13);
+            this.label19.TabIndex = 33;
+            this.label19.Text = "City:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -201,6 +307,125 @@
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "First Name:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtStreetNumber01);
+            this.groupBox2.Controls.Add(this.cobCityId01);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.txtPostalCode01);
+            this.groupBox2.Controls.Add(this.unitNumber01);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.streetName01);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Location = new System.Drawing.Point(6, 71);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(197, 153);
+            this.groupBox2.TabIndex = 40;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Address1";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(4, 48);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Street Number:";
+            // 
+            // txtStreetNumber01
+            // 
+            this.txtStreetNumber01.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.customerBindingSource, "streetNumber01", true));
+            this.txtStreetNumber01.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "streetNumber01", true));
+            this.txtStreetNumber01.Location = new System.Drawing.Point(88, 45);
+            this.txtStreetNumber01.Name = "txtStreetNumber01";
+            this.txtStreetNumber01.Size = new System.Drawing.Size(100, 20);
+            this.txtStreetNumber01.TabIndex = 41;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.homeAppDBDataSet1;
+            // 
+            // homeAppDBDataSet1
+            // 
+            this.homeAppDBDataSet1.DataSetName = "HomeAppDBDataSet";
+            this.homeAppDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cobCityId01
+            // 
+            this.cobCityId01.DataSource = this.cityBindingSource;
+            this.cobCityId01.DisplayMember = "name";
+            this.cobCityId01.FormattingEnabled = true;
+            this.cobCityId01.Location = new System.Drawing.Point(88, 96);
+            this.cobCityId01.Name = "cobCityId01";
+            this.cobCityId01.Size = new System.Drawing.Size(100, 21);
+            this.cobCityId01.TabIndex = 39;
+            this.cobCityId01.ValueMember = "cityId";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(13, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 13);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Unit Number:";
+            // 
+            // txtPostalCode01
+            // 
+            this.txtPostalCode01.Location = new System.Drawing.Point(88, 123);
+            this.txtPostalCode01.Name = "txtPostalCode01";
+            this.txtPostalCode01.Size = new System.Drawing.Size(100, 20);
+            this.txtPostalCode01.TabIndex = 38;
+            // 
+            // unitNumber01
+            // 
+            this.unitNumber01.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.customerBindingSource, "unitNumber01", true));
+            this.unitNumber01.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "unitNumber01", true));
+            this.unitNumber01.Location = new System.Drawing.Point(88, 19);
+            this.unitNumber01.Name = "unitNumber01";
+            this.unitNumber01.Size = new System.Drawing.Size(100, 20);
+            this.unitNumber01.TabIndex = 30;
+            this.unitNumber01.TextChanged += new System.EventHandler(this.unitNumber01_TextChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 126);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(67, 13);
+            this.label17.TabIndex = 37;
+            this.label17.Text = "Postal Code:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(13, 74);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(69, 13);
+            this.label18.TabIndex = 31;
+            this.label18.Text = "Street Name:";
+            // 
+            // streetName01
+            // 
+            this.streetName01.Location = new System.Drawing.Point(88, 71);
+            this.streetName01.Name = "streetName01";
+            this.streetName01.Size = new System.Drawing.Size(100, 20);
+            this.streetName01.TabIndex = 32;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(55, 100);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(27, 13);
+            this.label20.TabIndex = 33;
+            this.label20.Text = "City:";
             // 
             // txtFirstName
             // 
@@ -360,256 +585,35 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Name:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtStreetNumber01);
-            this.groupBox2.Controls.Add(this.cobCityId01);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.txtPostalCode01);
-            this.groupBox2.Controls.Add(this.unitNumber01);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.streetName01);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Location = new System.Drawing.Point(6, 71);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(197, 153);
-            this.groupBox2.TabIndex = 40;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Address1";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13, 22);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 13);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "Unit Number:";
-            // 
-            // txtPostalCode01
-            // 
-            this.txtPostalCode01.Location = new System.Drawing.Point(88, 123);
-            this.txtPostalCode01.Name = "txtPostalCode01";
-            this.txtPostalCode01.Size = new System.Drawing.Size(100, 20);
-            this.txtPostalCode01.TabIndex = 38;
-            // 
-            // unitNumber01
-            // 
-            this.unitNumber01.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.customerBindingSource, "unitNumber01", true));
-            this.unitNumber01.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "unitNumber01", true));
-            this.unitNumber01.Location = new System.Drawing.Point(88, 19);
-            this.unitNumber01.Name = "unitNumber01";
-            this.unitNumber01.Size = new System.Drawing.Size(100, 20);
-            this.unitNumber01.TabIndex = 30;
-            this.unitNumber01.TextChanged += new System.EventHandler(this.unitNumber01_TextChanged);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 126);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(67, 13);
-            this.label17.TabIndex = 37;
-            this.label17.Text = "Postal Code:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(13, 74);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(69, 13);
-            this.label18.TabIndex = 31;
-            this.label18.Text = "Street Name:";
-            // 
-            // streetName01
-            // 
-            this.streetName01.Location = new System.Drawing.Point(88, 71);
-            this.streetName01.Name = "streetName01";
-            this.streetName01.Size = new System.Drawing.Size(100, 20);
-            this.streetName01.TabIndex = 32;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(55, 100);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 13);
-            this.label20.TabIndex = 33;
-            this.label20.Text = "City:";
-            // 
-            // cobCityId01
-            // 
-            this.cobCityId01.DataSource = this.cityBindingSource;
-            this.cobCityId01.DisplayMember = "name";
-            this.cobCityId01.FormattingEnabled = true;
-            this.cobCityId01.Location = new System.Drawing.Point(88, 96);
-            this.cobCityId01.Name = "cobCityId01";
-            this.cobCityId01.Size = new System.Drawing.Size(100, 21);
-            this.cobCityId01.TabIndex = 39;
-            this.cobCityId01.ValueMember = "cityId";
-            // 
-            // homeAppDBDataSet
-            // 
-            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
-            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cityBindingSource
-            // 
-            this.cityBindingSource.DataMember = "City";
-            this.cityBindingSource.DataSource = this.homeAppDBDataSet;
-            // 
             // cityTableAdapter
             // 
             this.cityTableAdapter.ClearBeforeFill = true;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 48);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 13);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "Street Number:";
-            // 
-            // txtStreetNumber01
-            // 
-            this.txtStreetNumber01.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.customerBindingSource, "streetNumber01", true));
-            this.txtStreetNumber01.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "streetNumber01", true));
-            this.txtStreetNumber01.Location = new System.Drawing.Point(88, 45);
-            this.txtStreetNumber01.Name = "txtStreetNumber01";
-            this.txtStreetNumber01.Size = new System.Drawing.Size(100, 20);
-            this.txtStreetNumber01.TabIndex = 41;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtStreetNum02);
-            this.groupBox1.Controls.Add(this.cobCityId02);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtPostalCode02);
-            this.groupBox1.Controls.Add(this.txtUnitNum02);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.txtStreetName02);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Location = new System.Drawing.Point(209, 71);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(197, 153);
-            this.groupBox1.TabIndex = 42;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Address2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Street Number:";
-            // 
-            // txtStreetNum02
-            // 
-            this.txtStreetNum02.Location = new System.Drawing.Point(88, 45);
-            this.txtStreetNum02.Name = "txtStreetNum02";
-            this.txtStreetNum02.Size = new System.Drawing.Size(100, 20);
-            this.txtStreetNum02.TabIndex = 41;
-            // 
-            // cobCityId02
-            // 
-            this.cobCityId02.DataSource = this.cityBindingSource;
-            this.cobCityId02.DisplayMember = "name";
-            this.cobCityId02.FormattingEnabled = true;
-            this.cobCityId02.Location = new System.Drawing.Point(88, 96);
-            this.cobCityId02.Name = "cobCityId02";
-            this.cobCityId02.Size = new System.Drawing.Size(100, 21);
-            this.cobCityId02.TabIndex = 39;
-            this.cobCityId02.ValueMember = "cityId";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 13);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Unit Number:";
-            // 
-            // txtPostalCode02
-            // 
-            this.txtPostalCode02.Location = new System.Drawing.Point(88, 123);
-            this.txtPostalCode02.Name = "txtPostalCode02";
-            this.txtPostalCode02.Size = new System.Drawing.Size(100, 20);
-            this.txtPostalCode02.TabIndex = 38;
-            // 
-            // txtUnitNum02
-            // 
-            this.txtUnitNum02.Location = new System.Drawing.Point(88, 19);
-            this.txtUnitNum02.Name = "txtUnitNum02";
-            this.txtUnitNum02.Size = new System.Drawing.Size(100, 20);
-            this.txtUnitNum02.TabIndex = 30;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 126);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 13);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Postal Code:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 74);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 13);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Street Name:";
-            // 
-            // txtStreetName02
-            // 
-            this.txtStreetName02.Location = new System.Drawing.Point(88, 71);
-            this.txtStreetName02.Name = "txtStreetName02";
-            this.txtStreetName02.Size = new System.Drawing.Size(100, 20);
-            this.txtStreetName02.TabIndex = 32;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(55, 100);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(27, 13);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "City:";
-            // 
-            // homeAppDBDataSet1
-            // 
-            this.homeAppDBDataSet1.DataSetName = "HomeAppDBDataSet";
-            this.homeAppDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "Customer";
-            this.customerBindingSource.DataSource = this.homeAppDBDataSet1;
-            // 
             // customerTableAdapter
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(12, 38);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Node0";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            this.treeView1.Size = new System.Drawing.Size(229, 440);
+            this.treeView1.TabIndex = 43;
             // 
             // frmManageCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 490);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.grpContact);
             this.Controls.Add(this.grpCustomer);
             this.Controls.Add(this.txtSearchCustomer);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.lstCustomer);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNewCustomer);
             this.Controls.Add(this.btnUpdateCustomer);
@@ -619,16 +623,16 @@
             this.Load += new System.EventHandler(this.frmManageCustomer_Load);
             this.grpCustomer.ResumeLayout(false);
             this.grpCustomer.PerformLayout();
-            this.grpContact.ResumeLayout(false);
-            this.grpContact.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet1)).EndInit();
+            this.grpContact.ResumeLayout(false);
+            this.grpContact.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -639,7 +643,6 @@
         private System.Windows.Forms.Button btnDeleteCustomer;
         private System.Windows.Forms.Button btnUpdateCustomer;
         private System.Windows.Forms.Button btnNewCustomer;
-        private System.Windows.Forms.RichTextBox lstCustomer;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearchCustomer;
         private System.Windows.Forms.GroupBox grpCustomer;
@@ -692,5 +695,6 @@
         private HomeAppDBDataSet homeAppDBDataSet1;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private HomeAppDBDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }

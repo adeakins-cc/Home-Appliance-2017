@@ -84,3 +84,16 @@ C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmEditPart.resources
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmEditProperty.resources
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmEditTechnician.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageCategories.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.Finance.frmManageFinance.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmMain.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageCustomer.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.Invoice.frmEditInvoice.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmNewInvoice.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Technician.frmManageTechnician.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageParts.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageProperty.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmViewInvoices.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.Properties.Resources.resources
+C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csproj.GenerateResource.Cache

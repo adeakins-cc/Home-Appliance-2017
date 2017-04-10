@@ -96,11 +96,11 @@
     <Compile Include="View\Invoice\frmInvoice.Designer.cs">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Technician\frmNewTechnician.cs">
+    <Compile Include="View\Technician\frmManageTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Technician\frmNewTechnician.Designer.cs">
-      <DependentUpon>frmNewTechnician.cs</DependentUpon>
+    <Compile Include="View\Technician\frmManageTechnician.Designer.cs">
+      <DependentUpon>frmManageTechnician.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Part\frmManagePart.cs">
       <SubType>Form</SubType>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="View\Invoice\frmInvoice.resx">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Technician\frmNewTechnician.resx">
-      <DependentUpon>frmNewTechnician.cs</DependentUpon>
+    <EmbeddedResource Include="View\Technician\frmManageTechnician.resx">
+      <DependentUpon>frmManageTechnician.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Part\frmManagePart.resx">
       <DependentUpon>frmManagePart.cs</DependentUpon>

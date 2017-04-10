@@ -337,6 +337,7 @@
             this.Controls.Add(this.lstFinance);
             this.Name = "frmManageFinance";
             this.Text = "Manage Finance";
+            this.Load += new System.EventHandler(this.frmManageFinance_Load);
             this.grpSearchOptions.ResumeLayout(false);
             this.grpSearchOptions.PerformLayout();
             this.grpList.ResumeLayout(false);
