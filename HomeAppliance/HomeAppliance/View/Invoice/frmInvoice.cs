@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeAppliance.View.Invoice;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,10 @@ namespace HomeAppliance
 
         private void frmInvoice_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'homeAppDBDataSet.Technician' table. You can move, or remove it, as needed.
+            this.technicianTableAdapter.Fill(this.homeAppDBDataSet.Technician);
+            // TODO: This line of code loads data into the 'homeAppDBDataSet.Invoice' table. You can move, or remove it, as needed.
+            this.invoiceTableAdapter.Fill(this.homeAppDBDataSet.Invoice);
             // TODO: This line of code loads data into the 'homeAppDBDataSet.PartsList' table. You can move, or remove it, as needed.
             this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
             // TODO: This line of code loads data into the 'homeAppDBDataSet.Part' table. You can move, or remove it, as needed.
@@ -36,6 +41,10 @@ namespace HomeAppliance
             this.Close();
         }
 
-
+        private void btnAddPart_Click(object sender, EventArgs e)
+        {
+            frmAddPart newPart = new frmAddPart();
+            newPart.ShowDialog();
+        }
     }
 }
