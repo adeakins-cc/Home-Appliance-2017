@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dateInvoiceDate = new System.Windows.Forms.DateTimePicker();
-            this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
             this.lblInvDate = new System.Windows.Forms.Label();
             this.lstOwner = new System.Windows.Forms.ListView();
             this.lblOwner = new System.Windows.Forms.Label();
@@ -41,29 +39,20 @@
             this.dateServiceDate = new System.Windows.Forms.DateTimePicker();
             this.lblTechnician = new System.Windows.Forms.Label();
             this.drpTechnician = new System.Windows.Forms.ComboBox();
-            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblCustomerComplain = new System.Windows.Forms.Label();
             this.txtComplaint = new System.Windows.Forms.RichTextBox();
             this.lblServiceNotes = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.RichTextBox();
             this.lblParts = new System.Windows.Forms.Label();
             this.dataListParts = new System.Windows.Forms.DataGridView();
-            this.partListIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partsListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.partsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.partName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quality = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddPart = new System.Windows.Forms.Button();
             this.btnRemovePart = new System.Windows.Forms.Button();
             this.grpCharge = new System.Windows.Forms.GroupBox();
+            this.txtGST = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnPost = new System.Windows.Forms.Button();
             this.chkRSTExempt = new System.Windows.Forms.CheckBox();
+            this.btnNewInvoiceExit = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtRST = new System.Windows.Forms.TextBox();
@@ -76,7 +65,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaterials = new System.Windows.Forms.TextBox();
             this.lblmaterials = new System.Windows.Forms.Label();
-            this.btnNewInvoiceExit = new System.Windows.Forms.Button();
             this.btnSearchCustomerProperty = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSerialNumber = new System.Windows.Forms.TextBox();
@@ -87,52 +75,35 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtGST = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
-            this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.partBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.partTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartTableAdapter();
-            this.partsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.partsListTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartsListTableAdapter();
-            this.invoiceTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.InvoiceTableAdapter();
-            this.tableAdapterManager = new HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager();
-            this.technicianTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TechnicianTableAdapter();
             this.lblInvoiceId = new System.Windows.Forms.Label();
             this.lblCustomerId = new System.Windows.Forms.Label();
             this.lblPropertyId = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
+            this.label11 = new System.Windows.Forms.Label();
+            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
+            this.partsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.partsListTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartsListTableAdapter();
+            this.tableAdapterManager = new HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager();
+            this.partListIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.technicianTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TechnicianTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
             this.grpCharge.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateInvoiceDate
             // 
-            this.dateInvoiceDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.invoiceBindingSource, "invoiceDate", true));
             this.dateInvoiceDate.Location = new System.Drawing.Point(11, 28);
             this.dateInvoiceDate.Name = "dateInvoiceDate";
             this.dateInvoiceDate.Size = new System.Drawing.Size(200, 20);
             this.dateInvoiceDate.TabIndex = 0;
-            // 
-            // invoiceBindingSource
-            // 
-            this.invoiceBindingSource.DataMember = "Invoice";
-            this.invoiceBindingSource.DataSource = this.homeAppDBDataSet;
-            // 
-            // homeAppDBDataSet
-            // 
-            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
-            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblInvDate
             // 
@@ -188,7 +159,6 @@
             // 
             // dateServiceDate
             // 
-            this.dateServiceDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.invoiceBindingSource, "serviceDate", true));
             this.dateServiceDate.Location = new System.Drawing.Point(11, 197);
             this.dateServiceDate.Name = "dateServiceDate";
             this.dateServiceDate.Size = new System.Drawing.Size(200, 20);
@@ -205,8 +175,6 @@
             // 
             // drpTechnician
             // 
-            this.drpTechnician.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "technicianId", true));
-            this.drpTechnician.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.invoiceBindingSource, "technicianId", true));
             this.drpTechnician.DataSource = this.technicianBindingSource;
             this.drpTechnician.DisplayMember = "name";
             this.drpTechnician.FormattingEnabled = true;
@@ -215,11 +183,6 @@
             this.drpTechnician.Size = new System.Drawing.Size(200, 21);
             this.drpTechnician.TabIndex = 9;
             this.drpTechnician.ValueMember = "technicianId";
-            // 
-            // technicianBindingSource
-            // 
-            this.technicianBindingSource.DataMember = "Technician";
-            this.technicianBindingSource.DataSource = this.homeAppDBDataSet;
             // 
             // lblCustomerComplain
             // 
@@ -232,7 +195,6 @@
             // 
             // txtComplaint
             // 
-            this.txtComplaint.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "complaints", true));
             this.txtComplaint.Location = new System.Drawing.Point(11, 240);
             this.txtComplaint.Name = "txtComplaint";
             this.txtComplaint.Size = new System.Drawing.Size(198, 96);
@@ -250,7 +212,6 @@
             // 
             // txtNotes
             // 
-            this.txtNotes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "notes", true));
             this.txtNotes.Location = new System.Drawing.Point(218, 240);
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(200, 96);
@@ -271,69 +232,16 @@
             this.dataListParts.AutoGenerateColumns = false;
             this.dataListParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataListParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.partName,
-            this.Price,
-            this.quality,
             this.partListIdDataGridViewTextBoxColumn,
             this.invoiceIdDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
             this.partIdDataGridViewTextBoxColumn,
             this.editPriceDataGridViewTextBoxColumn});
-            this.dataListParts.DataSource = this.partsListBindingSource1;
+            this.dataListParts.DataSource = this.partsListBindingSource;
             this.dataListParts.Location = new System.Drawing.Point(12, 359);
             this.dataListParts.Name = "dataListParts";
             this.dataListParts.Size = new System.Drawing.Size(406, 109);
             this.dataListParts.TabIndex = 18;
-            // partListIdDataGridViewTextBoxColumn
-            // 
-            this.partListIdDataGridViewTextBoxColumn.DataPropertyName = "partListId";
-            this.partListIdDataGridViewTextBoxColumn.HeaderText = "partListId";
-            this.partListIdDataGridViewTextBoxColumn.Name = "partListIdDataGridViewTextBoxColumn";
-            // 
-            // invoiceIdDataGridViewTextBoxColumn
-            // 
-            this.invoiceIdDataGridViewTextBoxColumn.DataPropertyName = "invoiceId";
-            this.invoiceIdDataGridViewTextBoxColumn.HeaderText = "invoiceId";
-            this.invoiceIdDataGridViewTextBoxColumn.Name = "invoiceIdDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // partIdDataGridViewTextBoxColumn
-            // 
-            this.partIdDataGridViewTextBoxColumn.DataPropertyName = "partId";
-            this.partIdDataGridViewTextBoxColumn.HeaderText = "partId";
-            this.partIdDataGridViewTextBoxColumn.Name = "partIdDataGridViewTextBoxColumn";
-            // 
-            // editPriceDataGridViewTextBoxColumn
-            // 
-            this.editPriceDataGridViewTextBoxColumn.DataPropertyName = "editPrice";
-            this.editPriceDataGridViewTextBoxColumn.HeaderText = "editPrice";
-            this.editPriceDataGridViewTextBoxColumn.Name = "editPriceDataGridViewTextBoxColumn";
-            // 
-            // partsListBindingSource1
-            // 
-            this.partsListBindingSource1.DataMember = "FK_PartList_Invoice";
-            this.partsListBindingSource1.DataSource = this.invoiceBindingSource;
-            // 
-            // partsListBindingSource
-            // partName
-            // 
-            this.partName.HeaderText = "Part Name";
-            this.partName.Name = "partName";
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            // 
-            // quality
-            // 
-            this.quality.HeaderText = "Quality";
-            this.quality.Name = "quality";
             // 
             // btnAddPart
             // 
@@ -382,7 +290,6 @@
             // 
             // txtGST
             // 
-            this.txtGST.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "GST", true));
             this.txtGST.Location = new System.Drawing.Point(87, 152);
             this.txtGST.Name = "txtGST";
             this.txtGST.Size = new System.Drawing.Size(100, 20);
@@ -405,11 +312,11 @@
             this.btnPost.TabIndex = 16;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // chkRSTExempt
             // 
             this.chkRSTExempt.AutoSize = true;
-            this.chkRSTExempt.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.invoiceBindingSource, "PSTExempt", true));
             this.chkRSTExempt.Location = new System.Drawing.Point(87, 204);
             this.chkRSTExempt.Name = "chkRSTExempt";
             this.chkRSTExempt.Size = new System.Drawing.Size(86, 17);
@@ -417,9 +324,18 @@
             this.chkRSTExempt.Text = "RST Exempt";
             this.chkRSTExempt.UseVisualStyleBackColor = true;
             // 
+            // btnNewInvoiceExit
+            // 
+            this.btnNewInvoiceExit.Location = new System.Drawing.Point(112, 258);
+            this.btnNewInvoiceExit.Name = "btnNewInvoiceExit";
+            this.btnNewInvoiceExit.Size = new System.Drawing.Size(75, 23);
+            this.btnNewInvoiceExit.TabIndex = 22;
+            this.btnNewInvoiceExit.Text = "Exit";
+            this.btnNewInvoiceExit.UseVisualStyleBackColor = true;
+            this.btnNewInvoiceExit.Click += new System.EventHandler(this.btnNewInvoiceExit_Click);
+            // 
             // txtTotal
             // 
-            this.txtTotal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "grossTotal", true));
             this.txtTotal.Location = new System.Drawing.Point(87, 178);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
@@ -436,7 +352,6 @@
             // 
             // txtRST
             // 
-            this.txtRST.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "PST", true));
             this.txtRST.Location = new System.Drawing.Point(87, 126);
             this.txtRST.Name = "txtRST";
             this.txtRST.Size = new System.Drawing.Size(100, 20);
@@ -453,7 +368,6 @@
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "subTotal", true));
             this.txtSubtotal.Location = new System.Drawing.Point(87, 100);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
@@ -470,7 +384,6 @@
             // 
             // txtServiceCalls
             // 
-            this.txtServiceCalls.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "serviceCharge", true));
             this.txtServiceCalls.Location = new System.Drawing.Point(87, 74);
             this.txtServiceCalls.Name = "txtServiceCalls";
             this.txtServiceCalls.Size = new System.Drawing.Size(100, 20);
@@ -487,7 +400,6 @@
             // 
             // txtLabour
             // 
-            this.txtLabour.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "labour", true));
             this.txtLabour.Location = new System.Drawing.Point(87, 48);
             this.txtLabour.Name = "txtLabour";
             this.txtLabour.Size = new System.Drawing.Size(100, 20);
@@ -504,7 +416,6 @@
             // 
             // txtMaterials
             // 
-            this.txtMaterials.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "partTotal", true));
             this.txtMaterials.Location = new System.Drawing.Point(87, 19);
             this.txtMaterials.Name = "txtMaterials";
             this.txtMaterials.Size = new System.Drawing.Size(100, 20);
@@ -518,16 +429,6 @@
             this.lblmaterials.Size = new System.Drawing.Size(52, 13);
             this.lblmaterials.TabIndex = 0;
             this.lblmaterials.Text = "Materials:";
-            // 
-            // btnNewInvoiceExit
-            // 
-            this.btnNewInvoiceExit.Location = new System.Drawing.Point(112, 258);
-            this.btnNewInvoiceExit.Name = "btnNewInvoiceExit";
-            this.btnNewInvoiceExit.Size = new System.Drawing.Size(75, 23);
-            this.btnNewInvoiceExit.TabIndex = 22;
-            this.btnNewInvoiceExit.Text = "Exit";
-            this.btnNewInvoiceExit.UseVisualStyleBackColor = true;
-            this.btnNewInvoiceExit.Click += new System.EventHandler(this.btnNewInvoiceExit_Click);
             // 
             // btnSearchCustomerProperty
             // 
@@ -558,7 +459,6 @@
             // 
             // txtSerialNumber
             // 
-            this.txtSerialNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "serialNumber", true));
             this.txtSerialNumber.Location = new System.Drawing.Point(90, 91);
             this.txtSerialNumber.Name = "txtSerialNumber";
             this.txtSerialNumber.Size = new System.Drawing.Size(100, 20);
@@ -566,7 +466,6 @@
             // 
             // txtModel
             // 
-            this.txtModel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "model", true));
             this.txtModel.Location = new System.Drawing.Point(90, 65);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(100, 20);
@@ -574,7 +473,6 @@
             // 
             // txtMake
             // 
-            this.txtMake.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "make", true));
             this.txtMake.Location = new System.Drawing.Point(90, 39);
             this.txtMake.Name = "txtMake";
             this.txtMake.Size = new System.Drawing.Size(100, 20);
@@ -582,7 +480,6 @@
             // 
             // txtPONumber
             // 
-            this.txtPONumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "poNumber", true));
             this.txtPONumber.Location = new System.Drawing.Point(90, 13);
             this.txtPONumber.Name = "txtPONumber";
             this.txtPONumber.Size = new System.Drawing.Size(100, 20);
@@ -624,89 +521,19 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "P.O. Number:";
             // 
-            // txtGST
-            // 
-            this.txtGST.Location = new System.Drawing.Point(87, 152);
-            this.txtGST.Name = "txtGST";
-            this.txtGST.Size = new System.Drawing.Size(100, 20);
-            this.txtGST.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 155);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "GST:";
-            // 
-            // homeAppDBDataSet
-            // 
-            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
-            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // homeAppDBDataSetBindingSource
-            // 
-            this.homeAppDBDataSetBindingSource.DataSource = this.homeAppDBDataSet;
-            this.homeAppDBDataSetBindingSource.Position = 0;
-            // 
-            // partBindingSource
-            // 
-            this.partBindingSource.DataMember = "Part";
-            this.partBindingSource.DataSource = this.homeAppDBDataSetBindingSource;
-            // 
-            // partTableAdapter
-            // 
-            this.partTableAdapter.ClearBeforeFill = true;
-            // 
-            // partsListBindingSource
-            // 
-            this.partsListBindingSource.DataMember = "PartsList";
-            this.partsListBindingSource.DataSource = this.homeAppDBDataSetBindingSource;
-            // 
-            // partsListTableAdapter
-            // 
-            this.partsListTableAdapter.ClearBeforeFill = true;
-            // 
-            // invoiceTableAdapter
-            // 
-            this.invoiceTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoryTableAdapter = null;
-            this.tableAdapterManager.CityTableAdapter = null;
-            this.tableAdapterManager.CustomerTableAdapter = null;
-            this.tableAdapterManager.FinacialTableAdapter = null;
-            this.tableAdapterManager.InvoiceTableAdapter = this.invoiceTableAdapter;
-            this.tableAdapterManager.PartsListTableAdapter = this.partsListTableAdapter;
-            this.tableAdapterManager.PartTableAdapter = this.partTableAdapter;
-            this.tableAdapterManager.PropertyTableAdapter = null;
-            this.tableAdapterManager.TaxesTableAdapter = null;
-            this.tableAdapterManager.TechnicianTableAdapter = this.technicianTableAdapter;
-            this.tableAdapterManager.UpdateOrder = HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // technicianTableAdapter
-            // 
-            this.technicianTableAdapter.ClearBeforeFill = true;
-            // 
             // lblInvoiceId
             // 
             this.lblInvoiceId.AutoSize = true;
-            this.lblInvoiceId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "invoiceId", true));
-            this.lblInvoiceId.Location = new System.Drawing.Point(89, 12);
+            this.lblInvoiceId.Location = new System.Drawing.Point(276, 9);
             this.lblInvoiceId.Name = "lblInvoiceId";
             this.lblInvoiceId.Size = new System.Drawing.Size(51, 13);
             this.lblInvoiceId.TabIndex = 25;
             this.lblInvoiceId.Text = "InvoiceId";
-            this.lblInvoiceId.Visible = false;
             // 
             // lblCustomerId
             // 
             this.lblCustomerId.AutoSize = true;
-            this.lblCustomerId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "customerId", true));
-            this.lblCustomerId.Location = new System.Drawing.Point(146, 12);
+            this.lblCustomerId.Location = new System.Drawing.Point(500, 9);
             this.lblCustomerId.Name = "lblCustomerId";
             this.lblCustomerId.Size = new System.Drawing.Size(60, 13);
             this.lblCustomerId.TabIndex = 26;
@@ -716,13 +543,51 @@
             // lblPropertyId
             // 
             this.lblPropertyId.AutoSize = true;
-            this.lblPropertyId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "propertyId", true));
-            this.lblPropertyId.Location = new System.Drawing.Point(211, 12);
+            this.lblPropertyId.Location = new System.Drawing.Point(565, 9);
             this.lblPropertyId.Name = "lblPropertyId";
             this.lblPropertyId.Size = new System.Drawing.Size(52, 13);
             this.lblPropertyId.TabIndex = 27;
             this.lblPropertyId.Text = "Propertyd";
             this.lblPropertyId.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(215, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 13);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Invoice #:";
+            // 
+            // homeAppDBDataSet
+            // 
+            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
+            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // partsListBindingSource
+            // 
+            this.partsListBindingSource.DataMember = "PartsList";
+            this.partsListBindingSource.DataSource = this.homeAppDBDataSet;
+            // 
+            // partsListTableAdapter
+            // 
+            this.partsListTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CategoryTableAdapter = null;
+            this.tableAdapterManager.CityTableAdapter = null;
+            this.tableAdapterManager.CustomerTableAdapter = null;
+            this.tableAdapterManager.FinacialTableAdapter = null;
+            this.tableAdapterManager.InvoiceTableAdapter = null;
+            this.tableAdapterManager.PartsListTableAdapter = this.partsListTableAdapter;
+            this.tableAdapterManager.PartTableAdapter = null;
+            this.tableAdapterManager.PropertyTableAdapter = null;
+            this.tableAdapterManager.TaxesTableAdapter = null;
+            this.tableAdapterManager.TechnicianTableAdapter = this.technicianTableAdapter;
+            this.tableAdapterManager.UpdateOrder = HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // partListIdDataGridViewTextBoxColumn
             // 
             this.partListIdDataGridViewTextBoxColumn.DataPropertyName = "partListId";
@@ -753,11 +618,21 @@
             this.editPriceDataGridViewTextBoxColumn.HeaderText = "editPrice";
             this.editPriceDataGridViewTextBoxColumn.Name = "editPriceDataGridViewTextBoxColumn";
             // 
+            // technicianBindingSource
+            // 
+            this.technicianBindingSource.DataMember = "Technician";
+            this.technicianBindingSource.DataSource = this.homeAppDBDataSet;
+            // 
+            // technicianTableAdapter
+            // 
+            this.technicianTableAdapter.ClearBeforeFill = true;
+            // 
             // frmNewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 503);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.lblPropertyId);
             this.Controls.Add(this.lblCustomerId);
             this.Controls.Add(this.lblInvoiceId);
@@ -785,21 +660,14 @@
             this.Name = "frmNewInvoice";
             this.Text = "New Invoices";
             this.Load += new System.EventHandler(this.frmInvoice_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
             this.grpCharge.ResumeLayout(false);
             this.grpCharge.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -823,9 +691,6 @@
         private System.Windows.Forms.RichTextBox txtNotes;
         private System.Windows.Forms.Label lblParts;
         private System.Windows.Forms.DataGridView dataListParts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quality;
         private System.Windows.Forms.Button btnAddPart;
         private System.Windows.Forms.Button btnRemovePart;
         private System.Windows.Forms.GroupBox grpCharge;
@@ -856,25 +721,20 @@
         private System.Windows.Forms.TextBox txtPONumber;
         private System.Windows.Forms.TextBox txtGST;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.BindingSource homeAppDBDataSetBindingSource;
+        private System.Windows.Forms.Label lblInvoiceId;
+        private System.Windows.Forms.Label lblCustomerId;
+        private System.Windows.Forms.Label lblPropertyId;
+        private System.Windows.Forms.Label label11;
         private HomeAppDBDataSet homeAppDBDataSet;
-        private System.Windows.Forms.BindingSource partBindingSource;
-        private HomeAppDBDataSetTableAdapters.PartTableAdapter partTableAdapter;
         private System.Windows.Forms.BindingSource partsListBindingSource;
         private HomeAppDBDataSetTableAdapters.PartsListTableAdapter partsListTableAdapter;
-        private System.Windows.Forms.BindingSource invoiceBindingSource;
-        private HomeAppDBDataSetTableAdapters.InvoiceTableAdapter invoiceTableAdapter;
         private HomeAppDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingSource partsListBindingSource1;
-        private HomeAppDBDataSetTableAdapters.TechnicianTableAdapter technicianTableAdapter;
-        private System.Windows.Forms.BindingSource technicianBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn partListIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn partIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn editPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label lblInvoiceId;
-        private System.Windows.Forms.Label lblCustomerId;
-        private System.Windows.Forms.Label lblPropertyId;
+        private HomeAppDBDataSetTableAdapters.TechnicianTableAdapter technicianTableAdapter;
+        private System.Windows.Forms.BindingSource technicianBindingSource;
     }
 }
