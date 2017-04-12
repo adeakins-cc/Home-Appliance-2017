@@ -117,3 +117,4 @@ C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeApplian
 >>>>>>> origin/master
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.dll
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.xml
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Invoice.frmAddPart.resources
