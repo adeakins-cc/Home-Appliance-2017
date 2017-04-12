@@ -32,7 +32,6 @@ C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.pdb
-C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.Finance.frmManageFinance.resources
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmMain.resources
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageCustomer.resources
@@ -89,11 +88,9 @@ C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.cspro
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.pdb
 C:\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageFinance.resources
-<<<<<<< HEAD
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Technician.frmManageTechnician.resources
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.frmManageFinance.resources
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Invoice.frmAddPart.resources
-=======
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb
@@ -114,7 +111,10 @@ C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeApplian
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.pdb
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.dll
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.xml
->>>>>>> origin/master
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.dll
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Dapper.xml
+<<<<<<< HEAD
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Invoice.frmAddPart.resources
+=======
+C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
+>>>>>>> origin/master

@@ -9,27 +9,29 @@ namespace HomeAppliance.Model
     class Property
     {
         //fields
-        private int     propertyID;
+        private int      propertyID;
         private Customer customer;
-        private int     unitNumber;
-        private int     streetNumber;
-        private string  streetName;
-        private string  city;
-        private string  province;
-        private string  country;
-        private string  postalCode;
+        private string   unitNumber;
+        private string   streetNumber;
+        private string   streetName;
+        private City     city;
+        private string   superintendent;
+        private string   superintendentPhone;
+        private DateTime dateActive;
+        private DateTime dateModified;
 
         public Property()
         {
-            propertyID      = 0;
-            customer        = new Customer();
-            unitNumber      = 0;
-            streetNumber    = 0;
-            streetName      = "";
-            city            = "";
-            province        = "";
-            country         = "";
-            postalCode      = "";
+            propertyID          = 0;
+            customer            = new Customer();
+            unitNumber          = "";
+            streetNumber        = "";
+            streetName          = "";
+            city                = new City();
+            superintendent      = "";
+            superintendentPhone = "";
+            dateActive          = DateTime.Now;
+            dateModified        = DateTime.Now;
         }
 
         public void setPropertyID(int propertyID)
@@ -50,25 +52,25 @@ namespace HomeAppliance.Model
             return customer;
         }
 
-        public void setUnitNumber(int unitNumber)
+        public void setUnitNumber(string unitNumber)
         {
             this.unitNumber = unitNumber;
         }
-        public int getUnitNumber()
+        public string getUnitNumber()
         {
             return unitNumber;
         }
 
-        public void setStreetNumber(int streetNumber)
+        public void setStreetNumber(string streetNumber)
         {
             this.streetNumber = streetNumber;
         }
-        public int getStreetNumber()
+        public string getStreetNumber()
         {
             return streetNumber;
         }
 
-        public void setStreetNumber(string streetName)
+        public void setStreetName(string streetName)
         {
             this.streetName = streetName;
         }
@@ -77,40 +79,49 @@ namespace HomeAppliance.Model
             return streetName;
         }
 
-        public void setCity(string city)
+        public void setCity(City city)
         {
             this.city = city;
         }
-        public string getCity()
+        public City getCity()
         {
             return city;
         }
 
-        public void setProvince(string province)
+        public void setSuperintendent(string superintendent)
         {
-            this.province = province;
+            this.superintendent = superintendent;
         }
-        public string getProvince()
+        public string getSuperintendent()
         {
-            return province;
-        }
-
-        public void setCountry(string country)
-        {
-            this.country = country;
-        }
-        public string getCountry()
-        {
-            return country;
+            return superintendent;
         }
 
-        public void setPostalCode(string postalCode)
+        public void setSuperintendentPhone(string superintendentPhone)
         {
-            this.postalCode = postalCode;
+            this.superintendentPhone = superintendentPhone;
         }
-        public string getPostalCode()
+        public string getSuperintendentPhone()
         {
-            return postalCode;
-        } 
+            return superintendentPhone;
+        }
+
+        public void setDateActive(DateTime dateActive)
+        {
+            this.dateActive = dateActive;
+        }
+        public string getDateActive()
+        {
+            return superintendentPhone;
+        }
+
+        public void setDateModified(DateTime dateModified)
+        {
+            this.dateModified = dateModified;
+        }
+        public DateTime getDateModified()
+        {
+            return dateModified;
+        }
     }
 }

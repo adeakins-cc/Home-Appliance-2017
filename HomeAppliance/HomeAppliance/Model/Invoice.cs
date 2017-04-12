@@ -9,42 +9,48 @@ namespace HomeAppliance.Model
     class Invoice
     {
         private int invoiceID;
-        private DateTime serviceDate;
-        private DateTime invoiceDate;
         private Customer customer;
         private Property property;
+        private DateTime serviceDate;
+        private DateTime invoiceDate;
         private Technician technician;
         private string customerComplaints;
         private string notes;
-        private decimal serviceCharge;
-        private decimal labour;
-        private decimal subTotal;
         private decimal partTotal;
-        private byte chargeHST;
-        private decimal HST;
+        private decimal labour;
+        private decimal serviceCharge;
+        private decimal GST;
+        private decimal PST;
+        private decimal subTotal;
         private decimal grossTotal;
+        private string PONumber;
         private string make;
         private string model;
         private string serialNumber;
-        private string PONumber;
+        private Boolean chargeTax;
+        
 
         public Invoice()
         {
             invoiceID = 0;
-            serviceDate = DateTime.Now;
-            invoiceDate = DateTime.Now;
             customer = new Customer();
             property = new Property();
+            serviceDate = DateTime.Now;
+            invoiceDate = DateTime.Now;
             technician = new Technician();
             customerComplaints = "";
             notes = "";
-            serviceCharge = 0;
-            labour = 0;
             partTotal = 0;
+            labour = 0;
+            serviceCharge = 0;
+            GST = 0;
+            PST = 0;
             subTotal = 0;
-            chargeHST = 0;
-            HST = 0;
             grossTotal = 0;
+            PONumber = "";
+            make = "";
+            model = "";
+            serialNumber = "";
         }
 
         public void setInvoiceID(int invoiceID)
@@ -54,24 +60,6 @@ namespace HomeAppliance.Model
         public int getInvoiceID()
         {
             return invoiceID;
-        }
-
-        public void setServiceDate(DateTime serviceDate)
-        {
-            this.serviceDate = serviceDate;
-        }
-        public DateTime getServiceDate()
-        {
-            return serviceDate;
-        }
-
-        public void setInvoiceDate(DateTime invoiceDate)
-        {
-            this.invoiceDate = invoiceDate;
-        }
-        public DateTime getInvoiceDate()
-        {
-            return invoiceDate;
         }
 
         public void setCustomer(Customer customer)
@@ -90,6 +78,24 @@ namespace HomeAppliance.Model
         public Property getProperty()
         {
             return property;
+        }
+
+        public void setServiceDate(DateTime serviceDate)
+        {
+            this.serviceDate = serviceDate;
+        }
+        public DateTime getServiceDate()
+        {
+            return serviceDate;
+        }
+
+        public void setInvoiceDate(DateTime invoiceDate)
+        {
+            this.invoiceDate = invoiceDate;
+        }
+        public DateTime getInvoiceDate()
+        {
+            return invoiceDate;
         }
 
         public void setTechnician(Technician technician)
@@ -119,13 +125,13 @@ namespace HomeAppliance.Model
             return notes;
         }
 
-        public void setServiceCharge(decimal serviceCharge)
+        public void setPartTotal(decimal partTotal)
         {
-            this.serviceCharge = serviceCharge;
+            this.partTotal = partTotal;
         }
-        public decimal getServiceCharge()
+        public decimal getPartTotal()
         {
-            return serviceCharge;
+            return partTotal;
         }
 
         public void setLabour(decimal labour)
@@ -137,13 +143,22 @@ namespace HomeAppliance.Model
             return labour;
         }
 
-        public void setPartTotal(decimal partTotal)
+        public void setServiceCharge(decimal serviceCharge)
         {
-            this.partTotal = partTotal;
+            this.serviceCharge = serviceCharge;
         }
-        public decimal getPartTotal()
+        public decimal getServiceCharge()
         {
-            return partTotal;
+            return serviceCharge;
+        }
+
+        public void setGST(decimal GST)
+        {
+            this.GST = GST;
+        }
+        public decimal getGST()
+        {
+            return GST;
         }
 
         public void setSubTotal(decimal subTotal)
@@ -153,25 +168,7 @@ namespace HomeAppliance.Model
         public decimal getSubTotal()
         {
             return subTotal;
-        }
-
-        public void setChargeHST(byte chargeHST)
-        {
-            this.chargeHST = chargeHST;
-        }
-        public byte getChargeHST()
-        {
-            return chargeHST;
-        }
-
-        public void setHST(decimal HST)
-        {
-            this.HST = HST;
-        }
-        public decimal getHST()
-        {
-            return HST;
-        }
+        }  
 
         public void setGrossTotal(decimal grossTotal)
         {
@@ -180,6 +177,15 @@ namespace HomeAppliance.Model
         public decimal getGrossTotal()
         {
             return grossTotal;
+        }
+
+        public void setPONumber(string PONumber)
+        {
+            this.PONumber = PONumber;
+        }
+        public string getPONumber()
+        {
+            return PONumber;
         }
 
         public void setMake(string make)
@@ -209,36 +215,13 @@ namespace HomeAppliance.Model
             return serialNumber;
         }
 
-        public void setPONumber(string PONumber)
+        public void setChargeTax(Boolean chargeTax)
         {
-            this.PONumber = PONumber;
+            this.chargeTax = chargeTax;
         }
-        public string getPONumber()
+        public Boolean getChargeTax()
         {
-            return PONumber;
+            return chargeTax;
         }
-
-
-        List<Customer> getCustomerList()
-        {
-            List<Customer> customerList = new List<Customer>();
-            return customerList;
-        }
-        List<Property> getPropertyList()
-        {
-            List<Property> propertyList = new List<Property>();
-            return propertyList;
-        }
-        List<Technician> getTechnicianSList()
-        {
-            List<Technician> technicianList = new List<Technician>();
-            return technicianList;
-        }
-        List<PartList> getPartList()
-        {
-            List<PartList> partList = new List<PartList>();
-            return partList;
-        }
-
     }
 }

@@ -9,42 +9,60 @@ namespace HomeAppliance.Model
     class Customer
     {
         private int customerID;
-        private string companyName;
         private string firstName;
         private string lastName;
+        private string companyName;
+        //Address 1
+        private string unitNumber_01;
+        private string streetNumber_01;
+        private string streetName_01;
+        private City city_01;
+        private string postalCode_01;
+        //Address 2
+        private string unitNumber_02;
+        private string streetNumber_02;
+        private string streetName_02;
+        private City city_02;
+        private string postalCode_02;
+
+        private string bussinessPhone;
+        private string homePhone;
+        private string fax;
+        private string contactMobile;
         private string contactName;
-        private int contactPhone;
-        private int contactMobile;
-        private int fax;
-        private int bussinessPhone;
+        private string comments;
+        private DateTime dateActive;
+        private DateTime dateModified;
         private string contactEmail;
-        private int unitNumber;
-        private int streetNumber;
-        private string streetName;
-        private string city;
-        private string province;
-        private string country;
-        private string postalCode;
 
         public Customer()
         {
             customerID      = 0;
-            companyName     = "";
             firstName       = "";
             lastName        = "";
+            companyName     = "";
+
+            unitNumber_01   = "";
+            streetNumber_01 = "";
+            streetName_01   = "";
+            city_01         = new City();
+            postalCode_01   = "";
+
+            unitNumber_02   = "";
+            streetNumber_02 = "";
+            streetName_02   = "";
+            city_02         = new City();
+            postalCode_02   = "";
+
+            bussinessPhone  = "";
+            homePhone       = "";
+            fax             = "";
+            contactMobile   = "";
             contactName     = "";
-            contactPhone    = 0;
-            contactMobile   = 0;
-            fax             = 0;
-            bussinessPhone  = 0;
+            comments        = "";
+            dateActive      = DateTime.Now;
+            dateModified    = DateTime.Now;
             contactEmail    = "";
-            unitNumber      = 0;
-            streetNumber    = 0;
-            streetName      = "";
-            city            = "";
-            province        = "";
-            country         = "";
-            postalCode      = "";
         }
 
         public void setCustomerID(int customerID)
@@ -54,15 +72,6 @@ namespace HomeAppliance.Model
         public int getCustomerID()
         {
             return customerID;
-        }
-
-        public void setCompanyName(string companyName)
-        {
-            this.companyName = companyName;
-        }
-        public string getCompanyName()
-        {
-            return companyName;
         }
 
         public void setFirstName(string firstName)
@@ -83,6 +92,141 @@ namespace HomeAppliance.Model
             return lastName;
         }
 
+        public void setCompanyName(string companyName)
+        {
+            this.companyName = companyName;
+        }
+        public string getCompanyName()
+        {
+            return companyName;
+        }
+
+        public void setUnitNumber_01(string unitNumber_01)
+        {
+            this.unitNumber_01 = unitNumber_01;
+        }
+        public string getUnitNumber_01()
+        {
+            return unitNumber_01;
+        }
+
+        public void setStreetNumber_01(string streetNumber_01)
+        {
+            this.streetNumber_01 = streetNumber_01;
+        }
+        public string getStreetNumber_01()
+        {
+            return streetNumber_01;
+        }
+
+        public void setStreetName_01(string streetName_01)
+        {
+            this.streetName_01 = streetName_01;
+        }
+        public string getStreetName_01()
+        {
+            return streetName_01;
+        }
+
+        public void setCity_01(City city_01)
+        {
+            this.city_01 = city_01;
+        }
+        public City getCity_01()
+        {
+            return city_01;
+        }
+
+        public void setPostalCode_01(string postalCode_01)
+        {
+            this.postalCode_01 = postalCode_01;
+        }
+        public string getPostalCode_01()
+        {
+            return postalCode_01;
+        }
+
+        public void setUnitNumber_02(string unitNumber_02)
+        {
+            this.unitNumber_02 = unitNumber_02;
+        }
+        public string getUnitNumber_02()
+        {
+            return unitNumber_02;
+        }
+
+        public void setStreetNumber_02(string streetNumber_02)
+        {
+            this.streetNumber_02 = streetNumber_02;
+        }
+        public string getStreetNumber_02()
+        {
+            return streetNumber_02;
+        }
+
+        public void setStreetName_02(string streetName_02)
+        {
+            this.streetName_02 = streetName_02;
+        }
+        public string getStreetName_02()
+        {
+            return streetName_02;
+        }
+
+        public void setCity_02(City city_02)
+        {
+            this.city_02 = city_02;
+        }
+        public City getCity_02()
+        {
+            return city_02;
+        }
+
+        public void setPostalCode_02(string postalCode_02)
+        {
+            this.postalCode_02 = postalCode_02;
+        }
+        public string getPostalCode_02()
+        {
+            return postalCode_02;
+        }
+
+        public void setBussinessPhone(string bussinessPhone)
+        {
+            this.bussinessPhone = bussinessPhone;
+        }
+        public string getBussinessPhone()
+        {
+            return bussinessPhone;
+        }
+
+        public void setHomePhone(string homePhone)
+        {
+            this.homePhone = homePhone;
+        }
+        public string getHomePhone()
+        {
+            return homePhone;
+        }
+
+        public void setFax(string fax)
+        {
+            this.fax = fax;
+        }
+        public string getFax()
+        {
+            return fax;
+        }
+
+        public void setContactMobile(string contactMobile)
+        {
+            this.contactMobile = contactMobile;
+        }
+        public string getContactMobile()
+        {
+            return contactMobile;
+        }
+
         public void setContactName(string contactName)
         {
             this.contactName = contactName;
@@ -92,42 +236,33 @@ namespace HomeAppliance.Model
             return contactName;
         }
 
-        public void setContactPhone(int contactPhone)
+        public void setComments(string comments)
         {
-            this.contactPhone = contactPhone;
+            this.comments = comments;
         }
-        public int getContactPhone()
+        public string getComments()
         {
-            return contactPhone;
-        }
-
-        public void setContactMobile(int contactMobile)
-        {
-            this.contactMobile = contactMobile;
-        }
-        public int getContactMobile()
-        {
-            return contactMobile;
+            return comments;
         }
 
-        public void setFax(int fax)
+        public void setDateActive(DateTime dateActive)
         {
-            this.fax = fax;
+            this.dateActive = dateActive;
         }
-        public int getFax()
+        public DateTime getDateActive()
         {
-            return fax;
-        }
-
-        public void setBussinessPhone(int bussinessPhone)
-        {
-            this.bussinessPhone = bussinessPhone;
-        }
-        public int getBussinessPhone()
-        {
-            return bussinessPhone;
+            return dateActive;
         }
 
+        public void setDateModified(DateTime dateModified)
+        {
+            this.dateModified = dateModified;
+        }
+        public DateTime getDateModified()
+        {
+            return dateModified;
+        }
+        
         public void setContactEmail(string contactEmail)
         {
             this.contactEmail = contactEmail;
@@ -135,74 +270,6 @@ namespace HomeAppliance.Model
         public string getContactEmail()
         {
             return contactEmail;
-        }
-
-        public void setUnitNumber(int unitNumber)
-        {
-            this.unitNumber = unitNumber;
-        }
-        public int getUnitNumber()
-        {
-            return unitNumber;
-        }
-
-        public void setStreetNumber(int streetNumber)
-        {
-            this.streetNumber = streetNumber;
-        }
-        public int getStreetNumber()
-        {
-            return streetNumber;
-        }
-
-        public void setStreetName(string streetName)
-        {
-            this.streetName = streetName;
-        }
-        public string getStreetName()
-        {
-            return streetName;
-        }
-
-        public void setCity(string city)
-        {
-            this.city = city;
-        }
-        public string getCity()
-        {
-            return city;
-        }
-
-        public void setProvince(string province)
-        {
-            this.province = province;
-        }
-        public string getProvince()
-        {
-            return province;
-        }
-
-        public void setCountry(string country)
-        {
-            this.country = country;
-        }
-        public string getCountry()
-        {
-            return country;
-        }
-
-        public void setPostalCode(string postalCode)
-        {
-            this.postalCode = postalCode;
-        }
-        public string getPostalCode()
-        {
-            return postalCode;
-        }
-        List<Property> getPropertyList()
-        {
-            List<Property> propertyList = new List<Property>();
-            return propertyList;
         }
     }
 }

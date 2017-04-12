@@ -8,29 +8,29 @@ namespace HomeAppliance.Model
 {
     class Finance
     {
-        private int finacialID;
-        private Invoice invoice;
-        private DateTime postDate;
-        private decimal totalDue;
-        private decimal amountPaid;
-        private string chequeName;
-        private string chequeNumber;
-        private DateTime paidDate;
-        private DateTime dateOnCheque;
-        private string notes;
+        private int         finacialID;
+        private DateTime    postDate;
+        private Invoice     invoice;
+        private decimal     totalDue;
+        private decimal     amountPaid;
+        private string      notes;
+        private DateTime    paidDate;
+        private string      chequeName;
+        private string      chequeNumber;
+        private DateTime    dateOnCheque;
 
         public Finance()
         {
-            finacialID  = 0;
-            invoice     = new Invoice();
-            postDate    = DateTime.Now;
-            totalDue    = 0;
-            amountPaid  = 0;
-            chequeName  = "";
-            chequeNumber = "";
-            paidDate    = DateTime.Now;
-            dateOnCheque = DateTime.Now;
-            notes       = "";
+            finacialID      = 0;
+            postDate        = DateTime.Now;
+            invoice         = new Invoice();
+            totalDue        = 0;
+            amountPaid      = 0;
+            notes           = "";
+            paidDate        = DateTime.Now;
+            chequeName      = "";
+            chequeNumber    = "";
+            dateOnCheque    = DateTime.Now;
         }
 
         public void setFinancialID(int finacialID)
@@ -42,15 +42,6 @@ namespace HomeAppliance.Model
             return finacialID;
         }
 
-        public void setInvoice(Invoice invoice)
-        {
-            this.invoice = invoice;
-        }
-        public Invoice getinvoice()
-        {
-            return invoice;
-        }
-
         public void setPostDate(DateTime postDate)
         {
             this.postDate = postDate;
@@ -58,6 +49,15 @@ namespace HomeAppliance.Model
         public DateTime getPostDate()
         {
             return postDate;
+        }
+
+        public void setInvoice(Invoice invoice)
+        {
+            this.invoice = invoice;
+        }
+        public Invoice getinvoice()
+        {
+            return invoice;
         }
 
         public void setTotalDue(decimal totalDue)
@@ -78,6 +78,24 @@ namespace HomeAppliance.Model
             return amountPaid;
         }
 
+        public void setNotes(string notes)
+        {
+            this.notes = notes;
+        }
+        public string getNotes()
+        {
+            return notes;
+        }
+
+        public void setPaidDate(DateTime paidDate)
+        {
+            this.paidDate = paidDate;
+        }
+        public DateTime getPaidDate()
+        {
+            return paidDate;
+        }
+
         public void setChequeName(string chequeName)
         {
             this.chequeName = chequeName;
@@ -96,15 +114,6 @@ namespace HomeAppliance.Model
             return chequeNumber;
         }
 
-        public void setPaidDate(DateTime paidDate)
-        {
-            this.paidDate = paidDate;
-        }
-        public DateTime getPaidDate()
-        {
-            return paidDate;
-        }
-
         public void setDateOnCheque(DateTime dateOnCheque)
         {
             this.dateOnCheque = dateOnCheque;
@@ -112,15 +121,6 @@ namespace HomeAppliance.Model
         public DateTime getDateOnCheque()
         {
             return dateOnCheque;
-        }
-
-        public void setNotes(string notes)
-        {
-            this.notes = notes;
-        }
-        public string getNotes()
-        {
-            return notes;
         }
     }
 }

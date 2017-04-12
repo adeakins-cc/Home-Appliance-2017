@@ -60,12 +60,14 @@
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\City.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Finance.cs" />
     <Compile Include="Model\Invoice.cs" />
     <Compile Include="Model\Part.cs" />
     <Compile Include="Model\PartList.cs" />
     <Compile Include="Model\Property.cs" />
+    <Compile Include="Model\Taxes.cs" />
     <Compile Include="Model\Technician.cs" />
     <Compile Include="PartClass.cs" />
     <Compile Include="View\Category\frmManageCategories.cs">
