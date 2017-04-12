@@ -7668,7 +7668,7 @@ SELECT customerId, firstName, lastName, companyName, unitNumber01, streetNumber0
                 "l_DateModified = 1 AND [DateModified] IS NULL) OR ([DateModified] = @Original_Da" +
                 "teModified)) AND ((@IsNull_contactEmail = 1 AND [contactEmail] IS NULL) OR ([con" +
                 "tactEmail] = @Original_contactEmail)));\r\nSELECT customerId, firstName, lastName," +
-                " companyName, unitNumber01, streetNumber01, streetName_01, cityId_01, postalCode" +
+                " companyName, unitNumber01, streetNumber01, streetName_01, cityId_01, superintendent" +
                 "_01, unitNumber_02, streetNumber_02, streetName_02, cityId_02, postalCode_02, bu" +
                 "ssinessPhone, homePhone, fax, contactMobile, contactName, comments, DateActive, " +
                 "DateModified, contactEmail FROM Customer WHERE (customerId = @customerId)";

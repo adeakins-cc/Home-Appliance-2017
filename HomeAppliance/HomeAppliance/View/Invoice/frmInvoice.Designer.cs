@@ -39,12 +39,20 @@
             this.dateServiceDate = new System.Windows.Forms.DateTimePicker();
             this.lblTechnician = new System.Windows.Forms.Label();
             this.drpTechnician = new System.Windows.Forms.ComboBox();
+            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
             this.lblCustomerComplain = new System.Windows.Forms.Label();
             this.txtComplaint = new System.Windows.Forms.RichTextBox();
             this.lblServiceNotes = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.RichTextBox();
             this.lblParts = new System.Windows.Forms.Label();
             this.dataListParts = new System.Windows.Forms.DataGridView();
+            this.partListIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAddPart = new System.Windows.Forms.Button();
             this.btnRemovePart = new System.Windows.Forms.Button();
             this.grpCharge = new System.Windows.Forms.GroupBox();
@@ -79,23 +87,18 @@
             this.lblCustomerId = new System.Windows.Forms.Label();
             this.lblPropertyId = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
-            this.partsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partsListTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartsListTableAdapter();
             this.tableAdapterManager = new HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager();
-            this.partListIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.invoiceTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.InvoiceTableAdapter();
             this.technicianTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TechnicianTableAdapter();
+            this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).BeginInit();
             this.grpCharge.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateInvoiceDate
@@ -184,6 +187,16 @@
             this.drpTechnician.TabIndex = 9;
             this.drpTechnician.ValueMember = "technicianId";
             // 
+            // technicianBindingSource
+            // 
+            this.technicianBindingSource.DataMember = "Technician";
+            this.technicianBindingSource.DataSource = this.homeAppDBDataSet;
+            // 
+            // homeAppDBDataSet
+            // 
+            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
+            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lblCustomerComplain
             // 
             this.lblCustomerComplain.AutoSize = true;
@@ -242,6 +255,41 @@
             this.dataListParts.Name = "dataListParts";
             this.dataListParts.Size = new System.Drawing.Size(406, 109);
             this.dataListParts.TabIndex = 18;
+            // 
+            // partListIdDataGridViewTextBoxColumn
+            // 
+            this.partListIdDataGridViewTextBoxColumn.DataPropertyName = "partListId";
+            this.partListIdDataGridViewTextBoxColumn.HeaderText = "partListId";
+            this.partListIdDataGridViewTextBoxColumn.Name = "partListIdDataGridViewTextBoxColumn";
+            // 
+            // invoiceIdDataGridViewTextBoxColumn
+            // 
+            this.invoiceIdDataGridViewTextBoxColumn.DataPropertyName = "invoiceId";
+            this.invoiceIdDataGridViewTextBoxColumn.HeaderText = "invoiceId";
+            this.invoiceIdDataGridViewTextBoxColumn.Name = "invoiceIdDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // partIdDataGridViewTextBoxColumn
+            // 
+            this.partIdDataGridViewTextBoxColumn.DataPropertyName = "partId";
+            this.partIdDataGridViewTextBoxColumn.HeaderText = "partId";
+            this.partIdDataGridViewTextBoxColumn.Name = "partIdDataGridViewTextBoxColumn";
+            // 
+            // editPriceDataGridViewTextBoxColumn
+            // 
+            this.editPriceDataGridViewTextBoxColumn.DataPropertyName = "editPrice";
+            this.editPriceDataGridViewTextBoxColumn.HeaderText = "editPrice";
+            this.editPriceDataGridViewTextBoxColumn.Name = "editPriceDataGridViewTextBoxColumn";
+            // 
+            // partsListBindingSource
+            // 
+            this.partsListBindingSource.DataMember = "PartsList";
+            this.partsListBindingSource.DataSource = this.homeAppDBDataSet;
             // 
             // btnAddPart
             // 
@@ -319,9 +367,9 @@
             this.chkRSTExempt.AutoSize = true;
             this.chkRSTExempt.Location = new System.Drawing.Point(87, 204);
             this.chkRSTExempt.Name = "chkRSTExempt";
-            this.chkRSTExempt.Size = new System.Drawing.Size(86, 17);
+            this.chkRSTExempt.Size = new System.Drawing.Size(85, 17);
             this.chkRSTExempt.TabIndex = 14;
-            this.chkRSTExempt.Text = "RST Exempt";
+            this.chkRSTExempt.Text = "PST Exempt";
             this.chkRSTExempt.UseVisualStyleBackColor = true;
             // 
             // btnNewInvoiceExit
@@ -362,9 +410,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(49, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "RST:";
+            this.label4.Text = "PST:";
             // 
             // txtSubtotal
             // 
@@ -559,16 +607,6 @@
             this.label11.TabIndex = 28;
             this.label11.Text = "Invoice #:";
             // 
-            // homeAppDBDataSet
-            // 
-            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
-            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // partsListBindingSource
-            // 
-            this.partsListBindingSource.DataMember = "PartsList";
-            this.partsListBindingSource.DataSource = this.homeAppDBDataSet;
-            // 
             // partsListTableAdapter
             // 
             this.partsListTableAdapter.ClearBeforeFill = true;
@@ -580,7 +618,7 @@
             this.tableAdapterManager.CityTableAdapter = null;
             this.tableAdapterManager.CustomerTableAdapter = null;
             this.tableAdapterManager.FinacialTableAdapter = null;
-            this.tableAdapterManager.InvoiceTableAdapter = null;
+            this.tableAdapterManager.InvoiceTableAdapter = this.invoiceTableAdapter;
             this.tableAdapterManager.PartsListTableAdapter = this.partsListTableAdapter;
             this.tableAdapterManager.PartTableAdapter = null;
             this.tableAdapterManager.PropertyTableAdapter = null;
@@ -588,50 +626,24 @@
             this.tableAdapterManager.TechnicianTableAdapter = this.technicianTableAdapter;
             this.tableAdapterManager.UpdateOrder = HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // partListIdDataGridViewTextBoxColumn
+            // invoiceTableAdapter
             // 
-            this.partListIdDataGridViewTextBoxColumn.DataPropertyName = "partListId";
-            this.partListIdDataGridViewTextBoxColumn.HeaderText = "partListId";
-            this.partListIdDataGridViewTextBoxColumn.Name = "partListIdDataGridViewTextBoxColumn";
-            // 
-            // invoiceIdDataGridViewTextBoxColumn
-            // 
-            this.invoiceIdDataGridViewTextBoxColumn.DataPropertyName = "invoiceId";
-            this.invoiceIdDataGridViewTextBoxColumn.HeaderText = "invoiceId";
-            this.invoiceIdDataGridViewTextBoxColumn.Name = "invoiceIdDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // partIdDataGridViewTextBoxColumn
-            // 
-            this.partIdDataGridViewTextBoxColumn.DataPropertyName = "partId";
-            this.partIdDataGridViewTextBoxColumn.HeaderText = "partId";
-            this.partIdDataGridViewTextBoxColumn.Name = "partIdDataGridViewTextBoxColumn";
-            // 
-            // editPriceDataGridViewTextBoxColumn
-            // 
-            this.editPriceDataGridViewTextBoxColumn.DataPropertyName = "editPrice";
-            this.editPriceDataGridViewTextBoxColumn.HeaderText = "editPrice";
-            this.editPriceDataGridViewTextBoxColumn.Name = "editPriceDataGridViewTextBoxColumn";
-            // 
-            // technicianBindingSource
-            // 
-            this.technicianBindingSource.DataMember = "Technician";
-            this.technicianBindingSource.DataSource = this.homeAppDBDataSet;
+            this.invoiceTableAdapter.ClearBeforeFill = true;
             // 
             // technicianTableAdapter
             // 
             this.technicianTableAdapter.ClearBeforeFill = true;
             // 
+            // invoiceBindingSource
+            // 
+            this.invoiceBindingSource.DataMember = "Invoice";
+            this.invoiceBindingSource.DataSource = this.homeAppDBDataSet;
+            // 
             // frmNewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 503);
+            this.ClientSize = new System.Drawing.Size(624, 503);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lblPropertyId);
             this.Controls.Add(this.lblCustomerId);
@@ -660,14 +672,15 @@
             this.Name = "frmNewInvoice";
             this.Text = "New Invoices";
             this.Load += new System.EventHandler(this.frmInvoice_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).EndInit();
             this.grpCharge.ResumeLayout(false);
             this.grpCharge.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -736,5 +749,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn editPriceDataGridViewTextBoxColumn;
         private HomeAppDBDataSetTableAdapters.TechnicianTableAdapter technicianTableAdapter;
         private System.Windows.Forms.BindingSource technicianBindingSource;
+        private HomeAppDBDataSetTableAdapters.InvoiceTableAdapter invoiceTableAdapter;
+        private System.Windows.Forms.BindingSource invoiceBindingSource;
     }
 }
