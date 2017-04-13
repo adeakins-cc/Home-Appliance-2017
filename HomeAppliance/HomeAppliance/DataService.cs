@@ -20,7 +20,7 @@ namespace HomeAppliance
                 {
                     db.Open();
                 }
-                return db.Query<CategoryClass>("select categoryId, name from Category").ToList();
+                return db.Query<CategoryClass>("select categoryId, name from Category ORDER BY name ASC").ToList();
             }
         }
 

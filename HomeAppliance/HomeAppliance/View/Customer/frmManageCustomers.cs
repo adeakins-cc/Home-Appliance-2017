@@ -58,6 +58,7 @@ namespace HomeAppliance
                 while (reader.Read())
                 {
                     customerNode.Nodes.Add(reader["firstName"].ToString() + ", " + reader["lastName"].ToString());
+                    customerNode.Tag = reader["customerId"].ToString();
                 }
                 treeView1.Nodes.Add(customerNode);
                 
@@ -101,9 +102,9 @@ namespace HomeAppliance
             }
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            
+
         }
     }
 }

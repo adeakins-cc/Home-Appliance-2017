@@ -56,17 +56,18 @@
             // 
             // btnNewPart
             // 
-            this.btnNewPart.Location = new System.Drawing.Point(501, 101);
+            this.btnNewPart.Location = new System.Drawing.Point(557, 101);
             this.btnNewPart.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewPart.Name = "btnNewPart";
             this.btnNewPart.Size = new System.Drawing.Size(100, 28);
             this.btnNewPart.TabIndex = 1;
             this.btnNewPart.Text = "Add part";
             this.btnNewPart.UseVisualStyleBackColor = true;
+            this.btnNewPart.Click += new System.EventHandler(this.btnNewPart_Click);
             // 
             // btnEditPart
             // 
-            this.btnEditPart.Location = new System.Drawing.Point(501, 135);
+            this.btnEditPart.Location = new System.Drawing.Point(557, 135);
             this.btnEditPart.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditPart.Name = "btnEditPart";
             this.btnEditPart.Size = new System.Drawing.Size(100, 28);
@@ -77,7 +78,7 @@
             // 
             // btnDeletePart
             // 
-            this.btnDeletePart.Location = new System.Drawing.Point(501, 169);
+            this.btnDeletePart.Location = new System.Drawing.Point(557, 169);
             this.btnDeletePart.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletePart.Name = "btnDeletePart";
             this.btnDeletePart.Size = new System.Drawing.Size(100, 28);
@@ -87,13 +88,14 @@
             // 
             // btnManagePartsExit
             // 
-            this.btnManagePartsExit.Location = new System.Drawing.Point(501, 420);
+            this.btnManagePartsExit.Location = new System.Drawing.Point(557, 420);
             this.btnManagePartsExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnManagePartsExit.Name = "btnManagePartsExit";
             this.btnManagePartsExit.Size = new System.Drawing.Size(100, 28);
             this.btnManagePartsExit.TabIndex = 4;
             this.btnManagePartsExit.Text = "Exit";
             this.btnManagePartsExit.UseVisualStyleBackColor = true;
+            this.btnManagePartsExit.Click += new System.EventHandler(this.btnManagePartsExit_Click);
             // 
             // txtSearchPart
             // 
@@ -161,6 +163,7 @@
             this.btnSavePart.TabIndex = 14;
             this.btnSavePart.Text = "Save";
             this.btnSavePart.UseVisualStyleBackColor = true;
+            this.btnSavePart.Click += new System.EventHandler(this.btnSavePart_Click);
             // 
             // btnCancelPart
             // 
@@ -174,13 +177,15 @@
             // 
             // dgvPartDetails
             // 
+            this.dgvPartDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.dgvPartDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPartDetails.Location = new System.Drawing.Point(15, 101);
+            this.dgvPartDetails.MultiSelect = false;
             this.dgvPartDetails.Name = "dgvPartDetails";
             this.dgvPartDetails.ReadOnly = true;
             this.dgvPartDetails.RowTemplate.Height = 24;
             this.dgvPartDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPartDetails.Size = new System.Drawing.Size(414, 193);
+            this.dgvPartDetails.Size = new System.Drawing.Size(523, 193);
             this.dgvPartDetails.TabIndex = 16;
             this.dgvPartDetails.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvPartDetails_MouseClick);
             // 
@@ -203,7 +208,7 @@
             this.txtPartName.Location = new System.Drawing.Point(15, 329);
             this.txtPartName.Margin = new System.Windows.Forms.Padding(4);
             this.txtPartName.Name = "txtPartName";
-            this.txtPartName.Size = new System.Drawing.Size(232, 22);
+            this.txtPartName.Size = new System.Drawing.Size(249, 22);
             this.txtPartName.TabIndex = 11;
             // 
             // lblPrice
@@ -228,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 461);
+            this.ClientSize = new System.Drawing.Size(672, 461);
             this.Controls.Add(this.dgvPartDetails);
             this.Controls.Add(this.btnCancelPart);
             this.Controls.Add(this.btnSavePart);
