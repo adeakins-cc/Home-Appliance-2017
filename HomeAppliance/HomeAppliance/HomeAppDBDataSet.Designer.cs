@@ -7668,7 +7668,7 @@ SELECT customerId, firstName, lastName, companyName, unitNumber01, streetNumber0
                 "l_DateModified = 1 AND [DateModified] IS NULL) OR ([DateModified] = @Original_Da" +
                 "teModified)) AND ((@IsNull_contactEmail = 1 AND [contactEmail] IS NULL) OR ([con" +
                 "tactEmail] = @Original_contactEmail)));\r\nSELECT customerId, firstName, lastName," +
-                " companyName, unitNumber01, streetNumber01, streetName_01, cityId_01, superintendent" +
+                " companyName, unitNumber01, streetNumber01, streetName_01, cityId_01, postalCode" +
                 "_01, unitNumber_02, streetNumber_02, streetName_02, cityId_02, postalCode_02, bu" +
                 "ssinessPhone, homePhone, fax, contactMobile, contactName, comments, DateActive, " +
                 "DateModified, contactEmail FROM Customer WHERE (customerId = @customerId)";
@@ -9448,13 +9448,26 @@ SELECT invoiceId, customerId, propertyId, serviceDate, invoiceDate, technicianId
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT invoiceId, customerId, propertyId, serviceDate, invoiceDate, technicianId," +
                 " complaints, notes, partTotal, labour, serviceCharge, GST, PST, subTotal, grossT" +
                 "otal, poNumber, PSTExempt, make, model, serialNumber FROM dbo.Invoice";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT invoiceId, customerId, propertyId, serviceDate, invoiceDate, technicianId, complaints, notes, partTotal, labour, serviceCharge, GST, PST, subTotal, grossTotal, poNumber, PSTExempt, make, model, serialNumber 
+FROM dbo.Invoice
+ORDER BY invoiceId DESC";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        invoiceId, customerId, propertyId, serviceDate, invoiceDate, technicianId, complaints, notes, partTotal, labour, serviceCharge, GST, PST, subTotal, grossTotal, poNumber, PSTExempt, make, model, 
+                         serialNumber
+FROM            Invoice
+ORDER BY invoiceId DESC";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9479,6 +9492,32 @@ SELECT invoiceId, customerId, propertyId, serviceDate, invoiceDate, technicianId
             HomeAppDBDataSet.InvoiceDataTable dataTable = new HomeAppDBDataSet.InvoiceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(HomeAppDBDataSet.InvoiceDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(HomeAppDBDataSet.InvoiceDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

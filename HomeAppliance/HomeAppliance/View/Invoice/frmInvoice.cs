@@ -88,8 +88,7 @@ namespace HomeAppliance
 
         private void btnPost_Click(object sender, EventArgs e)
         {
-            // Add the column to a new DataTable.
-            table.Columns.Add(column);
+            
         }
 
         private void newRow()
@@ -102,6 +101,58 @@ namespace HomeAppliance
 
         private void invoiceBindingSource_CurrentChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.invoiceTableAdapter.FillBy(this.homeAppDBDataSet.Invoice);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.invoiceTableAdapter.FillBy(this.homeAppDBDataSet.Invoice);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.invoiceTableAdapter.FillBy1(this.homeAppDBDataSet.Invoice);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy1ToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.invoiceTableAdapter.FillBy1(this.homeAppDBDataSet.Invoice);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

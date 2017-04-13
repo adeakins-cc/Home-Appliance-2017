@@ -161,6 +161,15 @@ namespace HomeAppliance.Model
             return GST;
         }
 
+        public void setPST(decimal PST)
+        {
+            this.PST = PST;
+        }
+        public decimal getPST()
+        {
+            return PST;
+        }
+
         public void setSubTotal(decimal subTotal)
         {
             this.subTotal = subTotal;
