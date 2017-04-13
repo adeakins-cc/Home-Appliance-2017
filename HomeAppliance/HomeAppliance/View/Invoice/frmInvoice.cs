@@ -93,27 +93,12 @@ namespace HomeAppliance
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.invoiceTableAdapter.FillBy(this.homeAppDBDataSet.Invoice);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
 
         }
 
         private void fillByToolStripButton_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                this.invoiceTableAdapter.FillBy(this.homeAppDBDataSet.Invoice);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+
 
         }
 
