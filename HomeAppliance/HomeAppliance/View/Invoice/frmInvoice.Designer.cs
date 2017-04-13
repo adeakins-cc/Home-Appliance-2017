@@ -57,7 +57,7 @@
             this.btnNewInvoiceExit = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtRST = new System.Windows.Forms.TextBox();
+            this.txtPST = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -269,7 +269,7 @@
             this.grpCharge.Controls.Add(this.btnNewInvoiceExit);
             this.grpCharge.Controls.Add(this.txtTotal);
             this.grpCharge.Controls.Add(this.label6);
-            this.grpCharge.Controls.Add(this.txtRST);
+            this.grpCharge.Controls.Add(this.txtPST);
             this.grpCharge.Controls.Add(this.label4);
             this.grpCharge.Controls.Add(this.txtSubtotal);
             this.grpCharge.Controls.Add(this.label3);
@@ -348,12 +348,12 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Total:";
             // 
-            // txtRST
+            // txtPST
             // 
-            this.txtRST.Location = new System.Drawing.Point(87, 126);
-            this.txtRST.Name = "txtRST";
-            this.txtRST.Size = new System.Drawing.Size(100, 20);
-            this.txtRST.TabIndex = 9;
+            this.txtPST.Location = new System.Drawing.Point(87, 126);
+            this.txtPST.Name = "txtPST";
+            this.txtPST.Size = new System.Drawing.Size(100, 20);
+            this.txtPST.TabIndex = 9;
             // 
             // label4
             // 
@@ -537,7 +537,7 @@
             // lblCustomerId
             // 
             this.lblCustomerId.AutoSize = true;
-            this.lblCustomerId.Location = new System.Drawing.Point(500, 9);
+            this.lblCustomerId.Location = new System.Drawing.Point(500, 10);
             this.lblCustomerId.Name = "lblCustomerId";
             this.lblCustomerId.Size = new System.Drawing.Size(60, 13);
             this.lblCustomerId.TabIndex = 26;
@@ -659,7 +659,7 @@
         private System.Windows.Forms.GroupBox grpCharge;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtRST;
+        private System.Windows.Forms.TextBox txtPST;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label label3;

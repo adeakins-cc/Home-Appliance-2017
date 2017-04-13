@@ -54,6 +54,9 @@
   <ItemGroup>
     <Compile Include="CategoryClass.cs" />
     <Compile Include="DataService.cs" />
+    <Compile Include="HomeAppDBDataSet.cs">
+      <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HomeAppDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +183,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="HomeAppDBDataSet.xsc">
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
     </None>

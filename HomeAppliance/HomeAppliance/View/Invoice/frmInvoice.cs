@@ -9,21 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace HomeAppliance
 {
     public partial class frmNewInvoice : Form
     {
         // Table name constants
-        private const String CATEGORIES_TABLE = "Invoice";
-
-        // Field name constants
-        private const String CATEGORYID_FIELD = "invoiceId";
-        private const String CATEGORYNAME_FIELD = "CategoryName";
-        private const String DESCRIPTION_FIELD = "Description";
-
-        private DataTable dt;
-        DataColumn column = new DataColumn();
-        DataTable table = new DataTable("Invoice");
+       
         public frmNewInvoice()
         {
             InitializeComponent();
@@ -31,25 +23,6 @@ namespace HomeAppliance
 
         private void frmInvoice_Load(object sender, EventArgs e)
         {
-            // Create the Categories table.
-            dt = new DataTable(CATEGORIES_TABLE);
-
-            // Add the identity column.
-            DataColumn col = dt.Columns.Add(CATEGORYID_FIELD,
-                typeof(System.Int32));
-            col.AllowDBNull = false;
-            col.AutoIncrement = true;
-            col.AutoIncrementSeed = -1;
-            col.AutoIncrementStep = -1;
-            // Set the primary key.
-            dt.PrimaryKey = new DataColumn[] { col };
-
-            // Add the other columns.
-            col = dt.Columns.Add(CATEGORYNAME_FIELD, typeof(System.String));
-            col.AllowDBNull = false;
-            col.MaxLength = 15;
-            dt.Columns.Add(DESCRIPTION_FIELD, typeof(System.String));
-
             // Fill the table.
             // TODO: This line of code loads data into the 'homeAppDBDataSet.Technician' table. You can move, or remove it, as needed.
             this.technicianTableAdapter.Fill(this.homeAppDBDataSet.Technician);
@@ -88,16 +61,30 @@ namespace HomeAppliance
 
         private void btnPost_Click(object sender, EventArgs e)
         {
-            
+            HomeAppDBDataSet.InvoiceDataTable tableInvoice = new HomeAppDBDataSet.InvoiceDataTable();
+            HomeAppDBDataSet.InvoiceRow newRow = homeAppDBDataSet.Invoice.NewInvoiceRow();
+            newRow.customerId = Convert.ToInt32(lblCustomerId.Text);
+            newRow.propertyId = Convert.ToInt32(lblPropertyId.Text);
+            newRow.serviceDate = Convert.ToDateTime(dateServiceDate);
+            newRow.invoiceDate = Convert.ToDateTime(dateInvoiceDate);
+            newRow.technicianId = Convert.ToInt32(drpTechnician.SelectedIndex);
+            newRow.complaints = txtComplaint.Text;
+            newRow.notes = txtNotes.Text;
+            newRow.partTotal = Convert.ToDecimal(txtMaterials.Text);
+            newRow.labour = Convert.ToDecimal(txtLabour.Text);
+            newRow.serviceCharge = Convert.ToDecimal(txtServiceCalls.Text);
+            newRow.GST = Convert.ToDecimal(txtGST.Text);
+            newRow.PST = Convert.ToDecimal(txtPST.Text);
+            newRow.subTotal = Convert.ToDecimal(txtSubtotal.Text);
+            newRow.grossTotal = Convert.ToDecimal(txtTotal.Text);
+            newRow.poNumber = txtPONumber.Text;
+            newRow.PSTExempt = chkRSTExempt.CheckState.ToString();
+            newRow.make = txtMake.Text;
+            newRow.model = txtModel.Text;
+            newRow.serialNumber = txtSerialNumber.Text;
+
         }
 
-        private void newRow()
-        {
-            column.DataType          = System.Type.GetType("System.Int32");
-            column.AutoIncrement     = true;
-            column.AutoIncrementSeed = 1000;
-            column.AutoIncrementStep = 10;
-        }
 
         private void invoiceBindingSource_CurrentChanged(object sender, EventArgs e)
         {
