@@ -26,7 +26,7 @@ namespace HomeAppliance.View.Invoice
 
         private void btnAddPart_Click(object sender, EventArgs e)
         {
-            int part_Id = dataGridParts.CurrentRow.Selected;
+            //int part_Id = dataGridParts.CurrentRow.Selected;
 
             //newRow.quantity = Convert.ToDecimal(lstPartList.se)
         }

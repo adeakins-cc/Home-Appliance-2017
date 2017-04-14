@@ -15,6 +15,7 @@ namespace HomeAppliance
     {
         SqlConnection dbConn = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=HomeAppDB;Integrated Security=True");
         SqlCommand dbCommand = new SqlCommand();
+        bool buttonClicked;
 
         public frmManageCategories()
         {
@@ -43,11 +44,14 @@ namespace HomeAppliance
                 dbCommand = new SqlCommand(query, dbConn);
                 if (dbCommand.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("New Category is added");
-                }
-                else
-                {
-                    MessageBox.Show("");
+                    if (buttonClicked == true)
+                    {
+                        MessageBox.Show("New Category is added");
+                    }
+                    else if (buttonClicked == false)
+                    {
+                        MessageBox.Show("Successfully delete category");
+                    }
                 }
             }
             catch (Exception ex)
@@ -62,7 +66,7 @@ namespace HomeAppliance
 
         private void btnNewCategory_Click(object sender, EventArgs e)
         {
-            // need to drop and re-create DB tables due to auto-increment primary key
+            buttonClicked = true;
             string insertQuery = "INSERT INTO Category(name) VALUES ('" + txtName.Text + "')";
             executeQuery(insertQuery);
             displayCategory();
@@ -78,6 +82,40 @@ namespace HomeAppliance
             txtName.Text = "";
         }
 
+        private void btnDeleteCategory_Click(object sender, EventArgs e)
+        {
+            buttonClicked = false;
+            if (dgvCategory.SelectedCells.Count > 0)
+            {
+                if (MessageBox.Show("Confirm to delete category", "Warning", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    string selectedIndex = dgvCategory.CurrentRow.Cells[0].Value.ToString();
+                    string deleteQuery = "DELETE FROM Category WHERE categoryId = '" + selectedIndex + "'";
+                    executeQuery(deleteQuery);
+                    displayCategory();
+                    txtName.Text = "";
+                }
+            }
+        }
 
+        private void dgvCategory_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtName.Text = dgvCategory.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void categoryNameCheck()
+        {
+            
+        }
+
+        private void btnManageCategoriesExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

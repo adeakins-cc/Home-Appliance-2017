@@ -41,27 +41,29 @@
             // btnManageCategoriesExit
             // 
             this.btnManageCategoriesExit.Location = new System.Drawing.Point(270, 289);
-            this.btnManageCategoriesExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManageCategoriesExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageCategoriesExit.Name = "btnManageCategoriesExit";
             this.btnManageCategoriesExit.Size = new System.Drawing.Size(158, 28);
             this.btnManageCategoriesExit.TabIndex = 10;
             this.btnManageCategoriesExit.Text = "Exit";
             this.btnManageCategoriesExit.UseVisualStyleBackColor = true;
+            this.btnManageCategoriesExit.Click += new System.EventHandler(this.btnManageCategoriesExit_Click);
             // 
             // btnDeleteCategory
             // 
             this.btnDeleteCategory.Location = new System.Drawing.Point(79, 289);
-            this.btnDeleteCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
             this.btnDeleteCategory.Size = new System.Drawing.Size(158, 28);
             this.btnDeleteCategory.TabIndex = 9;
             this.btnDeleteCategory.Text = "Delete Category";
             this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
             // btnEditCategory
             // 
             this.btnEditCategory.Location = new System.Drawing.Point(270, 253);
-            this.btnEditCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditCategory.Name = "btnEditCategory";
             this.btnEditCategory.Size = new System.Drawing.Size(158, 28);
             this.btnEditCategory.TabIndex = 8;
@@ -72,7 +74,7 @@
             // btnNewCategory
             // 
             this.btnNewCategory.Location = new System.Drawing.Point(78, 253);
-            this.btnNewCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCategory.Name = "btnNewCategory";
             this.btnNewCategory.Size = new System.Drawing.Size(159, 28);
             this.btnNewCategory.TabIndex = 7;
@@ -83,10 +85,11 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(127, 206);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(359, 22);
             this.txtName.TabIndex = 37;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label2
             // 
@@ -100,14 +103,18 @@
             // 
             // dgvCategory
             // 
+            this.dgvCategory.AllowUserToAddRows = false;
             this.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategory.Location = new System.Drawing.Point(12, 12);
+            this.dgvCategory.MultiSelect = false;
             this.dgvCategory.Name = "dgvCategory";
+            this.dgvCategory.ReadOnly = true;
             this.dgvCategory.RowTemplate.Height = 24;
             this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategory.Size = new System.Drawing.Size(474, 184);
             this.dgvCategory.TabIndex = 38;
+            this.dgvCategory.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvCategory_MouseClick);
             // 
             // frmManageCategories
             // 
@@ -121,7 +128,7 @@
             this.Controls.Add(this.btnDeleteCategory);
             this.Controls.Add(this.btnEditCategory);
             this.Controls.Add(this.btnNewCategory);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmManageCategories";
             this.Text = "Manage Categories";
             this.Load += new System.EventHandler(this.frmManageCategories_Load);
