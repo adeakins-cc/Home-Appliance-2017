@@ -28,18 +28,12 @@ namespace HomeAppliance
             this.technicianTableAdapter.Fill(this.homeAppDBDataSet.Technician);
             // TODO: This line of code loads data into the 'homeAppDBDataSet.PartsList' table. You can move, or remove it, as needed.
             this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
-
-            // Bind the default view for the table to the grid.
-            //frmNewInvoice.DataSource = dt.DefaultView;
         }
 
         private void addButton_Click(object sender, System.EventArgs e)
         {
-            // Add a new row.
-            /*DataRow row = dt.NewRow();
-            row[CATEGORYNAME_FIELD] = categoryNameTextBox.Text;
-            row[DESCRIPTION_FIELD] = descriptionTextBox.Text;
-            dt.Rows.Add(row);*/
+            HomeAppDBDataSet.InvoiceDataTable tableInvoice = new HomeAppDBDataSet.InvoiceDataTable();
+            HomeAppDBDataSet.InvoiceRow newRow = homeAppDBDataSet.Invoice.NewInvoiceRow();
         }
 
         private void btnSearchCustomerProperty_Click(object sender, EventArgs e)
@@ -63,42 +57,26 @@ namespace HomeAppliance
         {
             HomeAppDBDataSet.InvoiceDataTable tableInvoice = new HomeAppDBDataSet.InvoiceDataTable();
             HomeAppDBDataSet.InvoiceRow newRow = homeAppDBDataSet.Invoice.NewInvoiceRow();
-            newRow.customerId = Convert.ToInt32(lblCustomerId.Text);
-            newRow.propertyId = Convert.ToInt32(lblPropertyId.Text);
-            newRow.serviceDate = Convert.ToDateTime(dateServiceDate);
-            newRow.invoiceDate = Convert.ToDateTime(dateInvoiceDate);
+            newRow.customerId   = Convert.ToInt32(lblCustomerId.Text);
+            newRow.propertyId   = Convert.ToInt32(lblPropertyId.Text);
+            newRow.serviceDate  = Convert.ToDateTime(dateServiceDate);
+            newRow.invoiceDate  = Convert.ToDateTime(dateInvoiceDate);
             newRow.technicianId = Convert.ToInt32(drpTechnician.SelectedIndex);
-            newRow.complaints = txtComplaint.Text;
-            newRow.notes = txtNotes.Text;
-            newRow.partTotal = Convert.ToDecimal(txtMaterials.Text);
-            newRow.labour = Convert.ToDecimal(txtLabour.Text);
+            newRow.complaints   = txtComplaint.Text;
+            newRow.notes        = txtNotes.Text;
+            newRow.partTotal    = Convert.ToDecimal(txtMaterials.Text);
+            newRow.labour       = Convert.ToDecimal(txtLabour.Text);
             newRow.serviceCharge = Convert.ToDecimal(txtServiceCalls.Text);
-            newRow.GST = Convert.ToDecimal(txtGST.Text);
-            newRow.PST = Convert.ToDecimal(txtPST.Text);
-            newRow.subTotal = Convert.ToDecimal(txtSubtotal.Text);
-            newRow.grossTotal = Convert.ToDecimal(txtTotal.Text);
-            newRow.poNumber = txtPONumber.Text;
-            newRow.PSTExempt = chkRSTExempt.CheckState.ToString();
-            newRow.make = txtMake.Text;
-            newRow.model = txtModel.Text;
+            newRow.GST          = Convert.ToDecimal(txtGST.Text);
+            newRow.PST          = Convert.ToDecimal(txtPST.Text);
+            newRow.subTotal     = Convert.ToDecimal(txtSubtotal.Text);
+            newRow.grossTotal   = Convert.ToDecimal(txtTotal.Text);
+            newRow.poNumber     = txtPONumber.Text;
+            newRow.PSTExempt    = chkRSTExempt.CheckState.ToString();
+            newRow.make         = txtMake.Text;
+            newRow.model        = txtModel.Text;
             newRow.serialNumber = txtSerialNumber.Text;
-
-        }
-
-
-        private void invoiceBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
-        {
-
+            tableInvoice.AddInvoiceRow(newRow);
 
         }
 
