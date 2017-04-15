@@ -39,7 +39,7 @@ namespace HomeAppliance
 
         private void btnManageProperty_Click(object sender, EventArgs e)
         {
-            frmManageProperty propertyPage = new frmManageProperty();
+            dgvStreetBuildings propertyPage = new dgvStreetBuildings();
             propertyPage.Show();
         }
 

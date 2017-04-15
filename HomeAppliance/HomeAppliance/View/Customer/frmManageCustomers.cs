@@ -47,6 +47,7 @@ namespace HomeAppliance
                 {
                     companyNode.Nodes.Add(reader["companyName"].ToString());
                 }
+                
                 treeView1.Nodes.Add(companyNode);
 
                 dbCommand.Connection.Close();
@@ -60,6 +61,7 @@ namespace HomeAppliance
                     customerNode.Nodes.Add(reader["firstName"].ToString() + ", " + reader["lastName"].ToString());
                     customerNode.Tag = reader["customerId"].ToString();
                 }
+
                 treeView1.Nodes.Add(customerNode);
                 
                 dbCommand.Connection.Close();
@@ -71,7 +73,7 @@ namespace HomeAppliance
             }
         }
 
-        private void displayInfo(int custID)
+        private void displayInfo(string custID)
         {
             try
             {
@@ -102,9 +104,9 @@ namespace HomeAppliance
             }
         }
 
-        private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-
+            //displayInfo(treeView1.SelectedNode.Tag.ToString());
         }
     }
 }

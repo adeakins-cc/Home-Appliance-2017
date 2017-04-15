@@ -38,7 +38,7 @@ namespace HomeAppliance
 
         private void btnSearchCustomerProperty_Click(object sender, EventArgs e)
         {
-            frmManageProperty selectPropertyCustomer = new frmManageProperty();
+            dgvStreetBuildings selectPropertyCustomer = new dgvStreetBuildings();
             selectPropertyCustomer.ShowDialog();
         }
 
