@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliance.Model
 {
-    class Property
+    public class Property
     {
         //fields
         private int      propertyID;

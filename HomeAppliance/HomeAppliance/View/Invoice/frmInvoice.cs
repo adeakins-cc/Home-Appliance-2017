@@ -1,4 +1,5 @@
-﻿using HomeAppliance.View.Invoice;
+﻿using HomeAppliance.Model;
+using HomeAppliance.View.Invoice;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,22 @@ namespace HomeAppliance
 {
     public partial class frmNewInvoice : Form
     {
-        // Table name constants
-
+        // Table name constant 
+        public Part newPart { get; set; }
+        public decimal quantity { get; set; }
+        public decimal materialTotal;
+        public void updatePartList()
+        {
+            if (quantity > 0)
+            {
+                var row = (DataGridViewRow)dataListParts.RowTemplate.Clone();
+                row.CreateCells(dataListParts, newPart.getPartID(), newPart.getName(), newPart.getPrice(), quantity);
+                dataListParts.Rows.Add(row);
+            }
+            materialTotal += newPart.getPrice() * quantity;
+            txtMaterials.Text = materialTotal.ToString();
+            quantity = 0;
+        }
         public frmNewInvoice()
         {
             InitializeComponent();
@@ -28,7 +43,7 @@ namespace HomeAppliance
             this.technicianTableAdapter.Fill(this.homeAppDBDataSet.Technician);
             // TODO: This line of code loads data into the 'homeAppDBDataSet.PartsList' table. You can move, or remove it, as needed.
             this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
-
+            
         }
 
         private void addButton_Click(object sender, System.EventArgs e)
@@ -50,7 +65,7 @@ namespace HomeAppliance
 
         private void btnAddPart_Click(object sender, EventArgs e)
         {
-            frmAddPart newPart = new frmAddPart();
+            frmAddPart newPart = new frmAddPart(this);
             newPart.ShowDialog();
         }
 
@@ -109,7 +124,10 @@ namespace HomeAppliance
 
         private void btnRemovePart_Click(object sender, EventArgs e)
         {
-
+            Decimal mat = (decimal)dataListParts.SelectedRows[0].Cells[2].Value * (decimal)dataListParts.SelectedRows[0].Cells[3].Value;
+            materialTotal -= mat;
+            txtMaterials.Text = materialTotal.ToString();
+            dataListParts.Rows.RemoveAt(dataListParts.CurrentCell.RowIndex);
         }
     }
 }

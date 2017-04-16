@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliance.Model
 {
-    class Finance
+    public class Finance
     {
         private int         finacialID;
         private DateTime    postDate;

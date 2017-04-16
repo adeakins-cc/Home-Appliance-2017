@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliance.Model
 {
-    class Category
+    public class Category
     {
         private int categoryID;
         private string name;

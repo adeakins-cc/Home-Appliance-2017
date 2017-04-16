@@ -17,10 +17,11 @@ namespace HomeAppliance.View.Invoice
     {
 
         Part newPart = new Part();
-
-        public frmAddPart()
+        frmNewInvoice newInvoice;
+        public frmAddPart(frmNewInvoice newInvoice01)
         {
             InitializeComponent();
+            newInvoice = newInvoice01;
         }
 
         private void frmAddPart_Load(object sender, EventArgs e)
@@ -32,7 +33,10 @@ namespace HomeAppliance.View.Invoice
 
         private void btnAddPart_Click(object sender, EventArgs e)
         {
-            
+            newInvoice.newPart = newPart;
+            newInvoice.quantity = numQTY.Value;
+            newInvoice.updatePartList();
+            this.Close();
         }
 
         private void txtExit_Click(object sender, EventArgs e)
@@ -42,6 +46,7 @@ namespace HomeAppliance.View.Invoice
 
         private void dataGridParts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             newPart.setPartID((int)dataGridParts.SelectedRows[0].Cells[0].Value);
             newPart.setName(dataGridParts.SelectedRows[0].Cells[2].Value.ToString());
             newPart.setPrice((decimal)dataGridParts.SelectedRows[0].Cells[3].Value);

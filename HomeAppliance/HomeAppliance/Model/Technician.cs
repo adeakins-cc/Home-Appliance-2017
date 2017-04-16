@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliance.Model
 {
-    class Technician
+    public class Technician
     {
         private int technicianID;
         private string tecnicianName;

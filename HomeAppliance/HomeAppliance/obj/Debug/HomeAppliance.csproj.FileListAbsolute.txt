@@ -114,3 +114,4 @@ C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeApplian
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.dgvStreetBuildings.resources
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.dgvStreetBuildings.resources
+C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
