@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtSearch = new System.Windows.Forms.Button();
-            this.txtExit = new System.Windows.Forms.Button();
+            this.txtSearchName = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnAddPart = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numQTY = new System.Windows.Forms.NumericUpDown();
             this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
             this.tableAdapterManager = new HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager();
             this.partTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartTableAdapter();
@@ -46,7 +46,7 @@
             this.categoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQTY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridParts)).BeginInit();
@@ -61,31 +61,32 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Name:";
             // 
-            // textBox1
+            // txtSearchName
             // 
-            this.textBox1.Location = new System.Drawing.Point(67, 143);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtSearchName.Location = new System.Drawing.Point(67, 143);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.Size = new System.Drawing.Size(209, 20);
+            this.txtSearchName.TabIndex = 2;
             // 
-            // txtSearch
+            // btnSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(282, 143);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(75, 23);
-            this.txtSearch.TabIndex = 3;
-            this.txtSearch.Text = "Search";
-            this.txtSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Location = new System.Drawing.Point(282, 143);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtExit
+            // btnExit
             // 
-            this.txtExit.Location = new System.Drawing.Point(282, 170);
-            this.txtExit.Name = "txtExit";
-            this.txtExit.Size = new System.Drawing.Size(75, 23);
-            this.txtExit.TabIndex = 4;
-            this.txtExit.Text = "Exit";
-            this.txtExit.UseVisualStyleBackColor = true;
-            this.txtExit.Click += new System.EventHandler(this.txtExit_Click);
+            this.btnExit.Location = new System.Drawing.Point(282, 170);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.txtExit_Click);
             // 
             // btnAddPart
             // 
@@ -106,18 +107,18 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Quantity:";
             // 
-            // numericUpDown1
+            // numQTY
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(67, 173);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numQTY.Location = new System.Drawing.Point(67, 173);
+            this.numQTY.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(128, 20);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numQTY.Name = "numQTY";
+            this.numQTY.Size = new System.Drawing.Size(128, 20);
+            this.numQTY.TabIndex = 8;
+            this.numQTY.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -160,8 +161,6 @@
             this.dataGridParts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridParts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridParts.AutoGenerateColumns = false;
-            this.dataGridParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridParts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridParts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -179,6 +178,7 @@
             this.dataGridParts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridParts.Size = new System.Drawing.Size(344, 124);
             this.dataGridParts.TabIndex = 9;
+            this.dataGridParts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridParts_CellContentClick);
             // 
             // partIdDataGridViewTextBoxColumn
             // 
@@ -221,17 +221,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 213);
             this.Controls.Add(this.dataGridParts);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numQTY);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAddPart);
-            this.Controls.Add(this.txtExit);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearchName);
             this.Controls.Add(this.label1);
             this.Name = "frmAddPart";
             this.Text = "frmAddPart";
             this.Load += new System.EventHandler(this.frmAddPart_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQTY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridParts)).EndInit();
@@ -242,12 +242,12 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button txtSearch;
-        private System.Windows.Forms.Button txtExit;
+        private System.Windows.Forms.TextBox txtSearchName;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnAddPart;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numQTY;
         private HomeAppDBDataSet homeAppDBDataSet;
         private HomeAppDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private HomeAppDBDataSetTableAdapters.PartTableAdapter partTableAdapter;

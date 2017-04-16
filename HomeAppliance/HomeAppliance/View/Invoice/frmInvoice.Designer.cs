@@ -259,6 +259,7 @@
             this.btnRemovePart.TabIndex = 20;
             this.btnRemovePart.Text = "Remove Part";
             this.btnRemovePart.UseVisualStyleBackColor = true;
+            this.btnRemovePart.Click += new System.EventHandler(this.btnRemovePart_Click);
             // 
             // grpCharge
             // 

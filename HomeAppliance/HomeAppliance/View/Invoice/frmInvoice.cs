@@ -15,7 +15,7 @@ namespace HomeAppliance
     public partial class frmNewInvoice : Form
     {
         // Table name constants
-       
+
         public frmNewInvoice()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace HomeAppliance
             this.technicianTableAdapter.Fill(this.homeAppDBDataSet.Technician);
             // TODO: This line of code loads data into the 'homeAppDBDataSet.PartsList' table. You can move, or remove it, as needed.
             this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
+
         }
 
         private void addButton_Click(object sender, System.EventArgs e)
@@ -103,6 +104,11 @@ namespace HomeAppliance
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void btnRemovePart_Click(object sender, EventArgs e)
+        {
 
         }
     }

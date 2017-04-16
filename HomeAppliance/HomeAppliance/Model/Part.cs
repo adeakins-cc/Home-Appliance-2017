@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HomeAppliance.Model
 {
@@ -57,5 +58,9 @@ namespace HomeAppliance.Model
             return price;
         }
 
+        public static implicit operator Part(DataGridViewRow v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
