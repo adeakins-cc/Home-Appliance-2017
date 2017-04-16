@@ -17,8 +17,121 @@ namespace HomeAppliance
     {
         // Table name constant 
         public Part newPart { get; set; }
+        public Model.Invoice newInvoice = new Model.Invoice();
         public decimal quantity { get; set; }
         public decimal materialTotal;
+        public decimal total;
+        public decimal GST = 0.05M;
+        public decimal PST = 0.08M;
+        
+        public void verifyAndTotals()
+        {
+
+            #region verifyPartTotal
+            try
+            {
+                newInvoice.setPartTotal(materialTotal);
+                txtMaterials.Text = materialTotal.ToString();
+            }
+            catch (Exception)
+            {
+                newInvoice.setPartTotal(0);
+                txtMaterials.Text = "0";
+
+            }
+            #endregion
+            #region verifyLabourTotal
+            try
+            {
+                newInvoice.setLabour(Convert.ToDecimal(txtLabour.Text));
+            }
+            catch (Exception)
+            {
+                newInvoice.setLabour(0);
+                txtLabour.Text = "0";
+
+            }
+            #endregion
+            #region verifyServiceCharge
+            try
+            {
+                newInvoice.setServiceCharge(Convert.ToDecimal(txtServiceCalls.Text));
+            }
+            catch (Exception)
+            {
+                newInvoice.setServiceCharge(0);
+                txtServiceCalls.Text = "0";
+
+            }
+            #endregion
+            #region verifySubTotal
+            try
+            {
+                newInvoice.setSubTotal(Convert.ToDecimal(txtSubtotal.Text));
+            }
+            catch (Exception)
+            {
+                newInvoice.setSubTotal(0);
+                txtSubtotal.Text = "0";
+
+            }
+            #endregion
+            #region verifyPST
+            try
+            {
+                newInvoice.setPST(Convert.ToDecimal(txtPST.Text));
+            }
+            catch (Exception)
+            {
+                newInvoice.setPST(0);
+                txtPST.Text = "0";
+
+            }
+            #endregion
+            #region verifyGST
+            try
+            {
+                newInvoice.setGST(Convert.ToDecimal(txtGST.Text));
+            }
+            catch (Exception)
+            {
+                newInvoice.setGST(0);
+                txtGST.Text = "0";
+
+            }
+            #endregion
+            #region verifyTotal
+            try
+            {
+                newInvoice.setGrossTotal(Convert.ToDecimal(txtTotal.Text));
+            }
+            catch (Exception)
+            {
+                newInvoice.setGrossTotal(0);
+                txtTotal.Text = "0";
+
+            }
+            #endregion
+
+            newInvoice.setSubTotal(newInvoice.getPartTotal() + newInvoice.getLabour() + newInvoice.getServiceCharge());
+            txtSubtotal.Text = newInvoice.getSubTotal().ToString();
+            newInvoice.setGST(newInvoice.getSubTotal() * GST);
+            txtGST.Text = newInvoice.getGST().ToString();
+            if (chkPSTExempt.Checked != true)
+            {
+                newInvoice.setPST(newInvoice.getSubTotal() * PST);
+                txtPST.Text = newInvoice.getPST().ToString();
+            }
+            else
+            {
+                newInvoice.setPST(0);
+                txtPST.Text = newInvoice.getPST().ToString();
+            }
+
+            newInvoice.setGrossTotal(newInvoice.getGST() + newInvoice.getPST() + newInvoice.getSubTotal());
+            txtTotal.Text = newInvoice.getGrossTotal().ToString();
+
+        }
         public void updatePartList()
         {
             if (quantity > 0)
@@ -28,7 +141,7 @@ namespace HomeAppliance
                 dataListParts.Rows.Add(row);
             }
             materialTotal += newPart.getPrice() * quantity;
-            txtMaterials.Text = materialTotal.ToString();
+            verifyAndTotals();
             quantity = 0;
         }
         public frmNewInvoice()
@@ -38,12 +151,14 @@ namespace HomeAppliance
 
         private void frmInvoice_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'homeAppDBDataSet.Taxes' table. You can move, or remove it, as needed.
+            this.taxesTableAdapter.Fill(this.homeAppDBDataSet.Taxes);
             // Fill the table.
             // TODO: This line of code loads data into the 'homeAppDBDataSet.Technician' table. You can move, or remove it, as needed.
             this.technicianTableAdapter.Fill(this.homeAppDBDataSet.Technician);
             // TODO: This line of code loads data into the 'homeAppDBDataSet.PartsList' table. You can move, or remove it, as needed.
             this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
-            
+            verifyAndTotals();
         }
 
         private void addButton_Click(object sender, System.EventArgs e)
@@ -88,7 +203,7 @@ namespace HomeAppliance
             newRow.subTotal     = Convert.ToDecimal(txtSubtotal.Text);
             newRow.grossTotal   = Convert.ToDecimal(txtTotal.Text);
             newRow.poNumber     = txtPONumber.Text;
-            newRow.PSTExempt    = chkRSTExempt.CheckState.ToString();
+            newRow.PSTExempt    = chkPSTExempt.CheckState.ToString();
             newRow.make         = txtMake.Text;
             newRow.model        = txtModel.Text;
             newRow.serialNumber = txtSerialNumber.Text;
@@ -126,8 +241,18 @@ namespace HomeAppliance
         {
             Decimal mat = (decimal)dataListParts.SelectedRows[0].Cells[2].Value * (decimal)dataListParts.SelectedRows[0].Cells[3].Value;
             materialTotal -= mat;
-            txtMaterials.Text = materialTotal.ToString();
+            verifyAndTotals();
             dataListParts.Rows.RemoveAt(dataListParts.CurrentCell.RowIndex);
+        }
+
+        private void chkPSTExempt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPSTExempt.Checked != true)
+            {
+                newInvoice.setPST(0);
+            }
+            verifyAndTotals();
+
         }
     }
 }

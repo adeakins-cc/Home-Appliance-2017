@@ -33,10 +33,17 @@ namespace HomeAppliance.View.Invoice
 
         private void btnAddPart_Click(object sender, EventArgs e)
         {
-            newInvoice.newPart = newPart;
-            newInvoice.quantity = numQTY.Value;
-            newInvoice.updatePartList();
-            this.Close();
+            if (newPart.getPartID() > 0)
+            {
+                newInvoice.newPart = newPart;
+                newInvoice.quantity = numQTY.Value;
+                newInvoice.updatePartList();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Part");
+            }
         }
 
         private void txtExit_Click(object sender, EventArgs e)

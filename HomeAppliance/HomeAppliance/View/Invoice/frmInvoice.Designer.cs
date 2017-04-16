@@ -58,7 +58,7 @@
             this.txtGST = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnPost = new System.Windows.Forms.Button();
-            this.chkRSTExempt = new System.Windows.Forms.CheckBox();
+            this.chkPSTExempt = new System.Windows.Forms.CheckBox();
             this.btnNewInvoiceExit = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -91,6 +91,8 @@
             this.invoiceTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.InvoiceTableAdapter();
             this.partsListTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartsListTableAdapter();
             this.technicianTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TechnicianTableAdapter();
+            this.taxesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.taxesTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TaxesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
@@ -98,6 +100,7 @@
             this.grpCharge.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taxesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateInvoiceDate
@@ -311,7 +314,7 @@
             this.grpCharge.Controls.Add(this.txtGST);
             this.grpCharge.Controls.Add(this.label5);
             this.grpCharge.Controls.Add(this.btnPost);
-            this.grpCharge.Controls.Add(this.chkRSTExempt);
+            this.grpCharge.Controls.Add(this.chkPSTExempt);
             this.grpCharge.Controls.Add(this.btnNewInvoiceExit);
             this.grpCharge.Controls.Add(this.txtTotal);
             this.grpCharge.Controls.Add(this.label6);
@@ -336,8 +339,10 @@
             // 
             this.txtGST.Location = new System.Drawing.Point(87, 152);
             this.txtGST.Name = "txtGST";
+            this.txtGST.ReadOnly = true;
             this.txtGST.Size = new System.Drawing.Size(100, 20);
             this.txtGST.TabIndex = 24;
+            this.txtGST.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -358,15 +363,16 @@
             this.btnPost.UseVisualStyleBackColor = true;
             this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
-            // chkRSTExempt
+            // chkPSTExempt
             // 
-            this.chkRSTExempt.AutoSize = true;
-            this.chkRSTExempt.Location = new System.Drawing.Point(87, 204);
-            this.chkRSTExempt.Name = "chkRSTExempt";
-            this.chkRSTExempt.Size = new System.Drawing.Size(85, 17);
-            this.chkRSTExempt.TabIndex = 14;
-            this.chkRSTExempt.Text = "PST Exempt";
-            this.chkRSTExempt.UseVisualStyleBackColor = true;
+            this.chkPSTExempt.AutoSize = true;
+            this.chkPSTExempt.Location = new System.Drawing.Point(87, 204);
+            this.chkPSTExempt.Name = "chkPSTExempt";
+            this.chkPSTExempt.Size = new System.Drawing.Size(85, 17);
+            this.chkPSTExempt.TabIndex = 14;
+            this.chkPSTExempt.Text = "PST Exempt";
+            this.chkPSTExempt.UseVisualStyleBackColor = true;
+            this.chkPSTExempt.CheckedChanged += new System.EventHandler(this.chkPSTExempt_CheckedChanged);
             // 
             // btnNewInvoiceExit
             // 
@@ -382,8 +388,10 @@
             // 
             this.txtTotal.Location = new System.Drawing.Point(87, 178);
             this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 13;
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -398,8 +406,10 @@
             // 
             this.txtPST.Location = new System.Drawing.Point(87, 126);
             this.txtPST.Name = "txtPST";
+            this.txtPST.ReadOnly = true;
             this.txtPST.Size = new System.Drawing.Size(100, 20);
             this.txtPST.TabIndex = 9;
+            this.txtPST.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -414,8 +424,10 @@
             // 
             this.txtSubtotal.Location = new System.Drawing.Point(87, 100);
             this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.ReadOnly = true;
             this.txtSubtotal.Size = new System.Drawing.Size(100, 20);
             this.txtSubtotal.TabIndex = 7;
+            this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -432,6 +444,8 @@
             this.txtServiceCalls.Name = "txtServiceCalls";
             this.txtServiceCalls.Size = new System.Drawing.Size(100, 20);
             this.txtServiceCalls.TabIndex = 5;
+            this.txtServiceCalls.Text = "10";
+            this.txtServiceCalls.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -448,6 +462,8 @@
             this.txtLabour.Name = "txtLabour";
             this.txtLabour.Size = new System.Drawing.Size(100, 20);
             this.txtLabour.TabIndex = 3;
+            this.txtLabour.Text = "50";
+            this.txtLabour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -462,8 +478,10 @@
             // 
             this.txtMaterials.Location = new System.Drawing.Point(87, 19);
             this.txtMaterials.Name = "txtMaterials";
+            this.txtMaterials.ReadOnly = true;
             this.txtMaterials.Size = new System.Drawing.Size(100, 20);
             this.txtMaterials.TabIndex = 1;
+            this.txtMaterials.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblmaterials
             // 
@@ -636,11 +654,20 @@
             // 
             this.technicianTableAdapter.ClearBeforeFill = true;
             // 
+            // taxesBindingSource
+            // 
+            this.taxesBindingSource.DataMember = "Taxes";
+            this.taxesBindingSource.DataSource = this.homeAppDBDataSet;
+            // 
+            // taxesTableAdapter
+            // 
+            this.taxesTableAdapter.ClearBeforeFill = true;
+            // 
             // frmNewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 501);
+            this.ClientSize = new System.Drawing.Size(688, 517);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lblPropertyId);
             this.Controls.Add(this.lblCustomerId);
@@ -677,6 +704,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taxesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -715,7 +743,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaterials;
         private System.Windows.Forms.Label lblmaterials;
-        private System.Windows.Forms.CheckBox chkRSTExempt;
+        private System.Windows.Forms.CheckBox chkPSTExempt;
         private System.Windows.Forms.Button btnPost;
         private System.Windows.Forms.Button btnNewInvoiceExit;
         private System.Windows.Forms.Button btnSearchCustomerProperty;
@@ -746,5 +774,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.BindingSource taxesBindingSource;
+        private HomeAppDBDataSetTableAdapters.TaxesTableAdapter taxesTableAdapter;
     }
 }
