@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliance.Model
 {
-    class Taxes
+    public class Taxes
     {
         private int taxId;
         private string name;

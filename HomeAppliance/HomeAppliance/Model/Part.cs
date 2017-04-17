@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace HomeAppliance.Model
 {
-    class Part
+    public class Part
     {
         private int partID;
         private Category category;

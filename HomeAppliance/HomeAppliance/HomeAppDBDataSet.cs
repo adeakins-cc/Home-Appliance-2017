@@ -4,5 +4,8 @@
 
     partial class HomeAppDBDataSet
     {
+        partial class TaxesDataTable
+        {
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliance.Model
 {
-    class Invoice
+    public class Invoice
     {
         private int invoiceID;
         private Customer customer;

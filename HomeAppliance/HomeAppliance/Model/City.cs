@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeAppliance.Model
 {
-    class City
+    public class City
     {
         private int cityId;
         private string name;
