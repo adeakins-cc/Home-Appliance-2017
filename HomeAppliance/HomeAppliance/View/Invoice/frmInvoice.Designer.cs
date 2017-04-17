@@ -36,8 +36,6 @@
             this.lblSerDate = new System.Windows.Forms.Label();
             this.dateServiceDate = new System.Windows.Forms.DateTimePicker();
             this.lblTechnician = new System.Windows.Forms.Label();
-            this.drpTechnician = new System.Windows.Forms.ComboBox();
-            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
             this.lblCustomerComplain = new System.Windows.Forms.Label();
             this.txtComplaint = new System.Windows.Forms.RichTextBox();
@@ -86,21 +84,21 @@
             this.tableAdapterManager = new HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager();
             this.invoiceTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.InvoiceTableAdapter();
             this.partsListTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartsListTableAdapter();
-            this.technicianTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TechnicianTableAdapter();
-            this.taxesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.propertyTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PropertyTableAdapter();
             this.txtCustomer = new System.Windows.Forms.RichTextBox();
             this.txtProperty = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
+            this.cmboTechnician = new System.Windows.Forms.ComboBox();
+            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.technicianTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TechnicianTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).BeginInit();
             this.grpCharge.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taxesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateInvoiceDate
@@ -161,22 +159,6 @@
             this.lblTechnician.Size = new System.Drawing.Size(63, 13);
             this.lblTechnician.TabIndex = 8;
             this.lblTechnician.Text = "Technician:";
-            // 
-            // drpTechnician
-            // 
-            this.drpTechnician.DataSource = this.technicianBindingSource;
-            this.drpTechnician.DisplayMember = "name";
-            this.drpTechnician.FormattingEnabled = true;
-            this.drpTechnician.Location = new System.Drawing.Point(218, 197);
-            this.drpTechnician.Name = "drpTechnician";
-            this.drpTechnician.Size = new System.Drawing.Size(200, 21);
-            this.drpTechnician.TabIndex = 9;
-            this.drpTechnician.ValueMember = "technicianId";
-            // 
-            // technicianBindingSource
-            // 
-            this.technicianBindingSource.DataMember = "Technician";
-            this.technicianBindingSource.DataSource = this.homeAppDBDataSet;
             // 
             // homeAppDBDataSet
             // 
@@ -603,7 +585,7 @@
             this.tableAdapterManager.PartTableAdapter = null;
             this.tableAdapterManager.PropertyTableAdapter = null;
             this.tableAdapterManager.TaxesTableAdapter = null;
-            this.tableAdapterManager.TechnicianTableAdapter = this.technicianTableAdapter;
+            this.tableAdapterManager.TechnicianTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // invoiceTableAdapter
@@ -613,15 +595,6 @@
             // partsListTableAdapter
             // 
             this.partsListTableAdapter.ClearBeforeFill = true;
-            // 
-            // technicianTableAdapter
-            // 
-            this.technicianTableAdapter.ClearBeforeFill = true;
-            // 
-            // taxesBindingSource
-            // 
-            this.taxesBindingSource.DataMember = "Taxes";
-            this.taxesBindingSource.DataSource = this.homeAppDBDataSet;
             // 
             // propertyBindingSource
             // 
@@ -650,11 +623,33 @@
             this.txtProperty.TabIndex = 30;
             this.txtProperty.Text = "";
             // 
+            // cmboTechnician
+            // 
+            this.cmboTechnician.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.technicianBindingSource, "technicianId", true));
+            this.cmboTechnician.DataSource = this.technicianBindingSource;
+            this.cmboTechnician.DisplayMember = "name";
+            this.cmboTechnician.FormattingEnabled = true;
+            this.cmboTechnician.Location = new System.Drawing.Point(218, 197);
+            this.cmboTechnician.Name = "cmboTechnician";
+            this.cmboTechnician.Size = new System.Drawing.Size(200, 21);
+            this.cmboTechnician.TabIndex = 31;
+            this.cmboTechnician.ValueMember = "technicianId";
+            // 
+            // technicianBindingSource
+            // 
+            this.technicianBindingSource.DataMember = "Technician";
+            this.technicianBindingSource.DataSource = this.homeAppDBDataSet;
+            // 
+            // technicianTableAdapter
+            // 
+            this.technicianTableAdapter.ClearBeforeFill = true;
+            // 
             // frmNewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 502);
+            this.Controls.Add(this.cmboTechnician);
             this.Controls.Add(this.txtProperty);
             this.Controls.Add(this.txtCustomer);
             this.Controls.Add(this.label11);
@@ -670,7 +665,6 @@
             this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.lblCustomerComplain);
             this.Controls.Add(this.txtComplaint);
-            this.Controls.Add(this.drpTechnician);
             this.Controls.Add(this.lblTechnician);
             this.Controls.Add(this.lblSerDate);
             this.Controls.Add(this.dateServiceDate);
@@ -680,7 +674,6 @@
             this.Controls.Add(this.dateInvoiceDate);
             this.Text = "New Invoices";
             this.Load += new System.EventHandler(this.frmInvoice_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partsListBindingSource)).EndInit();
@@ -689,8 +682,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taxesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -705,7 +698,6 @@
         private System.Windows.Forms.Label lblSerDate;
         private System.Windows.Forms.DateTimePicker dateServiceDate;
         private System.Windows.Forms.Label lblTechnician;
-        private System.Windows.Forms.ComboBox drpTechnician;
         private System.Windows.Forms.Label lblCustomerComplain;
         private System.Windows.Forms.RichTextBox txtComplaint;
         private System.Windows.Forms.Label lblServiceNotes;
@@ -746,8 +738,6 @@
         private System.Windows.Forms.Label label11;
         private HomeAppDBDataSet homeAppDBDataSet;
         private HomeAppDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private HomeAppDBDataSetTableAdapters.TechnicianTableAdapter technicianTableAdapter;
-        private System.Windows.Forms.BindingSource technicianBindingSource;
         private HomeAppDBDataSetTableAdapters.InvoiceTableAdapter invoiceTableAdapter;
         private System.Windows.Forms.BindingSource invoiceBindingSource;
         private HomeAppDBDataSetTableAdapters.PartsListTableAdapter partsListTableAdapter;
@@ -756,10 +746,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.BindingSource taxesBindingSource;
         private System.Windows.Forms.BindingSource propertyBindingSource;
         private HomeAppDBDataSetTableAdapters.PropertyTableAdapter propertyTableAdapter;
         private System.Windows.Forms.RichTextBox txtCustomer;
         private System.Windows.Forms.RichTextBox txtProperty;
+        private System.Windows.Forms.ComboBox cmboTechnician;
+        private System.Windows.Forms.BindingSource technicianBindingSource;
+        private HomeAppDBDataSetTableAdapters.TechnicianTableAdapter technicianTableAdapter;
     }
 }

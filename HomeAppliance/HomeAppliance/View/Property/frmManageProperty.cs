@@ -119,5 +119,10 @@ namespace HomeAppliance
         {
 
         }
+
+        private void btnSaveNewProperty_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

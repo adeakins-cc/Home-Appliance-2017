@@ -210,6 +210,7 @@ namespace HomeAppliance
             this.technicianTableAdapter.Fill(this.homeAppDBDataSet.Technician);
             // TODO: This line of code loads data into the 'homeAppDBDataSet.PartsList' table. You can move, or remove it, as needed.
             this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
+            cmboTechnician.SelectedIndex = 1;
             verifyAndTotals();
             loadPropertyCustomer();
             generatedInvoiceId();
@@ -236,28 +237,6 @@ namespace HomeAppliance
         
         private void btnPost_Click(object sender, EventArgs e)
         {
-            HomeAppDBDataSet.InvoiceDataTable tableInvoice = homeAppDBDataSet.Invoice;
-            HomeAppDBDataSet.InvoiceRow newRow = homeAppDBDataSet.Invoice.NewInvoiceRow();
-            newRow.invoiceId    = invoiceId;
-            newRow.customerId   = customerId;
-            newRow.propertyId   = propertyId;
-            newRow.serviceDate  = dateServiceDate.Value;
-            newRow.invoiceDate  = dateInvoiceDate.Value;
-            newRow.technicianId = Convert.ToInt32(drpTechnician.SelectedIndex);
-            newRow.complaints   = txtComplaint.Text;
-            newRow.notes        = txtNotes.Text;
-            newRow.partTotal    = Convert.ToDecimal(txtMaterials.Text);
-            newRow.labour       = Convert.ToDecimal(txtLabour.Text);
-            newRow.serviceCharge = Convert.ToDecimal(txtServiceCalls.Text);
-            newRow.GST          = Convert.ToDecimal(txtGST.Text);
-            newRow.PST          = Convert.ToDecimal(txtPST.Text);
-            newRow.subTotal     = Convert.ToDecimal(txtSubtotal.Text);
-            newRow.grossTotal   = Convert.ToDecimal(txtTotal.Text);
-            newRow.poNumber     = txtPONumber.Text;
-            newRow.PSTExempt    = chkPSTExempt.CheckState.ToString();
-            newRow.make         = txtMake.Text;
-            newRow.model        = txtModel.Text;
-            newRow.serialNumber = txtSerialNumber.Text;
             error = "";
             if (customerId == 0)
             {
@@ -274,7 +253,11 @@ namespace HomeAppliance
             }
             else
             {
-                tableInvoice.ImportRow(newRow);
+                this.invoiceTableAdapter.Insert(customerId, propertyId, dateServiceDate.Value, dateInvoiceDate.Value,
+                    cmboTechnician.SelectedIndex, txtComplaint.Text, txtNotes.Text, Convert.ToDecimal(txtMaterials.Text),
+                    Convert.ToDecimal(txtLabour.Text), Convert.ToDecimal(txtServiceCalls.Text), Convert.ToDecimal(txtGST.Text),
+                    Convert.ToDecimal(txtPST.Text), Convert.ToDecimal(txtSubtotal.Text), Convert.ToDecimal(txtTotal.Text),
+                    txtPONumber.Text, chkPSTExempt.CheckState.ToString(), txtMake.Text, txtModel.Text,txtSerialNumber.Text);
                 this.Close();
             }
 

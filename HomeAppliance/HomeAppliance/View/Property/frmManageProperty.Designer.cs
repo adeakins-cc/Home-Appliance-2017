@@ -348,6 +348,7 @@
             this.btnSaveNewProperty.TabIndex = 22;
             this.btnSaveNewProperty.Text = "Save";
             this.btnSaveNewProperty.UseVisualStyleBackColor = true;
+            this.btnSaveNewProperty.Click += new System.EventHandler(this.btnSaveNewProperty_Click);
             // 
             // btnCancelP
             // 
