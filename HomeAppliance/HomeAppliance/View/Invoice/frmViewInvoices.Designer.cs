@@ -46,7 +46,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 19);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 2;
@@ -55,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(221, 19);
+            this.label2.Location = new System.Drawing.Point(218, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 3;
@@ -63,7 +63,7 @@
             // 
             // btnViewInvoiceRange
             // 
-            this.btnViewInvoiceRange.Location = new System.Drawing.Point(254, 117);
+            this.btnViewInvoiceRange.Location = new System.Drawing.Point(251, 107);
             this.btnViewInvoiceRange.Name = "btnViewInvoiceRange";
             this.btnViewInvoiceRange.Size = new System.Drawing.Size(82, 23);
             this.btnViewInvoiceRange.TabIndex = 4;
@@ -73,7 +73,7 @@
             // 
             // txtInvoiceStart
             // 
-            this.txtInvoiceStart.Location = new System.Drawing.Point(103, 91);
+            this.txtInvoiceStart.Location = new System.Drawing.Point(100, 81);
             this.txtInvoiceStart.Name = "txtInvoiceStart";
             this.txtInvoiceStart.Size = new System.Drawing.Size(115, 20);
             this.txtInvoiceStart.TabIndex = 5;
@@ -81,7 +81,7 @@
             // 
             // txtInvoiceEnd
             // 
-            this.txtInvoiceEnd.Location = new System.Drawing.Point(306, 90);
+            this.txtInvoiceEnd.Location = new System.Drawing.Point(303, 80);
             this.txtInvoiceEnd.Name = "txtInvoiceEnd";
             this.txtInvoiceEnd.Size = new System.Drawing.Size(118, 20);
             this.txtInvoiceEnd.TabIndex = 6;
@@ -89,7 +89,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 94);
+            this.label3.Location = new System.Drawing.Point(12, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 7;
@@ -98,7 +98,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(221, 94);
+            this.label4.Location = new System.Drawing.Point(218, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 8;
@@ -106,7 +106,7 @@
             // 
             // btnViewInvoiceExit
             // 
-            this.btnViewInvoiceExit.Location = new System.Drawing.Point(342, 117);
+            this.btnViewInvoiceExit.Location = new System.Drawing.Point(339, 107);
             this.btnViewInvoiceExit.Name = "btnViewInvoiceExit";
             this.btnViewInvoiceExit.Size = new System.Drawing.Size(82, 23);
             this.btnViewInvoiceExit.TabIndex = 9;
@@ -115,21 +115,21 @@
             // 
             // dateStart
             // 
-            this.dateStart.Location = new System.Drawing.Point(18, 36);
+            this.dateStart.Location = new System.Drawing.Point(15, 26);
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(200, 20);
             this.dateStart.TabIndex = 10;
             // 
             // dateEnd
             // 
-            this.dateEnd.Location = new System.Drawing.Point(224, 36);
+            this.dateEnd.Location = new System.Drawing.Point(221, 26);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(200, 20);
             this.dateEnd.TabIndex = 11;
             // 
             // btnInvoiceByDate
             // 
-            this.btnInvoiceByDate.Location = new System.Drawing.Point(342, 62);
+            this.btnInvoiceByDate.Location = new System.Drawing.Point(339, 52);
             this.btnInvoiceByDate.Name = "btnInvoiceByDate";
             this.btnInvoiceByDate.Size = new System.Drawing.Size(82, 23);
             this.btnInvoiceByDate.TabIndex = 12;
@@ -139,7 +139,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 114);
+            this.label5.Location = new System.Drawing.Point(12, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 13);
             this.label5.TabIndex = 13;
@@ -148,17 +148,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 59);
+            this.label6.Location = new System.Drawing.Point(12, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "Select Date range";
             // 
-            // frmViewInvoices
+            // frmManageFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 148);
+            this.ClientSize = new System.Drawing.Size(427, 137);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnInvoiceByDate);
@@ -172,7 +172,7 @@
             this.Controls.Add(this.btnViewInvoiceRange);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmViewInvoices";
+            this.Name = "frmManageFinance";
             this.Text = "View Invioces";
             this.ResumeLayout(false);
             this.PerformLayout();
