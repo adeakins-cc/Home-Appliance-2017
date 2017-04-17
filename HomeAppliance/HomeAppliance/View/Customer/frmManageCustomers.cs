@@ -14,6 +14,7 @@ namespace HomeAppliance
     public partial class frmManageCustomer : Form
     {
         SqlConnection dbConn = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=HomeAppDB;Integrated Security=True");
+        bool buttonClicked;
 
         public frmManageCustomer()
         {
@@ -30,12 +31,13 @@ namespace HomeAppliance
             getCustomerList();
             btnSaveCust.Enabled = false;
             btnCancelCust.Enabled = false;
+            txtStreetNum01.Text = "";
         }
 
         private void getCustomerList()
         {
             dbConn.Open();
-            treeView1.Nodes.Clear();
+            tvCustomerList.Nodes.Clear();
 
             int nodeNumber = 0;
             int innerNodeCounter;
@@ -45,15 +47,15 @@ namespace HomeAppliance
             SqlDataReader reader;
             try
             {
-                treeView1.Nodes.Add(new TreeNode("Company"));
+                tvCustomerList.Nodes.Add(new TreeNode("Company"));
                 dbCommand.CommandText = "SELECT customerId, companyName FROM Customer WHERE companyName != '' ORDER BY companyName ASC";
                 reader = dbCommand.ExecuteReader();
                 innerNodeCounter = 0;
-                
+
                 while (reader.Read())
                 {
-                    treeView1.Nodes[nodeNumber].Nodes.Add(new TreeNode(reader["companyName"].ToString()));
-                    treeView1.Nodes[nodeNumber].Nodes[innerNodeCounter].Tag = reader["customerId"].ToString();
+                    tvCustomerList.Nodes[nodeNumber].Nodes.Add(new TreeNode(reader["companyName"].ToString()));
+                    tvCustomerList.Nodes[nodeNumber].Nodes[innerNodeCounter].Tag = reader["customerId"].ToString();
                     innerNodeCounter += 1;
                 }
 
@@ -62,27 +64,31 @@ namespace HomeAppliance
 
                 nodeNumber += 1;
 
-                treeView1.Nodes.Add(new TreeNode("Customer"));
-                dbCommand.CommandText = "SELECT customerId, firstName, lastName, c.name FROM Customer cus JOIN City c "+
+                tvCustomerList.Nodes.Add(new TreeNode("Customer"));
+                dbCommand.CommandText = "SELECT customerId, firstName, lastName, c.name FROM Customer cus JOIN City c " +
                                         " ON cus.cityId_01 = c.cityId WHERE firstName != '' ORDER BY firstName ASC";
                 reader = dbCommand.ExecuteReader();
                 innerNodeCounter = 0;
 
                 while (reader.Read())
                 {
-                    treeView1.Nodes[nodeNumber].Nodes.Add(new TreeNode(reader["firstName"].ToString() + ", " + reader["lastName"].ToString()));
-                    treeView1.Nodes[nodeNumber].Nodes[innerNodeCounter].Tag = reader["customerId"].ToString();
+                    tvCustomerList.Nodes[nodeNumber].Nodes.Add(new TreeNode(reader["firstName"].ToString() + ", " + reader["lastName"].ToString()));
+                    tvCustomerList.Nodes[nodeNumber].Nodes[innerNodeCounter].Tag = reader["customerId"].ToString();
                     innerNodeCounter += 1;
                 }
                 nodeNumber += 1;
 
                 dbCommand.Connection.Close();
-                dbCommand.Connection.Open();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            displayInfo(tvCustomerList.SelectedNode.Tag.ToString());
         }
 
         private void displayInfo(string custID)
@@ -119,6 +125,7 @@ namespace HomeAppliance
                 txtContactName.Text = infoReader["contactName"].ToString();
                 cobCityId01.Text = infoReader["name"].ToString();
 
+                dbCommand.Connection.Close();
             }
             catch (Exception ex)
             {
@@ -126,42 +133,111 @@ namespace HomeAppliance
             }
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            displayInfo(treeView1.SelectedNode.Tag.ToString());
-        }
-
+ 
 
         private void verifyInput()
         {
+            string errMessage = "";
             if (txtCompanyName.Text == "")
             {
                 if (txtFirstName.Text == "" || txtLastName.Text == "")
                 {
-                    MessageBox.Show("First name and last name or company name is required");
+                    errMessage += "\nFirst name and last name or company name is required";
                 }
             }
 
-            if (txtStreetNum01.Text == "" && txtStreetName01.Text == "" )
+            if (txtStreetNum01.Text == "" && txtStreetName01.Text == "")
             {
-                MessageBox.Show("Street number and name are required");
+                errMessage += "\nStreet number and name are required";
             }
 
-            if (txtPhone.Text == "")
+            if (errMessage != "")
             {
-                MessageBox.Show("Phone number is required");
+                MessageBox.Show(errMessage);
             }
+        }
+        
+
+
+        private void executeQuery(String query)
+        {
+            try
+            {
+                dbConn.Open();
+                SqlCommand dbCommand = new SqlCommand(query, dbConn);
+                if (dbCommand.ExecuteNonQuery() == 1)
+                {
+                    if (buttonClicked == true)
+                    {
+                        MessageBox.Show("New Customer is added");
+                    }
+                    else if (buttonClicked == false)
+                    {
+                        MessageBox.Show("Successfully delete customer");
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                dbConn.Close();
+            }
+        }
+
+        private void btnUpdateCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void btnSaveCust_Click(object sender, EventArgs e)
+        {
+            verifyInput();
+            string insertCust = "INSERT INTO Customer(firstName,lastName,companyName,unitNumber01,streetNumber01,streetName_01, cityId_01, postalCode_01," +
+                                "unitNumber_02,streetNumber_02,streetName_02,cityId_02,postalCode_02,bussinessPhone,homePhone,fax,contactMobile,contactName) " +
+                                "VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtCompanyName.Text + "','" + txtUnitNum01.Text + "','"
+                                + txtStreetNum01.Text + "','" + txtStreetName01.Text + "','" + cobCityId01.SelectedValue.ToString() + "','" + txtPostalCode01.Text +
+                                "',null,null,null,null,null,'" +
+                                txtBussinessNumber.Text + "','" + txtPhone.Text + "','" + txtFax.Text + "','" + txtMobile.Text + "','" + txtContactName.Text + "')";
+            executeQuery(insertCust);
+            getCustomerList();
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtCompanyName.Text = "";
+            txtUnitNum01.Text = "";
+            txtStreetNum01.Text = "";
+            txtStreetName01.Text = "";
+            txtPostalCode01.Text = "";
+            txtBussinessNumber.Text = "";
+            txtPhone.Text = "";
+            txtFax.Text = "";
+            txtMobile.Text = "";
+            txtContactName.Text = "";
+
+            txtSearchCustomer.Enabled = true;
+            btnSearch.Enabled = true;
+            tvCustomerList.Enabled = true;
+            btnUpdateCustomer.Enabled = true;
+            btnDeleteCustomer.Enabled = true;
+            btnSaveCust.Enabled = false;
+            btnCancelCust.Enabled = false;
         }
 
         private void btnNewCustomer_Click(object sender, EventArgs e)
         {
             txtSearchCustomer.Enabled = false;
             btnSearch.Enabled = false;
-            treeView1.Enabled = false;
+            tvCustomerList.Enabled = false;
             btnUpdateCustomer.Enabled = false;
             btnDeleteCustomer.Enabled = false;
             btnSaveCust.Enabled = true;
             btnCancelCust.Enabled = true;
+            buttonClicked = true;
 
             txtFirstName.Text = "";
             txtLastName.Text = "";
@@ -182,6 +258,19 @@ namespace HomeAppliance
             txtFax.Text = "";
             txtEmail.Text = "";
 
+        }
+
+        private void btnDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            buttonClicked = false;
+
+            if (MessageBox.Show("Confirm to delete customer", "Warning", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                string selectedCustId = tvCustomerList.SelectedNode.Tag.ToString();
+                string deleteCust = "DELETE FROM Customer WHERE customerId = '" + selectedCustId + "'";
+                executeQuery(deleteCust);
+                getCustomerList();
+            }
         }
     }
 }

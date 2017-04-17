@@ -85,7 +85,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cityTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CityTableAdapter();
             this.customerTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CustomerTableAdapter();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tvCustomerList = new System.Windows.Forms.TreeView();
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.btnSaveCust = new System.Windows.Forms.Button();
             this.btnCancelCust = new System.Windows.Forms.Button();
@@ -118,6 +118,7 @@
             this.btnDeleteCustomer.TabIndex = 7;
             this.btnDeleteCustomer.Text = "Delete customer";
             this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
             // btnUpdateCustomer
             // 
@@ -644,14 +645,14 @@
             // 
             this.customerTableAdapter.ClearBeforeFill = true;
             // 
-            // treeView1
+            // tvCustomerList
             // 
-            this.treeView1.Location = new System.Drawing.Point(16, 47);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(428, 541);
-            this.treeView1.TabIndex = 43;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.tvCustomerList.Location = new System.Drawing.Point(16, 47);
+            this.tvCustomerList.Margin = new System.Windows.Forms.Padding(4);
+            this.tvCustomerList.Name = "tvCustomerList";
+            this.tvCustomerList.Size = new System.Drawing.Size(428, 541);
+            this.tvCustomerList.TabIndex = 43;
+            this.tvCustomerList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // lblCustomerID
             // 
@@ -672,6 +673,7 @@
             this.btnSaveCust.TabIndex = 44;
             this.btnSaveCust.Text = "Save";
             this.btnSaveCust.UseVisualStyleBackColor = true;
+            this.btnSaveCust.Click += new System.EventHandler(this.btnSaveCust_Click);
             // 
             // btnCancelCust
             // 
@@ -691,7 +693,7 @@
             this.Controls.Add(this.btnCancelCust);
             this.Controls.Add(this.btnSaveCust);
             this.Controls.Add(this.lblCustomerID);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.tvCustomerList);
             this.Controls.Add(this.grpContact);
             this.Controls.Add(this.grpCustomer);
             this.Controls.Add(this.txtSearchCustomer);
@@ -778,7 +780,7 @@
         private HomeAppDBDataSet homeAppDBDataSet1;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private HomeAppDBDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView tvCustomerList;
         private System.Windows.Forms.Label lblCustomerID;
         private System.Windows.Forms.Button btnSaveCust;
         private System.Windows.Forms.Button btnCancelCust;
