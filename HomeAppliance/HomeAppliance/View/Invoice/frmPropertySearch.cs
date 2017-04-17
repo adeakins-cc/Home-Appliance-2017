@@ -138,5 +138,10 @@ namespace HomeAppliance.View.Invoice
                 MessageBox.Show("No property selected");
             }
         }
+
+        private void btnManagePropertyExit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

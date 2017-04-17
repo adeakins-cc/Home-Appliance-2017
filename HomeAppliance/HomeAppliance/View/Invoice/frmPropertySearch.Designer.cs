@@ -311,6 +311,7 @@
             this.btnManagePropertyExit.TabIndex = 28;
             this.btnManagePropertyExit.Text = "Exit";
             this.btnManagePropertyExit.UseVisualStyleBackColor = true;
+            this.btnManagePropertyExit.Click += new System.EventHandler(this.btnManagePropertyExit_Click);
             // 
             // btnSelect
             // 

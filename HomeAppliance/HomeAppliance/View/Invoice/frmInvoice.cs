@@ -21,15 +21,30 @@ namespace HomeAppliance
         SqlCommand dbCommand = new SqlCommand();
         public Part newPart { get; set; }
         public Model.Invoice newInvoice = new Model.Invoice();
+        public int invoiceId;
         public decimal quantity { get; set; }
         public decimal materialTotal;
         public decimal total;
         public decimal GST = 0.05M;
         public decimal PST = 0.08M;
 
-        public int propertyId;
-        public int customerId;
+        public int propertyId = 0;
+        public int customerId = 0;
+        public string error = "";
 
+        public void generatedInvoiceId()
+        {
+            dbCommand.Connection = dbConn;
+            dbCommand.Connection.Close();
+            dbCommand.Connection.Open();
+
+            SqlDataReader readPropInfo;
+            dbCommand.CommandText = "SELECT invoiceId FROM Invoice ORDER BY invoiceId DESC";
+            readPropInfo = dbCommand.ExecuteReader();
+            readPropInfo.Read();
+            invoiceId = (int)readPropInfo["invoiceid"] + 1;
+            lblInvoiceId.Text = invoiceId.ToString();
+        }
 
         public void verifyAndTotals()
         {
@@ -173,6 +188,17 @@ namespace HomeAppliance
                     readPropInfo["streetName"].ToString() + " " + readPropInfo["cityId"].ToString() + "\n " +
                     readPropInfo["superintendent"].ToString() + " " + readPropInfo["superintendentPhone"].ToString();
                 txtProperty.Text = propertyText;
+
+                dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + customerId;
+                readPropInfo.Close();
+                readPropInfo = dbCommand.ExecuteReader();
+                readPropInfo.Read();
+
+                string customerText = "";
+                customerText += readPropInfo["firstName"].ToString() + " " + readPropInfo["lastName"].ToString() + "\n " +
+                    readPropInfo["companyName"].ToString() + "\n " + readPropInfo["unitNumber01"].ToString() + " " +
+                    readPropInfo["streetNumber01"].ToString() + " " + readPropInfo["streetName_01"].ToString();
+                txtCustomer.Text = customerText;
             }
             
         }
@@ -186,6 +212,7 @@ namespace HomeAppliance
             this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
             verifyAndTotals();
             loadPropertyCustomer();
+            generatedInvoiceId();
         }
 
         private void btnSearchCustomerProperty_Click(object sender, EventArgs e)
@@ -209,12 +236,13 @@ namespace HomeAppliance
         
         private void btnPost_Click(object sender, EventArgs e)
         {
-            HomeAppDBDataSet.InvoiceDataTable tableInvoice = new HomeAppDBDataSet.InvoiceDataTable();
+            HomeAppDBDataSet.InvoiceDataTable tableInvoice = homeAppDBDataSet.Invoice;
             HomeAppDBDataSet.InvoiceRow newRow = homeAppDBDataSet.Invoice.NewInvoiceRow();
+            newRow.invoiceId    = invoiceId;
             newRow.customerId   = customerId;
             newRow.propertyId   = propertyId;
-            newRow.serviceDate  = Convert.ToDateTime(dateServiceDate);
-            newRow.invoiceDate  = Convert.ToDateTime(dateInvoiceDate);
+            newRow.serviceDate  = dateServiceDate.Value;
+            newRow.invoiceDate  = dateInvoiceDate.Value;
             newRow.technicianId = Convert.ToInt32(drpTechnician.SelectedIndex);
             newRow.complaints   = txtComplaint.Text;
             newRow.notes        = txtNotes.Text;
@@ -230,7 +258,25 @@ namespace HomeAppliance
             newRow.make         = txtMake.Text;
             newRow.model        = txtModel.Text;
             newRow.serialNumber = txtSerialNumber.Text;
-            tableInvoice.AddInvoiceRow(newRow);
+            error = "";
+            if (customerId == 0)
+            {
+                error += "No Customer chosen. \n";
+            }
+            if (propertyId == 0)
+            {
+                error += "No Property chosen. \n";
+            }
+            
+            if (error != "")
+            {
+                MessageBox.Show(error);
+            }
+            else
+            {
+                tableInvoice.ImportRow(newRow);
+                this.Close();
+            }
 
         }
 
