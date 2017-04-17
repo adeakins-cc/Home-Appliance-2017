@@ -75,6 +75,7 @@
             this.btnManagePropertyExit.TabIndex = 12;
             this.btnManagePropertyExit.Text = "Exit";
             this.btnManagePropertyExit.UseVisualStyleBackColor = true;
+            this.btnManagePropertyExit.Click += new System.EventHandler(this.btnManagePropertyExit_Click);
             // 
             // btnDeleteProperty
             // 
@@ -363,7 +364,7 @@
             this.dgvBuildings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvBuildings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBuildings.Location = new System.Drawing.Point(221, 57);
-            this.dgvBuildings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvBuildings.Margin = new System.Windows.Forms.Padding(2);
             this.dgvBuildings.MultiSelect = false;
             this.dgvBuildings.Name = "dgvBuildings";
             this.dgvBuildings.ReadOnly = true;

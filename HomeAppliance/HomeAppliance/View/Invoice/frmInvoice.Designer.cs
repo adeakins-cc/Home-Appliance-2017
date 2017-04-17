@@ -31,10 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.dateInvoiceDate = new System.Windows.Forms.DateTimePicker();
             this.lblInvDate = new System.Windows.Forms.Label();
-            this.lstOwner = new System.Windows.Forms.ListView();
             this.lblOwner = new System.Windows.Forms.Label();
             this.lblProperty = new System.Windows.Forms.Label();
-            this.lstProperty = new System.Windows.Forms.ListView();
             this.lblSerDate = new System.Windows.Forms.Label();
             this.dateServiceDate = new System.Windows.Forms.DateTimePicker();
             this.lblTechnician = new System.Windows.Forms.Label();
@@ -84,15 +82,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblInvoiceId = new System.Windows.Forms.Label();
             this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblCustomerId = new System.Windows.Forms.Label();
-            this.lblPropertyId = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tableAdapterManager = new HomeAppliance.HomeAppDBDataSetTableAdapters.TableAdapterManager();
             this.invoiceTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.InvoiceTableAdapter();
             this.partsListTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PartsListTableAdapter();
             this.technicianTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TechnicianTableAdapter();
             this.taxesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.taxesTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.TaxesTableAdapter();
+            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.propertyTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.PropertyTableAdapter();
+            this.txtCustomer = new System.Windows.Forms.RichTextBox();
+            this.txtProperty = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListParts)).BeginInit();
@@ -101,6 +100,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taxesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateInvoiceDate
@@ -119,14 +119,6 @@
             this.lblInvDate.TabIndex = 1;
             this.lblInvDate.Text = "Invoice Date:";
             // 
-            // lstOwner
-            // 
-            this.lstOwner.Location = new System.Drawing.Point(12, 77);
-            this.lstOwner.Name = "lstOwner";
-            this.lstOwner.Size = new System.Drawing.Size(200, 97);
-            this.lstOwner.TabIndex = 2;
-            this.lstOwner.UseCompatibleStateImageBehavior = false;
-            // 
             // lblOwner
             // 
             this.lblOwner.AutoSize = true;
@@ -144,14 +136,6 @@
             this.lblProperty.Size = new System.Drawing.Size(67, 13);
             this.lblProperty.TabIndex = 5;
             this.lblProperty.Text = "Property Info";
-            // 
-            // lstProperty
-            // 
-            this.lstProperty.Location = new System.Drawing.Point(218, 77);
-            this.lstProperty.Name = "lstProperty";
-            this.lstProperty.Size = new System.Drawing.Size(200, 97);
-            this.lstProperty.TabIndex = 4;
-            this.lstProperty.UseCompatibleStateImageBehavior = false;
             // 
             // lblSerDate
             // 
@@ -598,26 +582,6 @@
             this.invoiceBindingSource.DataMember = "Invoice";
             this.invoiceBindingSource.DataSource = this.homeAppDBDataSet;
             // 
-            // lblCustomerId
-            // 
-            this.lblCustomerId.AutoSize = true;
-            this.lblCustomerId.Location = new System.Drawing.Point(500, 10);
-            this.lblCustomerId.Name = "lblCustomerId";
-            this.lblCustomerId.Size = new System.Drawing.Size(60, 13);
-            this.lblCustomerId.TabIndex = 26;
-            this.lblCustomerId.Text = "CustomerId";
-            this.lblCustomerId.Visible = false;
-            // 
-            // lblPropertyId
-            // 
-            this.lblPropertyId.AutoSize = true;
-            this.lblPropertyId.Location = new System.Drawing.Point(565, 9);
-            this.lblPropertyId.Name = "lblPropertyId";
-            this.lblPropertyId.Size = new System.Drawing.Size(52, 13);
-            this.lblPropertyId.TabIndex = 27;
-            this.lblPropertyId.Text = "Propertyd";
-            this.lblPropertyId.Visible = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -659,18 +623,41 @@
             this.taxesBindingSource.DataMember = "Taxes";
             this.taxesBindingSource.DataSource = this.homeAppDBDataSet;
             // 
-            // taxesTableAdapter
+            // propertyBindingSource
             // 
-            this.taxesTableAdapter.ClearBeforeFill = true;
+            this.propertyBindingSource.DataMember = "Property";
+            this.propertyBindingSource.DataSource = this.homeAppDBDataSet;
+            // 
+            // propertyTableAdapter
+            // 
+            this.propertyTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtCustomer
+            // 
+            this.txtCustomer.Location = new System.Drawing.Point(11, 77);
+            this.txtCustomer.Name = "txtCustomer";
+            this.txtCustomer.ReadOnly = true;
+            this.txtCustomer.Size = new System.Drawing.Size(201, 97);
+            this.txtCustomer.TabIndex = 29;
+            this.txtCustomer.Text = "";
+            // 
+            // txtProperty
+            // 
+            this.txtProperty.Location = new System.Drawing.Point(218, 77);
+            this.txtProperty.Name = "txtProperty";
+            this.txtProperty.ReadOnly = true;
+            this.txtProperty.Size = new System.Drawing.Size(200, 98);
+            this.txtProperty.TabIndex = 30;
+            this.txtProperty.Text = "";
             // 
             // frmNewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 517);
+            this.ClientSize = new System.Drawing.Size(626, 502);
+            this.Controls.Add(this.txtProperty);
+            this.Controls.Add(this.txtCustomer);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.lblPropertyId);
-            this.Controls.Add(this.lblCustomerId);
             this.Controls.Add(this.lblInvoiceId);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSearchCustomerProperty);
@@ -688,9 +675,7 @@
             this.Controls.Add(this.lblSerDate);
             this.Controls.Add(this.dateServiceDate);
             this.Controls.Add(this.lblProperty);
-            this.Controls.Add(this.lstProperty);
             this.Controls.Add(this.lblOwner);
-            this.Controls.Add(this.lstOwner);
             this.Controls.Add(this.lblInvDate);
             this.Controls.Add(this.dateInvoiceDate);
             this.Text = "New Invoices";
@@ -705,6 +690,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taxesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,10 +700,8 @@
 
         private System.Windows.Forms.DateTimePicker dateInvoiceDate;
         private System.Windows.Forms.Label lblInvDate;
-        private System.Windows.Forms.ListView lstOwner;
         private System.Windows.Forms.Label lblOwner;
         private System.Windows.Forms.Label lblProperty;
-        private System.Windows.Forms.ListView lstProperty;
         private System.Windows.Forms.Label lblSerDate;
         private System.Windows.Forms.DateTimePicker dateServiceDate;
         private System.Windows.Forms.Label lblTechnician;
@@ -759,8 +743,6 @@
         private System.Windows.Forms.TextBox txtGST;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblInvoiceId;
-        private System.Windows.Forms.Label lblCustomerId;
-        private System.Windows.Forms.Label lblPropertyId;
         private System.Windows.Forms.Label label11;
         private HomeAppDBDataSet homeAppDBDataSet;
         private HomeAppDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
@@ -775,6 +757,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.BindingSource taxesBindingSource;
-        private HomeAppDBDataSetTableAdapters.TaxesTableAdapter taxesTableAdapter;
+        private System.Windows.Forms.BindingSource propertyBindingSource;
+        private HomeAppDBDataSetTableAdapters.PropertyTableAdapter propertyTableAdapter;
+        private System.Windows.Forms.RichTextBox txtCustomer;
+        private System.Windows.Forms.RichTextBox txtProperty;
     }
 }

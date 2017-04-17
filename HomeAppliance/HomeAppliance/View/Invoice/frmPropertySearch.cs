@@ -76,19 +76,34 @@ namespace HomeAppliance.View.Invoice
             readPropInfo = dbCommand.ExecuteReader();
             readPropInfo.Read();
 
-            txtBuildingNumber.Text = readPropInfo["streetNumber"].ToString();
-            txtBuildingStreet.Text = readPropInfo["streetName"].ToString();
-            //city
-            txtUnits.Text = readPropInfo["unitNumber"].ToString();
-            txtSuperintendent.Text = readPropInfo["superintendent"].ToString();
-            txtSuperPhone.Text = readPropInfo["superintendentPhone"].ToString();
+            txtBuildingNumber.Text  = readPropInfo["streetNumber"].ToString();
+            txtBuildingStreet.Text  = readPropInfo["streetName"].ToString();
+            txtUnits.Text           = readPropInfo["unitNumber"].ToString();
+            txtSuperintendent.Text  = readPropInfo["superintendent"].ToString();
+            txtSuperPhone.Text      = readPropInfo["superintendentPhone"].ToString();
+
+            frmNewInvoice.customerId = (int)readPropInfo["customerId"];
+            frmNewInvoice.propertyId = (int)readPropInfo["propertyId"];
+            
+            dbCommand.CommandText = "SELECT name FROM City WHERE cityId = " + readPropInfo["cityId"].ToString();
+            readPropInfo.Close();
+            readPropInfo = dbCommand.ExecuteReader();
+            readPropInfo.Read();
+
+            txtCity.Text = readPropInfo["name"].ToString();
+            
+            dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + frmNewInvoice.customerId.ToString();
+            readPropInfo.Close();
+            readPropInfo = dbCommand.ExecuteReader();
+            readPropInfo.Read();
+
+            txtCustomer.Text = readPropInfo["firstName"].ToString() + ", " + readPropInfo["lastName"].ToString();
+            txtAddress01.Text = readPropInfo["unitNumber01"].ToString() + " " + readPropInfo["streetNumber01"].ToString() + " " +
+                readPropInfo["streetName_01"].ToString() + " " + readPropInfo["cityId_01"].ToString() + " " + readPropInfo["postalCode_01"].ToString();
+            txtAddress02.Text = readPropInfo["unitNumber_02"].ToString() + " " + readPropInfo["streetNumber_02"].ToString() + " " +
+                readPropInfo["streetName_02"].ToString() + " " + readPropInfo["cityId_02"].ToString() + " " + readPropInfo["postalCode_02"].ToString();
 
             dbCommand.Connection.Close();
-        }
-
-        private void dgvBuildings_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btnManagePropertySearch_Click(object sender, EventArgs e)
@@ -111,9 +126,17 @@ namespace HomeAppliance.View.Invoice
             }
         }
 
-        private void dgvBuildings_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void btnSelect_Click(object sender, EventArgs e)
         {
-
+            if (frmNewInvoice.customerId != 0)
+            {
+                frmNewInvoice.loadPropertyCustomer();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No property selected");
+            }
         }
     }
 }

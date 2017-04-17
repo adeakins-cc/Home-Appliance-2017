@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace HomeAppliance
     public partial class frmNewInvoice : Form
     {
         // Table name constant 
+        SqlConnection dbConn = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=HomeAppDB;Integrated Security=True");
+        SqlCommand dbCommand = new SqlCommand();
         public Part newPart { get; set; }
         public Model.Invoice newInvoice = new Model.Invoice();
         public decimal quantity { get; set; }
@@ -24,8 +27,8 @@ namespace HomeAppliance
         public decimal GST = 0.05M;
         public decimal PST = 0.08M;
 
-        public int propertyId { get; set; }
-        public int customerId { get; set; }
+        public int propertyId;
+        public int customerId;
 
 
         public void verifyAndTotals()
@@ -152,17 +155,37 @@ namespace HomeAppliance
         {
             InitializeComponent();
         }
+        public void loadPropertyCustomer()
+        {
+            if (propertyId != 0)
+            {
+                dbCommand.Connection = dbConn;
+                dbCommand.Connection.Close();
+                dbCommand.Connection.Open();
+
+                SqlDataReader readPropInfo;
+                dbCommand.CommandText = "SELECT * FROM Property WHERE propertyId = " + propertyId;
+                readPropInfo = dbCommand.ExecuteReader();
+                readPropInfo.Read();
+
+                string propertyText = "";
+                propertyText += readPropInfo["unitNumber"].ToString() + " " + readPropInfo["streetNumber"].ToString() + "\n " +
+                    readPropInfo["streetName"].ToString() + " " + readPropInfo["cityId"].ToString() + "\n " +
+                    readPropInfo["superintendent"].ToString() + " " + readPropInfo["superintendentPhone"].ToString();
+                txtProperty.Text = propertyText;
+            }
+            
+        }
 
         private void frmInvoice_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'homeAppDBDataSet.Taxes' table. You can move, or remove it, as needed.
-            this.taxesTableAdapter.Fill(this.homeAppDBDataSet.Taxes);
             // Fill the table.
             // TODO: This line of code loads data into the 'homeAppDBDataSet.Technician' table. You can move, or remove it, as needed.
             this.technicianTableAdapter.Fill(this.homeAppDBDataSet.Technician);
             // TODO: This line of code loads data into the 'homeAppDBDataSet.PartsList' table. You can move, or remove it, as needed.
             this.partsListTableAdapter.Fill(this.homeAppDBDataSet.PartsList);
             verifyAndTotals();
+            loadPropertyCustomer();
         }
 
         private void btnSearchCustomerProperty_Click(object sender, EventArgs e)
@@ -188,8 +211,8 @@ namespace HomeAppliance
         {
             HomeAppDBDataSet.InvoiceDataTable tableInvoice = new HomeAppDBDataSet.InvoiceDataTable();
             HomeAppDBDataSet.InvoiceRow newRow = homeAppDBDataSet.Invoice.NewInvoiceRow();
-            newRow.customerId   = Convert.ToInt32(lblCustomerId.Text);
-            newRow.propertyId   = Convert.ToInt32(lblPropertyId.Text);
+            newRow.customerId   = customerId;
+            newRow.propertyId   = propertyId;
             newRow.serviceDate  = Convert.ToDateTime(dateServiceDate);
             newRow.invoiceDate  = Convert.ToDateTime(dateInvoiceDate);
             newRow.technicianId = Convert.ToInt32(drpTechnician.SelectedIndex);

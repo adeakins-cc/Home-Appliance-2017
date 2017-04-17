@@ -114,5 +114,10 @@ namespace HomeAppliance
         {
 
         }
+
+        private void btnManagePropertyExit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
