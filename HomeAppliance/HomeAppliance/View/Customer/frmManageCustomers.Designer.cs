@@ -87,6 +87,8 @@
             this.customerTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CustomerTableAdapter();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.lblCustomerID = new System.Windows.Forms.Label();
+            this.btnSaveCust = new System.Windows.Forms.Button();
+            this.btnCancelCust = new System.Windows.Forms.Button();
             this.grpCustomer.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
@@ -99,7 +101,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(848, 475);
+            this.btnExit.Location = new System.Drawing.Point(910, 508);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(133, 28);
@@ -109,7 +111,7 @@
             // 
             // btnDeleteCustomer
             // 
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(848, 439);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(754, 508);
             this.btnDeleteCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
             this.btnDeleteCustomer.Size = new System.Drawing.Size(133, 28);
@@ -119,7 +121,7 @@
             // 
             // btnUpdateCustomer
             // 
-            this.btnUpdateCustomer.Location = new System.Drawing.Point(850, 404);
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(910, 467);
             this.btnUpdateCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
             this.btnUpdateCustomer.Size = new System.Drawing.Size(133, 28);
@@ -129,13 +131,14 @@
             // 
             // btnNewCustomer
             // 
-            this.btnNewCustomer.Location = new System.Drawing.Point(848, 368);
+            this.btnNewCustomer.Location = new System.Drawing.Point(754, 465);
             this.btnNewCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCustomer.Name = "btnNewCustomer";
             this.btnNewCustomer.Size = new System.Drawing.Size(133, 28);
             this.btnNewCustomer.TabIndex = 5;
             this.btnNewCustomer.Text = "Add customer";
             this.btnNewCustomer.UseVisualStyleBackColor = true;
+            this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
             // 
             // btnSearch
             // 
@@ -660,11 +663,33 @@
             this.lblCustomerID.Size = new System.Drawing.Size(0, 20);
             this.lblCustomerID.TabIndex = 43;
             // 
+            // btnSaveCust
+            // 
+            this.btnSaveCust.Location = new System.Drawing.Point(763, 357);
+            this.btnSaveCust.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveCust.Name = "btnSaveCust";
+            this.btnSaveCust.Size = new System.Drawing.Size(118, 28);
+            this.btnSaveCust.TabIndex = 44;
+            this.btnSaveCust.Text = "Save";
+            this.btnSaveCust.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelCust
+            // 
+            this.btnCancelCust.Location = new System.Drawing.Point(908, 357);
+            this.btnCancelCust.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelCust.Name = "btnCancelCust";
+            this.btnCancelCust.Size = new System.Drawing.Size(118, 28);
+            this.btnCancelCust.TabIndex = 45;
+            this.btnCancelCust.Text = "Cancel";
+            this.btnCancelCust.UseVisualStyleBackColor = true;
+            // 
             // frmManageCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 603);
+            this.Controls.Add(this.btnCancelCust);
+            this.Controls.Add(this.btnSaveCust);
             this.Controls.Add(this.lblCustomerID);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.grpContact);
@@ -755,5 +780,7 @@
         private HomeAppDBDataSetTableAdapters.CustomerTableAdapter customerTableAdapter;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label lblCustomerID;
+        private System.Windows.Forms.Button btnSaveCust;
+        private System.Windows.Forms.Button btnCancelCust;
     }
 }

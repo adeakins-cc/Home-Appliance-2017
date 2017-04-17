@@ -28,6 +28,8 @@ namespace HomeAppliance
             this.cityTableAdapter.Fill(this.homeAppDBDataSet.City);
 
             getCustomerList();
+            btnSaveCust.Enabled = false;
+            btnCancelCust.Enabled = false;
         }
 
         private void getCustomerList()
@@ -61,7 +63,8 @@ namespace HomeAppliance
                 nodeNumber += 1;
 
                 treeView1.Nodes.Add(new TreeNode("Customer"));
-                dbCommand.CommandText = "SELECT customerId, firstName, lastName FROM Customer WHERE firstName != '' ORDER BY firstName ASC";
+                dbCommand.CommandText = "SELECT customerId, firstName, lastName, c.name FROM Customer cus JOIN City c "+
+                                        " ON cus.cityId_01 = c.cityId WHERE firstName != '' ORDER BY firstName ASC";
                 reader = dbCommand.ExecuteReader();
                 innerNodeCounter = 0;
 
@@ -92,7 +95,8 @@ namespace HomeAppliance
                 dbCommand.Connection.Open();
 
                 SqlDataReader infoReader;
-                dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + custID;
+                //dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + custID;
+                dbCommand.CommandText = "SELECT *, c.name as 'City' FROM Customer cus JOIN City c on c.cityId = cus.cityId_01 WHERE customerId = " + custID;
                 infoReader = dbCommand.ExecuteReader();
                 infoReader.Read();
 
@@ -113,6 +117,7 @@ namespace HomeAppliance
                 txtFax.Text = infoReader["fax"].ToString();
                 txtMobile.Text = infoReader["contactMobile"].ToString();
                 txtContactName.Text = infoReader["contactName"].ToString();
+                cobCityId01.Text = infoReader["name"].ToString();
 
             }
             catch (Exception ex)
@@ -146,6 +151,37 @@ namespace HomeAppliance
             {
                 MessageBox.Show("Phone number is required");
             }
+        }
+
+        private void btnNewCustomer_Click(object sender, EventArgs e)
+        {
+            txtSearchCustomer.Enabled = false;
+            btnSearch.Enabled = false;
+            treeView1.Enabled = false;
+            btnUpdateCustomer.Enabled = false;
+            btnDeleteCustomer.Enabled = false;
+            btnSaveCust.Enabled = true;
+            btnCancelCust.Enabled = true;
+
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtCompanyName.Text = "";
+            txtUnitNum01.Text = "";
+            txtUnitNum02.Text = "";
+            txtStreetNum01.Text = "";
+            txtStreetNum02.Text = "";
+            txtStreetName01.Text = "";
+            txtStreetName02.Text = "";
+            txtPostalCode01.Text = "";
+            txtPostalCode02.Text = "";
+            txtContactName.Text = "";
+            txtPhone.Text = "";
+            txtMobile.Text = "";
+            txtBussinessNumber.Text = "";
+            txtOtherNumber.Text = "";
+            txtFax.Text = "";
+            txtEmail.Text = "";
+
         }
     }
 }
