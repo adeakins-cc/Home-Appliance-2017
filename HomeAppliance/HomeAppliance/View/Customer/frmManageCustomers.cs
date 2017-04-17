@@ -28,6 +28,8 @@ namespace HomeAppliance
             this.cityTableAdapter.Fill(this.homeAppDBDataSet.City);
 
             getCustomerList();
+            btnSaveCust.Enabled = false;
+            btnCancelCust.Enabled = false;
         }
 
         private void getCustomerList()
@@ -35,35 +37,45 @@ namespace HomeAppliance
             dbConn.Open();
             treeView1.Nodes.Clear();
 
+            int nodeNumber = 0;
+            int innerNodeCounter;
+
             SqlCommand dbCommand = new SqlCommand();
             dbCommand.Connection = dbConn;
             SqlDataReader reader;
             try
             {
+                treeView1.Nodes.Add(new TreeNode("Company"));
                 dbCommand.CommandText = "SELECT customerId, companyName FROM Customer WHERE companyName != '' ORDER BY companyName ASC";
                 reader = dbCommand.ExecuteReader();
-                TreeNode companyNode = new TreeNode("Company");
+                innerNodeCounter = 0;
+                
                 while (reader.Read())
                 {
-                    companyNode.Nodes.Add(reader["companyName"].ToString());
+                    treeView1.Nodes[nodeNumber].Nodes.Add(new TreeNode(reader["companyName"].ToString()));
+                    treeView1.Nodes[nodeNumber].Nodes[innerNodeCounter].Tag = reader["customerId"].ToString();
+                    innerNodeCounter += 1;
                 }
-                
-                treeView1.Nodes.Add(companyNode);
 
                 dbCommand.Connection.Close();
                 dbCommand.Connection.Open();
 
-                dbCommand.CommandText = "SELECT customerId, firstName, lastName FROM Customer WHERE firstName != '' ORDER BY firstName ASC";
+                nodeNumber += 1;
+
+                treeView1.Nodes.Add(new TreeNode("Customer"));
+                dbCommand.CommandText = "SELECT customerId, firstName, lastName, c.name FROM Customer cus JOIN City c "+
+                                        " ON cus.cityId_01 = c.cityId WHERE firstName != '' ORDER BY firstName ASC";
                 reader = dbCommand.ExecuteReader();
-                TreeNode customerNode = new TreeNode("Customer");
+                innerNodeCounter = 0;
+
                 while (reader.Read())
                 {
-                    customerNode.Nodes.Add(reader["firstName"].ToString() + ", " + reader["lastName"].ToString());
-                    customerNode.Tag = reader["customerId"].ToString();
+                    treeView1.Nodes[nodeNumber].Nodes.Add(new TreeNode(reader["firstName"].ToString() + ", " + reader["lastName"].ToString()));
+                    treeView1.Nodes[nodeNumber].Nodes[innerNodeCounter].Tag = reader["customerId"].ToString();
+                    innerNodeCounter += 1;
                 }
+                nodeNumber += 1;
 
-                treeView1.Nodes.Add(customerNode);
-                
                 dbCommand.Connection.Close();
                 dbCommand.Connection.Open();
             }
@@ -83,7 +95,8 @@ namespace HomeAppliance
                 dbCommand.Connection.Open();
 
                 SqlDataReader infoReader;
-                dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + custID;
+                //dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + custID;
+                dbCommand.CommandText = "SELECT *, c.name as 'City' FROM Customer cus JOIN City c on c.cityId = cus.cityId_01 WHERE customerId = " + custID;
                 infoReader = dbCommand.ExecuteReader();
                 infoReader.Read();
 
@@ -97,6 +110,15 @@ namespace HomeAppliance
                 txtStreetNum02.Text = infoReader["streetNumber_02"].ToString();
                 txtStreetName01.Text = infoReader["streetName_01"].ToString();
                 txtStreetName02.Text = infoReader["streetName_02"].ToString();
+                txtPostalCode01.Text = infoReader["postalCode_01"].ToString();
+                txtPostalCode02.Text = infoReader["postalCode_02"].ToString();
+                txtBussinessNumber.Text = infoReader["bussinessPhone"].ToString();
+                txtPhone.Text = infoReader["homePhone"].ToString();
+                txtFax.Text = infoReader["fax"].ToString();
+                txtMobile.Text = infoReader["contactMobile"].ToString();
+                txtContactName.Text = infoReader["contactName"].ToString();
+                cobCityId01.Text = infoReader["name"].ToString();
+
             }
             catch (Exception ex)
             {
@@ -106,7 +128,60 @@ namespace HomeAppliance
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            //displayInfo(treeView1.SelectedNode.Tag.ToString());
+            displayInfo(treeView1.SelectedNode.Tag.ToString());
+        }
+
+
+        private void verifyInput()
+        {
+            if (txtCompanyName.Text == "")
+            {
+                if (txtFirstName.Text == "" || txtLastName.Text == "")
+                {
+                    MessageBox.Show("First name and last name or company name is required");
+                }
+            }
+
+            if (txtStreetNum01.Text == "" && txtStreetName01.Text == "" )
+            {
+                MessageBox.Show("Street number and name are required");
+            }
+
+            if (txtPhone.Text == "")
+            {
+                MessageBox.Show("Phone number is required");
+            }
+        }
+
+        private void btnNewCustomer_Click(object sender, EventArgs e)
+        {
+            txtSearchCustomer.Enabled = false;
+            btnSearch.Enabled = false;
+            treeView1.Enabled = false;
+            btnUpdateCustomer.Enabled = false;
+            btnDeleteCustomer.Enabled = false;
+            btnSaveCust.Enabled = true;
+            btnCancelCust.Enabled = true;
+
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtCompanyName.Text = "";
+            txtUnitNum01.Text = "";
+            txtUnitNum02.Text = "";
+            txtStreetNum01.Text = "";
+            txtStreetNum02.Text = "";
+            txtStreetName01.Text = "";
+            txtStreetName02.Text = "";
+            txtPostalCode01.Text = "";
+            txtPostalCode02.Text = "";
+            txtContactName.Text = "";
+            txtPhone.Text = "";
+            txtMobile.Text = "";
+            txtBussinessNumber.Text = "";
+            txtOtherNumber.Text = "";
+            txtFax.Text = "";
+            txtEmail.Text = "";
+
         }
     }
 }
