@@ -133,8 +133,6 @@ namespace HomeAppliance
             }
         }
 
- 
-
         private void verifyInput()
         {
             string errMessage = "";
@@ -156,8 +154,6 @@ namespace HomeAppliance
                 MessageBox.Show(errMessage);
             }
         }
-        
-
 
         private void executeQuery(String query)
         {
@@ -188,13 +184,6 @@ namespace HomeAppliance
             }
         }
 
-        private void btnUpdateCustomer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void btnSaveCust_Click(object sender, EventArgs e)
         {
             verifyInput();
@@ -206,26 +195,7 @@ namespace HomeAppliance
                                 txtBussinessNumber.Text + "','" + txtPhone.Text + "','" + txtFax.Text + "','" + txtMobile.Text + "','" + txtContactName.Text + "')";
             executeQuery(insertCust);
             getCustomerList();
-            txtFirstName.Text = "";
-            txtLastName.Text = "";
-            txtCompanyName.Text = "";
-            txtUnitNum01.Text = "";
-            txtStreetNum01.Text = "";
-            txtStreetName01.Text = "";
-            txtPostalCode01.Text = "";
-            txtBussinessNumber.Text = "";
-            txtPhone.Text = "";
-            txtFax.Text = "";
-            txtMobile.Text = "";
-            txtContactName.Text = "";
-
-            txtSearchCustomer.Enabled = true;
-            btnSearch.Enabled = true;
-            tvCustomerList.Enabled = true;
-            btnUpdateCustomer.Enabled = true;
-            btnDeleteCustomer.Enabled = true;
-            btnSaveCust.Enabled = false;
-            btnCancelCust.Enabled = false;
+            clearField();
         }
 
         private void btnNewCustomer_Click(object sender, EventArgs e)
@@ -233,6 +203,7 @@ namespace HomeAppliance
             txtSearchCustomer.Enabled = false;
             btnSearch.Enabled = false;
             tvCustomerList.Enabled = false;
+            btnNewCustomer.Enabled = false;
             btnUpdateCustomer.Enabled = false;
             btnDeleteCustomer.Enabled = false;
             btnSaveCust.Enabled = true;
@@ -257,7 +228,23 @@ namespace HomeAppliance
             txtOtherNumber.Text = "";
             txtFax.Text = "";
             txtEmail.Text = "";
+        }
 
+        private void btnUpdateCustomer_Click(object sender, EventArgs e)
+        {
+            buttonClicked = true;
+            string selectedCustId = tvCustomerList.SelectedNode.Tag.ToString();
+            string updateCust = "UPDATE Customer SET firstName = '" + txtFirstName.Text + "', lastName = '" + txtLastName.Text + "', companyName = '"
+                                + txtCompanyName.Text + "', unitNumber01 = '" + txtUnitNum01.Text + "', streetNumber01 = '" + txtStreetNum01.Text
+                                + "', streetName_01 = '" + txtStreetName01.Text + "', cityId_01 = '" + cobCityId01.SelectedValue.ToString() + "', postalCode_01 = '"
+                                + txtPostalCode01.Text + "', unitNumber_02 = '" + txtUnitNum02.Text + "', streetNumber_02 = '" + txtStreetNum02.Text
+                                + "', streetName_02 = '" + txtStreetName02.Text + "', cityId_02 = '" + cobCityId02.SelectedValue.ToString() + "', postalCode_02 = '"
+                                + txtPostalCode02.Text + "', bussinessPhone = '" + txtBussinessNumber.Text + "', homePhone = '" + txtPhone.Text + "', fax = '"
+                                + txtFax.Text + "', contactMobile = '" + txtMobile.Text + "', contactName = '" + txtContactName.Text
+                                + "' WHERE customerId = '" + selectedCustId + "'";
+            executeQuery(updateCust);
+            getCustomerList();
+            clearField();
         }
 
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
@@ -270,7 +257,34 @@ namespace HomeAppliance
                 string deleteCust = "DELETE FROM Customer WHERE customerId = '" + selectedCustId + "'";
                 executeQuery(deleteCust);
                 getCustomerList();
+                clearField();
             }
+        }
+
+        private void clearField()
+        {
+            lblCustomerID.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtCompanyName.Text = "";
+            txtUnitNum01.Text = "";
+            txtStreetNum01.Text = "";
+            txtStreetName01.Text = "";
+            txtPostalCode01.Text = "";
+            txtBussinessNumber.Text = "";
+            txtPhone.Text = "";
+            txtFax.Text = "";
+            txtMobile.Text = "";
+            txtContactName.Text = "";
+
+            txtSearchCustomer.Enabled = true;
+            btnSearch.Enabled = true;
+            tvCustomerList.Enabled = true;
+            btnNewCustomer.Enabled = true;
+            btnUpdateCustomer.Enabled = true;
+            btnDeleteCustomer.Enabled = true;
+            btnSaveCust.Enabled = false;
+            btnCancelCust.Enabled = false;
         }
     }
 }
