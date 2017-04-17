@@ -180,6 +180,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>invoice.rpt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\City.cs" />
     <Compile Include="Model\Customer.cs" />
@@ -191,6 +196,12 @@
     <Compile Include="Model\Taxes.cs" />
     <Compile Include="Model\Technician.cs" />
     <Compile Include="PartClass.cs" />
+    <Compile Include="Reports\InvoiceReporting.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceReporting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\Category\frmManageCategories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +282,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>invoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InvoiceReporting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InvoiceReporting.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Category\frmManageCategories.resx">
       <DependentUpon>frmManageCategories.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,7 +361,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Reports\InvoiceDetails.rpt" />
-    <None Include="Reports\InvoiceReport.rpt" />
     <None Include="Reports\OwnerStatement.rpt" />
   </ItemGroup>
   <ItemGroup>
@@ -353,6 +371,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

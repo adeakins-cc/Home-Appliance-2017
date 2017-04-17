@@ -20,7 +20,6 @@ namespace HomeAppliance.View.Invoice
         private void frmViewInvoice_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
         }
     }
 }

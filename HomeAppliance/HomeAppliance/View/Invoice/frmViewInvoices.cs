@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeAppliance.View.Invoice;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,8 @@ namespace HomeAppliance
 
         private void btnViewInvoiceRange_Click(object sender, EventArgs e)
         {
-
+            frmViewInvoice invoice = new frmViewInvoice();
+            invoice.ShowDialog();
         }
     }
 }
