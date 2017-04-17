@@ -18,6 +18,7 @@ namespace HomeAppliance.View.Invoice
 
         Part newPart = new Part();
         frmNewInvoice newInvoice;
+
         public frmAddPart(frmNewInvoice newInvoice01)
         {
             InitializeComponent();

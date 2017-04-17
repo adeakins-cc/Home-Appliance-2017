@@ -122,6 +122,12 @@
     <Compile Include="View\Invoice\frmInvoice.Designer.cs">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Invoice\frmPropertySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Invoice\frmPropertySearch.Designer.cs">
+      <DependentUpon>frmPropertySearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Part\frmManagePart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Invoice\frmInvoice.resx">
       <DependentUpon>frmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Invoice\frmPropertySearch.resx">
+      <DependentUpon>frmPropertySearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Part\frmManagePart.resx">
       <DependentUpon>frmManagePart.cs</DependentUpon>

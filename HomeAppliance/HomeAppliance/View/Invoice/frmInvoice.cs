@@ -23,7 +23,11 @@ namespace HomeAppliance
         public decimal total;
         public decimal GST = 0.05M;
         public decimal PST = 0.08M;
-        
+
+        public int propertyId { get; set; }
+        public int customerId { get; set; }
+
+
         public void verifyAndTotals()
         {
 
@@ -161,16 +165,12 @@ namespace HomeAppliance
             verifyAndTotals();
         }
 
-        private void addButton_Click(object sender, System.EventArgs e)
-        {
-            HomeAppDBDataSet.InvoiceDataTable tableInvoice = new HomeAppDBDataSet.InvoiceDataTable();
-            HomeAppDBDataSet.InvoiceRow newRow = homeAppDBDataSet.Invoice.NewInvoiceRow();
-        }
-
         private void btnSearchCustomerProperty_Click(object sender, EventArgs e)
         {
-            dgvStreetBuildings selectPropertyCustomer = new dgvStreetBuildings();
-            selectPropertyCustomer.ShowDialog();
+            frmPropertySearch chooseProperty = new frmPropertySearch(this);
+            chooseProperty.ShowDialog();
+            //dgvStreetBuildings selectPropertyCustomer = new dgvStreetBuildings();
+            //selectPropertyCustomer.ShowDialog();
         }
 
         private void btnNewInvoiceExit_Click(object sender, EventArgs e)
@@ -183,7 +183,7 @@ namespace HomeAppliance
             frmAddPart newPart = new frmAddPart(this);
             newPart.ShowDialog();
         }
-
+        
         private void btnPost_Click(object sender, EventArgs e)
         {
             HomeAppDBDataSet.InvoiceDataTable tableInvoice = new HomeAppDBDataSet.InvoiceDataTable();

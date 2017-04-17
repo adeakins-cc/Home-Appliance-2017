@@ -9,48 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeAppliance
+namespace HomeAppliance.View.Invoice
 {
-    public partial class dgvStreetBuildings : Form
+    public partial class frmPropertySearch : Form
     {
         SqlConnection dbConn = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=HomeAppDB;Integrated Security=True");
         SqlCommand dbCommand = new SqlCommand();
+        private frmNewInvoice frmNewInvoice;
 
-        public dgvStreetBuildings()
+        public frmPropertySearch(frmNewInvoice frmNewInvoice)
         {
             InitializeComponent();
+            this.frmNewInvoice = frmNewInvoice;
         }
 
-        private void frmManageProperty_Load(object sender, EventArgs e)
+        private void frmPropertySearch_Load(object sender, EventArgs e)
         {
-            //using (dbConn)
-            //{
-            //    string propertyQuery = "SELECT * FROM Property";
-            //    string customerQuery = "SELECT * FROM Customer";
-            //    string fullQuery = propertyQuery + ";" + customerQuery;
-
-            //    DataSet dsFullDataQuery = new DataSet();
-            //    SqlDataAdapter da = new SqlDataAdapter(fullQuery, dbConn);
-            //    da.Fill(dsFullDataQuery);
-
-            //    dsFullDataQuery.Tables[0].TableName = "Property";
-            //    dsFullDataQuery.Tables[1].TableName = "Customer";
-
-            //    DataRelation Customer_Property = new DataRelation("custProperty", dsFullDataQuery.Tables["Customer"].Columns["customerId"],
-            //                                                dsFullDataQuery.Tables["Property"].Columns["customerId"]);
-
-            //    TreeNode streetNameNode = new TreeNode("Street Name");
-            //    foreach (DataRow streetNameDT in dsFullDataQuery.Tables["Property"].Rows)
-            //    {
-
-            //        streetNameNode.Nodes.Add(streetNameDT["streetName"].ToString());
-            //    }
-
-            //    tvStreetList.Nodes.Add(streetNameNode);
-            //}
             display();
         }
-
         private DataTable propDT(string sql, SqlConnection conn)
         {
             DataTable dt = new DataTable();
@@ -111,6 +87,31 @@ namespace HomeAppliance
         }
 
         private void dgvBuildings_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnManagePropertySearch_Click(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            
+            try
+            {
+                DataTable node = new DataTable();
+                node = propDT("SELECT streetName FROM Property WHERE streetName LIKE '%" + txtSearchProperty.Text + "%'", dbConn);
+                tvStreetList.Nodes.Clear();
+                for (int i = 0; i < node.Rows.Count; i++)
+                {
+                    tvStreetList.Nodes.Add(node.Rows[i][0].ToString());
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void dgvBuildings_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
