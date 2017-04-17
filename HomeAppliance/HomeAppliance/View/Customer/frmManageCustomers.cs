@@ -35,35 +35,44 @@ namespace HomeAppliance
             dbConn.Open();
             treeView1.Nodes.Clear();
 
+            int nodeNumber = 0;
+            int innerNodeCounter;
+
             SqlCommand dbCommand = new SqlCommand();
             dbCommand.Connection = dbConn;
             SqlDataReader reader;
             try
             {
+                treeView1.Nodes.Add(new TreeNode("Company"));
                 dbCommand.CommandText = "SELECT customerId, companyName FROM Customer WHERE companyName != '' ORDER BY companyName ASC";
                 reader = dbCommand.ExecuteReader();
-                TreeNode companyNode = new TreeNode("Company");
+                innerNodeCounter = 0;
+                
                 while (reader.Read())
                 {
-                    companyNode.Nodes.Add(reader["companyName"].ToString());
+                    treeView1.Nodes[nodeNumber].Nodes.Add(new TreeNode(reader["companyName"].ToString()));
+                    treeView1.Nodes[nodeNumber].Nodes[innerNodeCounter].Tag = reader["customerId"].ToString();
+                    innerNodeCounter += 1;
                 }
-                
-                treeView1.Nodes.Add(companyNode);
 
                 dbCommand.Connection.Close();
                 dbCommand.Connection.Open();
 
+                nodeNumber += 1;
+
+                treeView1.Nodes.Add(new TreeNode("Customer"));
                 dbCommand.CommandText = "SELECT customerId, firstName, lastName FROM Customer WHERE firstName != '' ORDER BY firstName ASC";
                 reader = dbCommand.ExecuteReader();
-                TreeNode customerNode = new TreeNode("Customer");
+                innerNodeCounter = 0;
+
                 while (reader.Read())
                 {
-                    customerNode.Nodes.Add(reader["firstName"].ToString() + ", " + reader["lastName"].ToString());
-                    customerNode.Tag = reader["customerId"].ToString();
+                    treeView1.Nodes[nodeNumber].Nodes.Add(new TreeNode(reader["firstName"].ToString() + ", " + reader["lastName"].ToString()));
+                    treeView1.Nodes[nodeNumber].Nodes[innerNodeCounter].Tag = reader["customerId"].ToString();
+                    innerNodeCounter += 1;
                 }
+                nodeNumber += 1;
 
-                treeView1.Nodes.Add(customerNode);
-                
                 dbCommand.Connection.Close();
                 dbCommand.Connection.Open();
             }
@@ -97,6 +106,14 @@ namespace HomeAppliance
                 txtStreetNum02.Text = infoReader["streetNumber_02"].ToString();
                 txtStreetName01.Text = infoReader["streetName_01"].ToString();
                 txtStreetName02.Text = infoReader["streetName_02"].ToString();
+                txtPostalCode01.Text = infoReader["postalCode_01"].ToString();
+                txtPostalCode02.Text = infoReader["postalCode_02"].ToString();
+                txtBussinessNumber.Text = infoReader["bussinessPhone"].ToString();
+                txtPhone.Text = infoReader["homePhone"].ToString();
+                txtFax.Text = infoReader["fax"].ToString();
+                txtMobile.Text = infoReader["contactMobile"].ToString();
+                txtContactName.Text = infoReader["contactName"].ToString();
+
             }
             catch (Exception ex)
             {
@@ -106,7 +123,29 @@ namespace HomeAppliance
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            //displayInfo(treeView1.SelectedNode.Tag.ToString());
+            displayInfo(treeView1.SelectedNode.Tag.ToString());
+        }
+
+
+        private void verifyInput()
+        {
+            if (txtCompanyName.Text == "")
+            {
+                if (txtFirstName.Text == "" || txtLastName.Text == "")
+                {
+                    MessageBox.Show("First name and last name or company name is required");
+                }
+            }
+
+            if (txtStreetNum01.Text == "" && txtStreetName01.Text == "" )
+            {
+                MessageBox.Show("Street number and name are required");
+            }
+
+            if (txtPhone.Text == "")
+            {
+                MessageBox.Show("Phone number is required");
+            }
         }
     }
 }

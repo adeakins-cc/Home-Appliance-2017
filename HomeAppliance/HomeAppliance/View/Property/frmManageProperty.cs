@@ -63,7 +63,7 @@ namespace HomeAppliance
         {
             dbConn.Open();
             DataTable node = new DataTable();
-            node = propDT("SELECT streetName FROM Property", dbConn);
+            node = propDT("SELECT DISTINCT streetName FROM Property", dbConn);
             for (int i = 0; i < node.Rows.Count; i++)
             {
                 tvStreetList.Nodes.Add(node.Rows[i][0].ToString());
