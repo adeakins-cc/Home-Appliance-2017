@@ -174,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmManageFinance";
             this.Text = "View Invioces";
+            this.Load += new System.EventHandler(this.frmManageFinance_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +194,6 @@
         private System.Windows.Forms.Button btnInvoiceByDate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private HomeAppDBDataSet homeAppDBDataSet;
     }
 }
