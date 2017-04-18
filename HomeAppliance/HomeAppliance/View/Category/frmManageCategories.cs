@@ -103,19 +103,9 @@ namespace HomeAppliance
             txtName.Text = dgvCategory.CurrentRow.Cells[1].Value.ToString();
         }
 
-        private void categoryNameCheck()
-        {
-            
-        }
-
         private void btnManageCategoriesExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

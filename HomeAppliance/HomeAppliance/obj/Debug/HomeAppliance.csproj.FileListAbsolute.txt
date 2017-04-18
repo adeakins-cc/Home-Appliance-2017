@@ -113,7 +113,6 @@ C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Invoice.frmAddPart.resources
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.dgvStreetBuildings.resources
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.dgvStreetBuildings.resources
-C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Invoice.frmPropertySearch.resources
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Invoice.frmPropertySearch.resources
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csproj.HomeAppliance.exe.config
@@ -202,4 +201,38 @@ D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\Hom
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
+=======
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.Data.AdoDotNetInterop.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.VSDesigner.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.Web.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\FlashControlV71.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\SAPBusinessObjects.WPF.Viewer.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\EnvDTE.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\VSLangProj.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\VsWebSite.Interop.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\EnvDTE80.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csproj.HomeAppliance.exe.config
+C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Invoice.frmViewInvoice.resources
+>>>>>>> origin/master
