@@ -187,13 +187,18 @@ namespace HomeAppliance
         private void btnSaveCust_Click(object sender, EventArgs e)
         {
             verifyInput();
-            string insertCust = "INSERT INTO Customer(firstName,lastName,companyName,unitNumber01,streetNumber01,streetName_01, cityId_01, postalCode_01," +
-                                "unitNumber_02,streetNumber_02,streetName_02,cityId_02,postalCode_02,bussinessPhone,homePhone,fax,contactMobile,contactName) " +
-                                "VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtCompanyName.Text + "','" + txtUnitNum01.Text + "','"
-                                + txtStreetNum01.Text + "','" + txtStreetName01.Text + "','" + cobCityId01.SelectedValue.ToString() + "','" + txtPostalCode01.Text +
-                                "',null,null,null,null,null,'" +
-                                txtBussinessNumber.Text + "','" + txtPhone.Text + "','" + txtFax.Text + "','" + txtMobile.Text + "','" + txtContactName.Text + "')";
-            executeQuery(insertCust);
+            //string insertCust = "INSERT INTO Customer(firstName,lastName,companyName,unitNumber01,streetNumber01,streetName_01, cityId_01, postalCode_01," +
+            //                    "unitNumber_02,streetNumber_02,streetName_02,cityId_02,postalCode_02,bussinessPhone,homePhone,fax,contactMobile,contactName) " +
+            //                    "VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtCompanyName.Text + "','" + txtUnitNum01.Text + "','"
+            //                    + txtStreetNum01.Text + "','" + txtStreetName01.Text + "','" + cobCityId01.SelectedValue.ToString() + "','" + txtPostalCode01.Text +
+            //                    "',null,null,null,null,null,'" +
+            //                    txtBussinessNumber.Text + "','" + txtPhone.Text + "','" + txtFax.Text + "','" + txtMobile.Text + "','" + txtContactName.Text + "')";
+            //executeQuery(insertCust);
+
+            this.customerTableAdapter.Insert(txtFirstName.Text, txtLastName.Text, txtCompanyName.Text, txtUnitNum01.Text, txtStreetNum01.Text,
+                                             txtStreetName01.Text, int.Parse(cobCityId01.SelectedValue.ToString()), txtPostalCode01.Text, txtUnitNum02.Text, 
+                                             txtStreetNum02.Text, txtStreetName02.Text, int.Parse(cobCityId02.SelectedValue.ToString()), txtPostalCode02.Text, txtBussinessNumber.Text, 
+                                             txtPhone.Text, txtFax.Text, txtMobile.Text, txtContactName.Text,null,null,null,null);
             getCustomerList();
             clearField();
         }
@@ -210,6 +215,7 @@ namespace HomeAppliance
             btnCancelCust.Enabled = true;
             buttonClicked = true;
 
+            lblCustomerID.Text = "";
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtCompanyName.Text = "";

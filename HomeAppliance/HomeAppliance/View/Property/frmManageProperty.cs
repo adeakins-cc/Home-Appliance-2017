@@ -23,31 +23,7 @@ namespace HomeAppliance
 
         private void frmManageProperty_Load(object sender, EventArgs e)
         {
-            //using (dbConn)
-            //{
-            //    string propertyQuery = "SELECT * FROM Property";
-            //    string customerQuery = "SELECT * FROM Customer";
-            //    string fullQuery = propertyQuery + ";" + customerQuery;
-
-            //    DataSet dsFullDataQuery = new DataSet();
-            //    SqlDataAdapter da = new SqlDataAdapter(fullQuery, dbConn);
-            //    da.Fill(dsFullDataQuery);
-
-            //    dsFullDataQuery.Tables[0].TableName = "Property";
-            //    dsFullDataQuery.Tables[1].TableName = "Customer";
-
-            //    DataRelation Customer_Property = new DataRelation("custProperty", dsFullDataQuery.Tables["Customer"].Columns["customerId"],
-            //                                                dsFullDataQuery.Tables["Property"].Columns["customerId"]);
-
-            //    TreeNode streetNameNode = new TreeNode("Street Name");
-            //    foreach (DataRow streetNameDT in dsFullDataQuery.Tables["Property"].Rows)
-            //    {
-
-            //        streetNameNode.Nodes.Add(streetNameDT["streetName"].ToString());
-            //    }
-
-            //    tvStreetList.Nodes.Add(streetNameNode);
-            //}
+            loadCity();
             display();
         }
 
@@ -63,7 +39,7 @@ namespace HomeAppliance
         {
             dbConn.Open();
             DataTable node = new DataTable();
-            node = propDT("SELECT DISTINCT streetName FROM Property", dbConn);
+            node = propDT("SELECT streetName FROM Property", dbConn);
             for (int i = 0; i < node.Rows.Count; i++)
             {
                 tvStreetList.Nodes.Add(node.Rows[i][0].ToString());
@@ -96,33 +72,71 @@ namespace HomeAppliance
             dbCommand.Connection.Open();
 
             SqlDataReader readPropInfo;
-            dbCommand.CommandText = "SELECT * FROM Property WHERE propertyId = " + propID;
+            dbCommand.CommandText = "SELECT *, cus.firstName, cus.lastName FROM Property p JOIN Customer cus ON p.customerId = cus.customerId "+
+                                    " WHERE propertyId = " + propID;
             readPropInfo = dbCommand.ExecuteReader();
             readPropInfo.Read();
 
             txtBuildingNumber.Text = readPropInfo["streetNumber"].ToString();
             txtBuildingStreet.Text = readPropInfo["streetName"].ToString();
-            //city
             txtUnits.Text = readPropInfo["unitNumber"].ToString();
             txtSuperintendent.Text = readPropInfo["superintendent"].ToString();
             txtSuperPhone.Text = readPropInfo["superintendentPhone"].ToString();
+            lblCustID.Text = readPropInfo["customerId"].ToString();
 
+            dbCommand.CommandText = "SELECT name FROM City WHERE cityId = " + readPropInfo["cityId"].ToString();
+            readPropInfo.Close();
+            readPropInfo = dbCommand.ExecuteReader();
+            readPropInfo.Read();
+
+            txtCity.Text = readPropInfo["name"].ToString();
+
+            dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + lblCustID.Text;
+            readPropInfo.Close();
+            readPropInfo = dbCommand.ExecuteReader();
+            readPropInfo.Read();
+
+            txtCustomer.Text = readPropInfo["firstName"].ToString() + ", " + readPropInfo["lastName"].ToString() + " (Company: " + readPropInfo["companyName"].ToString()+")";
+            txtAddress01.Text = readPropInfo["unitNumber01"].ToString() + " " + readPropInfo["streetNumber01"].ToString() + " " +
+                readPropInfo["streetName_01"].ToString() + " " + readPropInfo["cityId_01"].ToString() + " " + readPropInfo["postalCode_01"].ToString();
+            txtAddress02.Text = readPropInfo["unitNumber_02"].ToString() + " " + readPropInfo["streetNumber_02"].ToString() + " " +
+                readPropInfo["streetName_02"].ToString() + " " + readPropInfo["cityId_02"].ToString() + " " + readPropInfo["postalCode_02"].ToString();
+            
             dbCommand.Connection.Close();
         }
 
-        private void dgvBuildings_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnNewProperty_Click(object sender, EventArgs e)
         {
+            tvStreetList.Enabled = false;
+            dgvBuildings.Enabled = false;
+            btnNewProperty.Enabled = false;
+            btnUpdateProperty.Enabled = false;
+            btnDeleteProperty.Enabled = false;
+            btnSaveNewProperty.Enabled = true;
+            btnCancelP.Enabled = true;
+            txtCustomer.ReadOnly = false;
+            txtAddress01.ReadOnly = false;
+            txtAddress02.ReadOnly = false;
 
+            clearFields();
+        }
+
+        private void clearFields()
+        {
+            txtBuildingNumber.Text = "";
+            txtBuildingStreet.Text = "";
+            txtCity.Text = "";
+            txtUnits.Text = "";
+            txtSuperintendent.Text = "";
+            txtSuperPhone.Text = "";
+            txtCustomer.Text = "";
+            txtAddress01.Text = "";
+            txtAddress02.Text = "";
         }
 
         private void btnManagePropertyExit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSaveNewProperty_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

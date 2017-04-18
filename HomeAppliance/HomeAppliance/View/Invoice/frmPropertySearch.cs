@@ -141,7 +141,7 @@ namespace HomeAppliance.View.Invoice
 
         private void btnManagePropertyExit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
