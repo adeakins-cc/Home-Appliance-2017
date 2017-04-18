@@ -202,3 +202,4 @@ D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\Hom
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
+C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache

@@ -28,5 +28,10 @@ namespace HomeAppliance
             frmViewInvoice invoice = new frmViewInvoice();
             invoice.ShowDialog();
         }
+
+        private void frmManageFinance_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
