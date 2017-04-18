@@ -23,7 +23,6 @@ namespace HomeAppliance
 
         private void frmManageProperty_Load(object sender, EventArgs e)
         {
-            loadCity();
             display();
         }
 
