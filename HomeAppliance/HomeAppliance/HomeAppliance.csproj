@@ -170,8 +170,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryClass.cs" />
-    <Compile Include="DataService.cs" />
     <Compile Include="HomeAppDBDataSet.cs">
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
     </Compile>
@@ -195,7 +193,6 @@
     <Compile Include="Model\Property.cs" />
     <Compile Include="Model\Taxes.cs" />
     <Compile Include="Model\Technician.cs" />
-    <Compile Include="PartClass.cs" />
     <Compile Include="Reports\InvoiceReporting.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

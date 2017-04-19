@@ -31,17 +31,6 @@ namespace HomeAppliance
 
             // TODO: This line of code loads data into the 'homeAppDBDataSet.Category' table. You can move, or remove it, as needed.
             this.categoryTableAdapter.Fill(this.homeAppDBDataSet.Category);
-
-
-            // display parts detail for selected category
-            cbbCategory.DataSource = DataService.getAllCategory();
-            cbbCategory.DisplayMember = "name";
-            cbbCategory.ValueMember = "categoryId";
-            CategoryClass obj = cbbCategory.SelectedItem as CategoryClass;
-            if (obj!=null)
-            {
-                dgvPartDetails.DataSource = DataService.getPartByCategoryID(obj.categoryId);
-            }
         }
 
         private void cbbCategory_SelectionChangeCommitted(object sender, EventArgs e)
@@ -51,11 +40,11 @@ namespace HomeAppliance
 
         public void displayPartList()
         {
-            CategoryClass obj = cbbCategory.SelectedItem as CategoryClass;
-            if (obj != null)
-            {
-                dgvPartDetails.DataSource = DataService.getPartByCategoryID(obj.categoryId);
-            }
+            string partListQuery = "SELECT partId, name, price FROM Part WHERE categoryId = " + cbbCategory.SelectedValue.ToString() + " ORDER BY name ASC";
+            DataTable dt = new DataTable();
+            SqlDataAdapter partAdapter = new SqlDataAdapter(partListQuery, dbConn);
+            partAdapter.Fill(dt);
+            dgvPartDetails.DataSource = dt;
         }
 
         public void executeQuery(String query)
@@ -66,7 +55,14 @@ namespace HomeAppliance
                 dbCommand = new SqlCommand(query, dbConn);
                 if (dbCommand.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("New part is added");
+                    if (buttonClicked == true)
+                    {
+                        MessageBox.Show("New part is added");
+                    }
+                    else if (buttonClicked == false)
+                    {
+                        MessageBox.Show("Part is successfully updated");
+                    }
                 }
                 else
                 {
@@ -111,6 +107,23 @@ namespace HomeAppliance
             }
         }
 
+        private void btnDeletePart_Click(object sender, EventArgs e)
+        {
+            if (dgvPartDetails.SelectedCells.Count > 0)
+            {
+                if (MessageBox.Show("Confirm to delete part", "Warning", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    string selectedIndex = dgvPartDetails.CurrentRow.Cells[0].Value.ToString();
+                    string deleteQuery = "DELETE FROM Part WHERE partId = '" + selectedIndex + "'";
+                    executeQuery(deleteQuery);
+                    displayPartList();
+                    MessageBox.Show("Successfully delete part");
+                    txtPartName.Text = "";
+                    txtPrice.Text = "";
+                }
+            }
+        }
+
         private void dgvPartDetails_MouseClick(object sender, MouseEventArgs e)
         {
             txtPartName.Text = dgvPartDetails.CurrentRow.Cells[1].Value.ToString();
@@ -121,20 +134,47 @@ namespace HomeAppliance
         {
             if (buttonClicked == true)
             {
-                // insert into part
+                string insertQuery = "INSERT INTO Part(name, price, categoryId) VALUES ('" + txtPartName.Text + "'," + txtPrice.Text + "," 
+                                        + cbbCategory.SelectedValue.ToString() + ")";
+                executeQuery(insertQuery);
+                displayPartList();
+                txtPartName.Text = "";
+                txtPrice.Text = "";
 
+                txtPartName.Enabled = false;
+                txtPrice.Enabled = false;
+                btnSavePart.Enabled = false;
+                btnCancelPart.Enabled = false;
+                dgvPartDetails.Enabled = true;
+                btnNewPart.Enabled = true;
+                btnEditPart.Enabled = true;
+                btnDeletePart.Enabled = true;
             }
             if (buttonClicked == false)
             {
-                // update selected part
-           
-
+                string selectedCategory = dgvPartDetails.CurrentRow.Cells[0].Value.ToString();
+                string editQuery = "UPDATE Part SET name = '" + txtPartName.Text + "', price = " + txtPrice.Text + 
+                                   " WHERE partId = '" + selectedCategory + "'";
+                executeQuery(editQuery);
+                displayPartList();
+                txtPartName.Text = "";
+                txtPrice.Text = "";
+                txtPartName.Enabled = false;
+                txtPrice.Enabled = false;
+                btnSavePart.Enabled = false;
+                btnCancelPart.Enabled = false;
+                dgvPartDetails.Enabled = true;
+                btnNewPart.Enabled = true;
+                btnEditPart.Enabled = true;
+                btnDeletePart.Enabled = true;
             }
         }
 
         private void btnManagePartsExit_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
+
+
     }
 }

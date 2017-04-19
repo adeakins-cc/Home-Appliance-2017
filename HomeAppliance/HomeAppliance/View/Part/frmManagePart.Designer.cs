@@ -85,6 +85,7 @@
             this.btnDeletePart.TabIndex = 3;
             this.btnDeletePart.Text = "Delete part";
             this.btnDeletePart.UseVisualStyleBackColor = true;
+            this.btnDeletePart.Click += new System.EventHandler(this.btnDeletePart_Click);
             // 
             // btnManagePartsExit
             // 
