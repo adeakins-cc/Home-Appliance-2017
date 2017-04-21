@@ -44,7 +44,7 @@
             this.cryRepo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cryRepo.Location = new System.Drawing.Point(0, 0);
             this.cryRepo.Name = "cryRepo";
-            this.cryRepo.Size = new System.Drawing.Size(705, 637);
+            this.cryRepo.Size = new System.Drawing.Size(1050, 637);
             this.cryRepo.TabIndex = 0;
             this.cryRepo.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.cryRepo.Load += new System.EventHandler(this.cryRepo_Load);
@@ -63,7 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 637);
+            this.ClientSize = new System.Drawing.Size(1050, 637);
             this.Controls.Add(this.cryRepo);
             this.Name = "frmViewInvoice";
             this.Text = "temp";

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using HomeAppliance.View.Technician;
 using HomeAppliance;
+using HomeAppliance.View.Invoice;
 
 namespace HomeAppliance
 {
@@ -68,8 +69,8 @@ namespace HomeAppliance
 
         private void btnDisplayInvoice_Click(object sender, EventArgs e)
         {
-            frmManageFinance viewInvoicePage = new frmManageFinance();
-            viewInvoicePage.Show();
+            frmViewInvoice invoice = new frmViewInvoice();
+            invoice.ShowDialog();
         }
 
         private void btnManageFinacial_Click(object sender, EventArgs e)

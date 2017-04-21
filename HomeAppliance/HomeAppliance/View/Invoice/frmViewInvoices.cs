@@ -25,8 +25,7 @@ namespace HomeAppliance
 
         private void btnViewInvoiceRange_Click(object sender, EventArgs e)
         {
-            frmViewInvoice invoice = new frmViewInvoice();
-            invoice.ShowDialog();
+            
         }
 
         private void frmManageFinance_Load(object sender, EventArgs e)

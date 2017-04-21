@@ -26,9 +26,7 @@ namespace HomeAppliance.View.Invoice
             InvoiceReporting rpt = new InvoiceReporting();
             
             BindingSource bs = new BindingSource();
-
-                bs.DataSource = (DataTable)homeAppDBDataSet.Invoice;
-                rpt.SetDataSource(bs);
+            
                 cryRepo.ReportSource = rpt;
             
 

@@ -286,3 +286,4 @@ C:\Users\KimThanh\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.fr
 C:\Users\KimThanh\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.Properties.Resources.resources
 C:\Users\KimThanh\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csproj.GenerateResource.Cache
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
+C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache

@@ -199,6 +199,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceReporting.rpt</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Property.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Property.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\Category\frmManageCategories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,10 @@
     <EmbeddedResource Include="Reports\InvoiceReporting.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>InvoiceReporting.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Property.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Property.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Category\frmManageCategories.resx">
       <DependentUpon>frmManageCategories.cs</DependentUpon>
