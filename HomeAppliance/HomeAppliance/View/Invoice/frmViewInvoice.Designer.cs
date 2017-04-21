@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cryRepo = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.InvoiceReporting1 = new HomeAppliance.Reports.InvoiceReporting();
+            this.homeAppDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // cryRepo
@@ -43,6 +47,17 @@
             this.cryRepo.Size = new System.Drawing.Size(705, 637);
             this.cryRepo.TabIndex = 0;
             this.cryRepo.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.cryRepo.Load += new System.EventHandler(this.cryRepo_Load);
+            // 
+            // homeAppDBDataSetBindingSource
+            // 
+            this.homeAppDBDataSetBindingSource.DataSource = this.homeAppDBDataSet;
+            this.homeAppDBDataSetBindingSource.Position = 0;
+            // 
+            // homeAppDBDataSet
+            // 
+            this.homeAppDBDataSet.DataSetName = "HomeAppDBDataSet";
+            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // frmViewInvoice
             // 
@@ -51,8 +66,10 @@
             this.ClientSize = new System.Drawing.Size(705, 637);
             this.Controls.Add(this.cryRepo);
             this.Name = "frmViewInvoice";
-            this.Text = "frmViewInvoice";
+            this.Text = "temp";
             this.Load += new System.EventHandler(this.frmViewInvoice_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -60,6 +77,7 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer cryRepo;
-        private Reports.InvoiceReporting InvoiceReporting1;
+        private System.Windows.Forms.BindingSource homeAppDBDataSetBindingSource;
+        private HomeAppDBDataSet homeAppDBDataSet;
     }
 }

@@ -201,9 +201,6 @@ D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\Hom
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 D:\Download\Compressed\Home-Appliance-2017-master\Home-Appliance-2017-master\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-C:\Users\Alexa\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csprojResolveAssemblyReference.cache
-=======
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\CrystalDecisions.Data.AdoDotNetInterop.dll
@@ -235,7 +232,6 @@ C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeApplian
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.csproj.HomeAppliance.exe.config
 C:\Users\KimThanh\Documents\GitHub\Home-Appliance-2017\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.View.Invoice.frmViewInvoice.resources
->>>>>>> origin/master
 C:\Users\KimThanh\Desktop\HomeAppliance\HomeAppliance\bin\Debug\HomeAppliance.exe.config
 C:\Users\KimThanh\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.exe
 C:\Users\KimThanh\Desktop\HomeAppliance\HomeAppliance\obj\Debug\HomeAppliance.pdb

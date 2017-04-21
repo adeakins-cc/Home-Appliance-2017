@@ -194,10 +194,10 @@
     <Compile Include="Model\Taxes.cs" />
     <Compile Include="Model\Technician.cs" />
     <Compile Include="Reports\InvoiceReporting.cs">
+      <SubType>Component</SubType>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceReporting.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\Category\frmManageCategories.cs">
       <SubType>Form</SubType>
@@ -336,6 +336,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="HomeAppDBDataSet.xsc">
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
     </None>

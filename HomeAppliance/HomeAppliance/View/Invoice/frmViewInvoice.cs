@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using HomeAppliance.Reports;
 
 namespace HomeAppliance.View.Invoice
 {
     public partial class frmViewInvoice : Form
     {
-        SqlConnection dbConn = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=HomeAppDB;Integrated Security=True");
-        SqlCommand dbCommand = new SqlCommand();
         public frmViewInvoice()
         {
             InitializeComponent();
@@ -23,10 +23,20 @@ namespace HomeAppliance.View.Invoice
         private void frmViewInvoice_Load(object sender, EventArgs e)
         {
 
-            Reports.InvoiceReporting cryRpt = new Reports.InvoiceReporting();
-            cryRpt.Load("Reports/InvoiceReporting.rpt");
-            cryRepo.ReportSource = cryRpt;
-            cryRepo.Refresh();
+            InvoiceReporting rpt = new InvoiceReporting();
+            
+            BindingSource bs = new BindingSource();
+
+                bs.DataSource = (DataTable)homeAppDBDataSet.Invoice;
+                rpt.SetDataSource(bs);
+                cryRepo.ReportSource = rpt;
+            
+
+        }
+
+        private void cryRepo_Load(object sender, EventArgs e)
+        {
+                
         }
     }
 }
