@@ -155,6 +155,11 @@ namespace HomeAppliance
             }
         }
 
+        private void validateInput()
+        {
+            
+        }
+
         private void executeQuery(String query)
         {
             try
@@ -187,20 +192,32 @@ namespace HomeAppliance
         private void btnSaveCust_Click(object sender, EventArgs e)
         {
             verifyInput();
-            //string insertCust = "INSERT INTO Customer(firstName,lastName,companyName,unitNumber01,streetNumber01,streetName_01, cityId_01, postalCode_01," +
-            //                    "unitNumber_02,streetNumber_02,streetName_02,cityId_02,postalCode_02,bussinessPhone,homePhone,fax,contactMobile,contactName) " +
-            //                    "VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtCompanyName.Text + "','" + txtUnitNum01.Text + "','"
-            //                    + txtStreetNum01.Text + "','" + txtStreetName01.Text + "','" + cobCityId01.SelectedValue.ToString() + "','" + txtPostalCode01.Text +
-            //                    "',null,null,null,null,null,'" +
-            //                    txtBussinessNumber.Text + "','" + txtPhone.Text + "','" + txtFax.Text + "','" + txtMobile.Text + "','" + txtContactName.Text + "')";
-            //executeQuery(insertCust);
 
-            this.customerTableAdapter.Insert(txtFirstName.Text, txtLastName.Text, txtCompanyName.Text, txtUnitNum01.Text, txtStreetNum01.Text,
-                                             txtStreetName01.Text, int.Parse(cobCityId01.SelectedValue.ToString()), txtPostalCode01.Text, txtUnitNum02.Text, 
-                                             txtStreetNum02.Text, txtStreetName02.Text, int.Parse(cobCityId02.SelectedValue.ToString()), txtPostalCode02.Text, txtBussinessNumber.Text, 
-                                             txtPhone.Text, txtFax.Text, txtMobile.Text, txtContactName.Text,null,null,null,null);
-            getCustomerList();
-            clearField();
+            SqlCommand checkInput = new SqlCommand("SELECT * FROM Customer WHERE ([firstName] = @firstName) OR ([lastName] = @lastName) OR ([companyName] = @companyName) ", dbConn);
+            checkInput.Parameters.AddWithValue("@firstName", txtFirstName.Text);
+            checkInput.Parameters.AddWithValue("@lastName", txtLastName.Text);
+            checkInput.Parameters.AddWithValue("@companyName", txtCompanyName.Text);
+            checkInput.Connection.Open();
+
+            SqlDataReader reader = checkInput.ExecuteReader();
+            if (reader.HasRows)
+            {
+                MessageBox.Show(txtFirstName.Text + ", " + txtLastName.Text + " already exists");
+            }
+            else
+            {
+                string insertCust = "INSERT INTO Customer(firstName,lastName,companyName,unitNumber01,streetNumber01,streetName_01, cityId_01, postalCode_01," +
+                                "unitNumber_02,streetNumber_02,streetName_02,cityId_02,postalCode_02,bussinessPhone,homePhone,fax,contactMobile,contactName) " +
+                                "VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtCompanyName.Text + "','" + txtUnitNum01.Text + "','"
+                                + txtStreetNum01.Text + "','" + txtStreetName01.Text + "','" + cobCityId01.SelectedValue.ToString() + "','" + txtPostalCode01.Text +
+                                "','" + txtUnitNum02.Text + "','" + txtStreetNum02.Text + "','" + txtStreetName02 + "','" + cobCityId01.SelectedValue.ToString() +
+                                "','" + txtPostalCode02.Text + "','" + txtBussinessNumber.Text + "','" + txtPhone.Text + "','" + txtFax.Text + "','" + txtMobile.Text + "','"
+                                + txtContactName.Text + "')";
+                executeQuery(insertCust);
+                getCustomerList();
+                clearField();
+            }
+            checkInput.Connection.Close();
         }
 
         private void btnNewCustomer_Click(object sender, EventArgs e)
@@ -291,6 +308,19 @@ namespace HomeAppliance
             btnDeleteCustomer.Enabled = true;
             btnSaveCust.Enabled = false;
             btnCancelCust.Enabled = false;
+        }
+
+        private DataTable custDT(string sql, SqlConnection conn)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt);
+            return dt;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
