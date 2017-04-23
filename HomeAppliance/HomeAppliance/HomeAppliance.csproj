@@ -178,6 +178,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HomeAppDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeAppDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="invoice.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -265,17 +270,17 @@
     <Compile Include="View\Part\frmManagePart.designer.cs">
       <DependentUpon>frmManagePart.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Technician\frmManageTechnician.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Technician\frmManageTechnician.Designer.cs">
-      <DependentUpon>frmManageTechnician.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Property\frmManageProperty.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Property\frmManageProperty.Designer.cs">
       <DependentUpon>frmManageProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Technician\frmManageTechnician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Technician\frmManageTechnician.Designer.cs">
+      <DependentUpon>frmManageTechnician.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Invoice\frmViewInvoices.cs">
       <SubType>Form</SubType>
@@ -327,11 +332,11 @@
     <EmbeddedResource Include="View\Part\frmManagePart.resx">
       <DependentUpon>frmManagePart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Technician\frmManageTechnician.resx">
-      <DependentUpon>frmManageTechnician.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Property\frmManageProperty.resx">
       <DependentUpon>frmManageProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Technician\frmManageTechnician.resx">
+      <DependentUpon>frmManageTechnician.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Invoice\frmViewInvoices.resx">
       <DependentUpon>frmViewInvoices.cs</DependentUpon>
@@ -357,6 +362,17 @@
     </None>
     <None Include="HomeAppDBDataSet.xss">
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HomeAppDBDataSet1.xsc">
+      <DependentUpon>HomeAppDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HomeAppDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HomeAppDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HomeAppDBDataSet1.xss">
+      <DependentUpon>HomeAppDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

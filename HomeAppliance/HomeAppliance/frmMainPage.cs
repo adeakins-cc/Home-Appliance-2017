@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using HomeAppliance.View.Technician;
 using HomeAppliance;
 using HomeAppliance.View.Invoice;
+using HomeAppliance.View.Property;
 
 namespace HomeAppliance
 {
@@ -40,7 +41,7 @@ namespace HomeAppliance
 
         private void btnManageProperty_Click(object sender, EventArgs e)
         {
-            dgvStreetBuildings propertyPage = new dgvStreetBuildings();
+            frmManageProperty propertyPage = new frmManageProperty();
             propertyPage.Show();
         }
 

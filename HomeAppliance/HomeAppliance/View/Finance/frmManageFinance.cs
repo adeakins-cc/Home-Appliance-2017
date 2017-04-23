@@ -17,14 +17,14 @@ namespace HomeAppliance.Finance
             InitializeComponent();
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        private void frmManageFinance_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void frmManageFinance_Load(object sender, EventArgs e)
+        private void btnFinanceExit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

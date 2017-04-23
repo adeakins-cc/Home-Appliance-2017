@@ -155,11 +155,6 @@ namespace HomeAppliance
             }
         }
 
-        private void validateInput()
-        {
-            
-        }
-
         private void executeQuery(String query)
         {
             try
