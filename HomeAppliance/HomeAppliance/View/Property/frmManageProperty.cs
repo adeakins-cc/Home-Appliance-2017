@@ -42,7 +42,7 @@ namespace HomeAppliance.View.Property
         private void displayStreetName()
         {
             DataTable node = new DataTable();
-            node = propDT("SELECT streetName FROM Property", dbConn);
+            node = propDT("SELECT streetName FROM Property ORDER BY streetName ASC", dbConn);
             for (int i = 0; i < node.Rows.Count; i++)
             {
                 tvStreetList.Nodes.Add(node.Rows[i][0].ToString());
@@ -126,8 +126,18 @@ namespace HomeAppliance.View.Property
                 dbCommand = new SqlCommand(query, dbConn);
                 if (dbCommand.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("New Property is added");
-                  
+                    if (addButtonClick == true)
+                    {
+                        MessageBox.Show("New Property is added");
+                    }
+                    else if (addButtonClick == false)
+                    {
+                        MessageBox.Show("Selected property is updated");
+                    }
+                    else
+                    {
+                        MessageBox.Show("successfully delete property");
+                    }
                 }
             }
             catch (Exception ex)
@@ -163,29 +173,39 @@ namespace HomeAppliance.View.Property
 
         private void btnSaveNewProperty_Click(object sender, EventArgs e)
         {
-            //verifyField();
-            //string insertProp = "INSERT INTO Property(streetNumber, streetName, unitNumber, superintendent, superintendentPhone) VALUES('" +
-            //       txtBuildingNumber.Text + "','" + txtBuildingStreet.Text + "','" + txtUnits.Text + "','" + txtSuperintendent + "','" + txtSuperPhone.Text + "')";
-            //executeQuery(insertProp);
-            //displayStreetName();
-            //clearFields();
+            verifyField();
+
             if (addButtonClick == true)
             {
                 // run insert new property
+                string insertProp = "INSERT INTO Property(streetNumber, streetName, unitNumber, cityId, customerId) VALUES('" +
+                                    txtBuildingNumber.Text + "','" + txtBuildingStreet.Text + "','" + txtUnits.Text + "'," + cbbCity.SelectedValue.ToString() + ",'" + txtCustID.Text + "')";
+                executeQuery(insertProp);
+                displayStreetName();
+                clearFields();
+                btnSaveNewProperty.Enabled = false;
+                btnCancelP.Enabled = false;
+                btnNewProperty.Enabled = true;
+                btnUpdateProperty.Enabled = true;
+                btnDeleteProperty.Enabled = true;
+                GroupBox1.Enabled = false;
+                tvStreetList.Enabled = true;
+
             }
             else if (addButtonClick == false)
             {
                 // run update new property
-                string selectedProperty = dgvBuildings.CurrentRow.Cells[0].Value.ToString();
-                string updateProp = "UPDATE Property SET unitNumber = '" + txtUnits.Text + "', streetNumber = '" + txtBuildingNumber.Text + "', streetName = '" +
-                                    txtBuildingStreet.Text + "', cityId = " + cbbCity.SelectedValue.ToString() + ", superintendent = '" + txtSuperintendent.Text +
-                                    "', superintendentPhone = '" + txtSuperPhone.Text + "' WHERE propertyId = " + selectedProperty;
-                executeQuery(updateProp);
-                displayStreetName();
-                clearFields();
+                if (dgvBuildings.SelectedRows.Count > 0)
+                {
+                    string selectedProperty = dgvBuildings.CurrentRow.Cells[0].Value.ToString();
+                    string updateProp = "UPDATE Property SET unitNumber = '" + txtUnits.Text + "', streetNumber = '" + txtBuildingNumber.Text + "', streetName = '" +
+                                        txtBuildingStreet.Text + "', cityId = " + cbbCity.SelectedValue.ToString() + ", superintendent = '" + txtSuperintendent.Text +
+                                        "', superintendentPhone = '" + txtSuperPhone.Text + "' WHERE propertyId = " + selectedProperty;
+                    executeQuery(updateProp);
+                    displayStreetName();
+                    clearFields();
+                }
             }
-
-
         }
 
         private void btnNewProperty_Click(object sender, EventArgs e)
@@ -225,7 +245,22 @@ namespace HomeAppliance.View.Property
 
         private void btnDeleteProperty_Click(object sender, EventArgs e)
         {
-
+            if (tvStreetList.SelectedNode.Nodes.Count > 0 || dgvBuildings.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Confirm to delete property", "Warning", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    string selectedPropId = dgvBuildings.CurrentRow.Cells[0].Value.ToString();
+                    string deleteProp = "DELETE FROM Property WHERE propertyId = '" + selectedPropId + "'";
+                    executeQuery(deleteProp);
+                    displayStreetName();
+                    clearFields();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select a property to delete");
+            }
+            
         }
 
         private void btnManagePropertyExit_Click_1(object sender, EventArgs e)
