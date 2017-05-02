@@ -31,10 +31,11 @@ namespace HomeAppliance.View.Invoice
             SqlCommand dbCommand = new SqlCommand();
 
             string partListQuery = "SELECT Invoice.invoiceId, Invoice.serviceDate, Invoice.invoiceDate, Invoice.complaints, Invoice.notes, Invoice.partTotal, Invoice.labour, Invoice.serviceCharge, Invoice.GST, Invoice.PST, Invoice.subTotal, " +
-                         "Invoice.grossTotal, Invoice.PSTExempt, Invoice.poNumber, Invoice.make, Invoice.model, Invoice.serialNumber, Technician.name, Customer.firstName, Customer.lastName, Customer.companyName, " +
-                         "Customer.unitNumber01, Customer.streetNumber01, Customer.streetName_01, Customer.postalCode_01, CustCity.name, CustCity.province, CustCity.counrty, Customer.bussinessPhone, Customer.homePhone, " +
-                         "Customer.fax, Customer.contactMobile, Customer.contactName, Customer.contactEmail, Property.unitNumber, Property.streetNumber, Property.streetName, PropCity.name, " +
-                         "PropCity.province, PropCity.counrty, Property.superintendent, Property.superintendentPhone " +
+                         "Invoice.grossTotal, Invoice.PSTExempt, Invoice.poNumber, Invoice.make, Invoice.model, Invoice.serialNumber, Technician.name AS techName, Customer.firstName, Customer.lastName, Customer.companyName, " +
+                         "Customer.unitNumber01 AS customerUnitNumber, Customer.streetNumber01 AS customerStreetNumber, Customer.streetName_01 AS customerStreetName, Customer.postalCode_01 AS customerPostalCode, CustCity.name AS customerCity, " +
+                         "CustCity.province AS customerProvince, CustCity.counrty AS customerCountry, Customer.bussinessPhone, Customer.homePhone, " +
+                         "Customer.fax, Customer.contactMobile, Customer.contactName, Customer.contactEmail, Property.unitNumber AS propertyUnitNumber, Property.streetNumber AS propertyStreetnumber, Property.streetName AS propertyStreetName " +
+                         ", PropCity.name AS propertyCity, PropCity.province AS propertyProvince, PropCity.counrty AS propertyCountry, Property.superintendent, Property.superintendentPhone " +
                          "FROM Invoice INNER JOIN " +
                          "Customer ON Invoice.customerId = Customer.customerId INNER JOIN " +
                          "City AS CustCity ON Customer.cityId_01 = CustCity.cityId INNER JOIN " +
@@ -48,10 +49,10 @@ namespace HomeAppliance.View.Invoice
                          "Property ON Invoice.propertyId = Property.propertyId INNER JOIN " +
                          "Technician ON Invoice.technicianId = Technician.technicianId INNER JOIN " +
                          "City AS PropCity ON Property.cityId = PropCity.cityId;";*/
-            ReportDataTable dt = new ReportDataTable();
+            DataTable dt = new DataTable();
             SqlDataAdapter partAdapter = new SqlDataAdapter(partListQuery, dbConn);
             partAdapter.Fill(dt);
-            rpt.SetDataSource((DataTable)dt);
+            rpt.SetDataSource(dt);
 
             // Binding the crystalReportViewer with our report object. 
             cryRepo.ReportSource = rpt;

@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 272);
+            this.ClientSize = new System.Drawing.Size(667, 273);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPrintReports);
             this.Controls.Add(this.grpManagement);

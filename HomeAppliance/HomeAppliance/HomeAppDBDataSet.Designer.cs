@@ -4990,8 +4990,8 @@ namespace HomeAppliance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ReportRow AddReportRow(
                         string invoiceId, 
-                        string serviceDate, 
-                        string invoiceDate, 
+                        System.DateTime serviceDate, 
+                        System.DateTime invoiceDate, 
                         string complaints, 
                         string notes, 
                         string partTotal, 
@@ -5146,9 +5146,9 @@ namespace HomeAppliance {
             private void InitClass() {
                 this.columninvoiceId = new global::System.Data.DataColumn("invoiceId", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninvoiceId);
-                this.columnserviceDate = new global::System.Data.DataColumn("serviceDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnserviceDate = new global::System.Data.DataColumn("serviceDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnserviceDate);
-                this.columninvoiceDate = new global::System.Data.DataColumn("invoiceDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columninvoiceDate = new global::System.Data.DataColumn("invoiceDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninvoiceDate);
                 this.columncomplaints = new global::System.Data.DataColumn("complaints", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncomplaints);
@@ -5229,7 +5229,6 @@ namespace HomeAppliance {
                 this.columnsuperintendentPhone = new global::System.Data.DataColumn("superintendentPhone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsuperintendentPhone);
                 this.columninvoiceId.AllowDBNull = false;
-                this.columntechName.DefaultValue = ((string)("Error"));
                 this.columncustomerUnitNumber.ReadOnly = true;
             }
             
@@ -7318,13 +7317,13 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string serviceDate {
+            public System.DateTime serviceDate {
                 get {
-                    if (this.IsserviceDateNull()) {
-                        return null;
+                    try {
+                        return ((global::System.DateTime)(this[this.tableReport.serviceDateColumn]));
                     }
-                    else {
-                        return ((string)(this[this.tableReport.serviceDateColumn]));
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'serviceDate\' in table \'Report\' is DBNull.", e);
                     }
                 }
                 set {
@@ -7334,10 +7333,10 @@ namespace HomeAppliance {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string invoiceDate {
+            public System.DateTime invoiceDate {
                 get {
                     try {
-                        return ((string)(this[this.tableReport.invoiceDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableReport.invoiceDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'invoiceDate\' in table \'Report\' is DBNull.", e);
@@ -7576,11 +7575,11 @@ namespace HomeAppliance {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string techName {
                 get {
-                    if (this.IstechNameNull()) {
-                        return string.Empty;
-                    }
-                    else {
+                    try {
                         return ((string)(this[this.tableReport.techNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'techName\' in table \'Report\' is DBNull.", e);
                     }
                 }
                 set {
