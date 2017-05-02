@@ -30,7 +30,7 @@ namespace HomeAppliance.View.Invoice
             SqlConnection dbConn = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=HomeAppDB;Integrated Security=True");
             SqlCommand dbCommand = new SqlCommand();
 
-            string partListQuery = "SELECT Invoice.invoiceId, Invoice.serviceDate, Invoice.invoiceDate, Invoice.complaints, Invoice.notes, Invoice.partTotal, Invoice.labour, Invoice.serviceCharge, Invoice.GST, Invoice.PST, Invoice.subTotal, " +
+            string reportQuery = "SELECT Invoice.invoiceId, Invoice.serviceDate, Invoice.invoiceDate, Invoice.complaints, Invoice.notes, Invoice.partTotal, Invoice.labour, Invoice.serviceCharge, Invoice.GST, Invoice.PST, Invoice.subTotal, " +
                          "Invoice.grossTotal, Invoice.PSTExempt, Invoice.poNumber, Invoice.make, Invoice.model, Invoice.serialNumber, Technician.name AS techName, Customer.firstName, Customer.lastName, Customer.companyName, " +
                          "Customer.unitNumber01 AS customerUnitNumber, Customer.streetNumber01 AS customerStreetNumber, Customer.streetName_01 AS customerStreetName, Customer.postalCode_01 AS customerPostalCode, CustCity.name AS customerCity, " +
                          "CustCity.province AS customerProvince, CustCity.counrty AS customerCountry, Customer.bussinessPhone, Customer.homePhone, " +
@@ -42,17 +42,16 @@ namespace HomeAppliance.View.Invoice
                          "Property ON Invoice.propertyId = Property.propertyId INNER JOIN " +
                          "City AS PropCity ON Property.cityId = PropCity.cityId INNER JOIN " +
                          "Technician ON Invoice.technicianId = Technician.technicianId;";
-
-                          /*"FROM City AS CustCity INNER JOIN " +
-                         "Customer ON CustCity.cityId = Customer.cityId_01 INNER JOIN " +
-                         "Invoice ON Customer.customerId = Invoice.customerId INNER JOIN " +
-                         "Property ON Invoice.propertyId = Property.propertyId INNER JOIN " +
-                         "Technician ON Invoice.technicianId = Technician.technicianId INNER JOIN " +
-                         "City AS PropCity ON Property.cityId = PropCity.cityId;";*/
+            string partsQuery = "SELECT PartsList.invoiceId, Part.name, PartsList.quantity AS QTY, PartsList.editPrice AS price " +
+                         "FROM PartsList INNER JOIN " +
+                         "Part ON PartsList.partId = Part.partId;";
             DataTable dt = new DataTable();
-            SqlDataAdapter partAdapter = new SqlDataAdapter(partListQuery, dbConn);
-            partAdapter.Fill(dt);
+            SqlDataAdapter reportAdaptor = new SqlDataAdapter(reportQuery, dbConn);
+            reportAdaptor.Fill(dt);
             rpt.SetDataSource(dt);
+            SqlDataAdapter partsAdaptor = new SqlDataAdapter(reportQuery, dbConn);
+            partsAdaptor.Fill(dt);
+            rpt.Subreports[0].SetDataSource(dt);
 
             // Binding the crystalReportViewer with our report object. 
             cryRepo.ReportSource = rpt;
