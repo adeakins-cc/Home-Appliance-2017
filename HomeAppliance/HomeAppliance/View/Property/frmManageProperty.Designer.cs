@@ -59,23 +59,21 @@
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbCity = new System.Windows.Forms.ComboBox();
             this.cityBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.homeAppDBDataSet11 = new HomeAppliance.HomeAppDBDataSet1();
+            this.homeAppDBDataSet = new HomeAppliance.HomeAppDBDataSet();
             this.txtSearchProperty = new System.Windows.Forms.TextBox();
             this.btnManagePropertySearch = new System.Windows.Forms.Button();
             this.btnManagePropertyExit = new System.Windows.Forms.Button();
             this.btnDeleteProperty = new System.Windows.Forms.Button();
             this.btnUpdateProperty = new System.Windows.Forms.Button();
             this.btnNewProperty = new System.Windows.Forms.Button();
-            this.homeAppDBDataSet1 = new HomeAppliance.HomeAppDBDataSet();
             this.cityTableAdapter1 = new HomeAppliance.HomeAppDBDataSetTableAdapters.CityTableAdapter();
             this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cityTableAdapter = new HomeAppliance.HomeAppDBDataSet1TableAdapters.CityTableAdapter();
+            this.cityTableAdapter = new HomeAppliance.HomeAppDBDataSetTableAdapters.CityTableAdapter();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuildings)).BeginInit();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,75 +86,68 @@
             this.GroupBox2.Controls.Add(this.txtAddress01);
             this.GroupBox2.Controls.Add(this.label1);
             this.GroupBox2.Controls.Add(this.label2);
-            this.GroupBox2.Location = new System.Drawing.Point(486, 495);
-            this.GroupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox2.Location = new System.Drawing.Point(364, 402);
             this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox2.Size = new System.Drawing.Size(353, 207);
+            this.GroupBox2.Size = new System.Drawing.Size(265, 168);
             this.GroupBox2.TabIndex = 35;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "Owner Details";
             // 
             // txtCustID
             // 
-            this.txtCustID.Location = new System.Drawing.Point(266, 17);
+            this.txtCustID.Location = new System.Drawing.Point(200, 14);
+            this.txtCustID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.ReadOnly = true;
-            this.txtCustID.Size = new System.Drawing.Size(74, 22);
+            this.txtCustID.Size = new System.Drawing.Size(56, 20);
             this.txtCustID.TabIndex = 39;
             // 
             // txtCustomer
             // 
-            this.txtCustomer.Location = new System.Drawing.Point(9, 48);
-            this.txtCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCustomer.Location = new System.Drawing.Point(7, 39);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.ReadOnly = true;
-            this.txtCustomer.Size = new System.Drawing.Size(331, 22);
+            this.txtCustomer.Size = new System.Drawing.Size(249, 20);
             this.txtCustomer.TabIndex = 38;
             // 
             // txtAddress02
             // 
-            this.txtAddress02.Location = new System.Drawing.Point(9, 151);
-            this.txtAddress02.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress02.Location = new System.Drawing.Point(7, 123);
             this.txtAddress02.Name = "txtAddress02";
             this.txtAddress02.ReadOnly = true;
-            this.txtAddress02.Size = new System.Drawing.Size(331, 22);
+            this.txtAddress02.Size = new System.Drawing.Size(249, 20);
             this.txtAddress02.TabIndex = 36;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(9, 127);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(7, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 35;
             this.label3.Text = "Address2:";
             // 
             // txtAddress01
             // 
-            this.txtAddress01.Location = new System.Drawing.Point(9, 98);
-            this.txtAddress01.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress01.Location = new System.Drawing.Point(7, 80);
             this.txtAddress01.Name = "txtAddress01";
             this.txtAddress01.ReadOnly = true;
-            this.txtAddress01.Size = new System.Drawing.Size(331, 22);
+            this.txtAddress01.Size = new System.Drawing.Size(249, 20);
             this.txtAddress01.TabIndex = 34;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(9, 74);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(7, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 33;
             this.label1.Text = "Address1:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(7, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 25;
             this.label2.Text = "Customer:";
             // 
@@ -164,10 +155,9 @@
             // 
             this.lblStreetName.AutoSize = true;
             this.lblStreetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStreetName.Location = new System.Drawing.Point(13, 41);
-            this.lblStreetName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStreetName.Location = new System.Drawing.Point(10, 33);
             this.lblStreetName.Name = "lblStreetName";
-            this.lblStreetName.Size = new System.Drawing.Size(112, 20);
+            this.lblStreetName.Size = new System.Drawing.Size(94, 17);
             this.lblStreetName.TabIndex = 33;
             this.lblStreetName.Text = "Street Names";
             // 
@@ -175,94 +165,83 @@
             // 
             this.lblBuildingList.AutoSize = true;
             this.lblBuildingList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuildingList.Location = new System.Drawing.Point(400, 41);
-            this.lblBuildingList.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBuildingList.Location = new System.Drawing.Point(300, 33);
             this.lblBuildingList.Name = "lblBuildingList";
-            this.lblBuildingList.Size = new System.Drawing.Size(128, 20);
+            this.lblBuildingList.Size = new System.Drawing.Size(107, 17);
             this.lblBuildingList.TabIndex = 34;
             this.lblBuildingList.Text = "Street Buildings";
             // 
             // txtSuperPhone
             // 
-            this.txtSuperPhone.Location = new System.Drawing.Point(245, 151);
-            this.txtSuperPhone.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSuperPhone.Location = new System.Drawing.Point(184, 123);
             this.txtSuperPhone.Name = "txtSuperPhone";
-            this.txtSuperPhone.Size = new System.Drawing.Size(171, 22);
+            this.txtSuperPhone.Size = new System.Drawing.Size(129, 20);
             this.txtSuperPhone.TabIndex = 35;
             // 
             // txtSuperintendent
             // 
-            this.txtSuperintendent.Location = new System.Drawing.Point(12, 151);
-            this.txtSuperintendent.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSuperintendent.Location = new System.Drawing.Point(9, 123);
             this.txtSuperintendent.Name = "txtSuperintendent";
-            this.txtSuperintendent.Size = new System.Drawing.Size(212, 22);
+            this.txtSuperintendent.Size = new System.Drawing.Size(160, 20);
             this.txtSuperintendent.TabIndex = 34;
             // 
             // txtUnits
             // 
-            this.txtUnits.Location = new System.Drawing.Point(245, 103);
-            this.txtUnits.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUnits.Location = new System.Drawing.Point(184, 84);
             this.txtUnits.Name = "txtUnits";
-            this.txtUnits.Size = new System.Drawing.Size(171, 22);
+            this.txtUnits.Size = new System.Drawing.Size(129, 20);
             this.txtUnits.TabIndex = 33;
             // 
             // txtBuildingStreet
             // 
-            this.txtBuildingStreet.Location = new System.Drawing.Point(129, 49);
-            this.txtBuildingStreet.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuildingStreet.Location = new System.Drawing.Point(97, 40);
             this.txtBuildingStreet.Name = "txtBuildingStreet";
-            this.txtBuildingStreet.Size = new System.Drawing.Size(287, 22);
+            this.txtBuildingStreet.Size = new System.Drawing.Size(216, 20);
             this.txtBuildingStreet.TabIndex = 32;
             // 
             // txtBuildingNumber
             // 
-            this.txtBuildingNumber.Location = new System.Drawing.Point(12, 49);
-            this.txtBuildingNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuildingNumber.Location = new System.Drawing.Point(9, 40);
             this.txtBuildingNumber.Name = "txtBuildingNumber";
-            this.txtBuildingNumber.Size = new System.Drawing.Size(91, 22);
+            this.txtBuildingNumber.Size = new System.Drawing.Size(69, 20);
             this.txtBuildingNumber.TabIndex = 31;
             // 
             // lblLastModified
             // 
-            this.lblLastModified.Location = new System.Drawing.Point(214, 180);
-            this.lblLastModified.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLastModified.Location = new System.Drawing.Point(160, 146);
             this.lblLastModified.Name = "lblLastModified";
-            this.lblLastModified.Size = new System.Drawing.Size(203, 20);
+            this.lblLastModified.Size = new System.Drawing.Size(152, 16);
             this.lblLastModified.TabIndex = 29;
             this.lblLastModified.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblDateActive
             // 
-            this.lblDateActive.Location = new System.Drawing.Point(8, 180);
-            this.lblDateActive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDateActive.Location = new System.Drawing.Point(6, 146);
             this.lblDateActive.Name = "lblDateActive";
-            this.lblDateActive.Size = new System.Drawing.Size(192, 20);
+            this.lblDateActive.Size = new System.Drawing.Size(144, 16);
             this.lblDateActive.TabIndex = 28;
             // 
             // Label9
             // 
-            this.Label9.Location = new System.Drawing.Point(241, 128);
-            this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label9.Location = new System.Drawing.Point(181, 104);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(96, 20);
+            this.Label9.Size = new System.Drawing.Size(72, 16);
             this.Label9.TabIndex = 26;
             this.Label9.Text = "Super Phone";
             // 
             // Label5
             // 
-            this.Label5.Location = new System.Drawing.Point(11, 128);
-            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label5.Location = new System.Drawing.Point(8, 104);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(139, 20);
+            this.Label5.Size = new System.Drawing.Size(104, 16);
             this.Label5.TabIndex = 25;
             this.Label5.Text = "Superintendent";
             // 
             // btnSaveNewProperty
             // 
-            this.btnSaveNewProperty.Location = new System.Drawing.Point(777, 405);
-            this.btnSaveNewProperty.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveNewProperty.Location = new System.Drawing.Point(583, 329);
             this.btnSaveNewProperty.Name = "btnSaveNewProperty";
-            this.btnSaveNewProperty.Size = new System.Drawing.Size(125, 28);
+            this.btnSaveNewProperty.Size = new System.Drawing.Size(94, 23);
             this.btnSaveNewProperty.TabIndex = 36;
             this.btnSaveNewProperty.Text = "Save";
             this.btnSaveNewProperty.UseVisualStyleBackColor = true;
@@ -273,69 +252,63 @@
             this.dgvBuildings.AllowUserToAddRows = false;
             this.dgvBuildings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvBuildings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuildings.Location = new System.Drawing.Point(292, 68);
-            this.dgvBuildings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvBuildings.Location = new System.Drawing.Point(219, 55);
+            this.dgvBuildings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvBuildings.MultiSelect = false;
             this.dgvBuildings.Name = "dgvBuildings";
             this.dgvBuildings.ReadOnly = true;
             this.dgvBuildings.RowTemplate.Height = 24;
             this.dgvBuildings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBuildings.Size = new System.Drawing.Size(477, 418);
+            this.dgvBuildings.Size = new System.Drawing.Size(358, 340);
             this.dgvBuildings.TabIndex = 38;
             this.dgvBuildings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvBuildings_MouseClick);
             // 
             // Label4
             // 
-            this.Label4.Location = new System.Drawing.Point(241, 78);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label4.Location = new System.Drawing.Point(181, 63);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(64, 20);
+            this.Label4.Size = new System.Drawing.Size(48, 16);
             this.Label4.TabIndex = 22;
             this.Label4.Text = "Units";
             // 
             // Label8
             // 
-            this.Label8.Location = new System.Drawing.Point(11, 80);
-            this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label8.Location = new System.Drawing.Point(8, 65);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(96, 20);
+            this.Label8.Size = new System.Drawing.Size(72, 16);
             this.Label8.TabIndex = 17;
             this.Label8.Text = "City";
             // 
             // Label7
             // 
-            this.Label7.Location = new System.Drawing.Point(125, 30);
-            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label7.Location = new System.Drawing.Point(94, 24);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(203, 20);
+            this.Label7.Size = new System.Drawing.Size(152, 16);
             this.Label7.TabIndex = 16;
             this.Label7.Text = "Street Name";
             // 
             // Label6
             // 
-            this.Label6.Location = new System.Drawing.Point(8, 30);
-            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label6.Location = new System.Drawing.Point(6, 24);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(96, 20);
+            this.Label6.Size = new System.Drawing.Size(72, 16);
             this.Label6.TabIndex = 15;
             this.Label6.Text = "Number";
             // 
             // btnCancelP
             // 
-            this.btnCancelP.Location = new System.Drawing.Point(777, 451);
-            this.btnCancelP.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelP.Location = new System.Drawing.Point(583, 366);
             this.btnCancelP.Name = "btnCancelP";
-            this.btnCancelP.Size = new System.Drawing.Size(125, 28);
+            this.btnCancelP.Size = new System.Drawing.Size(94, 23);
             this.btnCancelP.TabIndex = 37;
             this.btnCancelP.Text = "Cancel";
             this.btnCancelP.UseVisualStyleBackColor = true;
             // 
             // tvStreetList
             // 
-            this.tvStreetList.Location = new System.Drawing.Point(13, 68);
-            this.tvStreetList.Margin = new System.Windows.Forms.Padding(4);
+            this.tvStreetList.Location = new System.Drawing.Point(10, 55);
             this.tvStreetList.Name = "tvStreetList";
-            this.tvStreetList.Size = new System.Drawing.Size(269, 419);
+            this.tvStreetList.Size = new System.Drawing.Size(203, 341);
             this.tvStreetList.TabIndex = 32;
             this.tvStreetList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvStreetList_AfterSelect);
             // 
@@ -356,11 +329,9 @@
             this.GroupBox1.Controls.Add(this.Label7);
             this.GroupBox1.Controls.Add(this.Label6);
             this.GroupBox1.Enabled = false;
-            this.GroupBox1.Location = new System.Drawing.Point(14, 495);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Location = new System.Drawing.Point(10, 402);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(425, 207);
+            this.GroupBox1.Size = new System.Drawing.Size(319, 168);
             this.GroupBox1.TabIndex = 31;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Property Details";
@@ -370,46 +341,44 @@
             this.cbbCity.DataSource = this.cityBindingSource1;
             this.cbbCity.DisplayMember = "name";
             this.cbbCity.FormattingEnabled = true;
-            this.cbbCity.Location = new System.Drawing.Point(12, 103);
+            this.cbbCity.Location = new System.Drawing.Point(9, 84);
+            this.cbbCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbCity.Name = "cbbCity";
-            this.cbbCity.Size = new System.Drawing.Size(213, 24);
+            this.cbbCity.Size = new System.Drawing.Size(161, 21);
             this.cbbCity.TabIndex = 39;
             this.cbbCity.ValueMember = "cityId";
             // 
             // cityBindingSource1
             // 
             this.cityBindingSource1.DataMember = "City";
-            this.cityBindingSource1.DataSource = this.homeAppDBDataSet11;
+            this.cityBindingSource1.DataSource = this.homeAppDBDataSet;
             // 
-            // homeAppDBDataSet11
+            // homeAppDBDataSet
             // 
-            this.homeAppDBDataSet11.DataSetName = "HomeAppDBDataSet1";
-            this.homeAppDBDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.homeAppDBDataSet.DataSetName = "homeAppDBDataSet";
+            this.homeAppDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtSearchProperty
             // 
-            this.txtSearchProperty.Location = new System.Drawing.Point(13, 13);
-            this.txtSearchProperty.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchProperty.Location = new System.Drawing.Point(10, 11);
             this.txtSearchProperty.Name = "txtSearchProperty";
-            this.txtSearchProperty.Size = new System.Drawing.Size(269, 22);
+            this.txtSearchProperty.Size = new System.Drawing.Size(203, 20);
             this.txtSearchProperty.TabIndex = 30;
             // 
             // btnManagePropertySearch
             // 
-            this.btnManagePropertySearch.Location = new System.Drawing.Point(292, 13);
-            this.btnManagePropertySearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManagePropertySearch.Location = new System.Drawing.Point(219, 11);
             this.btnManagePropertySearch.Name = "btnManagePropertySearch";
-            this.btnManagePropertySearch.Size = new System.Drawing.Size(100, 28);
+            this.btnManagePropertySearch.Size = new System.Drawing.Size(75, 23);
             this.btnManagePropertySearch.TabIndex = 29;
             this.btnManagePropertySearch.Text = "Search";
             this.btnManagePropertySearch.UseVisualStyleBackColor = true;
             // 
             // btnManagePropertyExit
             // 
-            this.btnManagePropertyExit.Location = new System.Drawing.Point(777, 709);
-            this.btnManagePropertyExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManagePropertyExit.Location = new System.Drawing.Point(583, 576);
             this.btnManagePropertyExit.Name = "btnManagePropertyExit";
-            this.btnManagePropertyExit.Size = new System.Drawing.Size(125, 28);
+            this.btnManagePropertyExit.Size = new System.Drawing.Size(94, 23);
             this.btnManagePropertyExit.TabIndex = 28;
             this.btnManagePropertyExit.Text = "Exit";
             this.btnManagePropertyExit.UseVisualStyleBackColor = true;
@@ -417,10 +386,9 @@
             // 
             // btnDeleteProperty
             // 
-            this.btnDeleteProperty.Location = new System.Drawing.Point(777, 151);
-            this.btnDeleteProperty.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteProperty.Location = new System.Drawing.Point(583, 123);
             this.btnDeleteProperty.Name = "btnDeleteProperty";
-            this.btnDeleteProperty.Size = new System.Drawing.Size(125, 28);
+            this.btnDeleteProperty.Size = new System.Drawing.Size(94, 23);
             this.btnDeleteProperty.TabIndex = 27;
             this.btnDeleteProperty.Text = "Delete property";
             this.btnDeleteProperty.UseVisualStyleBackColor = true;
@@ -428,10 +396,9 @@
             // 
             // btnUpdateProperty
             // 
-            this.btnUpdateProperty.Location = new System.Drawing.Point(777, 110);
-            this.btnUpdateProperty.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateProperty.Location = new System.Drawing.Point(583, 89);
             this.btnUpdateProperty.Name = "btnUpdateProperty";
-            this.btnUpdateProperty.Size = new System.Drawing.Size(125, 28);
+            this.btnUpdateProperty.Size = new System.Drawing.Size(94, 23);
             this.btnUpdateProperty.TabIndex = 26;
             this.btnUpdateProperty.Text = "Update property";
             this.btnUpdateProperty.UseVisualStyleBackColor = true;
@@ -439,28 +406,17 @@
             // 
             // btnNewProperty
             // 
-            this.btnNewProperty.Location = new System.Drawing.Point(777, 68);
-            this.btnNewProperty.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNewProperty.Location = new System.Drawing.Point(583, 55);
             this.btnNewProperty.Name = "btnNewProperty";
-            this.btnNewProperty.Size = new System.Drawing.Size(125, 28);
+            this.btnNewProperty.Size = new System.Drawing.Size(94, 23);
             this.btnNewProperty.TabIndex = 25;
             this.btnNewProperty.Text = "Add property";
             this.btnNewProperty.UseVisualStyleBackColor = true;
             this.btnNewProperty.Click += new System.EventHandler(this.btnNewProperty_Click);
             // 
-            // homeAppDBDataSet1
-            // 
-            this.homeAppDBDataSet1.DataSetName = "HomeAppDBDataSet";
-            this.homeAppDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cityTableAdapter1
             // 
             this.cityTableAdapter1.ClearBeforeFill = true;
-            // 
-            // cityBindingSource
-            // 
-            this.cityBindingSource.DataMember = "City";
-            this.cityBindingSource.DataSource = this.homeAppDBDataSet1;
             // 
             // cityTableAdapter
             // 
@@ -468,9 +424,9 @@
             // 
             // frmManageProperty
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 750);
+            this.ClientSize = new System.Drawing.Size(688, 609);
             this.Controls.Add(this.GroupBox2);
             this.Controls.Add(this.lblStreetName);
             this.Controls.Add(this.lblBuildingList);
@@ -485,6 +441,7 @@
             this.Controls.Add(this.btnDeleteProperty);
             this.Controls.Add(this.btnUpdateProperty);
             this.Controls.Add(this.btnNewProperty);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmManageProperty";
             this.Text = "frmManageProperty";
             this.Load += new System.EventHandler(this.frmManageProperty_Load);
@@ -494,8 +451,7 @@
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeAppDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -539,11 +495,10 @@
         private System.Windows.Forms.Button btnNewProperty;
         private System.Windows.Forms.ComboBox cbbCity;
         private System.Windows.Forms.TextBox txtCustID;
-        private HomeAppDBDataSet homeAppDBDataSet1;
         private HomeAppDBDataSetTableAdapters.CityTableAdapter cityTableAdapter1;
         private System.Windows.Forms.BindingSource cityBindingSource;
-        private HomeAppDBDataSet1 homeAppDBDataSet11;
+        private HomeAppDBDataSet homeAppDBDataSet;
         private System.Windows.Forms.BindingSource cityBindingSource1;
-        private HomeAppDBDataSet1TableAdapters.CityTableAdapter cityTableAdapter;
+        private HomeAppDBDataSetTableAdapters.CityTableAdapter cityTableAdapter;
     }
 }

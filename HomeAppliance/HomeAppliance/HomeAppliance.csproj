@@ -178,11 +178,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="HomeAppDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HomeAppDBDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="invoice.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -203,12 +198,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceReporting.rpt</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\Property.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Property.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\Category\frmManageCategories.cs">
       <SubType>Form</SubType>
@@ -298,10 +287,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>InvoiceReporting.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Property.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Property.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Category\frmManageCategories.resx">
       <DependentUpon>frmManageCategories.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,8 +335,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="HomeAppDBDataSet.xsc">
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
     </None>
@@ -362,17 +345,6 @@
     </None>
     <None Include="HomeAppDBDataSet.xss">
       <DependentUpon>HomeAppDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HomeAppDBDataSet1.xsc">
-      <DependentUpon>HomeAppDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HomeAppDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HomeAppDBDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HomeAppDBDataSet1.xss">
-      <DependentUpon>HomeAppDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -385,7 +357,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Reports\InvoiceDetails.rpt" />
-    <None Include="Reports\OwnerStatement.rpt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

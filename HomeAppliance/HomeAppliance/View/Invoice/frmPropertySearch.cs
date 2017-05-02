@@ -92,7 +92,7 @@ namespace HomeAppliance.View.Invoice
 
             txtCity.Text = readPropInfo["name"].ToString();
             
-            dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + frmNewInvoice.customerId.ToString();
+            dbCommand.CommandText = "SELECT * FROM Customer WHERE customerId = " + frmNewInvoice.customerId;
             readPropInfo.Close();
             readPropInfo = dbCommand.ExecuteReader();
             readPropInfo.Read();

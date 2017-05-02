@@ -24,8 +24,8 @@ namespace HomeAppliance.View.Property
 
         private void frmManageProperty_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'homeAppDBDataSet11.City' table. You can move, or remove it, as needed.
-            this.cityTableAdapter.Fill(this.homeAppDBDataSet11.City);
+            // TODO: This line of code loads data into the 'homeAppDBDataSet.City' table. You can move, or remove it, as needed.
+            this.cityTableAdapter.Fill(this.homeAppDBDataSet.City);
             btnSaveNewProperty.Enabled = false;
             btnCancelP.Enabled = false;
             displayStreetName();
