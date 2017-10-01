@@ -135,10 +135,10 @@ namespace HomeAppliance
             }
             #endregion
 
-            newInvoice.setSubTotal(newInvoice.getPartTotal() + newInvoice.getLabour() + newInvoice.getServiceCharge());
-            txtSubtotal.Text = newInvoice.getSubTotal().ToString();
-            newInvoice.setGST(newInvoice.getSubTotal() * GST);
-            txtGST.Text = newInvoice.getGST().ToString();
+            newInvoice.setSubTotal(Math.Round(newInvoice.getPartTotal() + newInvoice.getLabour() + newInvoice.getServiceCharge(),2));
+            txtSubtotal.Text = Math.Round(newInvoice.getSubTotal(),2).ToString();
+            newInvoice.setGST(Math.Round(newInvoice.getSubTotal() * GST,2));
+            txtGST.Text = Math.Round(newInvoice.getGST(),2).ToString();
             if (chkPSTExempt.Checked != true)
             {
                 newInvoice.setPST(newInvoice.getSubTotal() * PST);

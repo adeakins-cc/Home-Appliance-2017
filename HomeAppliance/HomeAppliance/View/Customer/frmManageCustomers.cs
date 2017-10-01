@@ -90,7 +90,14 @@ namespace HomeAppliance
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            displayInfo(tvCustomerList.SelectedNode.Tag.ToString());
+            if (tvCustomerList.SelectedNode.Tag != null)
+            {
+                displayInfo(tvCustomerList.SelectedNode.Tag.ToString());
+            }
+            else
+            {
+                tvCustomerList.SelectedNode.Expand();
+            }
         }
 
         private void displayInfo(string custID)
